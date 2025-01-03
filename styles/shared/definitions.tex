@@ -1,0 +1,81 @@
+%%
+%% Commands for Definitions.
+%%
+\let\th@plain\relax%%%
+\RequirePackage{ntheorem}%
+\RequirePackage[framemethod=TikZ]{mdframed}%
+%
+\theorembodyfont{\normalfont}%
+\newcommand{\definitionautorefname}{Definition}%%
+%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\theoremstyle{nonumberplain}%
+}{}%
+%
+%%% Definitions
+\newmdtheoremenv[%
+linewidth=2pt,%
+linecolor=definition-frame,%
+roundcorner=4pt,%
+backgroundcolor=definition-background,%
+leftmargin=5pt,%
+rightmargin=5pt,%
+font={},%
+nobreak=true%
+]{definition}{\definitionautorefname}%
+%
+%% The auto-ref name for best practices
+\newcommand{\@bestPracticeautorefname}{Best Practice}%
+%
+%%% Best Practices
+%% The best practices suite offers the command \bestPractice that prints
+%% information  about a best practice in a framed box.
+%% The list of all best practices can be printed via \printBestPractices.
+\newmdtheoremenv[%
+linewidth=2pt,%
+linecolor=bestpractice-frame,%
+roundcorner=4pt,%
+backgroundcolor=bestpractice-background,%
+leftmargin=5pt,%
+rightmargin=5pt,%
+font={},%
+nobreak=true%
+]{@bestPractice}{\@bestPracticeautorefname}%
+%
+%
+%%% Useful Tools
+%% The useful tools command suite offers the command \usefulTool that
+%% prints information about a useful tool in a framed box.
+%% The list of all useful tools can be printed via \printUsefulTools.
+\newcommand{\@usefulToolautorefname}{Useful Tool}%
+%
+\newmdtheoremenv[%
+linewidth=2pt,%
+linecolor=usefultool-frame,%
+roundcorner=4pt,%
+backgroundcolor=usefultool-background,%
+leftmargin=5pt,%
+rightmargin=5pt,%
+font={},%
+nobreak=true%
+]{@usefulTool}{\@usefulToolautorefname}%
+%
+%
+%%% A Novice Hint is a box intended to give some useful information for novies
+%%% or first-time readers.
+\protected\gdef\noviceHint#1{%
+\begin{center}%
+\fcolorbox{novice-hint-frame}{novice-hint-background}{%
+\parbox{0.9\linewidth}{%
+\textbf{First Time Readers and Novices:}~#1
+}}%
+\end{center}%
+}%
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/definitions.tex}%
+}{}%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/definitions.tex}%
+}{}%
+%

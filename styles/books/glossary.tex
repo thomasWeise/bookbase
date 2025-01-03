@@ -1,0 +1,46 @@
+%%
+%% Commands related to glossaries.
+%%
+%
+%% Load the glossaries package
+\RequirePackage[acronyms,symbols,toc,sort=standard,nonumberlist]{glossaries}%
+%
+
+\xdef\@@@mode@@on{A}%
+\xdef\@@@mode@@off{B}%
+%%
+%% This command evaluates to #2 when encountered the first time on a page with parameter #1.
+%% It evaluates to #3 for the rest of the page.
+\protected\gdef\oncePerPage#1#2#3{%
+\ifcsname @#1@mode\endcsname\relax\else\expandafter\xdef\csname @#1@mode\endcsname{\@@@mode@@on}\fi%
+\edef\@@@@tmp@exp{\csname @#1@mode\endcsname}%
+\ifx\@@@@tmp@exp\@@@mode@@on\relax%
+\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{%
+\expandafter\xdef\csname @#1@mode\endcsname{\@@@mode@@off}%
+#2%
+\afterpage{\expandafter\xdef\csname @#1@mode\endcsname{\@@@mode@@on}}%
+}{#3}%
+}%
+%
+%%
+%% Invoke the glossary term, but link only once per page.
+%%
+%% Print the glossary entry in the singular form.
+\protected\gdef\pgls#1{%
+\oncePerPage{@gls@#1}{\gls{#1}}{\gls[hyper=false]{#1}}%
+}%
+%% Print the glossary entry in the singular form starting with capital letter.
+\protected\gdef\Pgls#1{%
+\oncePerPage{@gls@#1}{\Gls{#1}}{\Gls[hyper=false]{#1}}%
+}%
+%
+%% Print the glossary entry in the plural form.
+\protected\gdef\pglspl#1{%
+\oncePerPage{@gls@#1}{\glspl{#1}}{\glspl[hyper=false]{#1}}%
+}%
+%
+%% Print the glossary entry in the plural form starting with capital letter.
+\protected\gdef\Pglspl#1{%
+\oncePerPage{@gls@#1}{\Glspl{#1}}{\Glspl[hyper=false]{#1}}%
+}%

@@ -1,0 +1,23 @@
+%%
+%% Set up the colors for the bibliography.
+\setbeamercolor{bibliography item}{fg=black}%
+\setbeamercolor{bibliography entry author}{fg=black}%
+\setbeamercolor{bibliography entry title}{fg=black}%
+\setbeamercolor{bibliography entry note}{fg=black}%
+%
+%% Set the text style to tiny for the slides bibliography.
+\AtBeginBibliography{\tiny}%
+%
+%
+%%% We count the number of citations, in order to see if we need to print the bibliography.
+\newcount\@bib@numcites%
+\@bib@numcites=0%
+\let\@bib@oldnocite\nocite%
+\let\@bib@oldcite\cite%
+%
+%
+%% cite a as superscript in the text
+\gdef\cite#1{\supercite{#1}\strut\relax\global\advance\@bib@numcites by 1\relax}%
+%% cite a reference without putting the reference in the text
+\gdef\nocite#1{\@bib@oldnocite{#1}\relax\global\advance\@bib@numcites by 1\relax}%
+%

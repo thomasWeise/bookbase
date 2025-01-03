@@ -1,0 +1,29 @@
+%%
+%% Algorithm Commands
+%%
+%
+\RequirePackage[ruled,vlined,noend]{algorithm2e}%
+\SetAlgorithmName{Algorithm}{Algorithm}{List of Algorithms}%
+\SetKwComment{comment}{$\triangleright$\ }{}%
+\renewcommand{\CommentSty}[1]{{\itshape\footnotesize\color{algorithm-comment}#1}}%
+\SetAlgoLined%
+\let\@oldKwStyle\KwSty%
+\renewcommand{\KwSty}[1]{{\color{algorithm-keywords}\@oldKwStyle{#1}}}%
+%
+%
+%% A separator between two instructions to appear on the same line
+\xdef\aSep{;~~~}%
+%%
+%% The variable style.
+\protected\gdef\aVar#1{\ensuremath{\mathit{#1}}}%
+%
+%% Assign value #2 to variable #1.
+\protected\gdef\aAssign#1#2{\ensuremath{#1\gets#2}}%
+%
+%% Element #2 of array #1
+\protected\gdef\aArrayIndex#1#2{\mbox{\ensuremath{#1\!\left[#2\right]}}}%
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/algorithms.tex}%
+}{}%
+%

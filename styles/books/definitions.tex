@@ -1,0 +1,56 @@
+%%
+%% Define the commands for definitions in books.
+%%
+%
+\xdef\@bestPractices{}%
+%
+%% A best practice
+%% #1 the label, we will prepend bp:
+%% #2 the best practice
+\gdef\bestPractice#1#2{%
+\begin{@bestPractice}\label{bp:#1}#2\end{@bestPractice}%
+%
+\ifx\@bestPractices\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{\gdef\@bestPractices{\noindent\cref{bp:#1}:~#2}}%
+{\g@addto@macro\@bestPractices{\medskip\par\noindent\cref{bp:#1}: #2}}%
+}%
+%
+%% Print the best practices
+%% #1 The text to be prepended.
+\gdef\printBestPractices#1{%
+\chapter*{Best Practices}%
+\pdfbookmark{Best Practices}{Best Practices}%
+#1\medskip
+
+\@bestPractices%
+}%
+%
+%
+%%% Useful Tools
+%% The useful tools command suite offers the command \usefulTool that
+%% prints information about a useful tool in a framed box.
+%% The list of all useful tools can be printed via \printUsefulTools.
+%
+\xdef\@usefulTools{}%
+%
+%% A useful tool
+%% #1 the label, we will prepend up:
+%% #2 the useful tool
+\gdef\usefulTool#1#2{%
+\begin{@usefulTool}\label{ut:#1}#2\end{@usefulTool}%
+%
+\ifx\@usefulTools\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{\gdef\@usefulTools{\noindent\cref{ut:#1}:~#2}}%
+{\g@addto@macro\@usefulTools{\medskip\par\noindent\cref{ut:#1}: #2}}%
+}%
+%
+%% Print the useful tools
+%% #1 The text to be prepended.
+\gdef\printUsefulTools#1{%
+\chapter*{Useful Tools}%
+\pdfbookmark{Useful Tools}{Useful Tools}%
+#1\medskip
+
+\@usefulTools%
+}%
+%

@@ -1,0 +1,12 @@
+%%
+%% This is the shared main style file for the book.
+%%
+%
+\newif\ifIsBook % Create the condition for book compilation.
+\IsBooktrue     % This is the book compilation mode.
+%
+\newif\ifIsSlides % Create the condition for slides compilation.
+\IsSlidesfalse    % This is NOT the slides compilation mode.
+%
+\input{\bookbaseDir/styles/styles.tex}%  Load the styles file.
+%

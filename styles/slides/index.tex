@@ -1,0 +1,17 @@
+%%
+%% Index Dummy commands
+%%
+%
+%% In slides, we do not have an index.
+%% However, in order to smooth out issues that may arise from copying book
+%% code over to slides, we define some dummy commands that take the place
+%% of the index commands without actually doing anything.
+%
+%% The dummy index command just purges its argument
+\protected\gdef\index#1{}%
+%
+%% An index for Python commands
+\protected\gdef\pythonIdx#1{}%
+\protected\gdef\pythonilIdx#1{\pythonil{#1}}%
+\protected\gdef\pythonilsIdx#1{\pythonils{#1}}%
+%

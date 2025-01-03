@@ -1,0 +1,20 @@
+%%
+%% Glossary commands for slides: without hyperlinks
+%%
+%
+\RequirePackage[acronyms,symbols,nonumberlist,nowarn]{glossaries}%
+\glsdisablehyper%
+%
+%% Print the glossary entry in the singular form.
+\protected\gdef\pgls#1{\gls[hyper=false]{#1}}%
+%% Print the glossary entry in the singular form starting with capital letter.
+\protected\gdef\Pgls#1{\Gls[hyper=false]{#1}}%
+%
+%% Print the glossary entry in the plural form.
+\protected\gdef\pglspl#1{\glspl[hyper=false]{#1}}%
+%
+%% Print the glossary entry in the plural form starting with capital letter.
+\protected\gdef\Pglspl#1{\Glspl[hyper=false]{#1}}%
+%
+%% The pseudo-glslink just prints the glossary text, but does not put a link
+\protected\gdef\glslink#1#2{#2}%

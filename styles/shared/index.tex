@@ -1,0 +1,17 @@
+%%
+%% Index commands
+%%
+%
+%%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/index.tex}%
+}{}%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/index.tex}%
+}{}%
+%% dots without end-of-sentence spacing at the end
+\protected\gdef\idxdots{%
+.\kern\fontdimen3\font%
+.\kern\fontdimen3\font%
+.\@\strut}%
+%

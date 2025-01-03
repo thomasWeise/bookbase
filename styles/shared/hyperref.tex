@@ -1,0 +1,26 @@
+%%%
+%%% Load hyperref to make links clickable
+%%%
+%
+\PassOptionsToPackage{hyphens}{url}%
+%
+\RequirePackage{hyperref}%
+%
+\hypersetup{%
+unicode,%
+breaklinks=true,%
+colorlinks,%
+linkcolor=href-linkcolor,%
+citecolor=href-citecolor,%
+urlcolor=href-urlcolor,%
+}%
+\RequirePackage{doi}%
+\RequirePackage{url}%
+\RequirePackage{bookmark}%
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/hyperref.tex}%
+}{}%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/hyperref.tex}%
+}{}%

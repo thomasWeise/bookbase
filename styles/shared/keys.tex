@@ -1,0 +1,29 @@
+%%
+%% Keyboard keys.
+%%
+%
+\RequirePackage[os=win]{menukeys}%
+\renewmenumacro{\keys}[+]{roundedkeys}%
+\renewmenumacro{\directory}[/]{hyphenatepaths}%
+%
+%% Get the Windows and Apple Macintosh symbols.
+%% see https://tex.stackexchange.com/questions/387952
+\RequirePackage{fontawesome}%
+\tw@make@key@box{OS@mac}{\faApple}%
+\tw@make@key@box{OS@win}{\faWindows}%
+\tw@make@key@macro*{\OS}%
+%
+%% The key sequence needed to launch a terminal under Ubuntu Linux.
+\protected\gdef\ubuntuTerminal{\keys{\ctrl+\Alt+T}}%
+%% The key sequence needed to launch a terminal under Microsoft Windows.
+\protected\gdef\windowsTerminal{press \keys{\OSwin + R}, type in \textil{cmd}, and hit \keys{\return}}%
+%
+%% The PyCharm main menu key
+\protected\gdef\pycharmMainMenu{\ensuremath{\mathrel{\rlap{\raisebox{\fontdimen22\textfont2}{\ensuremath{=}}}\raisebox{-0.5\fontdimen22\textfont2}{\ensuremath{=}}}}}
+%% The PyCharm python console menu key
+\protected\gdef\pycharmConsole{\raisebox{-1.75pt}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmPythonConsole}}}%
+%% The pycharm debugger resume command
+\protected\gdef\pycharmDebuggerResume{\raisebox{-1.75pt}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmDebuggerResumeProgram}}}%
+%% The pycharm debugger step over command
+\protected\gdef\pycharmDebuggerStepOver{\raisebox{-1.75pt}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmDebuggerStepOver}}}%
+%

@@ -1,0 +1,16 @@
+%
+\RequirePackage{graphicx}%
+%
+%% This command puts a tight box around something.
+%% The frame of the box is black, the background is white
+%% This is very useful when including figures.
+%% #1 the stuff to include
+\protected\gdef\tightbox#1{\bgroup%
+\fboxsep=0pt%
+\fboxrule=0.5pt%
+\mbox{\fcolorbox{black}{white}{\mbox{#1}}}%
+\egroup}%
+%
+%% Draw beautiful directory trees
+\RequirePackage{dirtree}%
+%

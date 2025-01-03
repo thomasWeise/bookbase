@@ -62,8 +62,6 @@ istFile="$documentName.ist"
 slgFile="$documentName.slg"
 sloFile="$documentName.slo"
 slsFile="$documentName.sls"
-pythonIdxFile="python.idx"
-pythonIndFile="python.ind"
 
 rm "$acnFile" || true
 rm "$acrFile" || true
@@ -80,8 +78,6 @@ rm "$gloFile" || true
 rm "$glsFile" || true
 rm "$idxFile" || true
 rm "$istFile" || true
-rm "$documentName.ilg" || true
-rm "$documentName.ind" || true
 rm "$gloFile" || true
 rm "$documentName.latexgit.dummy" || true
 rm "$documentName.loa" || true
@@ -107,9 +103,9 @@ rm "$documentName.upa" || true
 rm "$documentName.upb" || true
 rm "$documentName.vrb" || true
 rm "$documentName.xcp" || true
-rm "python.ilg" || true
-rm "$pythonIndFile" || true
-rm "$pythonIdxFile" || true
+rm *.idx || true
+rm *.ilg || true
+rm *.ind || true
 rm "texput.log" || true
 
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now removing Unicode BOMs of .tex and .sty files, if any, as they will confuse LaTeX compilers"
@@ -171,24 +167,12 @@ while (("$additional" >= 0))  ; do
     fi
   done
 
-  if [ -f "$pythonIdxFile" ]; then
-    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Discovered python index file '$pythonIdxFile'."
-    fileContents="$(<$pythonIdxFile)"
-    watchFileContents="${watchFileContents}${fileContents}"
-  fi
-
-  if [ -f "$pythonIndFile" ]; then
-    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Discovered python index file '$pythonIndFile'."
-    fileContents="$(<$pythonIndFile)"
-    watchFileContents="${watchFileContents}${fileContents}"
-  fi
-
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now applying latexgit as ${latexGitProgram[@]}."
   "${latexGitProgram[@]}" "$documentName"
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished applying latexgit as ${latexGitProgram[@]}."
 
   if [ -f "$idxFile" ]; then
-    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File '$idxFile' exists, so we now apply the make-index programm '$makeIndexProgram'."
+    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File '$idxFile' exists, so we now apply the make-index program '$makeIndexProgram'."
     "$makeIndexProgram" "$documentName"
     echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished applying the make-index program '$makeIndexProgram'."
   else
@@ -328,8 +312,6 @@ rm "$gloFile" || true
 rm "$glsFile" || true
 rm "$idxFile" || true
 rm "$istFile" || true
-rm "$documentName.ilg" || true
-rm "$documentName.ind" || true
 rm "$gloFile" || true
 rm "$documentName.latexgit.dummy" || true
 rm "$documentName.loa" || true
@@ -354,9 +336,9 @@ rm "$documentName.upa" || true
 rm "$documentName.upb" || true
 rm "$documentName.vrb" || true
 rm "$documentName.xcp" || true
-rm "python.ilg" || true
-rm "$pythonIndFile" || true
-rm "$pythonIdxFile" || true
+rm *.idx || true
+rm *.ilg || true
+rm *.ind || true
 rm "texput.log" || true
 
 for anyAuxFile in *.aux; do

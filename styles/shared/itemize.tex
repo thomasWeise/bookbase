@@ -1,0 +1,9 @@
+%%
+%% Shortcuts for printing the the itemization/enumeration starts somewhere in a text.
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/itemize.tex}%
+}{}%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/itemize.tex}%
+}{}%

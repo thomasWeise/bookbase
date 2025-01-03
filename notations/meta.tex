@@ -1,0 +1,37 @@
+%%
+%% Text constants about our team and uni
+%%
+%
+\xdef\authorNamePrefix{Prof.~Dr.~}%
+\xdef\authorName{Thomas Weise}%
+\gdef\authorNameCN{汤卫思}%
+\gdef\authorNameCNSuffix{教授}
+\xdef\authorEmail{tweise@hfuu.edu.cn}%
+\xdef\authorUrl{http://iao.hfuu.edu.cn/5}%
+%
+\xdef\groupName{Institute of Applied Optimization}%
+\xdef\groupAbbreviation{IAO}%
+\gdef\groupNameCN{应用优化研究所}%
+\xdef\groupUrl{https://iao.hfuu.edu.cn}%
+%
+\xdef\schoolName{School of Artificial Intelligence and Big Data}%
+\gdef\schoolNameCN{人工智能与大数据学院}%
+\xdef\schoolUrlCN{http://www.hfuu.edu.cn/aibd}%
+%
+\xdef\uniName{Hefei University}%
+\xdef\uniUrl{http://www.hfuu.edu.cn/english}%
+\xdef\uniNameCN{合肥大学}%
+\xdef\uniUrlCN{http://www.hfuu.edu.cn}%
+%
+\xdef\cityName{Hefei, Anhui, China}%
+\gdef\cityNameCN{中国安徽省合肥市}%
+%
+%% Setting up document properties used in slides
+\gdef\insertauthoremail{\href{mailto:\authorEmail}{\authorEmail}}%
+\gdef\insertauthorweb{\href{\authorUrl}{\authorUrl}}%
+\author{\authorName~(\expandafter\zhb{\authorNameCN})}%
+\date{\today}%
+%
+\global\let\introSlide\relax%
+\global\let\courseUrlQR\relax%
+%

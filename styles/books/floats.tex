@@ -1,0 +1,15 @@
+%%
+%% Figure and Table tools.
+%%
+%
+\RequirePackage{subfig}%
+%%
+%% Numerical subfigure IDs.
+\renewcommand{\thesubfigure}{\thefigure.\arabic{subfigure}}%
+\renewcommand{\p@subfigure}{}%
+%
+%% Needed for \FloatBarrier
+\RequirePackage{placeins}%
+%% For, well, \afterpage
+\RequirePackage{afterpage}%
+%
