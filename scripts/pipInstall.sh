@@ -13,7 +13,7 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Welcome to requirements installation scrip
 requirements="$(readlink -f "$1")"  # the script to execute
 cycle=1
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Installing requirements from file '$requirements'."
-while ! timeout --kill-after=60m 58m "$PYTHON_INTERPRETER" -m pip install --no-input --default-timeout=300 --timeout=300 --retries=100 -r "$requirements" ; do
+while ! timeout 60m "$PYTHON_INTERPRETER" -m pip install --no-input --default-timeout=300 --timeout=300 --retries=100 -r "$requirements" ; do
     cycle=$((cycle+1))
     if (("$cycle" > 100)) ; then
         echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Something odd is happening: We have performed $cycle cycles of pip install and all failed. That's too many. Let's quit."
