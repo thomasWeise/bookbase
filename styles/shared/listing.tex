@@ -208,3 +208,8 @@ breaklines=true%
 \inlinelistingbox{\lstinline[style=python_style]$#1$\resizebox{!}{\@lstbasicstylesheight}{\color{darkgray}es}}}%
 %
 %
+%% A dunder method
+%% #1 the method name
+%% This addss the underscores and a index entry.
+\protected\gdef\dunder#1{\expandafter\pythonilIdx{\_\_#1\_\_}\expandafter\pythonIdx{dunder!\_\_#1\_\_}}%
+%
