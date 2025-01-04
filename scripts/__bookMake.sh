@@ -19,11 +19,12 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Building '$title' document '$document' for
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The script directory is '$scriptDir'."
 currentDir="$(pwd)"
-echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We are working in directory: '$currentDir'."
+echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We are working in directory '$currentDir'."
 
 rm -rf "$currentDir/book.pdf" || true
 
 websiteDir="$currentDir/website"
+echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The website directory is '$websiteDir'."
 rm -rf "$websiteDir" || true
 
 bookTex="$currentDir/book.tex"
