@@ -1,0 +1,33 @@
+%
+%%
+%% A command for rendering the title page
+%% #1 the path to the abstract file
+\protected\gdef\renderTitlePage#1{
+\begin{titlingpage}%
+\pdfbookmark{Title Page}{Title Page}%
+\newpagecolor{titlepage-background}\afterpage{\restorepagecolor}%
+\pagestyle{empty}%
+\centering%
+{\color{titlepage-text}%
+%
+\strut\vfill\strut%
+%
+{\color{titlepage-title}\resizebox{0.9\linewidth}{!}{\bfseries\thetitle}}%
+\\[2cm]%
+%
+\resizebox{0.5\linewidth}{!}{\authorName~\zhb{(\authorNameCN)}}%
+\\[2cm]%
+%
+\resizebox{0.275\linewidth}{!}{\thedate}%
+\\[2cm]%
+%
+\includegraphics[width=3.5cm]{\bookbaseDir/graphics/logos/hfuu_logo_round_red}%
+\\[2cm]%
+%
+\begin{abstract}\input{#1}\end{abstract}%
+}%
+%
+\strut\vfill\vfill\strut%
+\end{titlingpage}%
+}%
+%

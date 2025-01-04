@@ -7,6 +7,7 @@
 \gdef\authorNameCN{汤卫思}%
 \gdef\authorNameCNSuffix{教授}
 \xdef\authorEmail{tweise@hfuu.edu.cn}%
+\xdef\authorEmailB{tweise@ustc.edu.cn}%
 \xdef\authorUrl{http://iao.hfuu.edu.cn/5}%
 %
 \xdef\groupName{Institute of Applied Optimization}%
@@ -34,4 +35,18 @@
 %
 \global\let\introSlide\relax%
 \global\let\courseUrlQR\relax%
+%
+%% Print the copyright block
+%% #1 the years
+\protected\gdef\copyrightBlock#1{%
+\begin{flushleft}%
+Copyright~\textcopyright\~#1\\[3pt]%
+\authorNamePrefix\href{\authorUrl}{\authorName}~(\expandafter\zhb{\authorNameCN\authorNameCNSuffix})\\%
+at the \groupName~(\expandafter\zhb{\groupNameCN}, \href{\groupUrl}{\groupAbbreviation})\\%
+of the \schoolName~(\href{\schoolUrlCN}{\expandafter\zhb{\schoolNameCN}})\\%
+of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\expandafter\zhb{\uniNameCN}}),\\%
+in \cityName~(\expandafter\zhb{\cityNameCN})\\[6pt]%
+Contact me via email to \expandafter\href{mailto:\authorEmail}{\authorEmail}\ifx\relax\authorEmailB\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{ with CC to~\expandafter\href{mailto:\authorEmailB}{\authorEmailB}}.%
+\end{flushleft}%
+}%
 %

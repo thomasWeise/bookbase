@@ -2,7 +2,7 @@
 
 ## pdflatex Compiler Script
 ## $1 the document to compile
-## $2 == "quick" for incomplete compile
+## $2 == "draft" for incomplete compile
 
 # strict error handling
 set -o pipefail  # trace ERR through pipes
@@ -117,7 +117,7 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We will now perform runs of the tool chain
 
 watchFileContents=""
 oldWatchFileContents="old"
-quickArg="${2:-}"
+draftArg="${2:-}"
 cycle=0
 additional=1
 
@@ -221,9 +221,9 @@ while (("$additional" >= 0))  ; do
 
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished build cycle $cycle."
 
-  if [ "$quickArg" == "quick" ] ; then
+  if [ "$draftArg" == "draft" ] ; then
     if (("$cycle" > 1)) ; then
-      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Quick and incomplete compilation was selected, so we stop after now (cycle $cycle)."
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Draft compilation was selected, so we stop after now (cycle $cycle)."
       break
     fi
   fi
@@ -247,7 +247,7 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The tool chain has been applied until noth
 latexWarningsCount=0
 latexWarningString=""
 logFile="$documentName.log"
-if [ -f "$logFile" ] && [ "$quickArg" != "quick" ]; then
+if [ -f "$logFile" ] && [ "$draftArg" != "draft" ]; then
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We found the log file '$logFile' and check its contents."
   fileContents="$(<$logFile)"
 

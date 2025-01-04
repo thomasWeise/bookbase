@@ -41,6 +41,7 @@
 \input{\bookbaseDir/styles/shared/glossary.tex}%
 \input{\bookbaseDir/styles/shared/definitions.tex}%
 \input{\bookbaseDir/styles/shared/algorithms.tex}%
+\input{\bookbaseDir/styles/shared/keys.tex}%
 %
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/overlays.tex}%
@@ -58,6 +59,10 @@
 }{}%
 %
 \input{\bookbaseDir/notations/notations.sty}%
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/titlepage.tex}%
+}{}%
 %
 \makeglossaries%
 %

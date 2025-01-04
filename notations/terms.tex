@@ -7,8 +7,8 @@ name={bias},%
 description={%
 The bias is subtracted from the value stored in the \pgls{exponent} field of a floating point number. %
 This allows for representing both positive and negative exponents. %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the bias is~1023. %
-See \cref{sec:howFloatingPointNumbersWork}.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the bias is~1023.%
+\optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }%
 }%
 %
@@ -89,8 +89,8 @@ name={exponent},%
 description={%
 The exponent is the part of a floating point number that stores a power of~2 with which the \pgls{significand} is multiplied. %
 This allows for covering a wide range of different precisions and representing both very large and very small numbers. %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 11~bits with a \pgls{bias} of~1023. %
-See \cref{sec:howFloatingPointNumbersWork}.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 11~bits with a \pgls{bias} of~1023.%
+\optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }%
 }%
 %
@@ -100,8 +100,8 @@ name={f\nobreakdashes-string},%
 plural={f\nobreakdashes-strings},%
 sort={f-string},
 description={%
-is a special string in \python, which delimited by \pythonil{f"..."}\pythonIdx{f\textquotedbl\idxdots\textquotedbl} which can contain expressions in curly braces like \pythonil{f"a\{6-1\}b"} that are then turned to text via \pgls{strinterpolation}, which turns the string to~\pythonil{"a5b"}. %
-f\nobreakdashes-strings are discussed in \cref{sec:fstrings}.%
+is a special string in \python, which delimited by \pythonil{f"..."}\pythonIdx{f\textquotedbl\idxdots\textquotedbl} which can contain expressions in curly braces like \pythonil{f"a\{6-1\}b"} that are then turned to text via \pgls{strinterpolation}, which turns the string to~\pythonil{"a5b"}.%
+\optionalRef{sec:fstrings}{ f\nobreakdashes-strings are discussed in \cref{sec:fstrings}.}%
 }%
 }%
 %
@@ -174,8 +174,8 @@ name={(string) interpolation},%
 sort={string interpolation},
 description={%
 In \python, string interpolation is the process where all the expressions in an \pgls{fstring} are evaluated and the final string is constructed. %
-An example for string interpolation is turning \pythonil{f"Rounded \{1.234:.2f\}"} to \pythonil{"Rounded 1.23"}\pythonIdx{.2f}. %
-This is discussed in \cref{sec:fstrings}.%
+An example for string interpolation is turning \pythonil{f"Rounded \{1.234:.2f\}"} to \pythonil{"Rounded 1.23"}\pythonIdx{.2f}.%
+\optionalRef{sec:fstrings}{ This is discussed in \cref{sec:fstrings}.}%
 }%
 }%
 %
@@ -213,8 +213,8 @@ See \gls{significand}.%
 name={modulo division},%
 description={%
 is, in \python, done by the operator \pythonil{\%} that computes the remainder of a division. %
-\pythonil{15 \% 6} gives us \pythonil{3}. %
-Modulo division is mentioned in \cref{sec:int,sec:floatarith}.%
+\pythonil{15 \% 6} gives us \pythonil{3}.%
+\optionalRef{sec:int}{ Modulo division is mentioned in \cref{sec:int}.}%
 }%
 }%
 %
@@ -224,7 +224,8 @@ name={package},%
 description={%
 A \python\ package is basically a directory containing \python\ files. %
 This allows us to group functionality together as a library that can be used by different applications. %
-Many popular \python\ packages are offered as open source at \pgls{pypi} and can be installed with~\pip, which we discuss in \cref{sec:pipAndVenv}.%
+Many popular \python\ packages are offered as open source at \pgls{pypi} and can be installed with~\pip.%
+\optionalRef{sec:pipAndVenv}{ We discuss this in \cref{sec:pipAndVenv}.}%
 }%
 }%
 %
@@ -242,8 +243,8 @@ In \python, the \pythonilIdx{re} module offers functionality work with regular e
 name={significand},%
 description={%
 The significand is the part of a floating point number that stores the digits of the number (in binary representation). %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 52~bits. %
-See \cref{sec:howFloatingPointNumbersWork}.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 52~bits.%
+\optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }%
 }%
 %
@@ -261,8 +262,8 @@ In \python, the function~\pythonilIdx{signature} of the module~\pythonilIdx{insp
 \newglossaryentry{signBit}{%
 name={sign bit},%
 description={%
-The sign bit indicates whether a floating point number is positive or negative in the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}. %
-See \cref{sec:howFloatingPointNumbersWork}.%
+The sign bit indicates whether a floating point number is positive or negative in the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}.%
+\optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }%
 }%
 %
@@ -273,7 +274,8 @@ description={%
 A stack trace gives information the way in which one function invoked another. %
 The term comes from the fact that the data needed to implement function calls is stored in a stack data structure~\cite{K1997FA}. %
 The data for the most recently invoked function is on top, the data of the function that called is right below, the data of the function that called that one comes next, and so on. %
-Printing a stack trace can be very helpful when trying to find out where an \pythonilIdx{Exception} occurred, see, for instance, \cref{sec:exceptions,lst:exceptions:use_sqrt_raise}.%
+Printing a stack trace can be very helpful when trying to find out where an \pythonilIdx{Exception} occurred.%
+\optionalRef{sec:exceptions}{ See, for instance, \cref{sec:exceptions}.}%
 }%
 }%
 %
@@ -326,7 +328,8 @@ plural={terminals},%
 description={%
 A terminal is a text-based window where you can enter commands and execute them~\cite{CN2020ULB,B2022ELATCL}. %
 Knowing what a terminal is and how to use it is very essential in any programming- or system administration-related task. %
-If you want to open a terminal under \windows, you can \windowsTerminal, as shown, e.g., in \cpageref{fig:installingPythonWindows01openTerminal}. %
+If you want to open a terminal under \windows, you can \windowsTerminal. %
+\optionalRef{fig:installingPythonWindows01openTerminal}{This is shown, e.g., in \cref{fig:installingPythonWindows01openTerminal}. }%
 Under \ubuntu\ \linux, \ubuntuTerminal\ opens a terminal, which then runs a \bash\ shell inside.%
 }%
 }%
@@ -342,8 +345,8 @@ This creates problems for code analysis, both automated as well as manual: %
 For example, it may not always be clear whether a variable or function parameter should be an integer or floating point number. %
 The annotations allow us to explicitly state which type is expected. %
 They are \emph{ignored} during the program execution. %
-They are a basically a piece of documentation. %
-See \cref{bp:typeHints,sec:varTypeHints}.%
+They are a basically a piece of documentation.%
+\optionalRef{sec:varTypeHints}{ See \cref{sec:varTypeHints}.}%
 }%
 }%
 %
@@ -353,7 +356,7 @@ name={UTF-8},%
 description={%
 The \acrfull{UTF8} is one standard for encoding \pgls{unicode} characters into a binary format that can be stored in files~\cite{Y2003UATFOI1,ISOIEC106462020ITUCCSU}. %
 It is the world wide web's most commonly used character encoding, where each character is represented by one to four bytes. %
-It is backwards compatible with ASCII~(see~\cref{sec:unicodeChars}).%
+It is backwards compatible with ASCII\optionalRef{sec:unicodeChars}{~(see~\cref{sec:unicodeChars})}.%
 }%
 }%
 %
