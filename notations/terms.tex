@@ -45,7 +45,8 @@ The elements in the row are separated by a fixed delimiter, usually a comma~(\in
 \newglossaryentry{db}{%
 name={database},%
 description={%
-A \acrfull{DB} is an organized collection of structured information or data, typically stored electronically in a computer system.%
+A \acrfull{DB} is an organized collection of structured information or data, typically stored electronically in a computer system. %
+Databases are discussed in our book~\cite{databases}.%
 }%
 }%
 \protected\gdef\db{\pgls{db}}%%
@@ -267,6 +268,14 @@ In \python, the \pythonilIdx{re} module offers functionality work with regular e
 }%
 %
 %
+\newglossaryentry{rdb}{%
+name={relational database},%
+description={%
+A relational \pgls{db} is a \pgls{db} that organizes data into rows~(tuples, records) and columns~(attributes), which collectively form tables~(relations) where the data points are related to each other~\cite{I2021WIARDB,C1970ARMODFLSDB,SC1975OTPOARADI,T2018ISARD,H2016RDDAI,HM2024IMARD,databases}.%
+}%
+}%
+%
+%
 \newglossaryentry{significand}{%
 name={significand},%
 description={%
@@ -435,6 +444,7 @@ The \ensuremath{x}\nobreakdashes-axis is the horizontal axis of a two-dimensiona
 name={XML},%
 plural={XML},%
 description={%
+\sloppy%
 The \acrfull{XML} is a text-based language for storing and transporting of data~\cite{BPSMM2008EMLX1FE,K2019ITXJY,CH2013XFCAMLTMC}. %
 It allows you to define elements in the form \xmlil{<myElement myAttr="x">...text..</myElement>}. %
 Different from \pgls{csv}, elements in XML can be hierarchically nested, like~\textil{<a><b><c>test</c></b><b>bla</b></a>}, and thus easily represent tree structures. %
