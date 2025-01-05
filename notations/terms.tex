@@ -21,6 +21,16 @@ A breakpoint is a mark in a line of code in an~\pgls{IDE} at which the \debugger
 }%
 %
 %
+\newglossaryentry{C}{%
+text={\softwareStyle{C}},%
+name={C},%
+sort={C},%
+description={%
+is a programming language, which is very successful in system programming situations~\cite{ISOIEC98892017PLCWDOS,D2024MCFABAFITTCPL}.%
+}%
+}%
+%
+%
 \newglossaryentry{csv}{%
 name={CSV},%
 description={%
@@ -32,21 +42,39 @@ The elements in the row are separated by a fixed delimiter, usually a comma~(\in
 }%
 %
 %
+\newglossaryentry{db}{%
+name={database},%
+description={%
+A \acrfull{DB} is an organized collection of structured information or data, typically stored electronically in a computer system.%
+}%
+}%
+\protected\gdef\db{\pgls{db}}%%
+%
+%
+\newglossaryentry{dbms}{%
+name={database management system},%
+description={%
+A \acrfull{DBMS} is the software layer located between the user or application and the~\pgls{db}. %
+The \pgls{DBMS} allows the user/application to create, read, write, update, delete, and otherwise manipulate the data in the~\pgls{db}.%
+}%
+}%
+\protected\gdef\db{\pgls{dbms}}%%
+%
+%
+\newglossaryentry{dbs}{%
+name={database system},%
+description={%
+A \acrfull{DBS} is the combination of a \pgls{db} and a the corresponding \pgls{dbms}, i.e., basically, an installation of a \pgls{DBMS} on a computer together with one (or multiple) \pglspl{db}.%
+}%
+}%
+\protected\gdef\db{\pgls{dbms}}%%
+%
+%
 \newglossaryentry{docstring}{%
 name={docstring},%
 description={%
 Docstrings are special string constants in \python\ that contain documentation for modules or functions~\cite{PEP257}. %
 They must be delimited by~\pythonil{"""..."""}\pythonIdx{\textquotedbl\textquotedbl\textquotedbl\idxdots\textquotedbl\textquotedbl\textquotedbl}~\cite{PEP257,PEP8}.%
-}%
-}%
-%
-%
-\newglossaryentry{C}{%
-text={\softwareStyle{C}},%
-name={C},%
-sort={C},%
-description={%
-is another programming language, which is very successful in system programming situations~\cite{ISOIEC98892017PLCWDOS,D2024MCFABAFITTCPL}.%
 }%
 }%
 %
@@ -412,6 +440,16 @@ It allows you to define elements in the form \xmlil{<myElement myAttr="x">...tex
 Different from \pgls{csv}, elements in XML can be hierarchically nested, like~\textil{<a><b><c>test</c></b><b>bla</b></a>}, and thus easily represent tree structures. %
 XML is one of most-used data interchange formats. %
 To process XML in \python, use the \pythonilIdx{defusedxml} library~\cite{H2021D0XBPFPSM}, as it protects against several security issues.%
+}%
+}%
+%
+\newglossaryentry{yaml}{
+name={YAML},%
+plural={YAML},%
+description={%
+\acrfull{YAML} is a human-friendly data serialization language for all programming languages~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}. %
+It is widely used for configuration files in the DevOps environment. %
+See \url{https://yaml.org} for more information.%
 }%
 }%
 %
