@@ -1,8 +1,7 @@
 #!/bin/bash -
 
 ## Make a set of slides
-# $1 book title
-# $2 book base URL
+# $1 the slide set to make
 
 # strict error handling
 set -o pipefail  # trace ERR through pipes
