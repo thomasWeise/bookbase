@@ -18,11 +18,12 @@
 %% Print the best practices
 %% #1 The text to be prepended.
 \gdef\printBestPractices#1{%
+\ifx\@bestPractices\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{%
 \chapter*{Best Practices}%
 \pdfbookmark{Best Practices}{Best Practices}%
 #1\medskip
 
-\@bestPractices%
+\@bestPractices}%
 }%
 %
 %
@@ -47,10 +48,11 @@
 %% Print the useful tools
 %% #1 The text to be prepended.
 \gdef\printUsefulTools#1{%
+\ifx\@usefulTools\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{%
 \chapter*{Useful Tools}%
 \pdfbookmark{Useful Tools}{Useful Tools}%
 #1\medskip
 
-\@usefulTools%
+\@usefulTools}%
 }%
 %
