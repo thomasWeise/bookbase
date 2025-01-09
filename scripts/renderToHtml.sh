@@ -45,4 +45,7 @@ websiteText="${websiteText//"\"$baseUrl/"/"\"./"}"
 websiteText="${websiteText//"=$baseUrl"/"=."}"
 echo "$websiteText" > "$outFile"
 
+echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now rendering table of contents."
+"$PYTHON_INTERPRETER" "$scriptDir/createHtmlToc.py" "$outFile"
+
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Done rendering '$inFile' to '$outFile'."

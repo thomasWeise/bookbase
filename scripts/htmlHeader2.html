@@ -22,14 +22,25 @@ body {
 div.document {
     text-align: center;
     margin: 0 auto;
-    max-width: min(25cm, 70em);
+    max-width: min(40cm, 115em);
 }
-div.body {
+div.toc {
     background-color: white;
     margin: 5px;
+    float: left;
     border: 1px solid #ccc;
     text-align: left;
     padding: 0.5em 0.5em 0.5em 0.5em;
+    max-width: min(7cm, 20em);
+}
+div.content {
+    background-color: white;
+    margin: 5px;
+    float: left;
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    max-width: min(25cm, 70em);
 }
 p {
     margin: 0.8em 0 0.5em 0;
@@ -119,5 +130,5 @@ pre {
 }
 </style>
 <body style="margin-left:5%;margin-right:5%">
-<div class="document"><div class="body">
+<div class="document"><div class="body">${toc}<div class="content">
 <div>
