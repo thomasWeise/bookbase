@@ -41,6 +41,16 @@ This allows you to find errors in the code more easily~\cite{W2024PME,A2002D,R20
 }%
 \protected\gdef\debugger{\pgls{debugger}}%
 %
+\newglossaryentry{lampStack}{%
+text={\softwareStyle{LAMP} Stack},%
+name={LAMP Stack},%
+sort={LAMP Stack},%
+description={%
+A system setup for web applications: \linux, Apache (a webserver), \mysql, and the server-side scripting language PHP~\cite{C2022HAFTLS,H2020ULU2E}.%
+}%
+}%
+\protected\gdef\lampStack{\pgls{lampStack}}%
+%
 %
 \newglossaryentry{linux}{%
 text={\softwareStyle{Linux}},%
@@ -48,12 +58,24 @@ name={Linux},%
 sort={Linux},%
 description={%
 is the leading open source operating system, i.e., a free alternative for \windows~\cite{T1999TLE,B2022ELATCL,H2022LML,SFLR2009LIAN,VV2022LF}. %
-Its variant \ubuntu\ is particularly easy to use and install. %
 We recommend using it for this course, for software development, and for research. %
-Learn more at \url{https://www.linux.org}.%
+Learn more at \url{https://www.linux.org}. %
+Its variant \ubuntu\ is particularly easy to use and install.%
 }%
 }%
 \protected\gdef\linux{\pgls{linux}}%
+%
+%
+\newglossaryentry{mariadb}{%
+text={\softwareStyle{MariaDB}},%
+name={MariaDB},%
+sort={MariaDB},%
+description={%
+An open source \pgls{rdb} management system that has forked off from \mysql~\cite{R2014MM,B2019LTMEELFFSAA,D2015LMAM,AA2018QAWMV1ITSQ,AA2018QAWMV2IDQ}. %
+See \url{https://mariadb.org} for more information.%
+}%
+}%
+\protected\gdef\mariadb{\pgls{mariadb}}%
 %
 %
 \newglossaryentry{matplotlib}{%
@@ -93,6 +115,19 @@ Learn more at \url{https://github.com/python/mypy}\optionalRef{sec:variableTypes
 \protected\gdef\mypy{\pgls{mypy}}%
 %
 %
+\newglossaryentry{mysql}{%
+text={\softwareStyle{MySQL}},%
+name={MySQL},%
+sort={MySQL},%
+description={%
+An open source \pgls{rdb} management system~\cite{WAM2002MRMDFTS,TA2024DDAMWPAM,BT2021HPM,RGS2021BTOTONAMDFPC,D2015LMAM}. %
+\mysql\ is famous for its use in the \pgls{lampStack}. %
+See \url{https://www.mysql.com} for more information.%
+}%
+}%
+\protected\gdef\mysql{\pgls{mysql}}%
+%
+%
 \newglossaryentry{numpy}{%
 text={\softwareStyle{NumPy}},%
 name={NumPy},%
@@ -129,6 +164,18 @@ Learn more at \url{https://packaging.python.org/installing}.%
 }%
 }%
 \protected\gdef\pip{\pgls{pip}}%
+%
+%
+\newglossaryentry{postgresql}{%
+text={\softwareStyle{PostgreSQL}},%
+name={PostgreSQL},%
+sort={PostgreSQL},%
+description={%
+An open source object-relational \pgls{dbms}~\cite{TA2024DDAMWPAM,FP2023LP,OH2017PUAR,B2024PELUYDW}.%
+See \url{https://postgresql.org} for more information.%
+}%
+}%
+\protected\gdef\postgresql{\pgls{postgresql}}%
 %
 %
 \newglossaryentry{pycharm}{%
@@ -272,7 +319,7 @@ text={\softwareStyle{Ubuntu}},%
 name={Ubuntu},%
 sort={Ubuntu},%
 description={%
-is a variant of the open source operating system \linux~\cite{CN2020ULB}. %
+is a variant of the open source operating system \linux~\cite{CN2020ULB,H2020ULU2E}. %
 We recommend that you use this operating system to follow this class, for software development, and for research. %
 Learn more at \url{https://ubuntu.com}. %
 If you are in China, you can download it from \expandafter\url{\ubuntuDownloadUrl}.%
