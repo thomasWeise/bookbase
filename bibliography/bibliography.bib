@@ -1,4 +1,5 @@
 @string { and = " and " }
+@string { andothers = and # "others" }
 @string { addr_sep = "{:~}" }
 
 %% months
@@ -632,6 +633,7 @@
 @string { l_usa_cambridge = "{{Cambridge}, {MA}, {USA}}" }
 @string { l_usa_centennial = "{{Centennial}, {CO}, {USA}}" }
 @string { l_usa_champaign = "{{Champaign}, {IL}, {USA}}" }
+@string { l_usa_charlotte = "{{Charlotte}, {NC}, {USA}}" }
 @string { l_usa_chicago = "{{Chicago}, {IL}, {USA}}" }
 @string { l_usa_cedar_rapids = "{{Cedar Rapids}, {IA}, {USA}}" }
 @string { l_usa_cincinnati = "{{Cincinnati}, {OH}, {USA}}" }
@@ -718,6 +720,7 @@
 @string { p_hefei_university_school_ai = p_hefei_university # ", School of Artificial Intelligence and Big Data~(\zh{人工智能与大数据学院})" }
 @string { p_hefei_university_iao = p_hefei_university_school_ai # ", Institute of Applied Optimization~(\zh{应用优化研究所}, IAO)" }
 @string { p_hiroshima_university_dep_ie = "{Department of Information Engineering, Hiroshima University}" }
+@string { p_hwaci = "{Hipp, Wyrick \& Company,~Inc.~{(Hwaci)}}" }
 @string { p_ibm = "{International Business Machines Corporation~{(IBM)}}" }
 @string { p_ibm_press = "{{IBM} Press}" }
 @string { p_iec = "{International Electrotechnical Commission~{(IEC)}}" }
@@ -844,6 +847,7 @@
 @string { pa_hefei_university_school_ai = pa_hefei_university }
 @string { pa_hefei_university_iao = pa_hefei_university_school_ai }
 @string { pa_hiroshima_university_dep_ie = l_japan_higashi_hiroshima }
+@string { pa_hwaci = l_usa_charlotte }
 @string { pa_ibm = l_usa_armonk }
 @string { pa_ibm_press = l_usa_indianapolis }
 @string { pa_ieee = l_usa_piscataway }
@@ -2502,6 +2506,26 @@
  pages = {357--362},
  date = {2020},
  doi = {10.1038/S41586-020-2649-2},
+}
+
+@book{HO2023WKUOS,
+ author = a_hipp_d_richard # andothers,
+ title = {Well-Known Users of \sqlite},
+ date = {2023-01-02},
+ publisher = p_hwaci,
+ address = pa_hwaci,
+ url = {https://www.sqlite.org/famous.html},
+ urldate = {2025-01-12}
+}
+
+@book{HO2024HSIT,
+ author = a_hipp_d_richard # andothers,
+ title = {How \sqlite\ Is Tested},
+ date = {2024-03-13},
+ publisher = p_hwaci,
+ address = pa_hwaci,
+ url = {https://sqlite.org/testing.html},
+ urldate = {2025-01-12},
 }
 
 @article{HS2013THAGOID,
