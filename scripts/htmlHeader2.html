@@ -1,12 +1,38 @@
 </title>
 <style>
-code {
-    background-color:rgb(204 210 95 / 0.3);
-    white-space:nowrap;
-    border-radius:3px;
-    background-color: #F2F2F2;
-    border-bottom: 1px solid #ddd;
-    color: #333;
+@media only screen and (orientation: portrait) {
+    body {
+        padding: max(0.2em, 2px)
+    }
+    div.document {
+        max-width: min(98%, 98vw);
+    }
+    div.content {
+        padding: 0.5em;
+        margin: max(1px, 0.1em);
+        max-width: min(98%, 97vw);
+    }
+    div.toc {
+        margin: max(1em, 5px);
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        font-size: 105%;
+        padding: max(0.2em, 2px) max(2em, 40px, 5%);
+    }
+    div.document {
+        max-width: min(40cm, 115em, 98%);
+        margin: 0 auto;
+    }
+    div.content {
+        padding: 0.5em 1em;
+        margin: max(1em, 5px);
+    }
+    div.toc {
+        margin: max(1em, 5px) 2em 2em max(1em, 5px);
+    }
 }
 
 body {
@@ -16,62 +42,45 @@ body {
     text-align: center;
     background-color: #ebf5fb;
     color: black;
+    max-width: 99vw;
 }
 
 div.document {
     text-align: center;
-    margin: 0 auto;
+}
+
+div.content {
+    background-color: white;
+    float: left;
+    border: 1px solid #ccc;
+    text-align: left;
 }
 
 div.toc {
     background-color: #ebf5fb;
-    margin: max(1em, 5px) 2em 2em max(1em, 5px);
     float: left;
     border: 1px solid #ccc;
+    outline: max(4px, 0.2em) solid white;
     text-align: left;
     padding: 0.6em;
     max-width: max(25%, min(8cm, 22em));
 }
 
-div.content {
-    background-color: white;
-    margin: max(1em, 5px);
-    float: left;
-    border: 1px solid #ccc;
-    text-align: left;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-}
-
-@media only screen and (orientation: portrait) {
-    body {
-        font-size: max(18px, 1.25em);
-        padding: max(0.2em, 2px)
-    }
-    div.document {
-        max-width: 98%;
-    }
-    div.content {
-        padding: 0.5em;
-        max-width: 99%;
-    }
-}
-
-@media only screen and (orientation: landscape) {
-    body {
-        padding: max(0.2em, 2px) max(2em, 40px, 5%);
-    }
-    div.document {
-        max-width: min(40cm, 115em, 98%);
-    }
-    div.content {
-        padding: 0.5em 1em;
-    }
+code {
+    background-color:rgb(204 210 95 / 0.3);
+    white-space:nowrap;
+    border-radius:3px;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    max-width: 99%;
 }
 
 ul.toc {
   list-style-position: inside;
   margin: min(2px, 0.2em);
   padding: 0;
+  max-width: 99%;
 }
 
 li.toc {
@@ -104,7 +113,7 @@ h1, h2, h3 {
 h1 {
     margin: 0;
     padding: 0.7em 0 0.3em 0;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 h2 {
@@ -151,7 +160,8 @@ div.date {
   text-align:right;
   font-size:85%;
   padding-right:0.6em;
-  padding-top:0.2em
+  padding-top:0.2em;
+  max-width: 99%;
 }
 
 pre {
@@ -164,6 +174,8 @@ pre {
     padding: 0.5em;
     border-right: 5px solid #ccc;
     border-left: 5px solid #ccc;
+    max-width: 99%;
+    overflow: scroll;
 }
 </style>
 <body>
