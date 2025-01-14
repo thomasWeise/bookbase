@@ -559,6 +559,7 @@
 @string { a_vetterling_william_t = "William T.\ Vetterling" }
 @string { a_virtanen_pauli = "Pauli Virtanen" }
 @string { a_vizcaino_juan_antonio = "Juan Antonio Vizca{\'i}no" }
+@string { a_voorhis_dave = "Dave Voorhis" }
 @string { a_vyssotsky_victor_a = "Victor A.\ Vyssotsky" }
 @string { a_wallach_hanna_m = "Hanna M.\ Wallach" }
 @string { a_wang_rui = "Rui Wang" }
@@ -607,6 +608,7 @@
 @string { l_australia_hobart = "{{Hobart}, {TAS}, {Australia}}" }
 @string { l_australia_sydney = "{{Sydney}, {NSW}, {Australia}}" }
 @string { l_austria_laxenburg = "{{Laxenburg}, {Austria}}" }
+@string { l_canada_brandon = "{{Brandon}, {MB}, {Canada}}" }
 @string { l_canada_halifax = "{{Halifax}, {NS}, {Canada}}" }
 @string { l_canada_oakville = "{{Oakville}, {ON}, {Canada}}" }
 @string { l_canada_toronto = "{{Toronto}, {ON}, {Canada}}" }
@@ -679,6 +681,7 @@
 @string { l_usa_los_alamitos = "{{Los Alamitos}, {CA}, {USA}}" }
 @string { l_usa_motvale = "{{Montvale}, {NJ}, {USA}}" }
 @string { l_usa_mountain_view = "{{Mountain View}, {CA}, {USA}}" }
+@string { l_usa_needham = "{{Needham}, {MA}, {USA}}" }
 @string { l_usa_new_york = "{{New York}, {NY}, {USA}}" }
 @string { l_usa_newton = "{{Newton}, {MA}, {USA}}" }
 @string { l_usa_philadelphia = "{{Philadelphia}, {PA}, {USA}}" }
@@ -709,6 +712,7 @@
 
 
 %% publishers
+@string { p_aacs = "{Armchair Airlines Computer Services~{(AACS)}~Inc.}" }
 @string { p_aci_learning = "{{ACI} Learning}" }
 @string { p_acm = "{Association for Computing Machinery~({ACM})}" }
 @string { p_active_state = "{ActiveState Software~Inc.}" }
@@ -739,6 +743,7 @@
 @string { p_elsevier = "{Elsevier~B.V.}" }
 @string { p_encyclopaedia_britannica_inc = "{Encyclop{\ae}dia Britannica,~Inc.}" }
 @string { p_for_dummies = "For Dummies" }
+@string { p_foundry = "{Foundry (formerly~{IDG} Communications,~Inc.)}" }
 @string { p_freie_universitat_berlin = "{Freie Universit{\"a}t Berlin}" }
 @string { p_geeksforgeeks = "{GeeksforGeeks -- Sanchhaya Education Private Limited}" }
 @string { p_github = "{\github~Inc}" }
@@ -839,6 +844,7 @@
 
 
 %% publisher addresses
+@string { pa_aacs = l_canada_brandon }
 @string { pa_aci_learning = l_usa_centennial }
 @string { pa_acm = l_usa_new_york }
 @string { pa_active_state = l_canada_vancouver }
@@ -869,6 +875,7 @@
 @string { pa_elsevier = l_netherlands_amsterdam }
 @string { pa_encyclopaedia_britannica_inc = l_usa_chicago }
 @string { pa_for_dummies = l_usa_hoboken }
+@string { pa_foundry = l_usa_needham }
 @string { pa_freie_universitat_berlin = l_germany_berlin }
 @string { pa_geeksforgeeks = l_india_noida}
 @string { pa_github = l_usa_san_francisco }
@@ -1025,6 +1032,13 @@
  publisher = p_ieee,
  address = pa_ieee,
  issn = {1521-9615},
+}
+
+@xdata{j_cw,
+ journal = {Computerworld},
+ publisher = p_foundry,
+ address = pa_foundry,
+ issn = {0010-4841},
 }
 
 @xdata{j_d,
@@ -1810,6 +1824,24 @@
  doi = {10.1145/362384.362685},
  url = {https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf},
  urldate = {2025-01-05},
+}
+
+@article{C1985DYDRBTR,
+ author = a_codd_edgar_frank,
+ title = {Does your \acrshort{DBMS} run by the rules?},
+ xdata = {j_cw},
+ date = {1985-10-21},
+ volume = {19},
+ pages = {49},
+}
+
+@article{C1985IYDRR,
+ author = a_codd_edgar_frank,
+ title = {Is your \acrshort{DBMS} really relational?},
+ xdata = {j_cw},
+ date = {1985-10-14},
+ volume = {19},
+ pages = {ID1},
 }
 
 @article{C2002LFLHADWTDM,
@@ -4270,7 +4302,7 @@
 }
 
 @inbook{S2024DTHOD,
- crossref = {2024D},
+ crossref = {S2024D},
  title = {The History of \glslink{db}{Databases}},
  url = {https://dbs.academy.lv/lection/dbs_LS02ENa_hist.pdf},
  urldate = {2025-01-11},
@@ -4531,6 +4563,17 @@
  address = pa_usas,
  url = {https://www.sensitiveresearch.com/Archive/CharCodeHist/Files/CODES%20standards%20documents%20ASCII%20Sean%20Leonard%20Oct%202015/ASCII%2068,%20X3.4-1967.pdf},
  urldate = {2024-07-26}
+}
+
+@book{V2019CTR,
+ author = a_voorhis_dave,
+ title = {Codd's Twelve Rules},
+ date = {2019-06-30},
+ publisher = p_aacs,
+ address = pa_aacs,
+ url = {https://reldb.org/c/index.php/twelve-rules},
+ urldate = {2025-01-14},
+ addendum = {Reprints~\cite{C1985IYDRR,C1985DYDRBTR}},
 }
 
 @article{VGOHRCBPWBvdWBWMMNJKLCPFMVLPCHQHARPvMS2020SFAFSCIP,

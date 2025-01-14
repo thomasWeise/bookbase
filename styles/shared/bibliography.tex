@@ -69,7 +69,7 @@ URL\addcolon\space%
 \renewbibmacro*{issue+date}{}%
 \renewbibmacro*{note+pages}{%
 \setunit{\addcomma\addspace}%
-\usebibmacro{date}}%
+\usebibmacro{date}\newunit\newblock\printfield{note}}%
 %
 \DeclareFieldFormat[article]{pages}{#1}
 %
@@ -96,3 +96,53 @@ URL\addcolon\space%
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/bibliography.tex}%
 }{}%
+%
+%%% Also print publisher and publisher's address for journal articles
+%% Warning: This overwrites any `note` field.
+% We transform all article records and put the "address:~publisher"
+% in front of the original note, if any.
+% This means that we can only use note fields with articles.
+\DeclareSourcemap{%
+\maps[datatype=bibtex]{%
+\map[overwrite]{%
+%
+%% Resolve publisher in xdata records and pre-pend to note
+% We only work on xdata records that start with "j_", because
+% in our bibliography, these and only these identify journals.
+\pertype{xdata}%
+\step[fieldset=entrykey, match=\regexp{\Aj_[a-z].*}, final]%
+\step[fieldsource=note, fieldtarget=___tmp___bib]%
+\step[fieldset=note, null]%
+\step[fieldsource=publisher, final]%
+\step[fieldset=address, fieldvalue={:~}, appendstrict]%
+\step[fieldset=address, origfieldval, append]%
+\step[fieldsource=address, final]%
+\step[fieldset=note, origfieldval]%
+\step[fieldsource=___tmp___bib, final]%
+\step[fieldset=note, fieldvalue={. }, appendstrict]%
+\step[fieldset=note, origfieldval, append]%
+\step[fieldset=___tmp___bib, null]%
+\step[fieldset=publisher, null]%
+\step[fieldset=address, null]%
+}%
+%
+%% Resolve publisher in article records and pre-pend to note
+\map[overwrite]{%
+\pertype{article}%
+\step[fieldsource=note, fieldtarget=___tmp___bib]%
+\step[fieldset=note, null]%
+\step[fieldsource=publisher, final]%
+\step[fieldset=address, fieldvalue={:~}, appendstrict]%
+\step[fieldset=address, origfieldval, append]%
+\step[fieldsource=address, final]%
+\step[fieldset=note, origfieldval]%
+\step[fieldsource=___tmp___bib, final]%
+\step[fieldset=note, fieldvalue={. }, appendstrict]%
+\step[fieldset=note, origfieldval, append]%
+\step[fieldset=___tmp___bib, null]%
+\step[fieldset=publisher, null]%
+\step[fieldset=address, null]%
+}%
+}%
+}%
+%
