@@ -77,6 +77,18 @@ literate=%
 {∫}{{$\int$}}1%
 }%
 %
+%% Style for Bash shell commands
+\lstdefinestyle{bash_style}{%
+style=basic_style,%
+language=bash,%
+}%
+%
+%% Style for BAT shell commands
+\lstdefinestyle{bat_style}{%
+style=basic_style,%
+language=command.com,%
+}%
+%
 %% Style for Python
 \lstdefinestyle{python_style}{%
 style=basic_style,%
@@ -91,10 +103,10 @@ morestring=[s]{"""}{"""},%
 }%
 \lstset{style=python_style}%
 %
-%% Style for XML
-\lstdefinestyle{xml_style}{%
+%% Style for SQL commands
+\lstdefinestyle{sql_style}{%
 style=basic_style,%
-language=XML,%
+language=SQL,%
 }%
 %
 %% Style for Plain Text
@@ -132,24 +144,26 @@ emphstyle={[8]\@lstbasicstyle},%
 breaklines=true%
 }%
 %
-%% Style for Bash shell commands
-\lstdefinestyle{bash_style}{%
-style=basic_style,%
-language=bash,%
-}%
-%
-%% Style for BAT shell commands
-\lstdefinestyle{bat_style}{%
-style=basic_style,%
-language=command.com,%
-}%
-%
 %% Style for Tool Output
 \lstdefinestyle{tool_style}{%
 style=text_style,%
 morecomment=[f][\color{listing-tool-command}][0]{\$ },
 morecomment=[f][\color{listing-tool-result}][0]{\# },
 breaklines=true%
+}%
+%
+%% Style for Tool Output
+\lstdefinestyle{tool_style_sql}{%
+style=sql_style,%
+morecomment=[f][\color{listing-tool-command}][0]{\$ },
+morecomment=[f][\color{listing-tool-result}][0]{\# },
+breaklines=true%
+}%
+%
+%% Style for XML
+\lstdefinestyle{xml_style}{%
+style=basic_style,%
+language=XML,%
 }%
 %
 %
