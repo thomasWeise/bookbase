@@ -175,17 +175,9 @@ language=XML,%
 \mbox{\fcolorbox{listing-rule}{listing-background}{\mbox{#1}}}%
 \egroup}%
 %
-%% print some text inline
-%% #1 the optional args
-%% #2 the code to be printed inline
-\gdef\textil#1{%
-\inlinelistingbox{\lstinline[style=text_style]$#1$}}%
-%
-%% print some Python code inline
-%% #1 the optional args
-%% #2 the code to be printed inline
-\gdef\pythonil#1{%
-\inlinelistingbox{\lstinline[style=python_style]$#1$}}%
+%% Needed for plural inline styles
+\newlength\@lstbasicstylesheight%
+\settoheight{\@lstbasicstylesheight}{\mbox{\bgroup\@lstbasicstyle{s}\egroup}}%
 %
 %% print some Bash code inline
 %% #1 the optional args
@@ -199,15 +191,11 @@ language=XML,%
 \gdef\batil#1{%
 \inlinelistingbox{\lstinline[style=bat_style]$#1$}}%
 %
-%% print some xml inline
+%% print some Python code inline
 %% #1 the optional args
 %% #2 the code to be printed inline
-\gdef\xmlil#1{%
-\inlinelistingbox{\lstinline[style=xml_style]$#1$}}%
-%
-%% Needed for plural inline styles
-\newlength\@lstbasicstylesheight%
-\settoheight{\@lstbasicstylesheight}{\mbox{\bgroup\@lstbasicstyle{s}\egroup}}%
+\gdef\pythonil#1{%
+\inlinelistingbox{\lstinline[style=python_style]$#1$}}%
 %
 %% print some Python code inline with an 's' added for plural
 %% #1 the optional args
@@ -220,6 +208,24 @@ language=XML,%
 %% #2 the code to be printed inline
 \gdef\pythoniles#1{%
 \inlinelistingbox{\lstinline[style=python_style]$#1$\resizebox{!}{\@lstbasicstylesheight}{\color{darkgray}es}}}%
+%
+%% print some sql inline
+%% #1 the optional args
+%% #2 the code to be printed inline
+\gdef\sqlil#1{%
+\inlinelistingbox{\lstinline[style=sql_style]$#1$}}%
+%
+%% print some text inline
+%% #1 the optional args
+%% #2 the code to be printed inline
+\gdef\textil#1{%
+\inlinelistingbox{\lstinline[style=text_style]$#1$}}%
+%
+%% print some xml inline
+%% #1 the optional args
+%% #2 the code to be printed inline
+\gdef\xmlil#1{%
+\inlinelistingbox{\lstinline[style=xml_style]$#1$}}%
 %
 %
 %% A dunder method
