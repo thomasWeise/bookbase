@@ -31,6 +31,32 @@ is a programming language, which is very successful in system programming situat
 }%
 %
 %
+\newglossaryentry{client}{%
+text={client},%
+name={client},%
+sort={client},%
+description={%
+In a \pgls{clientServerArchitecture}, the \pgls{client} is a device or process that requests a service from the \pgls{server}. %
+It initiates the communication with the \pgls{server}, sends a request, and receives the response with the result of the request. %
+Typical examples for \pglspl{client} are web browsers in the internet as well as \pglspl{client} for \pglspl{dbms}, such as \psql.%
+}%
+}%
+%
+%
+\newglossaryentry{clientServerArchitecture}{%
+text={\pgls{client}\nobreakdashes-\pgls{server} architecture},%
+name={client-server architecture},%
+sort={client-server architecture},%
+description={%
+is a system design where a central \pgls{server} receives requests from one or multiple \pglspl{client}~\cite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBLGGCH2025CSA}. %
+These requests and responses are usually sent over network connections. %
+A typical example for such a system is the world wide web~(WWW), where web \pglspl{server} host websites and make them available to web browsers, the \pglspl{client}. %
+Another typical example is the structure of \pgls{db} software, where a central \pgls{server}, the \pgls{dbms}, offers access to the \pgls{db} to the different \pglspl{client}. %
+Here, the \pgls{client} can be some \pgls{terminal} software shipping with the \pgls{DBMS}, such as \psql, or the different applications that access the \pglspl{db}.%
+}%
+}%
+%
+%
 \newglossaryentry{csv}{%
 name={CSV},%
 description={%
@@ -208,6 +234,15 @@ description={%
 }%
 %
 %
+\newglossaryentry{locale}{%
+name={locale},%
+description={%
+A \pgls{locale} corresponds basically to a selection of country or culture for a system or application~\cite{J2024L}. %
+The \pgls{locale} then determines a set of country- or culture-dependent settings, such as the text represention for money or dates, or what decimal separators are used.%
+}%
+}%
+%
+%
 \newglossaryentry{numerator}{%
 name={numerator},%
 description={%
@@ -279,6 +314,20 @@ In \python, the \pythonilIdx{re} module offers functionality work with regular e
 name={relational database},%
 description={%
 A relational \pgls{db} is a \pgls{db} that organizes data into rows~(tuples, records) and columns~(attributes), which collectively form tables~(relations) where the data points are related to each other~\cite{I2021WIARDB,C1970ARMODFLSDB,SC1975OTPOARADI,T2018ISARD,H2016RDDAI,HM2024IMARD,databases}.%
+}%
+}%
+%
+%
+\newglossaryentry{server}{%
+text={server},%
+name={server},%
+sort={server},%
+description={%
+In a \pgls{clientServerArchitecture}, the \pgls{server} is a process that fulfills the requests of the \pglspl{client}. %
+It usually waits for incoming communication carring the requests from the \pglspl{client}. %
+For each request, it takes the necessary actions, performs the required computations, and then sends a response with the result of the request. %
+Typical examples for \pglspl{server} are web servers~\cite{C2022HAFTLS} in the internet as well as \pglspl{dbms}. %
+It is also common to refer to the computer running the \pgls{server} processes as \pgls{server} as well, i.e., to call it the \inQuotes{\pgls{server} computer~\cite{L2022MUS}.}%
 }%
 }%
 %
