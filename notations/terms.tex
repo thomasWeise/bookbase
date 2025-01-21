@@ -238,7 +238,9 @@ description={%
 name={locale},%
 description={%
 A \pgls{locale} corresponds basically to a selection of country or culture for a system or application~\cite{J2024L}. %
-The \pgls{locale} then determines a set of country- or culture-dependent settings, such as the text represention for money or dates, or what decimal separators are used.%
+The \pgls{locale} then determines a set of country- or culture-dependent settings, such as the text representation for money or dates, or what decimal separators are used.%
+A good example is, for example, that American English readers will interpret the date~7/4/2000 as July~4th, 2000, whereas British English readers will read this as the 7th~of April, 2000~\cite{CDE2025D}. %
+It is therefore important that software printing dates knows whether it is running on an American or British English~PC.%
 }%
 }%
 %
@@ -297,6 +299,17 @@ A \python\ package is basically a directory containing \python\ files. %
 This allows us to group functionality together as a library that can be used by different applications. %
 Many popular \python\ packages are offered as open source at \pgls{pypi} and can be installed with~\pip.%
 \optionalRef{sec:pipAndVenv}{ We discuss this in \cref{sec:pipAndVenv}.}%
+}%
+}%
+%
+%
+\newglossaryentry{port}{%
+name={port},%
+description={%
+A \pgls{port} in networking is a software-defined number associated to a network protocol that receives or transmits communication for a specific service~\cite{KR2020CNATDA}. %
+In the \pgls{clientServerArchitecture}, the \pgls{server} listens for incoming communication connections at a specific \pgls{port}. %
+The \pglspl{client} connect to the network address and \pgls{port} number of the \pgls{server} to establish such connections. %
+\Pgls{port} numbers range from~0 to~65535, where the \pgls{port} numbers from~0 to~1023 are so-called well-known ports corresponding to the most common services, e.g., HTTP, the protocol underpinning of the WWW, uses normally port~80.%
 }%
 }%
 %
