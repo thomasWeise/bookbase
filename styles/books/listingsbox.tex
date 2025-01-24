@@ -185,28 +185,30 @@ $\downarrow$~~\expandafter\bashil{python3 #3}~~$\downarrow$%
 %% #2 the path to the directory
 %% #3 the path to the file inside the directory
 %% #4 the database to invoke it on, if any
-%% #5 the script to invoke
-%% #6 the label (lst: will be prepended to the program, exec: will be
+%% #5 the user to use
+%% #6 the password, if any
+%% #7 the script to invoke
+%% #8 the label (lst: will be prepended to the program, exec: will be
 %%    pre-pended to the output)
-%% #7 the caption
-\protected\gdef\gitSQLAndOutput#1#2#3#4#5#6#7{%
-\expandafter\expandafter\expandafter\edef\expandafter\csname @gitSQLAndOutputFormat:exec:#6\endcsname{\@gitSQLAndOutputFormat}%
+%% #9 the caption
+\protected\gdef\gitSQLAndOutput#1#2#3#4#5#6#7#8#9{%
+\expandafter\expandafter\expandafter\edef\expandafter\csname @gitSQLAndOutputFormat:exec:#8\endcsname{\@gitSQLAndOutputFormat}%
 \gitSQLAndOutputFormatDefault%
 %
 \gitLoad{#1}{#2/#3}{}%
-\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitUrl:lst:#6\endcsname{\gitUrl}%
-\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitFile:lst:#6\endcsname{\gitFile}%
-\gitExec{#1}{.}{_scripts_/#5 #2 #3 #4}%
-\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitFile:exec:#6\endcsname{\gitFile}%
+\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitUrl:lst:#8\endcsname{\gitUrl}%
+\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitFile:lst:#8\endcsname{\gitFile}%
+\gitExec{#1}{.}{_scripts_/#7 #2 #3 #4 #5 #6}%
+\expandafter\expandafter\expandafter\edef\expandafter\csname @pwp@gitFile:exec:#8\endcsname{\gitFile}%
 %
 \begin{figure}[tb]%
 \centering%
-\lstinputlisting[label={lst:#6},style=sql_style,caption={#7~(stored in file~\href{\csname @pwp@gitUrl:lst:#6\endcsname}{\textil{#3}}; output in~\cref{exec:#6})}]{\csname @pwp@gitFile:lst:#6\endcsname}%
+\lstinputlisting[label={lst:#8},style=sql_style,caption={#9~(stored in file~\href{\csname @pwp@gitUrl:lst:#8\endcsname}{\textil{#3}}; output in~\cref{exec:#8})}]{\csname @pwp@gitFile:lst:#8\endcsname}%
 %
 \medskip%
 %
-\edef\@@@@gitOutputFmt{\csname @gitSQLAndOutputFormat:exec:#6\endcsname}%
-\lstinputlisting[label={exec:#6},style=\@@@@gitOutputFmt,caption={The \gls{stdout} resulting from the \sql\ statements in~\href{\csname @pwp@gitUrl:lst:#6\endcsname}{\textil{#3}} given in~\cref{lst:#6}.}]{\csname @pwp@gitFile:exec:#6\endcsname}%
+\edef\@@@@gitOutputFmt{\csname @gitSQLAndOutputFormat:exec:#8\endcsname}%
+\lstinputlisting[label={exec:#8},style=\@@@@gitOutputFmt,caption={The \gls{stdout} resulting from the \sql\ statements in~\href{\csname @pwp@gitUrl:lst:#8\endcsname}{\textil{#3}} given in~\cref{lst:#8}.}]{\csname @pwp@gitFile:exec:#8\endcsname}%
 \end{figure}%
 }%
 %
