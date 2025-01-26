@@ -13,10 +13,6 @@
 \makeindex%
 %
 \makeindex[name={sql},title={SQL Commands},intoc,columns=3]%
-%
-%% dots without end-of-sentence spacing at the end
-\protected\gdef\idxdots{%
-.\kern\fontdimen3\font%
-.\kern\fontdimen3\font%
-.\@\strut}%
+\protected\gdef\sqlIdx#1{\index[sql]{#1}}%
+\protected\gdef\sqlilIdx#1{\index[sql]{#1}\sqlil{#1}}%
 %
