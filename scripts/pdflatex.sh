@@ -54,6 +54,7 @@ acnFile="$documentName.acn"
 acrFile="$documentName.acr"
 algFile="$documentName.alg"
 auxFile="$documentName.aux"
+blgFile="$documentName.blg"
 glgFile="$documentName.glg"
 gloFile="$documentName.glo"
 glsFile="$documentName.gls"
@@ -69,7 +70,7 @@ rm "$algFile" || true
 rm "$auxFile" || true
 rm "$documentName.bbl" || true
 rm "$documentName.bcf" || true
-rm "$documentName.blg" || true
+rm "$blgFile" || true
 rm "$documentName-blx.bib" || true
 rm "$documentName.dvi" || true
 rm "$documentName.ent" || true
@@ -150,7 +151,7 @@ while (("$additional" >= 0))  ; do
          [[ "$fileContents" = *"\\abx@aux@segm"* ]]; then
         auxName="${anyAuxFile%%.*}"
         echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File '$auxFile' contains citations, so we applying '$bibProgram' to '$auxName'."
-        "$bibProgram" --dieondatamodel --isbn-normalise --sortcase=false --sortupper=false "$auxName"
+        "$bibProgram" --dieondatamodel --isbn13 --isbn-normalise --sortcase=false --sortupper=false "$auxName"
         echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished applying '$bibProgram' to '$auxFile'."
       else
         echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File '$auxFile' does not contain any citation, so we do not apply '$bibProgram'."
@@ -281,7 +282,18 @@ if [ -f "$logFile" ] && [ "$draftArg" != "draft" ]; then
     latexWarningsCount=$((latexWarningsCount+1))
     latexWarningString="${latexWarningString}"$'\n'"${latexWarningsCount}. At least one floating object such as a table or figure is too large. Please fix them (check file $documentName.log for pattern 'Float too large for page')."
   fi
+fi
 
+if [ -f "$blgFile" ] ; then
+  fileContents="$(<$blgFile)"
+  if [[ "$fileContents" = *"INFO - WARNINGS: "* ]] ; then
+    latexWarningsCount=$((latexWarningsCount+1))
+    latexWarningString="${latexWarningString}"$'\n'"${latexWarningsCount}. ${bibProgram} reported warnings, look for 'INFO - WARNINGS: ' in $blgFile."
+  fi
+  if [[ "$fileContents" = *"INFO - ERRORS: "* ]] ; then
+    latexWarningsCount=$((latexWarningsCount+1))
+    latexWarningString="${latexWarningString}"$'\n'"${latexWarningsCount}. ${bibProgram} reported errors, look for 'INFO - ERRORS: ' in $blgFile."
+  fi
 fi
 
 if (("$latexWarningsCount" < 1)) ; then
@@ -303,7 +315,7 @@ rm "$algFile" || true
 rm "$auxFile" || true
 rm "$documentName.bbl" || true
 rm "$documentName.bcf" || true
-rm "$documentName.blg" || true
+rm "$blgFile" || true
 rm "$documentName-blx.bib" || true
 rm "$documentName.dvi" || true
 rm "$documentName.ent" || true
