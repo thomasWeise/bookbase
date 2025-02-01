@@ -9,7 +9,10 @@ set -o nounset   # set -u : exit the script if you try to use an uninitialized v
 set -o errexit   # set -e : exit the script if any statement returns a non-true return value
 
 # get the script directory
-scriptDir="$(dirname "$0")"
+scriptDir="$(readlink -f "$(dirname "$0")")"
+
+# get the inner script to invoke
+innerScript="${1:-}"
 
 # Find the Python interpreter.
 if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
@@ -72,6 +75,10 @@ pythonVersion="$("$PYTHON_INTERPRETER" --version 2>/dev/null | sed -n 's/.*Pytho
 pythonVersion="$(sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]][[:space:]][[:space:]]*/ /g' -e 's/\.*$//'<<<"${pythonVersion}")" || true
 if [ -n "$pythonVersion" ]; then
     echo "python: $pythonVersion"
+fi
+
+if [ -n "$innerScript" ]; then
+  "$innerScript" "${@:2}"
 fi
 
 latexgitPyVersion="$("$PYTHON_INTERPRETER" -m pip freeze 2>/dev/null | grep latexgit | sed -n 's/.*==*\([.0-9]*\)/\1/p')" || true
