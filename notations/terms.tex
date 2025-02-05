@@ -50,7 +50,7 @@ sort={client-server architecture},%
 description={%
 is a system design where a central \pgls{server} receives requests from one or multiple \pglspl{client}~\cite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBLGGCH2025CSA}. %
 These requests and responses are usually sent over network connections. %
-A typical example for such a system is the world wide web~(WWW), where web \pglspl{server} host websites and make them available to web browsers, the \pglspl{client}. %
+A typical example for such a system is the \gls{WWW}, where web \pglspl{server} host websites and make them available to web browsers, the \pglspl{client}. %
 Another typical example is the structure of \pgls{db} software, where a central \pgls{server}, the \pgls{dbms}, offers access to the \pgls{db} to the different \pglspl{client}. %
 Here, the \pgls{client} can be some \pgls{terminal} software shipping with the \pgls{DBMS}, such as \psql, or the different applications that access the \pglspl{db}.%
 }%
@@ -60,7 +60,7 @@ Here, the \pgls{client} can be some \pgls{terminal} software shipping with the \
 \newglossaryentry{csv}{%
 name={CSV},%
 description={%
-A very common and simple text format for exchanging tabular or matrix data is \acrfull{CSV}~\cite{S2005CFAMTFCSVCF}. %
+A very common and simple text format for exchanging tabular or matrix data is \acrfull{CSV}~\cite{RFC4180}. %
 Each row in the text file represents one row in the table or matrix. %
 The elements in the row are separated by a fixed delimiter, usually a comma~(\inQuotes{,}), sometimes a semicolon~(\inQuotes{;}). %
 \python\ offers some out-of-the-box \pgls{CSV} support in the \pythonilIdx{csv}~module~\cite{PSF2024CCFRAW}.%
@@ -238,7 +238,7 @@ JavaScript is the predominant programming language used in websites to develop i
 name={JSON},%
 sort={JSON},%
 description={%
-\acrfull{JSON} is a data interchange format~\cite{E2017SE4TJDIS,B2017TJONJDIF} based on \pgls{javascript}~\cite{E1999ELS} syntax.%
+\acrfull{JSON} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \pgls{javascript}~\cite{E1999ELS} syntax.%
 }%
 }%
 %
@@ -318,7 +318,7 @@ description={%
 A \pgls{port} in networking is a software-defined number associated to a network protocol that receives or transmits communication for a specific service~\cite{KR2020CNATDA}. %
 In the \pgls{clientServerArchitecture}, the \pgls{server} listens for incoming communication connections at a specific \pgls{port}. %
 The \pglspl{client} connect to the network address and \pgls{port} number of the \pgls{server} to establish such connections. %
-\Pgls{port} numbers range from~0 to~65535, where the \pgls{port} numbers from~0 to~1023 are so-called well-known ports corresponding to the most common services, e.g., HTTP, the protocol underpinning of the WWW, uses normally port~80.%
+\Pgls{port} numbers range from~0 to~65535, where the \pgls{port} numbers from~0 to~1023 are so-called well-known ports corresponding to the most common services, e.g., \gls{HTTP}, the protocol underpinning of the \gls{WWW}, uses normally port~80.%
 }%
 }%
 %
@@ -469,7 +469,7 @@ They are a basically a piece of documentation.%
 \newglossaryentry{utf8}{%
 name={UTF-8},%
 description={%
-The \acrfull{UTF8} is one standard for encoding \pgls{unicode} characters into a binary format that can be stored in files~\cite{Y2003UATFOI1,ISOIEC106462020ITUCCSU}. %
+The \acrfull{UTF8} is one standard for encoding \pgls{unicode} characters into a binary format that can be stored in files~\cite{RFC3629,ISOIEC106462020ITUCCSU}. %
 It is the world wide web's most commonly used character encoding, where each character is represented by one to four bytes. %
 It is backwards compatible with ASCII\optionalRef{sec:unicodeChars}{~(see~\cref{sec:unicodeChars})}.%
 }%
