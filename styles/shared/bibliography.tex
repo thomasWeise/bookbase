@@ -146,3 +146,15 @@ URL\addcolon\space%
 }%
 }%
 %
+%% Fix event date format to eventdate, venue.
+%%
+\renewbibmacro*{event+venue+date}{%
+\printfield{eventtitle}%
+\newunit%
+\printfield{eventtitleaddon}%%
+\newunit%
+\printeventdate%
+\setunit*{\addcomma\space}%
+\printfield{venue}%
+\newunit}%
+%

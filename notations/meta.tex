@@ -30,7 +30,7 @@
 %% Setting up document properties used in slides
 \gdef\insertauthoremail{\href{mailto:\authorEmail}{\authorEmail}}%
 \gdef\insertauthorweb{\href{\authorUrl}{\authorUrl}}%
-\author{\authorName~(\expandafter\zhb{\authorNameCN})}%
+\author{\authorName~(\expandafter\authorNameCN)}%
 \date{\today}%
 %
 \global\let\introSlide\relax%
@@ -41,11 +41,11 @@
 \protected\gdef\copyrightBlock#1{%
 \begin{flushleft}%
 Copyright~\textcopyright~#1\\[3pt]%
-\authorNamePrefix\href{\authorUrl}{\authorName}~(\expandafter\zhb{\authorNameCN\authorNameCNSuffix})\\%
-at the \groupName~(\expandafter\zhb{\groupNameCN}, \href{\groupUrl}{\groupAbbreviation})\\%
-of the \schoolName~(\href{\schoolUrlCN}{\expandafter\zhb{\schoolNameCN}})\\%
-of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\expandafter\zhb{\uniNameCN}}),\\%
-in \cityName~(\expandafter\zhb{\cityNameCN})\\[6pt]%
+\authorNamePrefix\href{\authorUrl}{\authorName}~(\expandafter\authorNameCN\authorNameCNSuffix)\\%
+at the \groupName~(\expandafter\groupNameCN, \href{\groupUrl}{\groupAbbreviation})\\%
+of the \schoolName~(\href{\schoolUrlCN}{\schoolNameCN})\\%
+of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\uniNameCN}),\\%
+in \cityName~(\cityNameCN)\\[6pt]%
 Contact me via email to \expandafter\href{mailto:\authorEmail}{\authorEmail}\ifx\relax\authorEmailB\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{ with CC to~\expandafter\href{mailto:\authorEmailB}{\authorEmailB}}.%
 \end{flushleft}%
 }%
