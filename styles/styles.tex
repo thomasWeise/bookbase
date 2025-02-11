@@ -4,7 +4,10 @@
 %%
 %
 %% These global settings make the PDF documents smaller.
-\pdfminorversion=7%
+%% \pdfminorversion=7 can be set in books, but for slides, you must
+%% place it *before* \documentclass.
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\pdfminorversion=7}{}%
 \pdfcompresslevel=9%
 \pdfobjcompresslevel=3%
 %
