@@ -2,38 +2,119 @@
 %%% The acronyms.
 %%%
 %
-\newacronym[description={an Application Programming Interface is a set of rules or protocols that enables one software application or component to use or communicate with another~\cite{G2024WIAA}}]{API}{API}{Application Programming Interface}%
+\newacronym[description={%
+An \emph{Application Programming Interface} is a set of rules or protocols that enables one software application or component to use or communicate with another~\cite{G2024WIAA}.%
+}]{API}{API}{Application Programming Interface}%
 \newacronym[description={Artificial Intelligence, see, e.g.,~\cite{RN2022AIAMA}}]{AI}{AI}{Artificial Intelligence}%
-\newacronym[description={Comma-Separated Values, see, e.g.,~\cite{PSF2024CCFRAW,RFC4180} and~\gls{csv}},sort={CSV}]{CSV}{\gls{csv}}{Comma-Separated Values}%
-\newacronym[description={database, see \gls{db}}]{DB}{DB}{database}%
-\newacronym[description={database administrator, see \gls{dba}}]{DBA}{DBA}{database administrator}%
-\newacronym[plural={DBMSes},description={database management system, see \gls{dbms}}]{DBMS}{DBMS}{database management system}%
-\newacronym[plural={DBSes},description={database system = \acrshort{DB}~+~\acrshort{DBMS}, see \gls{dbs}}]{DBS}{DBS}{database system}%
-\newacronym[plural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}}]{DS}{DS}{Data Science}%
-\newacronym{ERD}{ERD}{Entity Relationship Diagram}%
-\newacronym[plural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
-\newacronym{GUI}{GUI}{graphical user interface}%
-\newacronym{HR}{HR}{human resources department}%
-\newacronym[description={Hyper Text Transfer Protocol, the protocol linking web browsers to web servers in the \pgls{WWW}~\cite{BL1991RQOHL,RFC1945,RFC2068,RFC9110,G2017HP}}]{HTTP}{HTTP}{Hyper Text Transfer Protocol}%
-\newacronym[description={Hypertext Transfer Protocol Secure, i.e., an encrypted variant of~\pgls{HTTP} where data is sent over~\pgls{TLS}~\cite{RFC9110,S2021SCG2HTH}}]{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}%
-\newacronym[description={Integrated Development Environment, see \gls{ide}}]{IDE}{IDE}{Integrated Development Environment}%
-\newacronym[plural={JSON},description={JavaScript Object Notation, see \gls{json} and~\cite{E2017SE4TJDIS}},sort={JSON}]{JSON}{\gls{json}}{JavaScript Object Notation}%
-\newacronym[plural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning}%
-\newacronym[plural={OOP}]{OOP}{OOP}{object-oriented programming}%
-\newacronym[plural={OSes},description={Operating System, the system that runs your computer, see, e.g., \linux\ and \windows}]{OS}{OS}{Operating System}%
-\newacronym[plural={regexes},description={see \gls{regexp} and~\cite{K2024REH,PSF2024RREO,N2018RQSRUAURE,N2019AITRE}}]{regex}{regex}{regular expression}%
-\newacronym[plural={SQL},description={Structured Query Language, see \cite{C20245YOQ}}]{SQL}{SQL}{Structured Query Language}%
+%
+\newacronym[description={%
+\emph{Comma-Separated Values} is a very common and simple text format for exchanging tabular or matrix data~\cite{RFC4180}. %
+Each row in the text file represents one row in the table or matrix. %
+The elements in the row are separated by a fixed delimiter, usually a comma~(\inQuotes{,}), sometimes a semicolon~(\inQuotes{;}). %
+\python\ offers some out-of-the-box CSV support in the \pythonilIdx{csv}~module~\cite{PSF2024CCFRAW}.%
+},sort={CSV}]{csv}{CSV}{Comma-Separated Values}%
+%
+\newacronym[description={%
+A \emph{database} is an organized collection of structured information or data, typically stored electronically in a computer system. %
+Databases are discussed in our book \citetitle{databases}~\cite{databases}.%
+}]{db}{DB}{database}%
+\protected\gdef\db{\pgls{db}}%%
+%
+\newacronym[description={%
+A \emph{database administrator} is the person or group responsible for the effective use of database technology in an organization or enterprise.%
+}]{dba}{DBA}{database administrator}%
+%
+\newacronym[plural={DBMSes},description={%
+A \emph{database management system} is the software layer located between the user or application and the~\pgls{db}. %
+The DBMS allows the user/application to create, read, write, update, delete, and otherwise manipulate the data in the~\pgls{db}~\cite{YM2024DDMSD}.%%
+}]{dbms}{DBMS}{database management system}%
+\protected\gdef\db{\glslink{dbms}}%%
+%
+\newacronym[plural={DBSes},description={%
+A \emph{database system} is the combination of a \pgls{db} and a the corresponding \glslink{dbms}, i.e., basically, an installation of a \glslink{dbms} on a computer together with one (or multiple) \pglspl{db}. %
+DBS = \acrshort{db}~+~\acrshort{dbms}.%
+}]{dbs}{DBS}{database system}%
+%
+\newacronym[plural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
+\newacronym{ERD}{ERD}{Entity Relationship Diagram.}%
+\newacronym[plural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out.}%
+\newacronym{GUI}{GUI}{Graphical User Interface.}%
+\newacronym{HR}{HR}{Human Resources Department.}%
+\newacronym[description={Hyper Text Transfer Protocol, the protocol linking web browsers to web servers in the \pgls{WWW}~\cite{BL1991RQOHL,RFC1945,RFC2068,RFC9110,G2017HP}.}]{HTTP}{HTTP}{Hyper Text Transfer Protocol}%
+\newacronym[description={Hypertext Transfer Protocol Secure, i.e., an encrypted variant of~\pgls{HTTP} where data is sent over~\pgls{TLS}~\cite{RFC9110,S2021SCG2HTH}.}]{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}%
+\newacronym[description={Integrated Development Environment, see \gls{ide}}]{IDE}{IDE}{Integrated Development Environment.}%
+%
+\newacronym[plural={JSON},description={%
+\emph{JavaScript Object Notation} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \pgls{javascript}~\cite{E1999ELS} syntax.%
+},sort={JSON}]{json}{JSON}{JavaScript Object Notation}%
+%
+\newacronym[plural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning.}%
+\newacronym[plural={OOP}]{OOP}{OOP}{Object-Oriented Programming.}%
+\newacronym[plural={OSes},description={Operating System, the system that runs your computer, see, e.g., \linux\ and \windows.}]{OS}{OS}{Operating System}%
+%
+\newacronym[plural={regexes},description={%
+A \emph{Regular Expression}, often called \inQuotes{regex} for short, is a sequence of characters that define a search pattern for text strings~\cite{K2024REH,PSF2024RREO,N2018RQSRUAURE,N2019AITRE}. %
+In \python, the \pythonilIdx{re} module offers functionality work with regular expressions~\cite{K2024REH,PSF2024RREO}.%
+}]{regex}{regex}{regular expression}%
+%
+\newacronym[plural={SQL},description={Structured Query Language, see \cite{C20245YOQ}.}]{SQL}{SQL}{Structured Query Language}%
 \protected\gdef\sql{\pgls{SQL}}%
-\newacronym[plural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
-\newacronym[description={see \gls{stderrs} and~\cite{J2024PTOGBSI8IS12ESSSSIS}},sort={stderr}]{stderr}{\texttt{stderr}}{standard error stream}%
-\newacronym[description={see \gls{stdins} and~\cite{J2024PTOGBSI8IS12ESSSSIS}},sort={stdin}]{stdin}{\texttt{stdin}}{standard input stream}%
-\newacronym[description={see \gls{stdouts} and~\cite{J2024PTOGBSI8IS12ESSSSIS}},sort={stdout}]{stdout}{\texttt{stdout}}{standard output stream}%
-\newacronym[description={Transport Layer Security, a protol for encrypted communication over the internet~\cite{RFC8446,DS2024TCID,S2021SCG2HTH}, used by, e.g., \pgls{HTTPS}}]{TLS}{TLS}{Transport Layer Security}%
-\newacronym[plural={UCS},description={Universal Coded Character Set, see \gls{unicode}}]{UCS}{UCS}{Universal Coded Character Set}%
-\newacronym[description={Uniform Resource Locator, identifiers for resources in the \pgls{WWW}, most notable the text you write into web browsers to visit websites~\cite{RFC1738}}]{URL}{URL}{Uniform Resource Locator}%
-\newacronym[plural={UTF8},description={\acrshort{UCS}~Transformation Format~8, see \gls{utf8} and~\cite{Y2022PPADT,ISOIEC106462020ITUCCSU}},sort={UTF-8}]{UTF8}{\gls{utf8}}{\acrshort{UCS}~Transformation Format~8}%
-\newacronym[plural={VCSes},description={Version Control Systems, see \gls{vcs}}]{VCS}{\gls{vcs}}{Version Control Systems}%
-\newacronym[description={World Wide Web~\cite{BL1991RQOHL,DDD2011IWWWHTP}}]{WWW}{WWW}{World Wide Web}%
-\newacronym[plural={XML},description={Extensible Markup Language, see \gls{xml} and~\cite{BPSMM2008EMLX1FE,K2019ITXJY,CH2013XFCAMLTMC}},sort={XML}]{XML}{\gls{xml}}{Extensible Markup Language}%
-\newacronym[plural={YAML},description={{YAML}~Ain't Markup Language\texttrademark, see \gls{yaml} and~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}},sort={YAML}]{YAML}{\gls{yaml}}{{YAML}~Ain't Markup Language\texttrademark}%
+%
+\newacronym[plural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}.}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
+%
+\newacronym[description={%
+The \emph{standard error stream} is one of the three pre-defined streams of a console process (together with the \gls{stdin} and the \gls{stdout})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+It is the text stream to which the process writes information about errors and exceptions. %
+If an uncaught \pythonilIdx{Exception} is raised in \python\ and the program terminates, then this information is written to \pgls{stderr}. %
+If you run a program in a \pgls{terminal}, then the text that a process writes to its \pgls{stderr} appears in the console.%
+},sort={stderr}]{stderr}{\texttt{stderr}}{standard error stream}%
+%
+\newacronym[description={%
+The \emph{standard input stream} is one of the three pre-defined streams of a console process (together with the \pgls{stdout} and the \pgls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+It is the text stream from which the process reads its input text, if any. %
+The \python\ instruction \pythonilIdx{input} reads from this stream. %
+If you run a program in a \pgls{terminal}, then the text that you type into the terminal while the process is running appears in this stream.%
+},sort={stdin}]{stdin}{\texttt{stdin}}{standard input stream}%
+%
+\newacronym[description={%
+The \emph{standard output stream} is one of the three pre-defined streams of a console process (together with the \pgls{stdin} and the \pgls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+It is the text stream to which the process writes its normal output. %
+The \pythonilIdx{print} instruction of \python\ writes text to this stream. %
+If you run a program in a \pgls{terminal}, then the text that a process writes to its \pgls{stdout} appears in the console.%
+},sort={stdout}]{stdout}{\texttt{stdout}}{standard output stream}%
+%
+\newacronym[description={Transport Layer Security, a protol for encrypted communication over the internet~\cite{RFC8446,DS2024TCID,S2021SCG2HTH}, used by, e.g., \pgls{HTTPS}.}]{TLS}{TLS}{Transport Layer Security}%
+%
+\newacronym[plural={UCS},description={Universal Coded Character Set, see \gls{unicode}}]{UCS}{UCS}{Universal Coded Character Set.}%
+%
+\newacronym[description={Uniform Resource Locator, identifiers for resources in the \pgls{WWW}, most notable the text you write into web browsers to visit websites~\cite{RFC1738}.}]{URL}{URL}{Uniform Resource Locator}%
+%
+\newacronym[plural={UTF8},description={%
+The \emph{\acrshort{UCS}~Transformation Format~8} is one standard for encoding \pgls{unicode} characters into a binary format that can be stored in files~\cite{RFC3629,ISOIEC106462020ITUCCSU}. %
+It is the world wide web's most commonly used character encoding, where each character is represented by one to four bytes. %
+It is backwards compatible with ASCII\optionalRef{sec:unicodeChars}{~(see~\cref{sec:unicodeChars})}.%
+},sort={UTF-8}]{utf8}{UTF\nobreakdashes-8}{\acrshort{UCS}~Transformation Format~8}%
+%
+\newacronym[plural={VCSes},description={%
+A \emph{Version Control System} is a software which allows you to manage and preserve the historical development of your program code~\cite{T2024BGAGVCPMATFTND}. %
+A distributed VCS allows multiple users to work on the same code and upload their changes to the server, which then preserves the change history.
+The most popular distributed VCS is \pgls{git}. %
+}]{vcs}{VCS}{Version Control Systems}%
+%
+\newacronym[description={World Wide Web~\cite{BL1991RQOHL,DDD2011IWWWHTP}}]{WWW}{WWW}{World Wide Web.}%
+%
+\newacronym[plural={XML},description={%
+\sloppy%
+The \emph{Extensible Markup Language} is a text-based language for storing and transporting of data~\cite{BPSMM2008EMLX1FE,K2019ITXJY,CH2013XFCAMLTMC}. %
+It allows you to define elements in the form \xmlil{<myElement myAttr="x">...text..</myElement>}. %
+Different from \pgls{csv}, elements in XML can be hierarchically nested, like~\textil{<a><b><c>test</c></b><b>bla</b></a>}, and thus easily represent tree structures. %
+XML is one of most-used data interchange formats. %
+To process XML in \python, use the \pythonilIdx{defusedxml} library~\cite{H2021D0XBPFPSM}, as it protects against several security issues.%
+},sort={XML}]{xml}{XML}{Extensible Markup Language}%
+%
+\newacronym[plural={YAML},description={%
+\emph{{YAML}~Ain't Markup Language\texttrademark} is a human-friendly data serialization language for all programming languages~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}. %
+It is widely used for configuration files in the DevOps environment. %
+See \url{https://yaml.org} for more information.%
+},sort={YAML}]{yaml}{YAML}{{YAML}~Ain't Markup Language\texttrademark}%
 %
