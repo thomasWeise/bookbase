@@ -75,3 +75,8 @@
 %
 \makeglossaries%
 %
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\def\@x@sewerw@localfoo{}%
+\forallglsentries[symbols]{\@x@sewerw@localfoo}{\glsmoveentry{\@x@sewerw@localfoo}{main}}%
+}{}%
+%
