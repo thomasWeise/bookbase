@@ -23,3 +23,8 @@
 %
 \checkandfixthelayout%
 %
+%% Removing chapter titles from headlines that seeped over into a new \part
+%% see https://tex.stackexchange.com/questions/737771
+\let\@mem@oldpart\part%
+\gdef\part#1{\@mem@oldpart{#1}\markboth{}{}}%
+%
