@@ -399,6 +399,7 @@
 @string { a_mann_samuel = "Samuel Mann" }
 @string { a_mark_leo = "Leo Mark" }
 @string { a_marsh_charlie = "Charlie Marsh" }
+@string { a_masinter_larry = "Larry Masinter" }
 @string { a_massa_francisco = "Francisco Massa" }
 @string { a_matplotlib_development_team = "{The \glslink{matplotlib}{Matplotlib} Development Team}" }
 @string { a_matthias_meg = "Meg Matthias" }
@@ -418,7 +419,6 @@
 @string { a_mikkonen_tommi = "Tommi Mikkonen" }
 @string { a_millman_jarrod_k = "K.\ Jarrod Millman" }
 @string { a_mirjalili_vahid = "Vahid Mirjalili" }
-@string { a_misinter_larry = "Larry Masinter" }
 @string { a_mitchell_james_g = "James G.\ Mitchell" }
 @string { a_mitchell_joan_s = "Joan S.\ Mitchell" }
 @string { a_mogul_jeffrey_c = "Jeffrey C.\ Mogul" }
@@ -888,8 +888,9 @@
 @string { p_pearson_education = "{Pearson Education,~Inc.}" }
 @string { p_microsoft_press = "{Microsoft Press}, " # p_pearson_education }
 @string { p_pearson_it_certification = "{Pearson {IT} Certification}" }
-@string { p_pergamon_press = "Pergamon Press Ltd." }
+@string { p_pergamon_press = "{Pergamon Press Ltd.}" }
 @string { p_plos = "{Public Library of Science~{(PLOS)}}" }
+@string { p_postgresql_global_development_group = "{The \glslink{postgresql}{PostgreSQL} Global Development Group~{(PGDG)}}" }
 @string { p_pragmatic_ai_labs = "{Pragmatic {AI} Labs}" }
 @string { p_pragmatic_bookshelf = "{{Pragmatic Bookshelf} {by} {The Pragmatic Programmers, {L.L.C.}}}" }
 @string { p_princeton_university_press = "{Princeton University Press}" }
@@ -2026,7 +2027,7 @@
 
 @article{C1985IYDRR,
  author = a_codd_edgar_frank,
- title = {Is your \glslink{dbms}{DBMS} really relational?},
+ title = {Is your \glslink{dbms}{DBMS} really \glslink{rdb}{relational}?},
  xdata = {j_cw},
  date = {1985-10-14},
  volume = {19},
@@ -4051,6 +4052,33 @@
  urldate = {2024-12-08},
 }
 
+@collection{PGDG:PD,
+ title = {\glslink{postgresql}{PostgreSQL} Documentation},
+ edition = {17.4},
+ date = {2025-02-20},
+ publisher = p_postgresql_global_development_group,
+ url = {https://www.postgresql.org/docs/17/index.html},
+ urldate = {2025-02-25},
+}
+
+@incollection{PGDG:PD:CU,
+ title = {Connection \glslink{URI}{URIs}},
+ chapter = {32.1.1.2},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/libpq-connect.html#LIBPQ-CONNSTRING-URIS},
+ urldate = {2025-02-25},
+}
+
+@incollection{PGDG:PD:SC,
+ title = {\glslink{SQL}{SQL} Commands},
+ chapter = {Part~{VI}.~Reference},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-commands.html},
+ urldate = {2025-02-25},
+}
+
 @inproceedings{PGMLBCKLGADKYDRTCSFBC2019PAISHPDLL,
  author = a_paszke_adam # and # a_gross_sam # and # a_massa_francisco # and # a_lerer_adam # and # a_bradbury_james # and # a_chanan_gregory # and # a_killeen_trevor # and # a_lin_zeming # and # a_gimelshein_natalia # and # a_antiga_luca # and # a_desmaison_alban # and # a_klopf_andreas # and # a_yang_edward_z # and # a_devito_zachary # and # a_raison_martin # and # a_tejani_alykhan # and # a_chilamkurthy_sasank # and # a_steiner_benoit # and # a_fang_lu # and # a_bai_junjie # and # a_chintala_soumith,
  title = {\glslink{pytorch}{PyTorch}:~{A}n Imperative Style, High\nobreakdashes-Performance Deep Learning Library},
@@ -4667,7 +4695,7 @@
 }
 
 @techreport{RFC1738,
- author = a_berners_lee_tim # and # a_misinter_larry # and # a_mccahil_mark_p,
+ author = a_berners_lee_tim # and # a_masinter_larry # and # a_mccahil_mark_p,
  title = {Uniform Resource Locators~(\glslink{URL}{URL})},
  xdata = {rep_rfc},
  number = {1738},
@@ -4705,6 +4733,16 @@
  url = {https://www.ietf.org/rfc/rfc3629.txt},
  urldate = {2025-02-05},
  addendum = {See \glslink{unicode}{Unicode} and~\cite{ISOIEC106462020ITUCCSU}}
+}
+
+@techreport{RFC3986,
+ author = a_berners_lee_tim # and # a_fielding_roy_t # and # a_masinter_larry,
+ title = {Uniform Resource Identifier~(\glslink{URI}{URI}):~{G}eneric Syntax},
+ xdata = {rep_rfc},
+ number = {3986},
+ date = {2005-01},
+ url = {https://www.ietf.org/rfc/rfc3986.txt},
+ urldate = {2025-02-25},
 }
 
 @techreport{RFC4180,
