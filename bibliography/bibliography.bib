@@ -107,6 +107,7 @@
 @string { a_broytman_oleg = "Oleg Broytman" }
 @string { a_brucher_matthieu = "Matthieu Brucher" }
 @string { a_bruhin_florian = "Florian Bruhin" }
+@string { a_brumm_ben = "Ben Brumm" }
 @string { a_bruneau_pierrix = "Pierrick Bruneau" }
 @string { a_bucher_brand = "Brandt Bucher" }
 @string { a_burnett_magaret_m = "Margaret M.\ Burnett" }
@@ -118,6 +119,7 @@
 @string { a_canady_rudd_h = "Rudd H.\ Canaday" }
 @string { a_cannon_brett = "Brett Cannon" }
 @string { a_cannon_jason = "Jason Cannon" }
+@string { a_cardinalby = "Cardinal~(cardinalby)" }
 @string { a_carey_cj = "CJ Carey" }
 @string { a_carlson_stephan_c = "Stephan C.\ Carlson" }
 @string { a_castro_oscar = "Oscar Castro" }
@@ -398,6 +400,7 @@
 @string { a_maler_eve = "Eve Maler" }
 @string { a_mann_samuel = "Samuel Mann" }
 @string { a_mark_leo = "Leo Mark" }
+@string { a_mark_s = "marc\_s" }
 @string { a_marsh_charlie = "Charlie Marsh" }
 @string { a_masinter_larry = "Larry Masinter" }
 @string { a_massa_francisco = "Francisco Massa" }
@@ -552,6 +555,7 @@
 @string { a_schofield_peter = "Peter Schofield" }
 @string { a_scholz_manuel = "Manuel Scholz" }
 @string { a_schotten_hans_d = "Hans D.\ Schotten" }
+@string { a_schultke_jan = "Jan Schultke" }
 @string { a_schurr_andy = "Andy Sch{\"u}rr" }
 @string { a_schweppe_heinz = "Heinz Schweppe" }
 @string { a_schwettman_steve = "Steve Schwettman" }
@@ -652,6 +656,7 @@
 @string { a_weise_thomas = "Thomas Weise~(汤卫思)" }
 @string { a_weiss_ron = "Ron Weiss" }
 @string { a_weisstein_eric_w = "Eric Wolfgang Weisstein" }
+@string { a_west_randolph = "Randolph West" }
 @string { a_white_john_r = "John R.\ White" }
 @string { a_whittaker_james_a = "James A.\ Whittaker" }
 @string { a_wicke_martin = "Martin Wicke" }
@@ -688,9 +693,11 @@
 
 %% locations
 @string { l_australia_hobart = "{{Hobart}, {TAS}, {Australia}}" }
+@string { l_australia_melbourne = "{{Melbourne}, {VIC}, {Australia}}" }
 @string { l_australia_sydney = "{{Sydney}, {NSW}, {Australia}}" }
 @string { l_austria_laxenburg = "{{Laxenburg}, {Austria}}" }
 @string { l_canada_brandon = "{{Brandon}, {MB}, {Canada}}" }
+@string { l_canada_calgary = "{{Calgary}, {AB}, {Canada}}" }
 @string { l_canada_halifax = "{{Halifax}, {NS}, {Canada}}" }
 @string { l_canada_montreal = "{{Montreal}, {QC}, {Canada}}" }
 @string { l_canada_oakville = "{{Oakville}, {ON}, {Canada}}" }
@@ -815,6 +822,7 @@
 @string { p_astral = "{Astral Software~Inc.}" }
 @string { p_bell_labs = "{Bell Telephone Laboratories, Incorporated}" }
 @string { p_birkhauser_boston = "{Birkh{\"a}user}" }
+@string { p_bornsql = "Born \glslink{SQL}{SQL}" }
 @string { p_bruhin_software = "{Bruhin Software}" }
 @string { p_cahners = "{Cahners Publishing Company}" }
 @string { p_cambridge_uni_press_ass = "{Cambridge University Press \& Assessment}" }
@@ -825,6 +833,7 @@
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
 @string { p_crc_press = "{{CRC} Press}" }
+@string { p_databasestar = "{Database Star}" }
 @string { p_dataversity = "{Dataversity Digital~LLC}" }
 @string { p_document_foundation = "{The Document Foundation}" }
 @string { p_ecma = "{Ecma International}" }
@@ -957,6 +966,7 @@
 @string { pa_astral = l_usa_new_york }
 @string { pa_bell_labs = l_usa_new_york }
 @string { pa_birkhauser_boston = l_usa_boston }
+@string { pa_bornsql = l_canada_calgary }
 @string { pa_bruhin_software = l_switzerland_winterthur }
 @string { pa_cahners = l_usa_boston }
 @string { pa_cambridge_uni_press_ass = l_uk_cambridge }
@@ -967,6 +977,7 @@
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
 @string { pa_crc_press = l_usa_boca_raton }
+@string { pa_databasestar = l_australia_melbourne }
 @string { pa_dataversity = l_usa_studio_city }
 @string { pa_document_foundation = l_germany_berlin }
 @string { pa_ecma = l_switzerland_geneva }
@@ -1831,6 +1842,16 @@
  isbn = {9781838987473}
 }
 
+@book{B2025SBPASG,
+ author = a_brumm_ben,
+ title = {\glslink{SQL}{SQL} Best Practices and Style Guide},
+ publisher = p_databasestar,
+ address = pa_databasestar,
+ date = {2024-12-10},
+ url = {https://www.databasestar.com/sql-best-practices},
+ urldate = {2025-02-26},
+}
+
 @book{B2022ELATCL,
  author = a_barret_daniel_j,
  title = {Efficient \glslink{linux}{Linux} at the Command Line},
@@ -1842,7 +1863,7 @@
 
 @book{B2023DMWME,
  author = a_boateng_bernard_obend,
- title = {Data Modeling with Microsoft Excel},
+ title = {Data Modeling with Microsoft \glslink{excel}{Excel}},
  date = {2023-11},
  publisher = p_packt,
  address = pa_packt,
@@ -2074,6 +2095,16 @@
  publisher = p_packt,
  address = pa_packt,
  isbn = {9781805128625}
+}
+
+@book{C2024SCVDTCBP,
+ author = a_cardinalby,
+ title = {Storing Currency Values:~{D}ata Types, Caveats, Best Practices},
+ date = {2023-01-08},
+ publisher = p_github,
+ address = pa_github,
+ url = {https://cardinalby.github.io/blog/post/best-practices/storing-currency-values-data-types},
+ urldate = {2025-02-27},
 }
 
 @book{C2025SD,
@@ -2493,7 +2524,7 @@
 }
 
 @book{EHF2008EEOGTGOJLH11FEEEELIEILHIATBG11EAPWMETBFR,
- title = {Euclid's Elements of Geometry~(\ensuremath{\Sigma\tau{o}\iota\chi\varepsilon{\tilde{\iota}}\alpha}). The Greek Text of J.L.~Heiberg~(1883-1885) from Euclidis Elementa, Edidit et Latine Interpretatus est I.L.~Heiberg in Aedibus } # p_teubner_b_g # {i, 1883-1885. Edited, and provided with a modern English translation, by } # a_fitzpatrick_richard,
+ title = {Euclid's Elements of Geometry~(\ensuremath{\Sigma\tau{o}\iota\chi\varepsilon{\tilde{\iota}}\alpha}). The Greek Text of J.L.~Heiberg~(1883-1885) from Euclidis Elementa, Edidit et Latine Interpretatus est {I.L.~Heiberg} in Aedibus } # p_teubner_b_g # {i, 1883-1885. Edited, and provided with a modern English translation, by } # a_fitzpatrick_richard,
  author = a_euclid,
  translator = a_heiberg_johan_ludvig,
  editor = a_fitzpatrick_richard,
@@ -2636,7 +2667,7 @@
 
 @book{G2024ECRFMME,
  author = a_griffiths_dawn,
- title = {Excel Cookbook -- Receipts for Mastering Microsoft Excel},
+ title = {\glslink{excel}{Excel} Cookbook -- Receipts for Mastering Microsoft Excel},
  date = {2024-05},
  publisher = p_oreilly,
  address = pa_oreilly,
@@ -2780,7 +2811,7 @@
 @inbook{H1997IS7FPN,
  author = a_hollasch_steve,
  title = {{IEEE} Standard~754 Floating Point Numbers},
- booktitle = {{CSE401}:~{I}ntroduction to Compiler Construction},
+ booktitle = {{CSE401}:~{Introduction} to Compiler Construction},
  publisher = p_university_of_washington,
  address = pa_university_of_washington,
  date = {1997-01-08},
@@ -3444,9 +3475,18 @@
  addendum = {See also \mbox{arXiv:2105.00500v1} \mbox{[cs.SE]} \mbox{2~May~2021}},
 }
 
+@incollection{M2014VPKM,
+ title = {\sqlilIdx{VARCHAR} Primary Key -- \glslink{mysql}{MySQL}},
+ editor = a_mark_s,
+ date = {2014-10-22/2016-02-05},
+ crossref = {SE:DA},
+ url = {https://dba.stackexchange.com/questions/80806},
+ urldate = {2025-02-27},
+}
+
 @book{M2017WAFSIPAHCIUT,
  author = a_maxwell_aaron,
- title = {What are \glslink{fstring}{f\nobreakdashes-strings} in \glslink{python}{Python} and how can I use them?},
+ title = {What are \glslink{fstring}{f\nobreakdashes-strings} in \glslink{python}{Python} and how can {I} use them?},
  publisher = p_infinite_skills,
  address = pa_infinite_skills,
  date = {2017-06},
@@ -4068,6 +4108,24 @@
  date = {2025-02-20},
  url = {https://www.postgresql.org/docs/17/libpq-connect.html#LIBPQ-CONNSTRING-URIS},
  urldate = {2025-02-25},
+}
+
+@incollection{PGDG:PD:IC,
+ title = {Identity Columns},
+ chapter = {5.3},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/ddl-identity-columns.html},
+ urldate = {2025-02-27},
+}
+
+@incollection{PGDG:PD:NT,
+ title = {Numeric Types},
+ chapter = {8.1},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/datatype-numeric.html},
+ urldate = {2025-02-27},
 }
 
 @incollection{PGDG:PD:SC,
@@ -4886,6 +4944,15 @@
  doi = {10.2307/2691200},
 }
 
+@incollection{S2010WNUDOFTRC,
+ editor = a_schultke_jan,
+ title = {Why not use Double or Float to represent currency?},
+ date = {2010-09-16/2025-01-13},
+ crossref = {SE:SO},
+ url = {https://stackoverflow.com/questions/3730019},
+ urldate = {2025-02-27},
+}
+
 @book{S2011NA,
  author = a_scott_larkin_rigdway,
  title = {Numerical Analysis},
@@ -5021,6 +5088,22 @@
  date = {2024-10-13},
  url = {https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html},
  urldate = {2024-12-12},
+}
+
+@collection{SE:DA,
+ title = {\glslink{dba}{Database Administrators}},
+ publisher = p_stack_exchange,
+ address = pa_stack_exchange,
+ url = {https://dba.stackexchange.com},
+ urldate = {2025-02-27},
+}
+
+@collection{SE:SO,
+ title = {Stack Overflow},
+ publisher = p_stack_exchange,
+ address = pa_stack_exchange,
+ url = {https://stackoverflow.com},
+ urldate = {2025-02-27},
 }
 
 @article{SF2013ASROSR,
@@ -5336,6 +5419,16 @@
  addendum = {Practice Tutorial}
 }
 
+@book{W2020HSISCVISS,
+ author = a_west_randolph,
+ title = {How should {I} store currency values in \glslink{SQL}{SQL} \glslink{server}{Server}?},
+ date = {2020-06-03},
+ publisher = p_bornsql,
+ address = pa_bornsql,
+ url = {https://bornsql.ca/blog/how-should-i-store-currency-values-in-sql-server},
+ urldate = {2025-02-27},
+}
+
 @inbook{W2024FN,
  title = {Fibonacci Number},
  crossref = {W2024MAWWR},
@@ -5406,12 +5499,11 @@
  isbn = {9781837632442}
 }
 
-@book{Y2025DWMMMT2RFSOADS,
+@incollection{Y2025DWMMMT2RFSOADS,
  author = a_yepis_erin,
  title = {Developers want more, more, more:~{T}he 2024 results from {Stack Overflow's} Annual Developer Survey},
  date = {2025-01-01},
- publisher = p_stack_exchange,
- address = pa_stack_exchange,
+ crossref = {SE:SO},
  url = {https://stackoverflow.blog/2025/01/01/developers-want-more-more-more-the-2024-results-from-stack-overflow-s-annual-developer-survey},
  urldate = {2025-01-07},
 }
@@ -5437,7 +5529,7 @@
 
 @techreport{Z2024DESIEWS,
  author = a_zinoviev_dimitry,
- title = {Discrete Event Simulation:~{I}t's Easy with \glslink{simpy}{SimPy}!},
+ title = {Discrete Event Simulation:~{It's} Easy with \glslink{simpy}{SimPy}!},
  xdata = {rep_arxiv_corr},
  number = {abs/2405.01562},
  date = {2024-04-03},
