@@ -3,6 +3,9 @@
 @preamble{"\providecommand{\pythonil}[1]{\texttt{#1}}"}
 @preamble{"\providecommand{\pythonIdx}[1]{}"}
 @preamble{"\providecommand{\pythonilIdx}[1]{\pythonil{#1}}"}
+@preamble{"\providecommand{\sqlil}[1]{\texttt{#1}}"}
+@preamble{"\providecommand{\sqlIdx}[1]{}"}
+@preamble{"\providecommand{\sqlilIdx}[1]{\sqlil{#1}}"}
 @preamble{"\providecommand{\inQuotes}[1]{``#1''}"}
 
 %% basic shortcuts
@@ -57,6 +60,7 @@
 @string { a_baran_paul = "Paul Baran" }
 @string { a_barham_paul = "Paul Barham" }
 @string { a_barnard_iii_g_a = "G.\ A.\ {Barnard~III}" }
+@string { a_barnhill_blake = "Blake Barnhill" }
 @string { a_barr_earl_t = "Earl T.\ Barr" }
 @string { a_barret_daniel_j = "Daniel J.\ Barrett" }
 @string { a_bartholomew_daniel = "Daniel Bartholomew" }
@@ -133,6 +137,7 @@
 @string { a_chen_boqi = "Boqi Chen" }
 @string { a_chen_jianmin = "Jianmin Chen" }
 @string { a_chen_zhifeng = "Zhifeng Chen" }
+@string { a_cheshire_stuart = "Stuart Cheshire" }
 @string { a_chilamkurthy_sasank = "Sasank Chilamkurthy" }
 @string { a_chintala_soumith = "Soumith Chintala" }
 @string { a_chopra_swati = "Swati Chopra" }
@@ -160,6 +165,7 @@
 @string { a_dale_darren = "Darren Dale" }
 @string { a_daley_robert_c = "Robert C.\ Daley" }
 @string { a_dauben_joseph_w = "Joseph W.\ Dauben" }
+@string { a_david_matt = "Matt David" }
 @string { a_davis_andy = "Andy Davis" }
 @string { a_davies_donald_w = "Donald W.\ Davies" }
 @string { a_dean_jeffrey = "Jeffrey Dean" }
@@ -184,6 +190,7 @@
 @string { a_duplys_paul = "Paul Duplys" }
 @string { a_dutka_jacques = "Jacques Dutka" }
 @string { a_dyer_russel_j_t = "Russell J.T.\ Dyer" }
+@string { a_eastlake_donald_e_3 = "Donald E. Eastlake~3rd" }
 @string { a_editors_of_encyclopaedia_britannica = "The Editors of Encyclopaedia Britannica" }
 @string { a_edwards_jeri = "Jeri Edwards" }
 @string { a_eglen_stephen_j = "Stephen J.\ Eglen" }
@@ -350,6 +357,7 @@
 @string { a_kraska_tim = "Tim Kraska" }
 @string { a_krekel_holger = "Holger Krekel" }
 @string { a_krishna_pulkit = "Pulkit Krishna" }
+@string { a_krochmal_marc = "Marc Krochmal" }
 @string { a_krueger_richard = "Richard Krueger" }
 @string { a_kuchling_andrew_m = "Andrew M.\ Kuchling" }
 @string { a_kudlur_manjunath = "Manjunath Kudlur" }
@@ -466,6 +474,7 @@
 @string { a_paixao_matheus = "Matheus Paix{\~a}o" }
 @string { a_pajankar_ashwin = "Ashwin Pajankar" }
 @string { a_pandas_dev = "{\glslink{pandas}{Pandas}~Developers}" }
+@string { a_panitz_aliza_r = "Aliza R. Panitz" }
 @string { a_paoli_jean = "Jean Paoli" }
 @string { a_paquete_luis = "Lu{\'i}s Paquete" }
 @string { a_pasareanu_corina_s = "Corina S.\ P{\u{a}}s{\u{a}}reanu" }
@@ -829,6 +838,7 @@
 @string { p_canonical = "{Canonical~Ltd.}" }
 @string { p_carnegie_mellon_university_qatar = "{Carnegie Mellon University Qatar}" }
 @string { p_cern = "{European Organization for Nuclear Research~{(CERN)}}" }
+@string { p_chart_io = "{Chart.io, Inc.}" }
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
@@ -924,6 +934,7 @@
 @string { p_techtarget = "{TechTarget,~Inc.}" }
 @string { p_tetras_publishing = "Tetras Publishing" }
 @string { p_teubner_b_g = "{B.~G.~Teubner}" }
+@string { p_the_data_school = "{The Data School}, " # p_chart_io }
 @string { p_tidelift = "{Tidelift,~Inc.}" }
 @string { p_tiobe = "{{TIOBE} Software~{BV}}" }
 @string { p_typis_academiae = "{Typis Academiae}" }
@@ -973,6 +984,7 @@
 @string { pa_canonical = l_uk_london }
 @string { pa_carnegie_mellon_university_qatar = l_qatar_doha }
 @string { pa_cern = l_switzerland_geneva }
+@string { pa_chart_io = l_usa_san_francisco }
 @string { pa_cnri = l_usa_reston }
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
@@ -1066,6 +1078,7 @@
 @string { pa_technical_publishing = l_usa_chicago }
 @string { pa_techtarget = l_usa_newton }
 @string { pa_teubner_b_g = l_germany_leipzig }
+@string { pa_the_data_school = pa_chart_io }
 @string { pa_tidelift = l_usa_boston }
 @string { pa_tiobe = l_netherlands_eindhoven }
 @string { pa_typis_academiae = l_russia_petropolis }
@@ -2362,6 +2375,24 @@
  publisher = p_oreilly,
  address = pa_oreilly,
  isbn = {9781449362904},
+}
+
+@book{DB2019HTTPS,
+ author = a_david_matt # and # a_barnhill_blake,
+ title = {How to Teach People \glslink{SQL}{SQL}},
+ date = {2019-12-10/2023-04-10},
+ publisher = p_the_data_school,
+ address = pa_the_data_school,
+ url = {https://dataschool.com/how-to-teach-people-sql},
+ urldate = {2025-02-27},
+}
+
+@inbook{DB2019HTTPSSC,
+ title = {Syntax Conventions},
+ crossref = {DB2019HTTPS},
+ date = {2020-07-28},
+ url = {https://dataschool.com/how-to-teach-people-sql/syntax-conventions},
+ urldate = {2025-02-27},
 }
 
 @book{DBvR2024ITN,
@@ -4101,6 +4132,24 @@
  urldate = {2025-02-25},
 }
 
+@incollection{PGDG:PD:AF,
+ title = {Aggregate Functions},
+ chapter = {9.21},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/functions-aggregate.html},
+ urldate = {2025-02-27},
+}
+
+@incollection{PGDG:PD:CQUIE,
+ title = {Combining Queries (\sqlilIdx{UNION}, \sqlilIdx{INTERSECT}, \sqlilIdx{EXCEPT})},
+ chapter = {7.4},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/queries-union.html},
+ urldate = {2025-02-27},
+}
+
 @incollection{PGDG:PD:CU,
  title = {Connection \glslink{URI}{URIs}},
  chapter = {32.1.1.2},
@@ -4119,12 +4168,30 @@
  urldate = {2025-02-27},
 }
 
+@incollection{PGDG:PD:MFAO,
+ title = {Mathematical Functions and Operators},
+ chapter = {9.3},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/functions-math.html},
+ urldate = {2025-02-27},
+}
+
 @incollection{PGDG:PD:NT,
  title = {Numeric Types},
  chapter = {8.1},
  crossref = {PGDG:PD},
  date = {2025-02-20},
  url = {https://www.postgresql.org/docs/17/datatype-numeric.html},
+ urldate = {2025-02-27},
+}
+
+@incollection{PGDG:PD:PM,
+ title = {Pattern Matching},
+ chapter = {9.7},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/functions-matching.html},
  urldate = {2025-02-27},
 }
 
@@ -4782,6 +4849,16 @@
  urldate = {2025-02-05},
 }
 
+@techreport{RFC2606,
+ author = a_eastlake_donald_e_3 # and # a_panitz_aliza_r,
+ title = {Reserved Top Level {DNS} Names},
+ xdata = {rep_rfc},
+ number = {2606},
+ date = {1999-06},
+ url = {https://www.ietf.org/rfc/rfc2606.txt},
+ urldate = {2025-02-27},
+}
+
 @techreport{RFC3629,
  author = a_yergeau_francois,
  title = {\glslink{utf8}{UTF-8}, A Transformation Format of ISO~10646},
@@ -4821,6 +4898,16 @@
  date = {2006-01},
  url = {https://www.ietf.org/rfc/rfc4253.txt},
  urldate = {2025-02-05},
+}
+
+@techreport{RFC6761,
+ author = a_cheshire_stuart # and # a_krochmal_marc,
+ title = {Special-Use Domain Names},
+ xdata = {rep_rfc},
+ number = {6761},
+ date = {2013-02},
+ url = {https://www.ietf.org/rfc/rfc4253.txt},
+ urldate = {2025-02-27},
 }
 
 @techreport{RFC8259,
