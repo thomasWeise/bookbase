@@ -25,18 +25,18 @@ Databases are discussed in our book \citetitle{databases}~\cite{databases}.%
 A \emph{database administrator} is the person or group responsible for the effective use of database technology in an organization or enterprise.%
 }]{dba}{DBA}{database administrator}%
 %
-\newacronym[plural={DBMSes},description={%
+\newacronym[shortplural={DBMSes},description={%
 A \emph{database management system} is the software layer located between the user or application and the~\gls{db}. %
 The DBMS allows the user/application to create, read, write, update, delete, and otherwise manipulate the data in the~\gls{db}~\cite{YM2024DDMSD}.%%
 }]{dbms}{DBMS}{database management system}%
 \protected\gdef\dbms{\pgls{dbms}}%%
 %
-\newacronym[plural={DBSes},description={%
+\newacronym[shortplural={DBSes},description={%
 A \emph{database system} is the combination of a \gls{db} and a the corresponding \glslink{dbms}, i.e., basically, an installation of a \glslink{dbms} on a computer together with one (or multiple) \glspl{db}. %
 DBS = \acrshort{db}~+~\acrshort{dbms}.%
 }]{dbs}{DBS}{database system}%
 %
-\newacronym[plural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
+\newacronym[shortplural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
 \newacronym{ERD}{ERD}{entity relationship diagram}%
 \newacronym[plural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 \newacronym{GUI}{GUI}{graphical user interface}%
@@ -54,30 +54,30 @@ It often offers functionality such as editing source code, debugging, testing, o
 For \python, we recommend using \pycharm.%
 }]{ide}{IDE}{Integrated Development Environment}%
 %
-\newacronym[plural={JSON},description={%
+\newacronym[shortplural={JSON},description={%
 \emph{JavaScript Object Notation} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \gls{javascript}~\cite{E1999ELS} syntax.%
 },sort={JSON}]{json}{JSON}{JavaScript Object Notation}%
 %
-\newacronym[plural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning}%
+\newacronym[shortplural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning}%
 %
-\newacronym[plural={OOP}]{OOP}{OOP}{Object-Oriented Programming}%
+\newacronym[shortplural={OOP}]{OOP}{OOP}{Object-Oriented Programming}%
 %
-\newacronym[plural={OSes},description={Operating System, the system that runs your computer, see, e.g., \linux\ and \windows.}]{OS}{OS}{Operating System}%
+\newacronym[shortplural={OSes},description={Operating System, the system that runs your computer, see, e.g., \linux\ and \windows.}]{OS}{OS}{Operating System}%
 %
-\newacronym[plural={regexes},description={%
+\newacronym[shortplural={regexes},description={%
 A \emph{Regular Expression}, often called \inQuotes{regex} for short, is a sequence of characters that define a search pattern for text strings~\cite{IEEE1993ISFITPOSIPP2SAU,K2024REH,N2018RQSRUAURE,N2019AITRE}. %
 In \python, the \pythonilIdx{re} module offers functionality work with regular expressions~\cite{K2024REH,PSF2024RREO}. %
 In \postgresql, regex-based pattern matching is supported as well~\cite{PGDG:PD:PRE}.%
 }]{regex}{regex}{regular expression}%
 %
-\newacronym[plural={SQL},description={
+\newacronym[shortplural={SQL},description={
 The \emph{Structured Query Language} is basically a programming language for querying and manipulating \glspl{rdb}~\cite{C20245YOQ}. %
 It is understood many \glspl{dbms}. %
 You find the \sql\ commands supported by \postgresql\ in the reference~\cite{PGDG:PD:SC}.%
 }]{SQL}{SQL}{Structured Query Language}%
 \protected\gdef\sql{\pgls{SQL}}%
 %
-\newacronym[plural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}.}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
+\newacronym[shortplural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}.}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
 %
 \newacronym[description={%
 The \emph{standard error stream} is one of the three pre-defined streams of a console process (together with the \gls{stdin} and the \gls{stdout})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
@@ -102,7 +102,7 @@ If you run a program in a \gls{terminal}, then the text that a process writes to
 %
 \newacronym[description={Transport Layer Security, a protol for encrypted communication over the internet~\cite{RFC8446,DS2024TCID,S2021SCG2HTH}, used by, e.g., \gls{HTTPS}.}]{TLS}{TLS}{Transport Layer Security}%
 %
-\newacronym[plural={UCS},description={%
+\newacronym[shortplural={UCS},description={%
 Universal Coded Character Set, see \gls{unicode}%
 }]{UCS}{UCS}{Universal Coded Character Set}%
 %
@@ -119,13 +119,13 @@ URIs are supersets of \glspl{URL}. %
 The connection strings of the \postgresql\ \dbms\ are examples for URIs.%
 }]{URI}{URI}{Uniform Resource Identifier}%
 %
-\newacronym[plural={UTF8},description={%
+\newacronym[shortplural={UTF8},description={%
 The \emph{\acrshort{UCS}~Transformation Format~8} is one standard for encoding \gls{unicode} characters into a binary format that can be stored in files~\cite{RFC3629,ISOIEC106462020ITUCCSU}. %
 It is the world wide web's most commonly used character encoding, where each character is represented by one to four bytes. %
 It is backwards compatible with ASCII\optionalRef{sec:unicodeChars}{~(see~\cref{sec:unicodeChars})}.%
 },sort={UTF-8}]{utf8}{UTF\nobreakdashes-8}{\acrshort{UCS}~Transformation Format~8}%
 %
-\newacronym[plural={VCSes},description={%
+\newacronym[shortplural={VCSes},description={%
 A \emph{Version Control System} is a software which allows you to manage and preserve the historical development of your program code~\cite{T2024BGAGVCPMATFTND}. %
 A distributed VCS allows multiple users to work on the same code and upload their changes to the server, which then preserves the change history.
 The most popular distributed VCS is \gls{git}. %
@@ -133,7 +133,7 @@ The most popular distributed VCS is \gls{git}. %
 %
 \newacronym[description={World Wide Web~\cite{BL1991RQOHL,DDD2011IWWWHTP}}]{WWW}{WWW}{World Wide Web}%
 %
-\newacronym[plural={XML},description={%
+\newacronym[shortplural={XML},description={%
 \sloppy%
 The \emph{Extensible Markup Language} is a text-based language for storing and transporting of data~\cite{BPSMM2008EMLX1FE,K2019ITXJY,CH2013XFCAMLTMC}. %
 It allows you to define elements in the form \xmlil{<myElement myAttr="x">...text..</myElement>}. %
@@ -142,7 +142,7 @@ XML is one of most-used data interchange formats. %
 To process XML in \python, use the \pythonilIdx{defusedxml} library~\cite{H2021D0XBPFPSM}, as it protects against several security issues.%
 },sort={XML}]{xml}{XML}{Extensible Markup Language}%
 %
-\newacronym[plural={YAML},description={%
+\newacronym[shortplural={YAML},description={%
 \emph{{YAML}~Ain't Markup Language\texttrademark} is a human-friendly data serialization language for all programming languages~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}. %
 It is widely used for configuration files in the DevOps environment. %
 See \url{https://yaml.org} for more information.%
