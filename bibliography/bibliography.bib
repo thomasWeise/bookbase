@@ -256,6 +256,7 @@
 @string { a_gramfort_alexandre = "Alexandre Gramfort" }
 @string { a_grasso_anthony = "Anthony Grasso" }
 @string { a_gregersen_erik = "Erik Gregersen" }
+@string { a_pope_gregory_13 = "{Pope Gregory~{XIII}}" }
 @string { a_grendell_lina = "Linda Grandell" }
 @string { a_griffiths_dawn = "Dawn Griffiths" }
 @string { a_griffiths_patricia_p = "Patricia P.\ Griffiths" }
@@ -812,6 +813,7 @@
 @string { l_usa_wakefield = "{{Wakefield}, {MA}, {USA}}" }
 @string { l_usa_washington_dc = "{{Washington}, {DC}, {USA}}" }
 @string { l_usa_wilmington = "{{Wilmington}, {DE}, {USA}}" }
+@string { l_vatican = "{Vatican}" }
 
 
 %% publishers
@@ -838,6 +840,7 @@
 @string { p_cambridge_uni_press_ass = "{Cambridge University Press \& Assessment}" }
 @string { p_canonical = "{Canonical~Ltd.}" }
 @string { p_carnegie_mellon_university_qatar = "{Carnegie Mellon University Qatar}" }
+@string { p_catholic_church = "{Catholic Church}" }
 @string { p_cern = "{European Organization for Nuclear Research~{(CERN)}}" }
 @string { p_chart_io = "{Chart.io, Inc.}" }
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
@@ -984,6 +987,7 @@
 @string { pa_cambridge_uni_press_ass = l_uk_cambridge }
 @string { pa_canonical = l_uk_london }
 @string { pa_carnegie_mellon_university_qatar = l_qatar_doha }
+@string { pa_catholic_church = l_vatican }
 @string { pa_cern = l_switzerland_geneva }
 @string { pa_chart_io = l_usa_san_francisco }
 @string { pa_cnri = l_usa_reston }
@@ -2659,6 +2663,15 @@
  addendum = {Article~NO.~{HM982209}}
 }
 
+@techreport{G1582IG,
+ author = a_pope_gregory_13,
+ title = {Inter Gravissimas},
+ type = {Proclamation / Papal Bull},
+ institution = p_catholic_church,
+ address = pa_catholic_church,
+ date = {1582-02-24},
+}
+
 @book{G2017HP,
  author = a_grigorik_ilya,
  title = {\glslink{HTTP}{HTTP} Protocols},
@@ -4220,6 +4233,15 @@
  urldate = {2025-02-28},
 }
 
+@incollection{PGDG:PD:HU,
+ title = {History of Units},
+ chapter = {B.6},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/datetime-units-history.html},
+ urldate = {2025-03-01},
+}
+
 @incollection{PGDG:PD:IC,
  title = {Identity Columns},
  chapter = {5.3},
@@ -4227,6 +4249,15 @@
  date = {2025-02-20},
  url = {https://www.postgresql.org/docs/17/ddl-identity-columns.html},
  urldate = {2025-02-27},
+}
+
+@incollection{PGDG:PD:JT,
+ title = {Joined Tables\sqlIdx{JOIN}},
+ chapter = {7.2.1.1},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/queries-table-expressions.html#QUERIES-JOIN},
+ urldate = {2025-03-01},
 }
 
 @incollection{PGDG:PD:MFAO,
