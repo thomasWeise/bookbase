@@ -83,7 +83,8 @@ In order to prevent such attacks, queries to \dbs\ should \emph{never} be constr
 Assume that \pythonil{user_id} was a string variable in a \python\ program and we construct the query \pythonil{f"SELECT * FROM data WHERE user_id = \{user_id\}"}. %
 Notice that the \textil{\{user_in\}} will be replaced with the value of variable~\pythonil{user_id} during \gls{strinterpolation}. %
 If \pythonil{user_id == "user123; DROP TABLE data;"}, mayhem would ensue when we execute the query~\cite{PEP675}. %
-Some programming languages, like \python, offer built-in datatypes (such as \pythonilIdx{LiteralString}~\cite{PEP675}) to annotate string constants that can be used by static type-checkers such as \mypy.%
+Some programming languages, like \python, offer built-in datatypes (such as \pythonilIdx{LiteralString}~\cite{PEP675}) to annotate string constants that can be used by static type-checkers. %
+At the time of this writing, \mypy\ does not support this yet~\cite{ZDWVSLS2022I1SP6L,VDGE2022PPDAFP:ST}.%
 }]{SQLi}{SQLi attack}{\glslink{SQL}{SQL} injection attack}%
 
 %
