@@ -7,6 +7,7 @@
 @preamble{"\providecommand{\sqlIdx}[1]{}"}
 @preamble{"\providecommand{\sqlilIdx}[1]{\sqlil{#1}}"}
 @preamble{"\providecommand{\inQuotes}[1]{``#1''}"}
+@preamble{"\providecommand{\githubUser}[1]{\inQuotes{\href{https://github.com/#1}{#1}}}"}
 
 %% basic shortcuts
 @string { and = " and " }
@@ -4340,12 +4341,48 @@
 }
 
 @incollection{PGDG:PD:CV,
- title = {\sqlilIdx{CREATE VIEW}},
+ title = {\sqlil{CREATE VIEW}\sqlIdx{CREATE!VIEW}},
  chapter = {Part~{VI}.~Reference},
  crossref = {PGDG:PD},
  date = {2025-02-20},
  url = {https://www.postgresql.org/docs/17/sql-createview.html},
  urldate = {2025-03-03},
+}
+
+@incollection{PGDG:PD:DD,
+ title = {\sqlil{DROP DATABASE}\sqlIdx{DROP!DATABASE}},
+ chapter = {Part~{VI}.~Reference},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-dropdatabase.html},
+ urldate = {2025-03-05},
+}
+
+@incollection{PGDG:PD:DT,
+ title = {\sqlil{DROP TABLE}\sqlIdx{DROP!TABLE}},
+ chapter = {Part~{VI}.~Reference},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-droptable.html},
+ urldate = {2025-03-05},
+}
+
+@incollection{PGDG:PD:DU,
+ title = {\sqlil{DROP USER}\sqlIdx{DROP!USER}},
+ chapter = {Part~{VI}.~Reference},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-dropuser.html},
+ urldate = {2025-03-05},
+}
+
+@incollection{PGDG:PD:DV,
+ title = {\sqlil{DROP VIEW}\sqlIdx{DROP!VIEW}},
+ chapter = {Part~{VI}.~Reference},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-dropview.html},
+ urldate = {2025-03-05},
 }
 
 @incollection{PGDG:PD:DTT,
@@ -4393,6 +4430,15 @@
  urldate = {2025-03-01},
 }
 
+@incollection{PGDG:PD:LCL,
+ title = {\glslink{postgresql}{libpq} -- \glslink{C}{C}~Library},
+ chapter = {Part {IV.}~\glslink{client}{Client} Interfaces, Chapter~32},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/libpq.html},
+ urldate = {2025-03-05},
+}
+
 @incollection{PGDG:PD:MFAO,
  title = {Mathematical Functions and Operators},
  chapter = {9.3},
@@ -4436,6 +4482,23 @@
  date = {2025-02-20},
  url = {https://www.postgresql.org/docs/17/sql-commands.html},
  urldate = {2025-02-25},
+}
+
+@incollection{PGDG:PD:SD,
+ title = {\glslink{SQL}{SQL}~Dump},
+ chapter = {25.1.},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/backup-dump.html},
+ urldate = {2025-03-05},
+}
+
+@book{PGDG:PJD,
+ title = {\glslink{postgresql}{PostgreSQL} {JDBC} Driver},
+ date = {2025-01-14},
+ publisher = p_postgresql_global_development_group,
+ url = {https://jdbc.postgresql.org},
+ urldate = {2025-03-05},
 }
 
 @inproceedings{PGMLBCKLGADKYDRTCSFBC2019PAISHPDLL,
