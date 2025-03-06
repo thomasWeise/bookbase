@@ -17,40 +17,6 @@ Learn more at \url{https://salsa.debian.org/apt-team/apt}.%
 \protected\gdef\aptGet{\gls{aptGet}}%
 %
 %
-\newglossaryentry{libreoffice}{%
-text={LibreOffice},%
-name={LibreOffice},%
-sort={LibreOffice},%
-description={%
-LibreOffice is on open source office suite~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU} which can be considered as a good and free alternative to Microsoft~Office~\cite{LF2022MOSBSO2AM3}.%
-}%
-}%
-\protected\gdef\libreoffice{\pgls{libreoffice}}%
-%
-%
-\newglossaryentry{libreofficeBase}{%
-text={LibreOffice~\softwareStyle{Base}},%
-name={LibreOffice Base},%
-sort={LibreOffice Base},%
-description={%
-is a \pglspl{dbms} that can work on stand-alone files but also connect to other popular \pglspl{rdb}~\cite{FNFHWSKLSSGLFRSRPLJG2022BG7R1BOL7C,S2022L7PFEUU}.
-It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU} and has functionality that is comparable to Microsoft Access~\cite{SSI2023MA2BTA,B2020HOMA2,UC2021AFD}.%
-}%
-}%
-\protected\gdef\libreofficeBase{\pgls{libreofficeBase}}%
-%
-%
-\newglossaryentry{libreofficeCalc}{%
-text={LibreOffice~\softwareStyle{Calc}},%
-name={LibreOffice Calc},%
-sort={LibreOffice Calc},%
-description={%
-is free and open source spread sheet software~\cite{S2022L7PFEUU,DF2024LTDF}, i.e., an alternative to Microsoft \pgls{excel}. %
-It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU}.%
-}%
-}%
-%
-%
 \newglossaryentry{bash}{%
 text={\softwareStyle{Bash}},%
 name={Bash},%
@@ -70,21 +36,11 @@ sort={debugger},%
 description={%
 A debugger is a tool that lets you execute a program step-by-step while observing the current values of variables. %
 This allows you to find errors in the code more easily~\cite{W2024PME,A2002D,R2007PPBPDTAM}.%
-\optionalRef{ut:debugger}{ See also \cref{ut:debugger}.}%
+\optionalRefElse{ut:debugger}{ See also \cref{ut:debugger}.}{ %
+Learn more about debugging in~\cite{programmingWithPython}.}%
 }%
 }%
 \protected\gdef\debugger{\pgls{debugger}}%
-%
-%
-\newglossaryentry{excel}{%
-text={\softwareStyle{Excel}},%
-name={excel},%
-sort={excel},%
-description={%
-Microsoft Excel is a spreadsheet program that allows users to store, organize, manipulate, and calculate data in tabular structures~\cite{B2023DMWME,G2024ECRFMME,LF2022MOSBSO2AM3}. %
-A free alternative to this commercial software is \gls{libreofficeCalc}~\cite{S2022L7PFEUU,DF2024LTDF}.%
-}%
-}%
 %
 %
 \newglossaryentry{flask}{%
@@ -124,6 +80,46 @@ Its variant \ubuntu\ is particularly easy to use and install.%
 \protected\gdef\linux{\pgls{linux}}%
 %
 %
+\newglossaryentry{libreoffice}{%
+text={LibreOffice},%
+name={LibreOffice},%
+sort={LibreOffice},%
+description={%
+LibreOffice is on open source office suite~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU} which is a good and free alternative to \microsoftOffice. %
+It offers software such as \libreofficeCalc\ and \libreofficeBase.%
+\optionalRefElse{sec:installLibreOffice}{ %
+Installation instructions for \libreoffice\ are given in \cref{sec:installLibreOffice}.}{ %
+See~\cite{databases} for more information and installation instructions.}%
+}%
+}%
+\protected\gdef\libreoffice{\pgls{libreoffice}}%
+%
+%
+\newglossaryentry{libreofficeBase}{%
+text={LibreOffice~\softwareStyle{Base}},%
+name={LibreOffice Base},%
+sort={LibreOffice Base},%
+description={%
+is a \pglspl{dbms} that can work on stand-alone files but also connect to other popular \pglspl{rdb}~\cite{FNFHWSKLSSGLFRSRPLJG2022BG7R1BOL7C,S2022L7PFEUU}.
+It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU} and has functionality that is comparable to Microsoft Access~\cite{SSI2023MA2BTA,B2020HOMA2,UC2021AFD}.%
+}%
+}%
+\protected\gdef\libreofficeBase{\pgls{libreofficeBase}}%
+%
+%
+\newglossaryentry{libreofficeCalc}{%
+text={LibreOffice~\softwareStyle{Calc}},%
+name={LibreOffice Calc},%
+sort={LibreOffice Calc},%
+description={%
+is spreadsheet software that allows you to arrange and perform calculations with data in a tabular grid. %
+It is a free and open source spread sheet software~\cite{S2022L7PFEUU,DF2024LTDF}, i.e., an alternative to \microsoftExcel. %
+It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU}.%
+}%
+}%
+\protected\gdef\libreofficeCalc{\pgls{libreofficeCalc}}%
+%
+%
 \newglossaryentry{mariadb}{%
 text={\softwareStyle{MariaDB}},%
 name={MariaDB},%
@@ -148,6 +144,45 @@ Learn more at at \url{https://matplotlib.org}~\cite{HDFDM2012MVWP}.%
 \protected\gdef\matplotlib{\pgls{matplotlib}}%
 %
 %
+\newglossaryentry{microsoftAccess}{%
+text={Microsoft~\softwareStyle{Access}},%
+name={Microsoft Access},%
+sort={Microsoft Access},%
+description={%
+is a \pglspl{dbms} that can work on \dbs\ stored in single, stand-alone files but also connect to other popular \pglspl{rdb}~\cite{SSI2023MA2BTA,B2020HOMA2,UC2021AFD}. %
+It is part of \microsoftOffice. %
+A free and open source alternative to this commercial software is \libreofficeBase.%
+}%
+}%
+\protected\gdef\microsoftAccess{\pgls{microsoftAccess}}%
+%
+%
+\newglossaryentry{microsoftExcel}{%
+text={Microsoft~\softwareStyle{Excel}},%
+name={Microsoft Excel},%
+sort={Microsoft Excel},%
+description={%
+is a spreadsheet program that allows users to store, organize, manipulate, and calculate data in tabular structures~\cite{B2023DMWME,G2024ECRFMME,LF2022MOSBSO2AM3}. %
+It is part of \microsoftOffice. %
+A free alternative to this commercial software is \libreofficeCalc~\cite{S2022L7PFEUU,DF2024LTDF}.%
+}%
+}%
+\protected\gdef\microsoftExcel{\pgls{microsoftExcel}}%
+%
+%
+%
+\newglossaryentry{microsoftOffice}{%
+text={Microsoft Office},%
+name={Microsoft Office},%
+sort={Microsoft Office},%
+description={%
+is a commercial suite of office software, including \microsoftExcel\ and \microsoftAccess~\cite{LF2022MOSBSO2AM3}. %
+\libreoffice\ is a free and open source alternative.%
+}%
+}%
+\protected\gdef\microsoftOffice{\pgls{microsoftOffice}}%
+%
+%
 \newglossaryentry{moptipy}{%
 text={\softwareStyle{moptipy}},%
 name={moptipy},%
@@ -167,7 +202,9 @@ sort={Mypy},%
 description={%
 \pythonIdx{Mypy}%
 is a static type checking tool for \python~\cite{LLHSVRZSJYYMC2024MOSTFP} that makes use of \pglspl{typeHint}. %
-Learn more at \url{https://github.com/python/mypy}\optionalRef{sec:variableTypesAndTypeHints}{ or in \cref{sec:variableTypesAndTypeHints}}.%
+Learn more at \url{https://github.com/python/mypy}\optionalRefElse{sec:variableTypesAndTypeHints}{ %
+or in \cref{sec:variableTypesAndTypeHints}}{ %
+and in~\cite{programmingWithPython}}.%
 }%
 }%
 \protected\gdef\mypy{\pgls{mypy}}%
@@ -278,7 +315,7 @@ name={Pylint},%
 sort={Pylint},%
 description={%
 is a \gls{linter} for \python\ that checks for errors, enforces coding standards, and that can make suggestions for improvements~\cite{PC2024PL}. %
-Learn more at \url{https://www.pylint.org}\optionalRef{ut:pylint}{ and \cref{ut:pylint}}.%
+Learn more at \url{https://www.pylint.org}\optionalRefElse{ut:pylint}{ and \cref{ut:pylint}{ and in~\cite{programmingWithPython}}}.%
 }%
 }%
 \protected\gdef\pylint{\pgls{pylint}}%
@@ -290,7 +327,7 @@ name={pytest},%
 sort={pytest},%
 description={%
 is a framework for writing and executing unit tests in \python~\cite{KPDT2024PD,O2022PTWP,DG2020TIP,P2021PUTAAOAEUTIP,W2024PME}. %
-Learn more at \url{https://pytest.org}\optionalRef{sec:unitTesting}{ and in \cref{sec:unitTesting}}.%
+Learn more at \url{https://pytest.org}\optionalRefElse{sec:unitTesting}{ and in \cref{sec:unitTesting}{ and in~\cite{programmingWithPython}}}.%
 }%
 }%
 \protected\gdef\pytest{\pgls{pytest}}%
@@ -338,7 +375,7 @@ sort={Ruff},%
 description={%
 \pythonIdx{ruff}%
 is a \gls{linter} and code formatting tool for \python~\cite{M2022RAEFPLACFWIR}. %
-Learn more at \url{https://docs.astral.sh/ruff}\optionalRef{ut:ruff}{ or in \cref{ut:ruff}}.%
+Learn more at \url{https://docs.astral.sh/ruff}\optionalRefElse{ut:ruff}{ or in \cref{ut:ruff}}{ or in~\cite{programmingWithPython}}.%
 }%
 }%
 \protected\gdef\ruff{\pgls{ruff}}%

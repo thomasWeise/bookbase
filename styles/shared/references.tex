@@ -1,0 +1,24 @@
+%
+%%
+%% Commands for References
+%%
+%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/references.tex}%
+}{}%
+%
+%% Put reference text only if a label exists.
+%% #1 the label to check
+%% #2 the text to be printed only if the label exists
+\protected\gdef\optionalRef#1#2{%
+\@ifundefined{r@#1}{}{#2}%
+}%
+%
+%% Put reference text only if a label exists.
+%% #1 the label to check
+%% #2 the text to be printed only if the label exists
+%% #3 the alternative text to be printed otherwise
+\protected\gdef\optionalRefElse#1#2#3{%
+\@ifundefined{r@#1}{#3}{#2}%
+}%
+%
