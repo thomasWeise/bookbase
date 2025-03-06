@@ -113,6 +113,7 @@
 @string { a_brett_matthew = "Matthew Brett" }
 @string { a_bright_jonathan = "Jonathan Bright" }
 @string { a_broomall_john_m = "John M.\ Broomall" }
+@string { a_broy_manfred = "Manfred Broy" }
 @string { a_broytman_oleg = "Oleg Broytman" }
 @string { a_brucher_matthieu = "Matthieu Brucher" }
 @string { a_bruhin_florian = "Florian Bruhin" }
@@ -142,6 +143,7 @@
 @string { a_chapman_eric = "Eric Chapman" }
 @string { a_chen_boqi = "Boqi Chen" }
 @string { a_chen_jianmin = "Jianmin Chen" }
+@string { a_chen_peter_pin_shan = "Peter Pin{-}Shan Chen" }
 @string { a_chen_zhifeng = "Zhifeng Chen" }
 @string { a_cheshire_stuart = "Stuart Cheshire" }
 @string { a_chilamkurthy_sasank = "Sasank Chilamkurthy" }
@@ -181,6 +183,7 @@
 @string { a_deitel_abbey = "Abbey Deitel" }
 @string { a_deitel_harvey = "Harvey Deitel" }
 @string { a_deitel_paul = "Paul Deitel" }
+@string { a_denert_ernst = "Ernst Denert" }
 @string { a_dengler_patrick = "Patrick Dengler" }
 @string { a_dennison_justing = "Justin Dennison" }
 @string { a_desmaison_alban = "Alban Desmaison" }
@@ -344,8 +347,10 @@
 @string { a_kathiravelu_pradeeban = "Pradeeban Kathiravelu" }
 @string { a_katz_daniel_s = "Daniel S.\ Katz" }
 @string { a_keeton_kimberly = "Kimberly Keeton" }
+@string { a_kempe_shannon = "Shannon Kempe" }
 @string { a_kennedy_dan_r = "Dan R.\ Kennedy" }
 @string { a_kern_robert = "Robert Kern" }
+@string { a_kerr_douglas_s = "Douglas S.\ Kerr" }
 @string { a_khan_faizan = "Faizan Khan" }
 @string { a_kilburn_tom = "Tom Kilburn" }
 @string { a_killeen_trevor = "Trevor Killeen" }
@@ -700,6 +705,7 @@
 @string { a_widenius_ulf_michael = "Ulf Michael \inQuotes{Monty} Widenius" }
 @string { a_wiebe_mark = "Mark Wiebe" }
 @string { a_wieser_eric = "Eric Wieser" }
+@string { a_williams_paul = "Paul Williams" }
 @string { a_wilson_joshua = "Joshua Wilson" }
 @string { a_wilson_kevin = "Kevin Wilson" }
 @string { a_wilson_margaret_m = "Margaret M.\ Wilson" }
@@ -798,6 +804,7 @@
 @string { l_usa_dallas = "{{Dallas}, {TX}, {USA}}" }
 @string { l_usa_dublin = "{{Dublin}, {OH}, {USA}}" }
 @string { l_usa_flower_mound = "{{Flower Mound}, {TX}, {USA}}" }
+@string { l_usa_framingham = "{{Framingham}, {MA}, {USA}}" }
 @string { l_usa_hanover = "{{Hanover}, {MD}, {USA}}" }
 @string { l_usa_highland_park = "{{Highland Park}, {NJ}, {USA}}" }
 @string { l_usa_hoboken = "{{Hoboken}, {NJ}, {USA}}" }
@@ -1399,6 +1406,13 @@
 @xdata{j_tg,
  journal = {The Gazette},
  address = l_usa_cedar_rapids
+}
+
+@xdata{j_tods,
+ journal = {{ACM}~Transactions on Database Systems~({TODS})},
+ publisher = p_acm,
+ address = pa_acm,
+ issn = {0362-5915}
 }
 
 @xdata{j_tsftloc,
@@ -2031,6 +2045,15 @@
  urldate = {2025-01-08}
 }
 
+@collection{BD2002SPCTSE,
+ editor = a_broy_manfred # and # a_denert_ernst,
+ booktitle = {Software Pioneers:~{C}ontributions to Software Engineering},
+ publisher = p_springer_verlag,
+ address = pa_springer_verlag,
+ date = {2002-02},
+ doi = {10.1007/978-3-642-59412-0},
+}
+
 @article{BFJKMRGRT1985RMFDSDAFTGDOTAXSDSSG,
  author = a_burns_thomas # and # a_fong_elizabeth_n # and # a_jefferson_david # and # a_knox_richard # and # a_mark_leo # and # a_reedy_christopher # and # a_reich_louis # and # a_roussopoulos_nick # and # a_truszkowski_walter,
  title = {Reference Model for \glslink{dbms}{DBMS} Standardization, Database Architecture Framework Task Group~{(DAFTG)} of the {ANSI/X3/SPARC} Database System Study Group},
@@ -2128,6 +2151,26 @@
  urldate = {2025-01-05},
 }
 
+@inproceedings{C1975TRMTAUVOD,
+ author = a_chen_peter_pin_shan,
+ title = {The \glslink{ERD}{Entity-Relationship Model}:~{T}oward a Unified View of Data},
+ crossref = {PROC1975VLDB},
+ pages = {173},
+ doi = {10.1145/1282480.1282492},
+ addendum = {See~\cite{C1976TERMTAUVOD} for a more comprehensive introduction.}
+}
+
+@article{C1976TERMTAUVOD,
+ author = a_chen_peter_pin_shan,
+ title = {The \glslink{ERD}{Entity-Relationship Model} -- Toward a Unified View of Data},
+ xdata = {j_tods},
+ volume = {1},
+ number = {1},
+ pages = {9--36},
+ date = {1976-03},
+ doi = {10.1145/320434.320440},
+}
+
 @article{C1985DYDRBTR,
  author = a_codd_edgar_frank,
  title = {Does your \glslink{dbms}{DBMS} run by the rules?},
@@ -2144,6 +2187,16 @@
  date = {1985-10-14},
  volume = {19},
  pages = {ID1},
+}
+
+@incollection{C2002ERMHEFTALL,
+ author = a_chen_peter_pin_shan,
+ crossref = {BD2002SPCTSE},
+ title = {\glslink{ERD}{Entity-Relationship Modeling}:~{H}istorical Events, Future Trends, and Lessons Learned},
+ pages = {296--310},
+ doi = {10.1007/978-3-642-59412-0\_17},
+ url = {http://bit.csc.lsu.edu/%7Echen/pdf/Chen_Pioneers.pdf},
+ urldate = {2025-03-06}
 }
 
 @article{C2002LFLHADWTDM,
@@ -3516,6 +3569,16 @@
  addendum = {See also~\cite{LOCCTFTROGOLTSI}}
 }
 
+@book{KW2012ASHOTEDAIM,
+ author = a_kempe_shannon # and # a_williams_paul,
+ title = {A Short History of the \glslink{ERD}{ER Diagram} and Information Modeling},
+ date = {2012-09-25},
+ publisher = p_dataversity,
+ address = pa_dataversity,
+ url = {https://www.dataversity.net/a-short-history-of-the-er-diagram-and-information-modeling},
+ urldate = {2025-03-06},
+}
+
 @book{L1909HDLVDVDP,
  author = a_landau_edmund,
  title = {{Handbuch der Lehre von der Verteilung der Primzahlen}},
@@ -4541,7 +4604,7 @@
 
 @proceedings{PROC1961AFIPS,
  editor = a_ware_willis_h,
- title = {Proceedings of the 1961 Eastern Joint Computer Conference:~{C}omputers -- Key to Total Systems Control, {(AFIPS'1961, Eastern)}},
+ title = {Eastern Joint Computer Conference:~{C}omputers -- Key to Total Systems Control, {(AFIPS'1961, Eastern)}},
  eventdate = {1961-12-12/1961-12-14},
  venue = l_usa_washington_dc,
  publisher = p_acm,
@@ -4553,7 +4616,7 @@
 
 @proceedings{PROC1965AFIPS,
  editor = a_rector_robert_w,
- title = {Proceedings of the 1965 Fall Joint Computer Conference~{(AFIPS'1965, Fall, Part~1)}},
+ title = {1965~Fall Joint Computer Conference~{(AFIPS'1965, Fall, Part~1)}},
  eventdate = {1965-11-30/1965-12-01},
  venue = l_usa_las_vegas,
  publisher = p_acm,
@@ -4564,7 +4627,7 @@
 }
 
 @proceedings{PROC1968IFIP1,
- title = {Proceedings of the World Congress on Information Processing~68~({IFIP~68})},
+ title = {World Congress on Information Processing~({IFIP'1968})},
  eventdate = {1966-08-05/1968-08-10},
  venue = l_uk_edinburgh,
  organization = pa_ifip # addr_sep # p_ifip,
@@ -4578,7 +4641,7 @@
 
 @proceedings{PROC1974SIGFIDET,
  editor = a_altschuler_gene # and # a_rustin_randall # and # a_plagman_bernard_d,
- title = {Proceedings of 1974~{ACM~SIGFIDET} (now {SIGMOD}) Workshop on Data Description, Access and Control},
+ title = {1974~{ACM~SIGFIDET} (now {SIGMOD}) Workshop on Data Description, Access and Control},
  eventdate = {1974-05-01/1974-05-03},
  venue = l_usa_ann_arbor,
  publisher = p_acm,
@@ -4588,8 +4651,18 @@
  doi = {10.1145/800296},
 }
 
+@proceedings{PROC1975VLDB,
+ editor = {Douglas S. Kerr},
+ booktitle = {1st~International Conference on Very Large Data Bases~{(VLDB'1975)}},
+ eventdate = {1975-09-22/1975-09-24},
+ venue = l_usa_framingham,
+ publisher = p_acm,
+ address = pa_acm,
+ isbn = {978-1-4503-3920-9},
+}
+
 @proceedings{PROC1986HPW,
- title = {Proceedings of the {ACM} Conference on The History of Personal Workstations~({HPW'86})},
+ title = {{ACM}~Conference on The History of Personal Workstations~({HPW'1986})},
  eventdate = {1986-01-09/1986-01-10},
  venue = l_usa_palo_alto,
  date = {1986-01},
@@ -4600,7 +4673,7 @@
 }
 
 @proceedings{PROC2005VLHCC,
- title = {Proceedings of the 2005 {IEEE} Symposium on Visual Languages and Human\nobreakdashes-Centric Computing~{(VL/HCC~'05)}},
+ title = {{IEEE}~Symposium on Visual Languages and Human\nobreakdashes-Centric Computing~{(VL/HCC'2005)}},
  eventdate = {2005-09-21/2005-09-24},
  venue = l_usa_dallas,
  editor = a_erwig_martin # and # a_schurr_andy,
@@ -4612,7 +4685,7 @@
 }
 
 @proceedings{PROC2006ACE,
- booktitle = {Proceedings of the 8th Australasian Conference on Computing Education~({ACE'06})},
+ booktitle = {8th~Australasian Conference on Computing Education~({ACE'2006})},
  eventdate = {2006-01-16/2006-01-19},
  venue = l_australia_hobart,
  editor = a_tolhurst_denise # and # a_mann_samuel,
@@ -4624,7 +4697,7 @@
 }
 
 @proceedings{PROC2009NAFIPS,
- title = {2009~Annual Meeting of the North American Fuzzy Information Processing Society~{(NAFIPS'09)}},
+ title = {Annual Meeting of the North American Fuzzy Information Processing Society~{(NAFIPS'2009)}},
  eventdate = {2009-06-14/2009-06-19},
  venue = l_usa_cincinnati,
  publisher = p_ieee,
@@ -4636,7 +4709,7 @@
 
 @proceedings{PROC2012OSS,
  editor = a_hammouda_imed # and # a_lundell_bjorn # and # a_mikkonen_tommi # and # a_scacchi_walt,
- title= {Proceedings of the 8th {IFIP}~{WG}~2.13 International Conference on Open Source Systems:~{L}ong-Term Sustainability~{OSS'12}},
+ title= {8th~{IFIP}~{WG}~2.13 International Conference on Open Source Systems:~{L}ong-Term Sustainability~{OSS'2012}},
  eventdate = {2012-09-10/2012-09-13},
  venue = l_tunisia_hammamet,
  xdata = {ser_iaiiact},
@@ -4646,7 +4719,7 @@
 }
 
 @proceedings{PROC2016OSDI,
- title = {12th {USENIX} Symposium on Operating Systems Design and Implementation~({OSDI'16})},
+ title = {12th~{USENIX} Symposium on Operating Systems Design and Implementation~({OSDI'2016})},
  eventdate = {2016-11-02/2016-11-04},
  venue = l_usa_savannah,
  editor = a_keeton_kimberly # and # a_roscoe_timothy,
@@ -4656,7 +4729,7 @@
 }
 
 @proceedings{PROC2018ESECFSE,
- title = {Proceedings of the 2018 {ACM} Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering ({ESEC/SIGSOFT}~{FSE}'18)},
+ title = {{ACM}~Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering ({ESEC/SIGSOFT}~{FSE}'2018)},
  eventdate = {2018-11-04/2018-11-09},
  venue = l_usa_lake_buena_vista,
  editor = a_leavens_gary_t # and # a_garcia_alessandro_f # and # a_pasareanu_corina_s,
@@ -4667,7 +4740,7 @@
 }
 
 @proceedings{PROC2019NEURIPS,
- title = {Advances in Neural Information Processing Systems~32:~{A}nnual Conference on Neural Information Processing Systems 2019~({NeurIPS'19})},
+ title = {Advances in Neural Information Processing Systems~32:~{A}nnual Conference on Neural Information Processing Systems~({NeurIPS'2019})},
  eventdate = {2019-12-08/2019-12-14},
  venue = l_canada_vancouver,
  editor = a_wallach_hanna_m # and # a_larochelle_hugo # and # a_beygelzimer_alina # and # a_d_alche_buc_florence # and # a_fox_emily_b # and # a_garnett_roman,
@@ -4680,7 +4753,7 @@
 }
 
 @proceedings{PROC2021IECON,
- title = {Proceedings of the 47th Annual Conference of the {IEEE} Industrial Electronics Society~({IECON'21}},
+ title = {47th~Annual Conference of the {IEEE} Industrial Electronics Society~({IECON'2021}},
  eventdate = {2021-10-13/2021-10-15},
  venue = l_canada_toronto,
  publisher = p_ieee,
@@ -4692,7 +4765,7 @@
 }
 
 @proceedings{PROC2022ASE,
- title = {37th {IEEE/ACM} International Conference on Automated Software Engineering~{(ASE'22)}},
+ title = {37th~{IEEE/ACM} International Conference on Automated Software Engineering~{(ASE'2022)}},
  eventdate = {2022-10-10/2022-10-14},
  venue = l_usa_rochester,
  publisher = p_acm,
@@ -4702,7 +4775,7 @@
 }
 
 @proceedings{PROC2022CCECE,
- title = {{IEEE} Canadian Conference on Electrical and Computer Engineering~{(CCECE'22)}},
+ title = {{IEEE}~Canadian Conference on Electrical and Computer Engineering~{(CCECE'2022)}},
  eventdate = {2022-09-18/2022-09-20},
  venue = l_canada_halifax,
  publisher = p_ieee,
@@ -4713,7 +4786,7 @@
 }
 
 @proceedings{PROC2023ECOOP,
- title = {37th European Conference on Object\nobreakdashes-Oriented Programming~{(ECOOP'23)}},
+ title = {37th~European Conference on Object\nobreakdashes-Oriented Programming~{(ECOOP'2023)}},
  eventdate = {2023-07-17/2023-07-21},
  venue = l_usa_seattle,
  editor = a_ali_karim # and # a_salvaneschi_guido,
@@ -4725,7 +4798,7 @@
 
 @proceedings{PROC2023GECCO,
  xdata = {c_gecco},
- booktitle = {Companion Proceedings of the Conference on Genetic and Evolutionary Computation~{(GECCO'23)}, Companion Volume},
+ booktitle = {Conference on Genetic and Evolutionary Computation~{(GECCO'2023)}, Companion Volume},
  eventdate = {2023-07-15/2023-07-19},
  venue = l_portugal_lisbon,
  editor = a_silva_sara # and # a_paquete_luis,
