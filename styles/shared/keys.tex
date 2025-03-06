@@ -18,21 +18,27 @@
 %% The key sequence needed to launch a terminal under Microsoft Windows.
 \protected\gdef\windowsTerminal{press \keys{\OSwin + R}, type in \textil{cmd}, and hit \keys{\return}}%
 %
+%% insert a icon button
+\protected\gdef\@key@icon@button#1{\raisebox{-0.111111em}{\includegraphics[width=1em,height=1em,keepaspectratio]{\bookbaseDir/graphics/icons/#1}}}
 %% The PyCharm main menu key
 \protected\gdef\pycharmMainMenu{\ensuremath{\mathrel{\rlap{\raisebox{\fontdimen22\textfont2}{\ensuremath{=}}}\raisebox{-0.5\fontdimen22\textfont2}{\ensuremath{=}}}}}
 %% The PyCharm python console menu key
-\protected\gdef\pycharmConsole{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmPythonConsole}}}%
+\protected\gdef\pycharmConsole{\@key@icon@button{pycharmPythonConsole}}%
 %% The pycharm debugger resume command
-\protected\gdef\pycharmDebuggerResume{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmDebuggerResumeProgram}}}%
+\protected\gdef\pycharmDebuggerResume{\@key@icon@button{pycharmDebuggerResumeProgram}}%
 %% The pycharm debugger step over command
-\protected\gdef\pycharmDebuggerStepOver{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmDebuggerStepOver}}}%
+\protected\gdef\pycharmDebuggerStepOver{\@key@icon@button{pycharmDebuggerStepOver}}%
 %% The PyCharm errors symbol
-\protected\gdef\pycharmErrorsSymbol{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmErrorsSymbol}}}%
+\protected\gdef\pycharmErrorsSymbol{\@key@icon@button{pycharmErrorsSymbol}}%
 %% The PyCharm errors button
-\protected\gdef\pycharmErrorsButton{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmErrorsButton}}}%
+\protected\gdef\pycharmErrorsButton{\@key@icon@button{pycharmErrorsButton}}%
 %
 %% The PyCharm warnings symbol
-\protected\gdef\pycharmWarningsSymbol{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmWarningsSymbol}}}%
+\protected\gdef\pycharmWarningsSymbol{\@key@icon@button{pycharmWarningsSymbol}}%
 %% The PyCharm run button
-\protected\gdef\pycharmRun{\raisebox{-0.111111em}{\includegraphics[width=1em,keepaspectratio]{\bookbaseDir/graphics/icons/pycharmRun}}}%
+\protected\gdef\pycharmRun{\@key@icon@button{pycharmRun}}%
 %
+% The LibreOffice Base refresh key
+\protected\gdef\libreOfficeBaseRefresh{\@key@icon@button{libreOfficeBaseRefresh}}%
+% The LibreOffice Base kex key
+\protected\gdef\libreOfficeBaseKey{\@key@icon@button{libreOfficeBaseKey}}%
