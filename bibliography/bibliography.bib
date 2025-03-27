@@ -46,6 +46,7 @@
 @string { a_andrews_michael = "Michael Andrews" }
 @string { a_antiga_luca = "Luca Antiga" }
 @string { a_antoniou_pantelis = "Pantelis Antoniou" }
+@string { a_arabnia_hamid_r = "Hamid R.\ Arabnia" }
 @string { a_archibald_anne_m = "Anne M.\ Archibald" }
 @string { a_aro_eemeli = "Eemeli Aro"}
 @string { a_arthur_jones = "Arthur Jones" }
@@ -600,6 +601,7 @@
 @string { a_reisner_phyllis = "Phyllis Reisner" }
 @string { a_reschke_julian_f = "Julian F.\ Reschke" }
 @string { a_rescorla_eric = "Eric Rescorla" }
+@string { a_reza_hassan = "Hassan Reza" }
 @string { a_ribeiro_antonio_h = "Ant{\^o}nio H.\ Ribeiro" }
 @string { a_richards_mark = "Mark Richards" }
 @string { a_riego_del_castillo_virginia = "Virginia {Riego{-}Del Castillo}" }
@@ -673,6 +675,7 @@
 @string { a_sheppart_kevin = "Kevin Sheppard" }
 @string { a_sherrill_sandra_l = "Sandra L.\ Sherrill" }
 @string { a_shewchuk_jonathan_richard = "Jonathan Richard Shewchuk" }
+@string { a_shi_mingtao = "Mingtao Shi" }
 @string { a_shimizukawa_takayuki = "Takayuki Shimizukawa" }
 @string { a_siever_ellen = "Ellen Siever" }
 @string { a_sigler_laurence_e = "Laurence E.\ Sigler" }
@@ -782,6 +785,7 @@
 @string { a_winslet_marianne = "Marianne Winslett" }
 @string { a_winter_collin = "Collin Winter" }
 @string { a_wolf_gregor = "Gregor Wolf" }
+@string { a_wong_bernard = "Bernard Wong" }
 @string { a_wu_zhize = "Zhize Wu~(吴志泽)" }
 @string { a_wyman_bostwick_f = "Bostwick F.\ Wyman" }
 @string { a_wyman_myra_f = "Myra F.\ Wyman" }
@@ -816,6 +820,7 @@
 @string { l_canada_halifax = "{{Halifax}, {NS}, {Canada}}" }
 @string { l_canada_montreal = "{{Montreal}, {QC}, {Canada}}" }
 @string { l_canada_oakville = "{{Oakville}, {ON}, {Canada}}" }
+@string { l_canada_richmond_hill = "{{Richmond Hill}, {ON}, {Canada}}" }
 @string { l_canada_toronto = "{{Toronto}, {ON}, {Canada}}" }
 @string { l_canada_vancouver = "{{Vancouver}, {BC}, {Canada}}" }
 @string { l_china_beijing = "{{China}, {Beijing}~(中国北京市)}" }
@@ -957,12 +962,14 @@
 @string { p_canonical = "{Canonical~Ltd.}" }
 @string { p_carnegie_mellon_university_qatar = "{Carnegie Mellon University Qatar}" }
 @string { p_catholic_church = "{Catholic Church}" }
+@string { p_ccse = "{Canadian Center of Science and Education~{(CCSE)}}" }
 @string { p_cern = "{European Organization for Nuclear Research~{(CERN)}}" }
 @string { p_chart_io = "{Chart.io, Inc.}" }
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
 @string { p_crc_press = "{{CRC} Press}" }
+@string { p_csrea_press = "{Computer Science Research, Education, and Applications~{(CSREA)} Press}" }
 @string { p_databasestar = "{Database Star}" }
 @string { p_dataversity = "{Dataversity Digital~LLC}" }
 @string { p_document_foundation = "{The Document Foundation}" }
@@ -1117,12 +1124,14 @@
 @string { pa_canonical = l_uk_london }
 @string { pa_carnegie_mellon_university_qatar = l_qatar_doha }
 @string { pa_catholic_church = l_vatican }
+@string { pa_ccse = l_canada_richmond_hill }
 @string { pa_cern = l_switzerland_geneva }
 @string { pa_chart_io = l_usa_san_francisco }
 @string { pa_cnri = l_usa_reston }
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
 @string { pa_crc_press = l_usa_boca_raton }
+@string { pa_csrea_press = "{{USA}}" }
 @string { pa_databasestar = l_australia_melbourne }
 @string { pa_dataversity = l_usa_studio_city }
 @string { pa_document_foundation = l_germany_berlin }
@@ -1292,6 +1301,13 @@
  publisher = p_acm,
  address = pa_acm,
  issn = {0001-0782},
+}
+
+@xdata{j_cais,
+ journal = {Computer and Information Science},
+ issn = {1913-8989},
+ publisher = p_ccse,
+ address = pa_ccse,
 }
 
 @xdata{j_casp,
@@ -1593,6 +1609,12 @@
  type = {Standard},
 }
 
+@xdata{rep_ieee_standard,
+ institution = p_ieee,
+ address = pa_ieee_ny,
+ type = {{IEEE}~Std},
+}
+
 @xdata{rep_iso_standard,
  institution = p_iso,
  address = pa_iso,
@@ -1605,10 +1627,9 @@
  type = {International Standard},
 }
 
-@xdata{rep_ieee_standard,
- institution = p_ieee,
- address = pa_ieee_ny,
- type = {{IEEE}~Std},
+@xdata{rep_iso_iec_ieee_standard,
+ institution = pa_iso_iec # addr_sep # p_iso # and # p_iec # and # pa_ieee_ny # addr_sep # pa_ieee_ny,
+ type = {{ISO/IEC/IEEE} International Standard},
 }
 
 @xdata{rep_nsotprocg,
@@ -2630,7 +2651,7 @@
 
 @article{CWG1993PAJADATC,
  author = a_carmel_erran # and # a_whitaker_randall_d # and # a_george_joey_f,
- title = {{PD} and Joint Application Design:~{A} Transatlantic Comparison},
+ title = {\glslink{participatoryDesign}{PD} and \glslink{JAD}{Joint Application Design}:~{A} Transatlantic Comparison},
  xdata = {j_cacm},
  volume = {36},
  number = {6},
@@ -3527,6 +3548,19 @@
  date = {1993-06-23},
  addendum = {Board Approved:~1992\nobreakdashes-09\nobreakdashes-17, {ANSI} Approved:~1993\nobreakdashes-04\nobreakdashes-05. See unapproved draft {IEEE}~P1003.2 Draft~11.2 of } # sep # {~1991 at the url},
  url = {https://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Ref-docs/POSIX/all.pdf},
+ urldate = {2025-03-27},
+}
+
+@techreport{IEEE1998IRPFSRS,
+ title = {{IEEE}~Recommended Practice for Software Requirements Specifications},
+ xdata = {rep_ieee_standard},
+ number = {{IEEE}~Std~830\nobreakdashes-1998},
+ date = {1998-10-20},
+ isbn = {978-0-7381-0448-5},
+ doi = {10.1109/IEEESTD.1998.88286},
+ url = {https://cse.msu.edu/~cse870/IEEEXplore-SRS-template.pdf},
+ urldate = {2025-03-27},
+ addendum = {Superseded by~\cite{ISOIECIEEE2018SASELCPRE}}
 }
 
 @techreport{IEEE2019ISFFPA,
@@ -3586,6 +3620,16 @@
  date = {2017-11},
  url = {https://files.lhmouse.com/standards/ISO%20C%20N2176.pdf},
  urldate = {2024-06-29},
+}
+
+@techreport{ISOIECIEEE2018SASELCPRE,
+ title = {Systems and Software Engineering {-}{-} Life Cycle Processes {-}{-} Requirements Engineering, Second Edition},
+ number = {ISO/IEC/IEEE~29148:2018(E)},
+ date = {2018-11-30},
+ xdata = {rep_iso_iec_ieee_standard},
+ isbn = {978-1-5044-5302-8},
+ doi = {10.1109/IEEESTD.2018.8559686},
+ addendum = {Supersedes~\cite{IEEE1998IRPFSRS}}
 }
 
 @book{IRTFRADDRHBUCASTSFEFSFTE,
@@ -5059,6 +5103,16 @@
  doi = {10.1145/12178},
 }
 
+@proceedings{PROC2004SERP,
+ editor = a_arabnia_hamid_r # and # a_reza_hassan,
+ title = {International Conference on Software Engineering Research and Practice~{(SERP'2004)}, Volume~2},
+ eventdate = {2004-06-21/2004-06-24},
+ venue = l_usa_las_vegas,
+ publisher = p_csrea_press,
+ address = pa_csrea_press,
+ isbn = {1-932415-29-7}
+}
+
 @proceedings{PROC2005ICSE,
  editor = a_roman_gruia_catalin # and # a_griswold_william_g # and # a_nuseibeh_bashar,
  booktitle = {27th~International Conference on Software Engineering~{(ICSE'2005)}},
@@ -5876,6 +5930,17 @@
  isbn = {978-0073523330},
 }
 
+@article{S2010DSRSAR,
+ author = a_shi_mingtao,
+ title = {Documenting Software Requirements Specification:~{A} Revisit},
+ xdata = {j_cais},
+ volume = {3},
+ number = {1},
+ pages = {17--19},
+ date = {2010-02},
+ doi = {10.5539/CIS.V3N1P17},
+}
+
 @incollection{S2010WNUDOFTRC,
  editor = a_schultke_jan,
  title = {Why not use Double or Float to represent currency?},
@@ -6442,6 +6507,15 @@
  date = {2000-01/2000-02},
  doi = {10.1109/52.819971},
  addendum = {Practice Tutorial}
+}
+
+@inproceedings{W2004ASOTMFMTQOTRSD,
+ author = a_wong_bernard,
+ title = {A Study of the Metrics for Measuring the Quality of the Requirements Specification Document},
+ pages = {549--553},
+ crossref = {PROC2004SERP},
+ url = {https://opus.lib.uts.edu.au/bitstream/10453/6956/1/2004000890.pdf},
+ urldate = {2025-03-27},
 }
 
 @book{W2020HSISCVISS,
