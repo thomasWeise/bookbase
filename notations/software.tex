@@ -3,6 +3,16 @@
 %%
 %
 %
+\newglossaryentry{android}{%
+text={\softwareStyle{Android}},%
+name={Android},%
+sort={Android},%
+description={%
+Android is a common operating system for mobile phones~\cite{SGMS2022APTBNRG}.%
+}%
+}%
+\protected\gdef\android{\pgls{android}}%
+%
 %
 \newglossaryentry{aptGet}{%
 text={\softwareStyle{apt\nobreakdashes-get}},%
@@ -43,6 +53,22 @@ Learn more about debugging in~\cite{programmingWithPython}.}%
 \protected\gdef\debugger{\pgls{debugger}}%
 %
 %
+\newglossaryentry{docker}{%
+text={\softwareStyle{Docker}},%
+name={Docker},%
+sort={Docker},%
+description={%
+provides \pgls{OS}-level virtualization. %
+A Docker container is something like a more lightweight variant of a virtual machine. %
+Docker containers offer a \linux\ runtime environment into which software can be installed and run isolated from the rest of the system. %
+Such containers can be created by scripts. %
+They offer a simple, reproducible, and portable way to configure and ship software components. %
+Learn more at \url{https://docker.com} or in~\cite{LM2023DUR}.%
+}%
+}%
+\protected\gdef\docker{\pgls{docker}}%
+%
+%
 \newglossaryentry{flask}{%
 text={\softwareStyle{Flask}},%
 name={Flask},%
@@ -53,6 +79,30 @@ It is based on the \python\ WSGI standard~\cite{PEP3333}. %
 Learn more at \url{https://flask.palletsprojects.com}.%
 }%
 }%
+%
+%
+\newglossaryentry{appleIOS}{%
+text={\softwareStyle{iOS}},%
+name={iOS},%
+sort={iOS},%
+description={%
+iOS is the operating system that powers Apple iPhones~\cite{S2025MAPAMAIE2,C2024TCOI1AI1}. %
+Learn more at \url{https://www.apple.com/ios}.%
+}%
+}%
+\protected\gdef\appleIOS{\pgls{appleIOS}}%
+%
+%
+\newglossaryentry{iPadOS}{%
+text={\softwareStyle{iPadOS}},%
+name={iPadOS},%
+sort={iPadOS},%
+description={%
+iPadOS is the operating system that powers Apple iPads~\cite{C2024TCOI1AI1}. %
+Learn more at \url{https://www.apple.com/ipados}.%
+}%
+}%
+\protected\gdef\iPadOS{\pgls{iPadOS}}%
 %
 %
 \newglossaryentry{lampStack}{%
@@ -118,6 +168,17 @@ It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7P
 }%
 }%
 \protected\gdef\libreofficeCalc{\pgls{libreofficeCalc}}%
+%
+\newglossaryentry{macOS}{%
+text={\softwareStyle{macOS}},%
+name={macOS},%
+sort={macOS},%
+description={%
+macOS or Mac~OS is the operating system that powers Apple Mac(intosh) computers~\cite{S2025MAPAMAIE2}. %
+Learn more at \url{https://www.apple.com/macos}.%
+}%
+}%
+\protected\gdef\macOS{\pgls{macOS}}%
 %
 %
 \newglossaryentry{mariadb}{%
