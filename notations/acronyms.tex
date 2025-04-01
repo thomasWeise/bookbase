@@ -12,7 +12,7 @@ An \emph{Application Programming Interface} is a set of rules or protocols that 
 Each row in the text file represents one row in the table or matrix. %
 The elements in the row are separated by a fixed delimiter, usually a comma~(\inQuotes{,}), sometimes a semicolon~(\inQuotes{;}). %
 \python\ offers some out-of-the-box CSV support in the \pythonilIdx{csv}~module~\cite{PSF2024CCFRAW}.%
-},sort={CSV}]{csv}{CSV}{comma-separated values}%
+},sort={CSV}]{CSV}{CSV}{comma-separated values}%
 %
 \newacronym[description={%
 A \emph{database} is an organized collection of structured information or data, typically stored electronically in a computer system. %
@@ -39,18 +39,17 @@ DBS = \acrshort{db}~+~\acrshort{dbms}.%
 \newacronym[shortplural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
 %
 \newacronym[description={%
-Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM}%
+Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}}%
 }]{ERD}{ERD}{entity relationship diagram}%
 %
 \newacronym[plural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 \newacronym{GUI}{GUI}{graphical user interface}%
-\newacronym{HR}{HR}{human resources department}%
-\newacronym{IT}{IT}{information technology}%
 %
 \newacronym[description={Hyper Text Transfer Protocol, the protocol linking web browsers to web servers in the \gls{WWW}~\cite{BL1991RQOHL,RFC1945,RFC2068,RFC9110,G2017HP}.}]{HTTP}{HTTP}{Hyper Text Transfer Protocol}%
 %
 \newacronym[description={Hypertext Transfer Protocol Secure, i.e., an encrypted variant of~\gls{HTTP} where data is sent over~\gls{TLS}~\cite{RFC9110,S2021SCG2HTH}.}]{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}%
 %
+\newacronym{HR}{HR}{human resources department}%
 %
 \newacronym[description={%
 An \emph{Integrated Developer Environment} is a program that allows the user do multiple different activities required for software development in one single system. %
@@ -58,21 +57,35 @@ It often offers functionality such as editing source code, debugging, testing, o
 For \python, we recommend using \pycharm.%
 }]{ide}{IDE}{Integrated Development Environment}%
 %
+\newacronym[description={%
+The Integration Definition for Information Modeling~(IDEF1X) is a standardized syntax for \pglspl{ERD}. %
+It was originally developed by the United States Air Force for data modeling, focusing on entities, relationships, and key structures~\cite{FIPSPUB184,ISOIECIEEE2012ITMLP2SASFII}.%
+}]{IDEF1X}{IDEF1X}{Integration Definition for Information Modeling}%
+%
+\newacronym{IT}{IT}{information technology}%
+\newacronym[description={Joint Application Development~\cite{CWG1993PAJADATC,M1996RTWSS}}]{JAD}{JAD}{Joint Application Development}%
+%
 \newacronym[shortplural={JSON},description={%
 \emph{JavaScript Object Notation} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \gls{javascript}~\cite{E1999ELS} syntax.%
-},sort={JSON}]{json}{JSON}{JavaScript Object Notation}%
+},sort={JSON}]{JSON}{JSON}{JavaScript Object Notation}%
 %
 \newacronym[shortplural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning}%
 %
-\newacronym[shortplural={OOP}]{OOP}{OOP}{Object-Oriented Programming}%
+\newacronym[shortplural={OOP},description={Object-Oriented Programming~\cite{S2007OOSE}}]{OOP}{OOP}{Object-Oriented Programming}%
 %
-\newacronym[shortplural={OSes},description={Operating System, the system that runs your computer, see, e.g., \linux\ and \microsoftWindows.}]{OS}{OS}{Operating System}%
+\newacronym[shortplural={OSes},description={Operating System, the system that runs your computer, see, e.g., \gls{linux}, \gls{microsoftWindows}, \gls{macOS}, and \gls{android}.}]{OS}{OS}{Operating System}%
+%
+\newacronym[description={Participatory Design~\cite{CWG1993PAJADATC,FMRSW1989OOSAATSDASD}}]{participatoryDesign}{PD}{Participatory Design}%
+%
+\newacronym[shortplural={RAD},description={Rapid Application Development~\cite{S2007OOSE,M1996RTWSS}}]{RAD}{RAD}{Rapid Application Development}%
 %
 \newacronym[shortplural={regexes},description={%
 A \emph{Regular Expression}, often called \inQuotes{regex} for short, is a sequence of characters that define a search pattern for text strings~\cite{IEEE1993ISFITPOSIPP2SAU,K2024REH,N2018RQSRUAURE,N2019AITRE}. %
 In \python, the \pythonilIdx{re} module offers functionality work with regular expressions~\cite{K2024REH,PSF2024RREO}. %
 In \postgresql, regex-based pattern matching is supported as well~\cite{PGDG:PD:PRE}.%
 }]{regex}{regex}{regular expression}%
+%
+\newacronym[shortplural={SDLCs},description={Software Development Life Cycle~\cite{I2018SAH,N2024SEFDS}}]{SDLC}{SDLC}{Software Development Life Cycle}%
 %
 \newacronym[shortplural={SQL},description={%
 The \emph{Structured Query Language} is basically a programming language for querying and manipulating \glspl{rdb}~\cite{C20245YOQ}. %
@@ -90,7 +103,9 @@ If \pythonil{user_id == "user123; DROP TABLE data;"}, mayhem would ensue when we
 Some programming languages, like \python, offer built-in datatypes (such as \pythonilIdx{LiteralString}~\cite{PEP675}) to annotate string constants that can be used by static type-checkers. %
 At the time of this writing, \mypy\ does not support this yet~\cite{ZDWVSLS2022I1SP6L,VDGE2022PPDAFP:ST}.%
 }]{SQLi}{SQLi attack}{\glslink{SQL}{SQL} injection attack}%
-
+%
+%
+\newacronym[description={Software Requirements Specification document~\cite{S2010DSRSAR,W2004ASOTMFMTQOTRSD,IEEE1998IRPFSRS,ISOIECIEEE2018SASELCPRE}}]{SRS}{SRS}{Software Requirements Specification}%
 %
 \newacronym[shortplural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}.}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
 %
@@ -115,11 +130,19 @@ The \pythonilIdx{print} instruction of \python\ writes text to this stream. %
 If you run a program in a \gls{terminal}, then the text that a process writes to its \gls{stdout} appears in the console.%
 },sort={stdout}]{stdout}{\texttt{stdout}}{standard output stream}%
 %
+\newacronym[shortplural={SVG},description={The Scalable Vector Graphics~(SVG) format is an \pgls{XML}-based format for vector graphics~\cite{DDGLMSWFJJ2011SVGSSE}. %
+Vector graphics are composed of geometric shapes like lines, rectangles, circles, and text. %
+As opposed to raster / pixel graphics, they can be scaled seamlessly and without artifacts. %
+They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
+%
 \newacronym[description={Transport Layer Security, a protol for encrypted communication over the internet~\cite{RFC8446,DS2024TCID,S2021SCG2HTH}, used by, e.g., \gls{HTTPS}.}]{TLS}{TLS}{Transport Layer Security}%
 %
 \newacronym[shortplural={UCS},description={%
 Universal Coded Character Set, see \gls{unicode}%
 }]{UCS}{UCS}{Universal Coded Character Set}%
+%
+\newacronym[description={%
+The Unified Modeling Language~(UML) is a graphical language for visualizing, specifying, constructing, and documenting the artifacts of distributed object systems~\cite{OMG2017OUMLOU,RMHOSMUUIIIIOPPTRS1997UNG,BRJ1999TUMLRM}}]{UML}{UML}{Unified Modeling Language}%
 %
 \newacronym[description={%
 A \emph{Uniform Resource Locator} identifies a resource in the \gls{WWW} and a way to obtain it by describing a network access mechanism. %
@@ -152,14 +175,14 @@ The most popular distributed VCS is \gls{git}. %
 \sloppy%
 The \emph{Extensible Markup Language} is a text-based language for storing and transporting of data~\cite{BPSMM2008EMLX1FE,K2019ITXJY,CH2013XFCAMLTMC}. %
 It allows you to define elements in the form \xmlil{<myElement myAttr="x">...text..</myElement>}. %
-Different from \gls{csv}, elements in XML can be hierarchically nested, like~\textil{<a><b><c>test</c></b><b>bla</b></a>}, and thus easily represent tree structures. %
+Different from \gls{CSV}, elements in XML can be hierarchically nested, like~\textil{<a><b><c>test</c></b><b>bla</b></a>}, and thus easily represent tree structures. %
 XML is one of most-used data interchange formats. %
 To process XML in \python, use the \pythonilIdx{defusedxml} library~\cite{H2021D0XBPFPSM}, as it protects against several security issues.%
-},sort={XML}]{xml}{XML}{Extensible Markup Language}%
+},sort={XML}]{XML}{XML}{Extensible Markup Language}%
 %
 \newacronym[shortplural={YAML},description={%
 \emph{{YAML}~Ain't Markup Language\texttrademark} is a human-friendly data serialization language for all programming languages~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}. %
 It is widely used for configuration files in the DevOps environment. %
 See \url{https://yaml.org} for more information.%
-},sort={YAML}]{yaml}{YAML}{{YAML}~Ain't Markup Language\texttrademark}%
+},sort={YAML}]{YAML}{YAML}{{YAML}~Ain't Markup Language\texttrademark}%
 %
