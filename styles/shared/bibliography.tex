@@ -113,6 +113,7 @@ URL\addcolon\space%
 % in our bibliography, these and only these identify journals.
 \pertype{xdata}%
 \step[fieldset=entrykey, match=\regexp{\Aj_[a-z].*}, final]%
+\step[fieldsource=entrykey, match=\regexp{\Aj_[a-z].*}, final]%
 \step[fieldsource=note, fieldtarget=___tmp___bib]%
 \step[fieldset=note, null]%
 \step[fieldsource=publisher, final]%
