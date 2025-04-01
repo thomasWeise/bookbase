@@ -88,7 +88,7 @@ sort={Inkscape},%
 description={%
 is a free and open source vector graphics editor, which primarily works with the \pgls{SVG} format~\cite{R2003DMEWI1APGTYJFBTPLVI,K2021TBOI}. %
 This is the tool that I would recommend for professional graphics design.%
-Learn more at \url{https://inkscape.org/}.%
+Learn more at \url{https://inkscape.org}.%
 }%
 }%
 \protected\gdef\inkscape{\pgls{inkscape}}%
@@ -165,6 +165,7 @@ sort={LibreOffice Base},%
 description={%
 is a \pglspl{dbms} that can work on stand-alone files but also connect to other popular \pglspl{rdb}~\cite{FNFHWSKLSSGLFRSRPLJG2022BG7R1BOL7C,S2022L7PFEUU}.
 It is part of \gls{libreoffice}~\cite{DF2024LTDF,GL2012LTSOOSSCBAFACSOL,S2022L7PFEUU} and has functionality that is comparable to Microsoft Access~\cite{SSI2023MA2BTA,B2020HOMA2,UC2021AFD}.%
+\optionalRef{ut:libreOfficeBase}{ See also \cref{ut:libreOfficeBase}.}%
 }%
 }%
 \protected\gdef\libreofficeBase{\pgls{libreofficeBase}}%
@@ -187,7 +188,7 @@ text={\softwareStyle{macOS}},%
 name={macOS},%
 sort={macOS},%
 description={%
-macOS or Mac~OS is the operating system that powers Apple Mac(intosh) computers~\cite{S2025MAPAMAIE2}. %
+or Mac~OS is the operating system that powers Apple Mac(intosh) computers~\cite{S2025MAPAMAIE2}. %
 Learn more at \url{https://www.apple.com/macos}.%
 }%
 }%
@@ -321,6 +322,18 @@ See \url{https://www.mysql.com} for more information.%
 \protected\gdef\mysql{\pgls{mysql}}%
 %
 %
+\newglossaryentry{mysqlWorkbench}{%
+text={\softwareStyle{MySQL} Workbench},%
+name={MySQL Workbench},%
+sort={MySQL Workbench},%
+description={%
+is a visual tool for \db\ designers that offers tools ranging from graphical modeling to performance analysis~\cite{M2013MWDM}. %
+Learn more at \url{https://www.mysql.com/products/workbench}.%
+}%
+}%
+\protected\gdef\mysqlWorkbench{\gls{mysqlWorkbench}}%
+%
+%
 \newglossaryentry{numpy}{%
 text={\softwareStyle{NumPy}},%
 name={NumPy},%
@@ -345,6 +358,18 @@ Learn more at \url{https://pandas.pydata.org}~\cite{PD2025P}.%
 \protected\gdef\pandas{\pgls{pandas}}%
 %
 %
+\newglossaryentry{pgmodeler}{%
+text={\softwareStyle{PgModeler}},%
+name={PgModeler},%
+sort={PgModeler},%
+description={%
+the \postgresql\ \db\ modeler is a tool that allows for graphical modeling of logical schemata for \dbs\ using an \pglspl{ERD}-like notation. %
+Learn more at \url{https://pgmodeler.io}.%
+}%
+}%
+\protected\gdef\pgmodeler{\gls{pgmodeler}}%
+%
+%
 \newglossaryentry{pip}{%
 text={\softwareStyle{pip}},%
 name={pip},%
@@ -365,7 +390,7 @@ name={PostgreSQL},%
 sort={PostgreSQL},%
 description={%
 An open source object-relational \pgls{dbms}~\cite{TA2024DDAMWPAM,FP2023LP,OH2017PUAR,B2024PELUYDW}. %
-See \url{https://postgresql.org} for more information.%
+See \url{https://postgresql.org}\optionalRef{ut:postgresql}{ and \cref{ut:postgresql}} for more information.%
 }%
 }%
 \protected\gdef\postgresql{\gls{postgresql}}%
@@ -377,6 +402,7 @@ name={psql},%
 sort={psql},%
 description={%
 is the \gls{client} program used to access the \postgresql\ \gls{dbms} server.%
+\optionalRef{ut:psql}{ See also \cref{ut:psql}.}%
 }%
 }%
 \protected\gdef\psql{\pgls{psql}}%
@@ -388,7 +414,7 @@ name={psycopg},%
 sort={psycopg},%
 description={%
 or, more exactly, \pythonil{psycopg 3}, is the most popular \postgresql\ adapter for \python, implementing the \python~\acrshort{db}~\acrshort{API}~2.0 specification~\cite{PEP249}. %
-Learn more at \url{https://www.psycopg.org}~\cite{VDGE2010P}.%
+Learn more at \url{https://www.psycopg.org}~\cite{VDGE2010P}\optionalRef{ut:psycopg}{ and \cref{ut:psycopg}}.%
 }%
 }%
 \protected\gdef\psycopg{\pgls{psycopg}}%
@@ -515,7 +541,7 @@ name={SQLite},%
 sort={SQLite},%
 description={is an relational \gls{dbms} which runs as in-process library that works directly on files as opposed to the client-server model used by other common \pglspl{dbms}. %
 It is the most wide-spread \gls{SQL}-based \gls{db} in use today, installed in nearly every smartphone, computer, web browser, television, and automobile~\cite{WB2019RHSOOS,GPBHKP2022SPPAF,C20245YOQ}. %
-Learn more at \url{https://sqlite.org/}.}
+Learn more at \url{https://sqlite.org}.}
 }%
 \protected\gdef\sqlite{\pgls{sqlite}}%
 %
@@ -576,7 +602,7 @@ sort={yEd},%
 description={%
 is a graph editor for high-quality diagrams~\cite{SG2015MDAWY,Y2011YGEM}, suitable to drawn, e.g., technology-independent \pglspl{ERD}. %
 Learn more at \url{https://www.yworks.com/products/yed}.%
-\optionalRef{sec:installingYed}{ See also \cref{sec:installingYed}.}%
+\optionalRef{ut:yEd}{ See also \cref{ut:yEd}.}%
 }%
 }%
 \protected\gdef\yEd{\pgls{yEd}}%

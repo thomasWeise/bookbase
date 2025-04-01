@@ -21,6 +21,7 @@
 \ifx\@bestPractices\@my@tex@package@empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{%
 \chapter*{Best Practices}%
 \pdfbookmark{Best Practices}{Best Practices}%
+\addcontentsline{toc}{chapter}{Best Practices}%
 #1\medskip
 
 \@bestPractices}%
@@ -51,6 +52,7 @@
 \ifx\@usefulTools\@my@tex@package@empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{%
 \chapter*{Useful Tools}%
 \pdfbookmark{Useful Tools}{Useful Tools}%
+\addcontentsline{toc}{chapter}{Useful Tools}%
 #1\medskip
 
 \@usefulTools}%
