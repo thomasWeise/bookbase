@@ -997,6 +997,7 @@
 @string { p_arpa = "{Advanced Research Projects Agency~{(ARPA)}}" }
 @string { p_asa = "{American Standards Association Incorporated}" }
 @string { p_astral = "{Astral Software~Inc.}" }
+@string { p_baidu = "{Baidu~(百度公司)}" }
 @string { p_bell_labs = "{Bell Telephone Laboratories, Incorporated}" }
 @string { p_birkhauser_boston = "{Birkh{\"a}user}" }
 @string { p_bornsql = "Born \glslink{SQL}{SQL}" }
@@ -1009,6 +1010,7 @@
 @string { p_ccse = "{Canadian Center of Science and Education~{(CCSE)}}" }
 @string { p_cern = "{European Organization for Nuclear Research~{(CERN)}}" }
 @string { p_chart_io = "{Chart.io, Inc.}" }
+@string { p_china_ministry_of_foreign_affairs = "{Ministry of Foreign Affairs of the People's Republic of China~{(中华人民共和国外交部)}}" }
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
@@ -1036,6 +1038,7 @@
 @string { p_iag_consulting = "{Information Architecture Group~({IAG}) Consulting}" }
 @string { p_ibm = "{International Business Machines Corporation~{(IBM)}}" }
 @string { p_ibm_press = "{{IBM} Press}" }
+@string { p_icao = "{International Civil Aviation Organization~({ICAO})}" }
 @string { p_icon_computing = "{{ICON} Computing}" }
 @string { p_iec = "{International Electrotechnical Commission~{(IEC)}}" }
 @string { p_ieee = "{Institute of Electrical and Electronics Engineers~{(IEEE)}}" }
@@ -1181,6 +1184,7 @@
 @string { pa_arpa = l_usa_washington_dc }
 @string { pa_asa = l_usa_new_york }
 @string { pa_astral = l_usa_new_york }
+@string { pa_baidu = l_china_beijing }
 @string { pa_bell_labs = l_usa_new_york }
 @string { pa_birkhauser_boston = l_usa_boston }
 @string { pa_bornsql = l_canada_calgary }
@@ -1193,6 +1197,7 @@
 @string { pa_ccse = l_canada_richmond_hill }
 @string { pa_cern = l_switzerland_geneva }
 @string { pa_chart_io = l_usa_san_francisco }
+@string { pa_china_ministry_of_foreign_affairs = l_china_beijing }
 @string { pa_cnri = l_usa_reston }
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
@@ -1219,6 +1224,7 @@
 @string { pa_iag_consulting = l_usa_wilmington }
 @string { pa_ibm = l_usa_armonk }
 @string { pa_ibm_press = l_usa_indianapolis }
+@string { pa_icao = l_canada_montreal }
 @string { pa_icon_computing = l_usa_bluebell }
 @string { pa_ieee = l_usa_piscataway }
 @string { pa_ieee_computer_society = l_usa_los_alamitos }
@@ -1708,6 +1714,11 @@
  type = {Federal Information Processing Standards Publication~({FiPS~PUB})},
  institution = p_nist,
  address = pa_nist,
+}
+
+@xdata{rep_icao_standard,
+ institution = p_icao,
+ address = pa_icao,
 }
 
 @xdata{rep_ieee_standard,
@@ -2358,6 +2369,23 @@
  doi = {10.1007/978-3-642-59412-0},
 }
 
+@collection{BD2006BDBK,
+ title = {百度百科~(Baidu Baike)},
+ publisher = p_baidu,
+ address = pa_baidu,
+ date = {2006-04-20},
+ url = {https://baike.baidu.com},
+ urldate = {2025-04-03},
+}
+
+@incollection{BD2006BDBKWOFFITOROC,
+ title = {中华人民共和国外国人工作许可证~(Work Permit for Foreigners of the People's Republic of China)},
+ date = {2025-01-19/2025-01-22},
+ crossref = {BD2006BDBK},
+ url = {https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%A4%96%E5%9B%BD%E4%BA%BA%E5%B7%A5%E4%BD%9C%E8%AE%B8%E5%8F%AF%E8%AF%81},
+ urldate = {2025-04-03},
+}
+
 @article{BFJKMRGRT1985RMFDSDAFTGDOTAXSDSSG,
  author = a_burns_thomas # and # a_fong_elizabeth_n # and # a_jefferson_david # and # a_knox_richard # and # a_mark_leo # and # a_reedy_christopher # and # a_reich_louis # and # a_roussopoulos_nick # and # a_truszkowski_walter,
  title = {Reference Model for \glslink{dbms}{DBMS} Standardization, Database Architecture Framework Task Group~{(DAFTG)} of the {ANSI/X3/SPARC} Database System Study Group},
@@ -2783,6 +2811,16 @@
  addendum = {Second Printing } # may # {, 1964},
  url = {https://www.ibiblio.org/apollo/Documents/CTSS_ProgrammersGuide.pdf},
  urldate = {2025-01-08}
+}
+
+@book{CMOFA2019ITCV,
+ title = {来华签证简介~(Introduction to Chinese Visa)},
+ booktitle = {外国人来华~(Visit China). 来华签证~(Chinese Visa)},
+ date = {2019-11-20},
+ publisher = p_china_ministry_of_foreign_affairs,
+ address = pa_china_ministry_of_foreign_affairs,
+ url = {http://cs.mfa.gov.cn/wgrlh/lhqz/lhqzjj_660596},
+ urldate = {2025-04-03},
 }
 
 @book{CN2020ULB,
@@ -3751,6 +3789,30 @@
  date = {2009/2011-11-08},
  url = {https://www.iag.biz/wp-content/uploads/Business_Ananlysis_Benchmark_Full_report_2009.pdf},
  urldate = {2025-03-27},
+}
+
+@inproceedings{ICAO2004TAGOMRTDFMUOPINAPN,
+ booktitle = {Technical Advisory Group on Machine Readable Travel Documents. Fifteenth Meeting},
+ title = {Use of Personal {ID} Number as Passport Number},
+ volume = {TAG\nobreakdashes-MRTD/15 WP/19 28/4/04},
+ eventdate = {2004-05-17/2004-05-21},
+ venue = l_canada_montreal,
+ urldate = {2025-04-03},
+ publisher = p_icao,
+ address = pa_icao,
+ pages = {1--2},
+ url = {https://www.icao.int/Meetings/TAG-MRTD/Documents/Tag-Mrtd-15/TagMrtd15_WP019_en.pdf},
+}
+
+
+@techreport{ICAO2021MRTDP3SCTAMEE,
+ title = {Machine Readable Travel Documents. Part~3:~{S}pecifications Common to all {MRTDs}. Eighth Edition},
+ number = {Doc~9303},
+ date = {2021},
+ xdata = {rep_icao_standard},
+ url = {https://www.icao.int/publications/documents/9303_p3_cons_en.pdf},
+ urldate = {2025-04-03},
+ isbn = {978-92-9265-333-0},
 }
 
 @techreport{IEEE1993ISFITPOSIPP2SAU,
