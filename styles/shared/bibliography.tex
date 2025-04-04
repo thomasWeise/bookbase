@@ -11,6 +11,7 @@ backend=biber,%
 style=numeric-comp,%
 backref=true,%
 urldate=iso,%
+date=comp,%
 ]{biblatex}%
 %
 %% Set our bibliography.
@@ -164,3 +165,16 @@ URL\addcolon\space%
 %% A link to a github user name
 \protected\gdef\githubUser#1{\inQuotes{\href{https://github.com/#1}{#1}}}%
 %
+%% This command is useful to print bibliography entries in a list for further reading.
+%% It works like \cite{...}, but suppresses the url visit date and the publisher address.
+\DeclareCiteCommand{\furtherReading}%
+{\usebibmacro{prenote}}%
+{%
+\clearfield{urlyear}\clearname{urlyear}\clearlist{urlyear}%
+\clearfield{address}\clearname{address}\clearlist{address}%
+\clearfield{location}\clearname{location}\clearlist{location}%
+\usedriver{%
+}{\thefield{entrytype}}%
+}%
+{\multicitedelim}%
+{\usebibmacro{postnote}}%
