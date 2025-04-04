@@ -141,6 +141,7 @@
 @string { a_cannon_jason = "Jason Cannon" }
 @string { a_cardinalby = "Cardinal~(cardinalby)" }
 @string { a_carey_cj = "CJ Carey" }
+@string { a_carlis_john_vincent = "John Vincent Carlis" }
 @string { a_carlson_stephan_c = "Stephan C.\ Carlson" }
 @string { a_carmel_erran = "Erran Carmel" }
 @string { a_castro_oscar = "Oscar Castro" }
@@ -240,6 +241,7 @@
 @string { a_euclid = "{{Euclid of Alexandria}~{(\ensuremath{E{\acute\upsilon}\kappa\lambda\varepsilon{\acute\iota}\delta\eta\varsigma})}}" }
 @string { a_euler_leonhard = "Leonhard Euler" }
 @string { a_evans_clark_c = "Clark C.\ Evans" }
+@string { a_everest_gordon_c = "Gordon C.\ Everest" }
 @string { a_fan_thomas_j = "Thomas J.\ \githubUser{thomasjpfan} Fan" }
 @string { a_fang_lu = "Lu Fang" }
 @string { a_fanning_steve = "Steve Fanning" }
@@ -488,6 +490,7 @@
 @string { a_lundell_bjorn = "Bj{\"o}rn Lundell" }
 @string { a_luschny_peter = "Peter Luschny" }
 @string { a_macfarlane_stuart = "Stuart Macfarlane" }
+@string { a_maguire_joseph_d = "Joseph D.\ Maguire" }
 @string { a_maiden_neil_a_m = "Neil A.\ M.\ Maiden" }
 @string { a_maler_eve = "Eve Maler" }
 @string { a_mann_samuel = "Samuel Mann" }
@@ -951,6 +954,7 @@
 @string { l_usa_ithaca = "{{Ithaca}, {NY}, {USA}}" }
 @string { l_usa_lake_buena_vista = "{{Lake Buena Vista}, {FL}, {USA}}" }
 @string { l_usa_las_vegas = "{{Las Vegas}, {NV}, {USA}}" }
+@string { l_usa_long_beach = "{{Long Beach}, {CA}, {USA}}" }
 @string { l_usa_los_alamitos = "{{Los Alamitos}, {CA}, {USA}}" }
 @string { l_usa_los_angeles = "{{Los Angeles}, {CA}, {USA}}" }
 @string { l_usa_milford = "{{Milford}, {MA}, {USA}}" }
@@ -1064,6 +1068,7 @@
 @string { p_iec = "{International Electrotechnical Commission~{(IEC)}}" }
 @string { p_ieee = "{Institute of Electrical and Electronics Engineers~{(IEEE)}}" }
 @string { p_ieee_computer_society = "{{IEEE}~Computer Society}" }
+@string { p_ieee_computer_society_publication_office = "{{IEEE} Computer Society Publications Office}" }
 @string { p_ietf = "{Internet Engineering Task Force~{(IETF)}}" }
 @string { p_ifip = "{International Federation for Information Processing~{(IFIP)}}" }
 @string { p_ilogix = "{i\nobreakdashes-Logix}" }
@@ -1252,6 +1257,7 @@
 @string { pa_icon_computing = l_usa_bluebell }
 @string { pa_ieee = l_usa_piscataway }
 @string { pa_ieee_computer_society = l_usa_los_alamitos }
+@string { pa_ieee_computer_society_publication_office = l_usa_long_beach }
 @string { pa_ieee_ny = l_usa_new_york }
 @string { pa_ietf = l_usa_wilmington }
 @string { pa_ifip = l_austria_laxenburg }
@@ -2834,6 +2840,15 @@
  isbn = {978-0-262-03384-8}
 }
 
+@book{CM2000MDMAUDA,
+ author = a_carlis_john_vincent # and # a_maguire_joseph_d,
+ title = {Mastering Data Modeling:~{A} User Driven Approach},
+ publisher = p_addison_wesley_professional,
+ address = pa_addison_wesley_professional,
+ date = {2000-11},
+ isbn = {020170045X},
+}
+
 @book{CM2003DDCPAA,
  author = a_chan_lois_mai # and # a_mitchell_joan_s,
  title = {Dewey Decimal Classification:~Principles and Application},
@@ -3155,6 +3170,15 @@
  url = {https://scholarlycommons.pacific.edu/cgi/viewcontent.cgi?article=1070},
  urldate = {2024-09-24},
  addendum = {See \cite{E1985AEOCF} for a translation.}
+}
+
+@inproceedings{E1976BDSMEWACE,
+ author = a_everest_gordon_c,
+ title = {Basic Data Structure Models Explained with a Common Example},
+ pages = {39--46},
+ crossref = {PROC1976TCOCS},
+ url = {https://www.researchgate.net/publication/291448084},
+ urldate = {2025-04-04}
 }
 
 @article{E1985AEOCF,
@@ -4861,6 +4885,15 @@
  urldate = {2025-04-04},
 }
 
+@inbook{P2006CITRD:ERMI,
+ title = {Entity-Relationship Model~{II}},
+ chapter = {15},
+ crossref = {P2006CITRD},
+ date = {2007-02-07},
+ url = {http://users.cms.caltech.edu/~donnie/dbcourse/intro0607/lectures/Lecture15.pdf},
+ urldate = {2025-04-04},
+}
+
 @book{P2021HOMLPAVWP,
  author = a_pajankar_ashwin,
  title = {Hands\nobreakdashes-on \glslink{matplotlib}{Matplotlib}:~{L}earn Plotting and Visualizations with \glslink{python}{Python}~3},
@@ -5568,6 +5601,15 @@
  publisher = p_acm,
  address = pa_acm,
  isbn = {978-1-4503-3920-9},
+}
+
+@proceedings{PROC1976TCOCS,
+ title = {Fifth Texas Conference on Computing Systems~({Computing Systems'1976})},
+ venue = l_usa_austin,
+ eventdate = {1976-10-18/1976-10-19},
+ publisher = p_ieee_computer_society_publication_office,
+ address = pa_ieee_computer_society_publication_office,
+ issn = {0730-8310}
 }
 
 @proceedings{PROC1986HPW,
