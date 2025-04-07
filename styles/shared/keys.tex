@@ -50,3 +50,47 @@
 \protected\gdef\libreOfficeBaseTable{\@key@icon@button{libreOfficeBaseTable}}%
 % The LibreOffice PDF button
 \protected\gdef\libreOfficePdf{\@key@icon@button{libreOfficePdf}}%
+%
+%% The four different Crow's Foot end notations.
+\protected\gdef\crowsFootOptionalOne{%
+\raisebox{-0.111111em}{\includegraphics[height=0.93em,keepaspectratio]{\bookbaseDir/graphics/icons/crowsFootOptionalOne}}}%
+\protected\gdef\crowsFootMandatoryOne{%
+\raisebox{-0.111111em}{\includegraphics[height=0.93em,keepaspectratio]{\bookbaseDir/graphics/icons/crowsFootMandatoryOne}}}%
+\protected\gdef\crowsFootOptionalMany{%
+\raisebox{-0.111111em}{\includegraphics[height=0.93em,keepaspectratio]{\bookbaseDir/graphics/icons/crowsFootOptionalMany}}}%
+\protected\gdef\crowsFootMandatoryMany{%
+\raisebox{-0.111111em}{\includegraphics[height=0.93em,keepaspectratio]{\bookbaseDir/graphics/icons/crowsFootMandatoryMany}}}%
+%
+\edef\@@crowsfoot@oo{\detokenize{O1}}%
+\edef\@@crowsfoot@mo{\detokenize{M1}}%
+\edef\@@crowsfoot@om{\detokenize{OM}}%
+%
+%% Crow's foot notation for entity relationship diagrams
+%% #1 first label (left side)
+%% #2 first end of relationship (left side)
+%% #3 second label (right side)
+%% #4 second relationship end (right side)
+%% relationship ends are: O1 = optional 1, M1 = mandatory 1,
+%%                        OM = optional many, MM = mandatory many
+\protected\gdef\crowsFoot#1#2#3#4{\mbox{%
+#1%
+\edef\@crowf@img@a{\detokenize{#2}}%
+\ifx\@crowf@img@a\@@crowsfoot@oo\let\@crowf@img@a\crowsFootOptionalOne%
+\else\ifx\@crowf@img@a\@@crowsfoot@mo\let\@crowf@img@a\crowsFootMandatoryOne%
+\else\ifx\@crowf@img@a\@@crowsfoot@om\let\@crowf@img@a\crowsFootOptionalMany%
+\else\let\@crowf@img@a\crowsFootMandatoryMany%
+\fi\fi\fi%
+\edef\@crowf@img@b{\detokenize{#4}}%
+\ifx\@crowf@img@b\@@crowsfoot@oo\let\@crowf@img@b\crowsFootOptionalOne%
+\else\ifx\@crowf@img@b\@@crowsfoot@mo\let\@crowf@img@b\crowsFootMandatoryOne%
+\else\ifx\@crowf@img@b\@@crowsfoot@om\let\@crowf@img@b\crowsFootOptionalMany%
+\else\let\@crowf@img@b\crowsFootMandatoryMany%
+\fi\fi\fi%
+\hspace*{0.1em}%
+\@crowf@img@a%
+\hspace*{-0.25em}%
+\reflectbox{\@crowf@img@b}%
+\hspace*{0.1em}%
+#3%
+}}%
+%
