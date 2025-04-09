@@ -311,6 +311,7 @@
 @string { a_goodger_david = "David Goodger" }
 @string { a_goodwin_michael = "Michael Goodwin" }
 @string { a_graf_florian = "Florian Graf" }
+@string { a_gray_jim = "Jim Gray" }
 @string { a_gramfort_alexandre = "Alexandre Gramfort" }
 @string { a_grasso_anthony = "Anthony Grasso" }
 @string { a_green_todd_j = "Todd J.\ Green" }
@@ -437,6 +438,7 @@
 @string { a_korn_l_k = "L.\ K.\ Korn" }
 @string { a_korth_henry_f = "Henry F.\ \inQuotes{Hank} Korth" }
 @string { a_kosheleva_olga = "Olga Kosheleva" }
+@string { a_kozelek_petr = "Petr Kozelek" }
 @string { a_kraska_tim = "Tim Kraska" }
 @string { a_krekel_holger = "Holger Krekel" }
 @string { a_krishna_pulkit = "Pulkit Krishna" }
@@ -616,6 +618,7 @@
 @string { a_pirozzi_enrico = "Enrico Pirozzi" }
 @string { a_pitonyak_andres = "Andrew Pitonyak" }
 @string { a_plagman_bernard_d = "Bernard D.\ Plagman" }
+@string { a_plattner_hasso = "Hasso Plattner" }
 @string { a_pohl_klaus = "Klaus Pohl" }
 @string { a_polat_ilhan = "Ilhan \githubUser{ilayn} Polat" }
 @string { a_pollard_tom_j = "Tom J.\ Pollard" }
@@ -648,6 +651,7 @@
 @string { a_reisner_phyllis = "Phyllis Reisner" }
 @string { a_reschke_julian_f = "Julian F.\ Reschke" }
 @string { a_rescorla_eric = "Eric Rescorla" }
+@string { a_reuter_andreas = "Andreas Reuter" }
 @string { a_reza_hassan = "Hassan Reza" }
 @string { a_ribeiro_antonio_h = "Ant{\^o}nio H.\ Ribeiro" }
 @string { a_richards_mark = "Mark Richards" }
@@ -811,6 +815,7 @@
 @string { a_virtanen_pauli = "Pauli \githubUser{pv} Virtanen" }
 @string { a_vizcaino_juan_antonio = "Juan Antonio Vizca{\'i}no" }
 @string { a_voorhis_dave = "Dave Voorhis" }
+@string { a_vossen_gottfried = " Gottfried Vossen" }
 @string { a_vyssotsky_victor_a = "Victor A.\ Vyssotsky" }
 @string { a_wahbeh_abullah = "Abdullah Wahbeh" }
 @string { a_wallach_hanna_m = "Hanna M.\ Wallach" }
@@ -825,6 +830,7 @@
 @string { a_weckesser_warren = "Warren Weckesser" }
 @string { a_wehr_l_a = "L.A.\ Wehr" }
 @string { a_weidenhaupt_klaus = "Klaus Weidenhaupt" }
+@string { a_weikum_gerhard = "Gerhard Weikum" }
 @string { a_weise_thomas = "Thomas Weise~(汤卫思)" }
 @string { a_weiss_ron = "Ron Weiss" }
 @string { a_weisstein_eric_w = "Eric Wolfgang Weisstein" }
@@ -1056,6 +1062,7 @@
 @string { p_chart_io = "{Chart.io, Inc.}" }
 @string { p_china_ministry_of_foreign_affairs = "{Ministry of Foreign Affairs of the People's Republic of China~{(中华人民共和国外交部)}}" }
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
+@string { p_codeproject = "CodeProject" }
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
 @string { p_crc_press = "{{CRC} Press}" }
@@ -1256,6 +1263,7 @@
 @string { pa_chart_io = l_usa_san_francisco }
 @string { pa_china_ministry_of_foreign_affairs = l_china_beijing }
 @string { pa_cnri = l_usa_reston }
+@string { pa_codeproject = l_canada_toronto }
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
 @string { pa_crc_press = l_usa_boca_raton }
@@ -3748,6 +3756,14 @@
  doi = {10.5555/1151869.1151880}
 }
 
+@book{GR1992TPCAT,
+ author = a_gray_jim # and # a_reuter_andreas,
+ title = {Transaction Processing:~{C}oncepts and Techniques },
+ xdata = {ser_tmksidms},
+ date = {1992-09},
+ isbn = { 1558601902},
+}
+
 @article{GRRX2001ACSOEHMFBDOOS,
  author = a_garcia_alessandro_f # and # a_rubira_cacilia_m_f # and # a_romanovsky_alexander_b # and # a_xu_jie,
  title = {A Comparative Study of Exception Handling Mechanisms for Building Dependable Object\nobreakdashes-Oriented Software},
@@ -4374,6 +4390,16 @@
  doi = {10.1109/NAFIPS.2009.5156463},
  url = {https://www.cs.utep.edu/vladik/2009/olg09-05a.pdf},
  urldate = {2024-09-25},
+}
+
+@book{K2010ATTDCID,
+ author = a_kozelek_petr,
+ title = {Audit Trail -- Tracing Data Changes in \glslink{db}{Database}},
+ date = {2010-08-30},
+ publisher = p_codeproject,
+ address = pa_codeproject,
+ url = {https://www.codeproject.com/Articles/105768/Audit-Trail-Tracing-Data-Changes-in-Database},
+ urldate = {2025-04-09},
 }
 
 @book{K2018EIPFEUU,
@@ -5048,6 +5074,25 @@
  date = {2007-02-07},
  url = {http://users.cms.caltech.edu/~donnie/dbcourse/intro0607/lectures/Lecture15.pdf},
  urldate = {2025-04-04},
+}
+
+@book{P2014ACIIMDMTIMOIMD,
+ author = a_plattner_hasso,
+ title = {A Course in In{-}Memory Data Management:~{T}he Inner Mechanics of In{-}Memory \glslink{db}{Databases}},
+ doi = {10.1007/978-3-642-55270-0},
+ publisher = p_springer_verlag,
+ address = pa_springer_verlag,
+ isbn = {978-3-642-55269-4},
+ date = {2014-06},
+ edition = {2},
+}
+
+@inbook{P2014ACIIMDMTIMOIMD:IO,
+ title = {Insert{\nobreakdashes-}Only},
+ pages = {173--180},
+ crossref = {P2014ACIIMDMTIMOIMD},
+ chapter = {Advanced Database Storage Techniques,~3},
+ doi = {10.1007/978-3-642-55270-0_26},
 }
 
 @book{P2021HOMLPAVWP,
@@ -7480,6 +7525,14 @@
  crossref = {PROC2016AMCIS},
  url = {https://scholar.dsu.edu/cgi/viewcontent.cgi?article=1016&context=bispapers},
  urldate = {2025-03-27},
+}
+
+@book{WV2001TISTAATPOCCAR,
+ author = a_weikum_gerhard # and # a_vossen_gottfried,
+ title = {Transactional Information Systems:~{T}heory, Algorithms, and the Practice of Concurrency Control and Recovery},
+ date = {2001-06},
+ xdata = {ser_tmksidms},
+ isbn = {1558605088},
 }
 
 @inproceedings{WW2023RSDEWASSAA,
