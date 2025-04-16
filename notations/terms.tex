@@ -78,7 +78,7 @@ The number~$b$ of a fraction~$\frac{a}{b}\in\rationalNumbers$ is called the \emp
 \newglossaryentry{doctest}{%
 name={doctest},%
 description={%
-\emph{doctests} are small pieces of code in the \glspl{docstring} that look like interactive \python\ sessions.
+\emph{doctests} are \pglspl{unitTest} in the form of as small pieces of code in the \glspl{docstring} that look like interactive \python\ sessions.
 The first line of a statement in such a \python\ snippet is indented with \python{>>>}\pythonIdx{>\strut>\strut>} and the following lines by \pythonil{...}\pythonIdx{\idxdots}.
 These snippets can be executed by modules like \pythonilIdx{doctest}~\cite{PSF2024DTIPE} or tools such as \pytest~\cite{KPDT2024HTRD}.
 Their output is the compared to the text following the snippet in the \gls{docstring}.
@@ -126,7 +126,7 @@ is a special string in \python, which delimited by \pythonil{f"..."}\pythonIdx{f
 \newglossaryentry{git}{%
 name={Git},%
 description={%
-is a distributed \acrfull{vcs} which allows multiple users to work on the same code while preserving the history of the code changes~\cite{S2023LG,T2024BGAGVCPMATFTND}. %
+is a distributed \acrfull{VCS} which allows multiple users to work on the same code while preserving the history of the code changes~\cite{S2023LG,T2024BGAGVCPMATFTND}. %
 Learn more at \url{https://git-scm.com}.%
 }%
 }%
@@ -145,7 +145,7 @@ Learn more at \url{https://gitee.com}.%
 \newglossaryentry{github}{%
 name={GitHub},%
 description={%
-is a website where software projects can be hosted and managed via the \gls{git} \gls{vcs}~\cite{PRGWSUdVLFTEKPKFBV2016TSRFTAOGAG,T2024BGAGVCPMATFTND}. %
+is a website where software projects can be hosted and managed via the \gls{git} \gls{VCS}~\cite{PRGWSUdVLFTEKPKFBV2016TSRFTAOGAG,T2024BGAGVCPMATFTND}. %
 Learn more at \url{https://github.com}.%
 }%
 }%
@@ -372,6 +372,24 @@ description={%
 A standard for assigning characters to numbers~\cite{TUC2023U1510,TUC2023U151ACS,ISOIEC106462020ITUCCSU}. %
 The Unicode standard supports basically all characters from all languages that are currently in use, as well as many special symbols. %
 It is the predominantly used way to represent characters in computers and is regularly updated and improved.%
+}%
+}%
+%
+%
+\newglossaryentry{unitTest}{%
+name={unit test},%
+description={%
+Software development is centered around creating the program code of an application, library, or otherwise useful system. %
+A \emph{unit test} is an \emph{additional} code fragment that is not part of that productive code. %
+It exists to execute (a part of) the productive code in a certain scenario (e.g., with specific parameters), to observe the behavior of that code, and to compare whether this behavior meets the specification~\cite{P2021PUTAAOAEUTIP,R2006ASOUTP,TLG2006UTCU}. %
+If not, the unit test fails. %
+The use of unit tests is at least threefold: %
+First, they help us to detect errors in the code. %
+Second, program code is usually not developed only once and, from then on, used without change indefinitely. %
+Instead, programs are often updated, improved, extended, and maintained over a long time. %
+Unit tests can help us to detect whether such changes in the program code, maybe after years, violate the specification or, maybe, cause another, depending, module of the program to violate its specification.
+Third, they are part of the documentation or even specification of a program.%
+\optionalRef{def:unitTesting}{ See also \cref{def:unitTesting}.}%
 }%
 }%
 %
