@@ -37,8 +37,8 @@ The DBMS allows the user/application to create, read, write, update, delete, and
 \protected\gdef\dbms{\pgls{dbms}}%%
 %
 \newacronym[shortplural={DBSes},description={%
-A \emph{database system} is the combination of a \gls{db} and a the corresponding \glslink{dbms}, i.e., basically, an installation of a \glslink{dbms} on a computer together with one (or multiple) \glspl{db}. %
-DBS = \acrshort{db}~+~\acrshort{dbms}.%
+A \emph{database system} is the combination of a \gls{db} and a the corresponding \glslink{dbms}, i.e., basically, an installation of a \glslink{dbms} on a computer together with one or multiple~\glspl{db}. %
+\mbox{DBS~=~\acrshort{db}~+~\acrshort{dbms}}.%
 }]{dbs}{DBS}{database system}%
 %
 
@@ -110,7 +110,7 @@ In order to prevent such attacks, queries to \pglspl{db} should \emph{never} be 
 Assume that \pythonil{user_id} was a string variable in a \python\ program and we construct the query \pythonil{f"SELECT * FROM data WHERE user_id = \{user_id\}"}. %
 Notice that the \textil{\{user_in\}} will be replaced with the value of variable~\pythonil{user_id} during \gls{strinterpolation}. %
 If \pythonil{user_id == "user123; DROP TABLE data;"}, mayhem would ensue when we execute the query~\cite{PEP675}. %
-Some programming languages, like \python, offer built-in datatypes (such as \pythonilIdx{LiteralString}~\cite{PEP675}) to annotate string constants that can be used by static type-checkers. %
+Some programming languages, like \python, offer built-in datatypes~(such as \pythonilIdx{LiteralString}~\cite{PEP675}) to annotate string constants that can be used by static type-checkers. %
 At the time of this writing, \mypy\ does not support this yet~\cite{ZDWVSLS2022I1SP6L,VDGE2022PPDAFP:ST}.%
 }]{SQLi}{SQLi attack}{\glslink{SQL}{SQL} injection attack}%
 %
@@ -120,21 +120,21 @@ At the time of this writing, \mypy\ does not support this yet~\cite{ZDWVSLS2022I
 \newacronym[shortplural={SSH},description={Secure Shell Transport Layer Protocol, a protocol that provides users a secure way to access computers over an unsecure network~\cite{RFC4253,AP2024WWS,BSB2005STSSTDG}.}]{SSH}{SSH}{Secure Shell Transport Layer Protocol}%
 %
 \newacronym[description={%
-The \emph{standard error stream} is one of the three pre-defined streams of a console process (together with the \gls{stdin} and the \gls{stdout})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+The \emph{standard error stream} is one of the three pre-defined streams of a console process~(together with the \gls{stdin} and the \gls{stdout})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
 It is the text stream to which the process writes information about errors and exceptions. %
 If an uncaught \pythonilIdx{Exception} is raised in \python\ and the program terminates, then this information is written to \gls{stderr}. %
 If you run a program in a \gls{terminal}, then the text that a process writes to its \gls{stderr} appears in the console.%
 },sort={stderr}]{stderr}{\texttt{stderr}}{standard error stream}%
 %
 \newacronym[description={%
-The \emph{standard input stream} is one of the three pre-defined streams of a console process (together with the \gls{stdout} and the \gls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+The \emph{standard input stream} is one of the three pre-defined streams of a console process~(together with the \gls{stdout} and the \gls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
 It is the text stream from which the process reads its input text, if any. %
 The \python\ instruction \pythonilIdx{input} reads from this stream. %
 If you run a program in a \gls{terminal}, then the text that you type into the terminal while the process is running appears in this stream.%
 },sort={stdin}]{stdin}{\texttt{stdin}}{standard input stream}%
 %
 \newacronym[description={%
-The \emph{standard output stream} is one of the three pre-defined streams of a console process (together with the \gls{stdin} and the \gls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
+The \emph{standard output stream} is one of the three pre-defined streams of a console process~(together with the \gls{stdin} and the \gls{stderr})~\cite{J2024PTOGBSI8IS12ESSSSIS}. %
 It is the text stream to which the process writes its normal output. %
 The \pythonilIdx{print} instruction of \python\ writes text to this stream. %
 If you run a program in a \gls{terminal}, then the text that a process writes to its \gls{stdout} appears in the console.%
