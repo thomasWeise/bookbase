@@ -828,6 +828,7 @@
 @string { a_tyler_christina = "Christina Tyler" }
 @string { a_ullman_jeffrey = "Jeffrey Ullman" }
 @string { a_ulrich_laurie_a = "Laurie A.\ Ulrich" }
+@string { a_user2959071 = "\href{https://dba.stackexchange.com/users/205536}{user2959071}" }
 @string { a_uszkoreit_julian = "Julian Uszkoreit" }
 @string { a_valiev_marat = "Marat Valiev" }
 @string { a_vaidyanathasamy_lakshminarayanan = "Lakshminarayanan Vaidyanathasamy" }
@@ -2414,6 +2415,15 @@
  date = {2012-12},
  url = {https://www.usenix.org/publications/login/december-2012-volume-37-number-6/data-processing-pandas},
  urldate = {2024-06-25},
+}
+
+@book{B2017MAMCTEAWFR,
+ author = a_bartholomew_daniel,
+ title = {\glslink{mariadb}{MariaDB} and \glslink{mysql}{MySQL} \glslink{CTE}{Common Table Expressions} and Window Functions Revealed},
+ date = {2017-11},
+ publisher = p_apress,
+ address = pa_apress,
+ isbn = {9781484231203},
 }
 
 @book{B2018THALOMMATFOY,
@@ -4972,15 +4982,6 @@
  isbn = {978-0071791885}
 }
 
-@incollection{M2014VPKM,
- title = {\sqlilIdx{VARCHAR} Primary Key -- \glslink{mysql}{MySQL}},
- editor = a_mark_s,
- date = {2014-10-22/2016-02-05},
- crossref = {SE:DA},
- url = {https://dba.stackexchange.com/questions/80806},
- urldate = {2025-02-27},
-}
-
 @book{M2017WAFSIPAHCIUT,
  author = a_maxwell_aaron,
  title = {What are \glslink{fstring}{f\nobreakdashes-strings} in \glslink{python}{Python} and how can {I} use them?},
@@ -5160,7 +5161,7 @@
 }
 
 @inbook{N2016SSFA:DC,
- title = {\glslink{postgresql}{PostgreSQL}: Deferrable Constraints},
+ title = {\glslink{postgresql}{PostgreSQL}:~{D}eferrable Constraints},
  date = {2016-08-13},
  crossref = {N2016SSFA},
  url = {https://blog.anayrat.info/en/2016/08/13/postgresql-deferrable-constraints},
@@ -5850,6 +5851,14 @@
  urldate = {2025-02-27},
 }
 
+@incollection{PGDG:PD:CT2,
+ title = {\sqlil{CREATE TABLE}\sqlIdx{CREATE!TABLE}},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/sql-createtable.html},
+ urldate = {2025-04-21},
+}
+
 @incollection{PGDG:PD:CU,
  title = {Connection \glslink{URI}{URIs}},
  chapter = {32.1.1.2},
@@ -6003,6 +6012,15 @@
  urldate = {2025-02-27},
 }
 
+@incollection{PGDG:PD:RDFMR,
+ title = {Returning Data from Modified Rows},
+ chapter = {6.4},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/dml-returning.html},
+ urldate = {2025-04-21},
+}
+
 @incollection{PGDG:PD:SC,
  title = {\glslink{SQL}{SQL} Commands},
  chapter = {Part~{VI}.~Reference},
@@ -6044,6 +6062,24 @@
  publisher = p_postgresql_global_development_group,
  url = {https://jdbc.postgresql.org},
  urldate = {2025-03-05},
+}
+
+@incollection{PGDG:T,
+ title = {Transactions},
+ date = {2025-02-20},
+ crossref = {PGDG:PD},
+ chapter = {3.4},
+ url = {https://www.postgresql.org/docs/17/tutorial-transactions.html},
+ urldate = {2025-04-21},
+}
+
+@incollection{PGDG:PD:WQCTE,
+ title = {\sqlilIdx{WITH} Queries~(\glslink{CTE}{Common Table Expressions})},
+ chapter = {7.8.},
+ crossref = {PGDG:PD},
+ date = {2025-02-20},
+ url = {https://www.postgresql.org/docs/17/queries-with.html},
+ urldate = {2025-04-21},
 }
 
 @inproceedings{PGMLBCKLGADKYDRTCSFBC2019PAISHPDLL,
@@ -6855,15 +6891,6 @@
  urldate = {2025-04-06},
 }
 
-@incollection{R2016HDIRENCFTCTNL,
- editor = a_raddevus,
- title = {How do I read \glslink{ERD}{ERD} Notation (Crow's Feet) to convert to Natural Language?},
- date = {2016-02-17/2018-06-22},
- crossref = {SE:DA},
- url = {https://dba.stackexchange.com/questions/129551},
- urldate = {2025-04-06},
-}
-
 @book{RF2020FOSAAEA,
  author = a_richards_mark # and # a_ford_neal,
  title = {Fundamentals of Software Architecture:~{A}n Engineering Approach},
@@ -7251,20 +7278,28 @@
  urldate = {2025-03-29},
 }
 
-@inbook{S2024D:THOD,
- crossref = {S2024D},
- title = {The History of \glslink{db}{Databases}},
- chapter = {02a},
- url = {https://dbs.academy.lv/lection/dbs_LS02ENa_hist.pdf},
- urldate = {2025-01-11},
-}
-
 @inbook{S2024D:LDMRMRA,
  crossref = {S2024D},
  title = {Logical Data Models. Relation Model. Relation Algebra},
  chapter = {05},
  url = {https://dbs.academy.lv/lection/dbs_LS05EN_rm.pdf},
  urldate = {2025-04-10},
+}
+
+@inbook{S2024D:MEDTRDM,
+ crossref = {S2024D},
+ title = {Mapping \glslink{ERD}{ER Diagrams} to Relation Data Model},
+ chapter = {06},
+ url = {https://dbs.academy.lv/lection/dbs_LS06EN_er2rm.pdf},
+ urldate = {2025-04-20},
+}
+
+@inbook{S2024D:THOD,
+ crossref = {S2024D},
+ title = {The History of \glslink{db}{Databases}},
+ chapter = {02a},
+ url = {https://dbs.academy.lv/lection/dbs_LS02ENa_hist.pdf},
+ urldate = {2025-01-11},
 }
 
 @book{S2024DEOGRPOT,
@@ -7348,6 +7383,33 @@
  address = pa_stack_exchange,
  url = {https://dba.stackexchange.com},
  urldate = {2025-02-27},
+}
+
+@incollection{SE:DA:2014VPKM,
+ title = {\sqlilIdx{VARCHAR} Primary Key -- \glslink{mysql}{MySQL}},
+ editor = a_mark_s,
+ date = {2014-10-22/2016-02-05},
+ crossref = {SE:DA},
+ url = {https://dba.stackexchange.com/questions/80806},
+ urldate = {2025-02-27},
+}
+
+@incollection{SE:DA:2016HDIRENCFTCTNL,
+ editor = a_raddevus,
+ title = {How do I read \glslink{ERD}{ERD} Notation (Crow's Feet) to convert to Natural Language?},
+ date = {2016-02-17/2018-06-22},
+ crossref = {SE:DA},
+ url = {https://dba.stackexchange.com/questions/129551},
+ urldate = {2025-04-06},
+}
+
+@incollection{SE:DA:2022WEAICCAWEIASIP,
+ title = {When exactly are \sqlilIdx{IMMEDIATE} constraints checked and what exactly is a \inQuotes{statement} in \glslink{postgresql}{Postgres}?},
+ editor = a_user2959071,
+ date = {2022-07-12/2022-07-13},
+ crossref = {SE:DA},
+ url = {https://dba.stackexchange.com/questions/314340},
+ urldate = {2025-04-21},
 }
 
 @collection{SE:SE,

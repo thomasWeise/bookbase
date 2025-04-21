@@ -175,6 +175,16 @@ $\downarrow$~~\expandafter\bashil{python3 #3}~~$\downarrow$%
 }%
 %
 %
+%%
+%% Use latexgit to place a SQL listing.
+%% #1 the git repository
+%% #2 the local path
+%% #3 the label (lst: will be pre-pended)
+%% #4 the caption
+\protected\gdef\gitSQL#1#2#3#4{%
+\gitCode{#1}{#2}{}{#3}{#4}{,style=sql_style}%
+}%
+%
 %%% Set the SQL output format, because sometimes we want to have different formats in the output
 \protected\gdef\gitSQLAndOutputFormat#1{\xdef\@gitSQLAndOutputFormat{#1}}%
 \protected\gdef\gitSQLAndOutputFormatDefault{\gitSQLAndOutputFormat{tool_style_sql}}%
