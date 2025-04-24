@@ -1028,6 +1028,7 @@
 @string { l_usa_luck = "{{Luck}, {WI}, {USA}}" }
 @string { l_usa_malvern = "{{Malvern}, {PA}, {USA}}" }
 @string { l_usa_milford = "{{Milford}, {MA}, {USA}}" }
+@string { l_usa_milpitas = "{{Milpitas}, {CA}, {USA}}" }
 @string { l_usa_minneapolis = "{{Minneapolis}, {MN}, {USA}}" }
 @string { l_usa_minneapolis_st_paul = "{{Minneapolis/St.~Paul}, {MN}, {USA}}" }
 @string { l_usa_motvale = "{{Montvale}, {NJ}, {USA}}" }
@@ -1171,6 +1172,7 @@
 @string { p_logilab = "{Logilab}" }
 @string { p_manning_publications = "{Manning Publications}" }
 @string { p_markt_technik = "{Markt+Technik Verlag {GmbH}}" }
+@string { p_maria_db = "\glslink{mariadb}{MariaDB}" }
 @string { p_martin_luther_university_iocs = "{{Institute of Computer Science}, {Martin\nobreakdashes-Luther\nobreakdashes-Universität Halle\nobreakdashes-Wittenberg}}" }
 @string { p_mcgraw_hill = "{McGraw\nobreakdashes-Hill}" }
 @string { p_mci_systemhouse = "{{MCI} Systemhouse Corporation}" }
@@ -1391,6 +1393,7 @@
 @string { pa_logilab = l_france_toulouse }
 @string { pa_manning_publications = l_usa_shelter_island }
 @string { pa_markt_technik = l_germany_burgthann }
+@string { pa_maria_db = l_usa_milpitas }
 @string { pa_martin_luther_university_iocs = l_germany_halle_saale }
 @string { pa_mcgraw_hill = l_usa_new_york }
 @string { pa_mci_systemhouse = l_canada_ottawa }
@@ -4201,26 +4204,6 @@
  doi = {10.1038/S41586-020-2649-2},
 }
 
-@book{HO2023WKUOS,
- author = a_hipp_d_richard # andothers,
- title = {Well-Known Users of \glslink{sqlite}{SQLite}},
- date = {2023-01-02},
- publisher = p_hwaci,
- address = pa_hwaci,
- url = {https://www.sqlite.org/famous.html},
- urldate = {2025-01-12}
-}
-
-@book{HO2024HSIT,
- author = a_hipp_d_richard # andothers,
- title = {How \glslink{sqlite}{SQLite} Is Tested},
- date = {2024-03-13},
- publisher = p_hwaci,
- address = pa_hwaci,
- url = {https://sqlite.org/testing.html},
- urldate = {2025-01-12},
-}
-
 @article{HPW1998REAVWRWS,
  author = a_haumer_peter # and # a_pohl_klaus # and # a_weidenhaupt_klaus,
  title = {Requirements Elicitation and Validation with Real World Scenes},
@@ -4251,6 +4234,41 @@
  pages = {54--66},
  data = {2013-04/2014-06},
  doi = {10.1109/MAHC.2012.55},
+}
+
+@collection{HWACIS,
+ title = {\glslink{sqlite}{SQLite}},
+ date = {2025},
+ publisher = p_hwaci,
+ address = pa_hwaci,
+ url = {https://sqlite.org},
+ urldate = {2025-04-24},
+}
+
+@incollection{HWACIS:HO2023WKUOS,
+ author = a_hipp_d_richard # andothers,
+ title = {Well-Known Users of \glslink{sqlite}{SQLite}},
+ date = {2023-01-02},
+ crossref = {HWACIS},
+ url = {https://www.sqlite.org/famous.html},
+ urldate = {2025-01-12}
+}
+
+@incollection{HWACIS:HO2024HSIT,
+ author = a_hipp_d_richard # andothers,
+ title = {How \glslink{sqlite}{SQLite} Is Tested},
+ date = {2024-03-13},
+ crossref = {HWACIS},
+ url = {https://sqlite.org/testing.html},
+ urldate = {2025-01-12},
+}
+
+@incollection{HWACIS:R,
+ title = {\sqlil{RETURNING}},
+ crossref = {HWACIS},
+ date = {2024-05-08},
+ url = {https://sqlite.org/lang_returning.html},
+ urldate = {2025-04-24},
 }
 
 @book{I2018SAH,
@@ -4963,6 +4981,22 @@
  url = {https://arxiv.org/abs/2105.00500},
  urldate = {2024-10-29},
  addendum = {See also \mbox{arXiv:2105.00500v1} \mbox{[cs.SE]} \mbox{2~May~2021}},
+}
+
+@collection{M:MSD,
+ title = {\glslink{mariadb}{MariaDB} \glslink{server}{Server} Documentation},
+ publisher = p_maria_db,
+ address = pa_maria_db,
+ year = {2025},
+ url = {https://mariadb.com/kb/en/documentation},
+ urldate = {2025-04-24},
+}
+
+@incollection{M:MSD:IR,
+ title = {\sqlil{INSERT...RETURNING}},
+ crossref = {M:MSD},
+ url = {https://mariadb.com/kb/en/insertreturning},
+ urldate = {2025-04-24},
 }
 
 @article{M2001FTEAOOP,
