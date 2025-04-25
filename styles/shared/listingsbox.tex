@@ -7,3 +7,13 @@
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/listingsbox.tex}%
 }{}%
+%
+%%% Run a command and assign a path.
+%% #1 the git repository
+%% #2 the path to the directory
+%% #3 the command to be executed
+%% #4 the LaTeX command that should receive the path.
+\protected\gdef\gitExecPath#1#2#3#4{%
+\gitExec{#1}{#2}{#3}%
+\expandafter\expandafter\expandafter\edef\expandafter\csname #4\endcsname{\gitFile}%
+}%
