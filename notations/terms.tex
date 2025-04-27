@@ -49,7 +49,7 @@ text={\gls{client}\nobreakdashes-\gls{server} architecture},%
 name={client-server architecture},%
 sort={client-server architecture},%
 description={%
-is a system design where a central \gls{server} receives requests from one or multiple \glspl{client}~\cite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBLGGCH2025CSA}. %
+is a system design where a central \gls{server} receives requests from one or multiple \glspl{client}~\cite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBEB:CSA}. %
 These requests and responses are usually sent over network connections. %
 A typical example for such a system is the \gls{WWW}, where web \glspl{server} host websites and make them available to web browsers, the \glspl{client}. %
 Another typical example is the structure of \gls{db} software, where a central \gls{server}, the \glslink{dbms}, offers access to the \gls{db} to the different \glspl{client}. %
@@ -80,7 +80,7 @@ name={doctest},%
 description={%
 \emph{doctests} are \pglspl{unitTest} in the form of as small pieces of code in the \glspl{docstring} that look like interactive \python\ sessions.
 The first line of a statement in such a \python\ snippet is indented with \python{>>>}\pythonIdx{>\strut>\strut>} and the following lines by \pythonil{...}\pythonIdx{\idxdots}.
-These snippets can be executed by modules like \pythonilIdx{doctest}~\cite{PSF:P3D:TPSL:DTIPE} or tools such as \pytest~\cite{KPDT2024HTRD}.
+These snippets can be executed by modules like \pythonilIdx{doctest}~\cite{PSF:P3D:TPSL:DTIPE} or tools such as \pytest~\cite{KPDT2024PD:HTRD}.
 Their output is the compared to the text following the snippet in the \gls{docstring}.
 If the output matches this text, the test succeeds.
 Otherwise it fails.%
@@ -91,7 +91,7 @@ Otherwise it fails.%
 \newglossaryentry{exitCode}{%
 name={exit code},%
 description={%
-When a process terminates, it can return a single integer value~(the exit status code) to indicate success or failure~\cite{J2024PTOGBSI8IS12EETAP}. %
+When a process terminates, it can return a single integer value~(the exit status code) to indicate success or failure~\cite{J2024PTOGBSI8IS12E:TAP}. %
 Per convention, an exit code of~0 means success. %
 Any non-zero exit code indicates an error. %
 Under \python, you can terminate the current process at any time by calling \pythonilIdx{exit} and optionally passing in the exit code that should be returned. %
@@ -174,9 +174,9 @@ JavaScript is the predominant programming language used in websites to develop i
 \newglossaryentry{locale}{%
 name={locale},%
 description={%
-A \gls{locale} corresponds basically to a selection of country or culture for a system or application~\cite{J2024L}. %
+A \gls{locale} corresponds basically to a selection of country or culture for a system or application~\cite{J2024PTOGBSI8IS12E:L}. %
 The \gls{locale} then determines a set of country- or culture-dependent settings, such as the text representation for money or dates, or what decimal separators are used.%
-A good example is, for example, that American English readers will interpret the date~7/4/2000 as July~4th, 2000, whereas British English readers will read this as the 7th~of April, 2000~\cite{CDE2025D}. %
+A good example is, for example, that American English readers will interpret the date~7/4/2000 as July~4th, 2000, whereas British English readers will read this as the 7th~of April, 2000~\cite{CDE:D}. %
 It is therefore important that software printing dates knows whether it is running on an American or British English~PC.%
 }%
 }%

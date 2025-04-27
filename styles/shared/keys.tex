@@ -21,9 +21,14 @@
 %% insert a icon button
 \protected\gdef\@key@icon@button#1{\raisebox{-0.111111em}{\includegraphics[width=1em,height=1em,keepaspectratio]{\bookbaseDir/graphics/icons/#1}}}
 %
+%% a four-bar button
+\protected\gdef\fourBarButton{\ensuremath{\mathrel{\rlap{\raisebox{\fontdimen22\textfont2}{\ensuremath{=}}}\raisebox{-0.5\fontdimen22\textfont2}{\ensuremath{=}}}}}%
+%% a three-bar button
+\protected\gdef\threeBarButton{\ensuremath{\boldsymbol{\equiv}}}%
+%
 %% The PyCharm main menu key
-\protected\gdef\pycharmMainMenu{\ensuremath{\mathrel{\rlap{\raisebox{\fontdimen22\textfont2}{\ensuremath{=}}}\raisebox{-0.5\fontdimen22\textfont2}{\ensuremath{=}}}}}
-\global\let\pgmodelerMainMenu\pycharmMainMenu%
+\global\let\pycharmMainMenu\fourBarButton%
+\global\let\pgmodelerMainMenu\threeBarButton%
 %% The PyCharm python console menu key
 \protected\gdef\pycharmConsole{\@key@icon@button{pycharmPythonConsole}}%
 %% The pycharm debugger resume command
