@@ -45,41 +45,12 @@
 }%
 %
 %
-%% Temporarily switch off all glossary linking.
-%%
-\newenvironment{noglossarylinks}{%
-%
+%% Temporarily switch off the \glslink command.
+%% This does not affect the \pgls family of commands.
+%% This environment cannot be recursively nested.
+\newenvironment{noglslink}{%
 \let\@noglossarylinks@old@glslink\glslink%
 \protected\gdef\glslink##1##2{##2}%
-%
-\global\let\@noglossarylinks@old@gls\gls%
-\protected\gdef\gls##1{\@noglossarylinks@old@gls[hyper=false]{##1}}%
-\global\let\@noglossarylinks@old@Gls\Gls%
-\protected\gdef\Gls##1{\@noglossarylinks@old@Gls[hyper=false]{##1}}%
-\global\let\@noglossarylinks@old@glspl\glspl%
-\protected\gdef\glspl##1{\@noglossarylinks@old@glspl[hyper=false]{##1}}%
-\global\let\@noglossarylinks@old@Glspl\Glspl%
-\protected\gdef\Glspl##1{\@noglossarylinks@old@Glspl[hyper=false]{##1}}%
-%
-\global\let\@noglossarylinks@old@pgls\pgls%
-\global\let\pgls\gls%
-\global\let\@noglossarylinks@old@Pgls\Pgls%
-\global\let\Pgls\Gls%
-\global\let\@noglossarylinks@old@pglspl\pglspl%
-\global\let\pglspl\glspl%
-\global\let\@noglossarylinks@old@Pglspl\Pglspl%
-\global\let\Pglspl\Glspl%
 }{%
-%
 \global\let\glslink\@noglossarylinks@old@glslink%
-%
-\global\let\pgls\@noglossarylinks@old@pgls%
-\global\let\Pgls\@noglossarylinks@old@Pgls%
-\global\let\pglspl\@noglossarylinks@old@pglspl%
-\global\let\Pglspl\@noglossarylinks@old@Pglspl%
-%
-\global\let\gls\@noglossarylinks@old@gls%
-\global\let\Gls\@noglossarylinks@old@Gls%
-\global\let\glspl\@noglossarylinks@old@glspl%
-\global\let\Glspl\@noglossarylinks@old@Glspl%
 }%
