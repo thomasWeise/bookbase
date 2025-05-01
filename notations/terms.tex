@@ -350,6 +350,18 @@ Under \ubuntu\ \linux, \ubuntuTerminal\ opens a terminal, which then runs a \bas
 }%
 %
 %
+\newglossaryentry{timestamping}{%
+name={timestamping},%
+plural={timestamping},%
+description={%
+is a technique used in \pglspl{db} to keep track of the creation and/or modification time of data~\cite{TJS2000ETID,SE:SE:WSADTUT}. %
+For each table in a \pgls{rdb} to which it is applied, an additional column with datatype~\sqlilIdx{TIMESTAMP}~\cite{PGDG:PD:DTT} is added for the creation timestamp. %
+This column is usually annotated as \sqlil{NOT NULL DEFAULT CURRENT_TIMESTAMP}\sqlIdx{CURRENT\_TIMESTAMP}~\cite{PGDG:PD:DTFAO}, meaning that the \dbms\ will automatically store the current date and time when a row is created. %
+If data can be changed, then another column for the last update time can be added to the table as well.%
+}%
+}%
+%
+%
 \newglossaryentry{typeHint}{%
 name={type hint},%
 plural={type hints},%
