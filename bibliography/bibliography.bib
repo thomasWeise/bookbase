@@ -215,6 +215,7 @@
 @string { a_daley_robert_c = "Robert C.\ Daley" }
 @string { a_dalpiaz_fabiano = "Fabiano Dalpiaz" }
 @string { a_damian_daniela_e = "Daniela E.\ Damian" }
+@string { a_date_christopher_j = "Christopher J.\ Date" }
 @string { a_dauben_joseph_w = "Joseph W.\ Dauben" }
 @string { a_david_matt = "Matt David" }
 @string { a_davies_donald_w = "Donald W.\ Davies" }
@@ -222,6 +223,7 @@
 @string { a_davis_andy = "Andy Davis" }
 @string { a_de_man_jozef = "Jozef {De Man}" }
 @string { a_dean_jeffrey = "Jeffrey Dean" }
+@string { a_dean_jr_albert_l = "Albert L.\ {Dean~Jr.}" }
 @string { a_deitel_abbey = "Abbey Deitel" }
 @string { a_deitel_harvey = "Harvey Deitel" }
 @string { a_deitel_paul = "Paul Deitel" }
@@ -463,6 +465,7 @@
 @string { a_kempe_shannon = "Shannon Kempe" }
 @string { a_kemper_alfons = "Alfons Kemper" }
 @string { a_kennedy_dan_r = "Dan R.\ Kennedy" }
+@string { a_kent_william = "William (Bill) Kent" }
 @string { a_kern_robert = "Robert Kern" }
 @string { a_kerr_douglas_s = "Douglas S.\ Kerr" }
 @string { a_kerschberg_larry = "Larry Kerschberg" }
@@ -1137,6 +1140,7 @@
 @string { l_usa_dallas = "{{Dallas}, {TX}, {USA}}" }
 @string { l_usa_davis = "{{Davis}, {CA}, {USA}}" }
 @string { l_usa_dublin = "{{Dublin}, {OH}, {USA}}" }
+@string { l_usa_englewood_cliffs = "{{Englewood Cliffs}, {NJ}, {USA}}" }
 @string { l_usa_gaithersburg = "{{Gaithersburg}, {MD}, {USA}}" }
 @string { l_usa_greenville = "{{Greenville}, {SC}, {USA}}" }
 @string { l_usa_flower_mound = "{{Flower Mound}, {TX}, {USA}}" }
@@ -1200,6 +1204,7 @@
 @string { l_usa_st_louis = "{{St.~Louis}, {MO}, {USA}}" }
 @string { l_usa_stanford = "{{Stanford}, {CA}, {USA}}" }
 @string { l_usa_studio_city = "{{Studio City}, {CA}, {USA}}" }
+@string { l_usa_upper_saddle_river = "{{Upper Saddle River}, {NJ}, {USA}}" }
 @string { l_usa_wakefield = "{{Wakefield}, {MA}, {USA}}" }
 @string { l_usa_washington_dc = "{{Washington}, {DC}, {USA}}" }
 @string { l_usa_wilmington = "{{Wilmington}, {DE}, {USA}}" }
@@ -1279,6 +1284,7 @@
 @string { p_iag_consulting = "{Information Architecture Group~({IAG}) Consulting}" }
 @string { p_ibm = "{International Business Machines Corporation~{(IBM)}}" }
 @string { p_ibm_press = "{{IBM} Press}" }
+@string { p_ibm_research_laboratory_sj = "{{IBM}~Research Laboratory}"}
 @string { p_icao = "{International Civil Aviation Organization~({ICAO})}" }
 @string { p_icon_computing = "{{ICON} Computing}" }
 @string { p_iec = "{International Electrotechnical Commission~{(IEC)}}" }
@@ -1358,6 +1364,8 @@
 @string { p_prc_standardization_administration = "{中国国家标准化管理委员会~(Standardization Administration of the People's Republic of China,~{SAC})}" }
 @string { p_prc_standards_press = "{中国标准出版社~(Standards Press of China)}" }
 @string { p_prc_state_administration_for_market_regulation = "{国家市场监督管理总局~(State Administration for Market Regulation)}" }
+@string { p_prentice_hall = "{Prentice-Hall}" }
+@string { p_prentice_hall_englewood = p_prentice_hall }
 @string { p_princeton_university_press = "{Princeton University Press}" }
 @string { p_project_gutenberg = "{Project Gutenberg Literary Archive Foundation}" }
 @string { p_psycopg_team = "The \glslink{psycopg}{Psycopg} Team" }
@@ -1505,6 +1513,7 @@
 @string { pa_iag_consulting = l_usa_wilmington }
 @string { pa_ibm = l_usa_armonk }
 @string { pa_ibm_press = l_usa_indianapolis }
+@string { pa_ibm_research_laboratory_sj = l_usa_san_jose }
 @string { pa_icao = l_canada_montreal }
 @string { pa_icon_computing = l_usa_bluebell }
 @string { pa_ieee = l_usa_piscataway }
@@ -1577,6 +1586,8 @@
 @string { pa_pragmatic_bookshelf = l_usa_flower_mound }
 @string { pa_prc_ministry_of_foreign_affairs = l_china_beijing }
 @string { pa_prc_standardization_administration = l_china_beijing }
+@string { pa_prentice_hall = l_usa_upper_saddle_river }
+@string { pa_prentice_hall_englewood = l_usa_englewood_cliffs }
 @string { pa_princeton_university_press = l_usa_princeton }
 @string { pa_project_gutenberg = l_usa_salt_lake_city }
 @string { pa_psycopg_team = l_uk_london }
@@ -2027,6 +2038,12 @@
  type = {Federal Information Processing Standards Publication~({FiPS~PUB})},
  institution = p_nist,
  address = pa_nist,
+}
+
+@xdata{rep_irrsj,
+ type = {{IBM} Research Report},
+ institution = p_ibm_research_laboratory_sj,
+ address = pa_ibm_research_laboratory_sj
 }
 
 @xdata{rep_icao_standard,
@@ -2942,6 +2959,36 @@
  urldate = {2025-01-05},
 }
 
+@techreport{C1971FNOTDBRM,
+ author = a_codd_edgar_frank,
+ title = {Further \glslink{3NF}{Normalization} of the \glslink{db}{Data Base} Relational Model},
+ number = {RJ909},
+ date = {1971-08-31},
+ xdata = {rep_irrsj},
+ url = {https://forum.thethirdmanifesto.com/wp-content/uploads/asgarosforum/987737/00-efc-further-normalization.pdf},
+ urldate = {2025-05-04},
+ addendum = {Reprinted in~\cite{PROC1971DBSCCSS6}},
+}
+
+@inproceedings{C1971NDBSABT,
+ author = a_codd_edgar_frank,
+ title = {\glslink{2NF}{Normalized} \glslink{db}{Data Base} Structure:~{A} Brief Tutorial},
+ crossref = {PROC1971SIGFIDET},
+ pages = {1--17},
+ doi = {10.1145/1734714.1734716},
+ addendum = {See also~\cite{C1971NDBSABT2}}
+}
+
+@techreport{C1971NDBSABT2,
+ author = a_codd_edgar_frank,
+ title = {\glslink{2NF}{Normalized} \glslink{db}{Data Base} Structure:~{A} Brief Tutorial},
+ number = {RJ935},
+ date = {1971},
+ xdata = {rep_irrsj},
+ url = {https://www.fsmwarden.com/Codd/Normalized%20data%20base%20structure_%20a%20brief%20tutorial(1971,%20nov).pdf},
+ urldate = {2025-05-04},
+}
+
 @inproceedings{C1971TCOTPP,
  author = a_cook_stephen_arthur,
  title = {The Complexity of Theorem-Proving Procedures},
@@ -3392,6 +3439,16 @@
  pages = {225--249},
  doi = {10.1007/BF00389433},
  addendum = {Communicated by~} # a_bottazzini_umberto
+}
+
+@book{D2003AITDS,
+ author = a_date_christopher_j,
+ title = {An Introduction to \glslink{dbs}{Database Systems}},
+ edition = {8},
+ publisher = p_pearson_education,
+ address = pa_pearson_education,
+ date = {2003-07},
+ isbn = {0321197844},
 }
 
 @collection{D2021RPT,
@@ -4799,6 +4856,19 @@
  pages = {187--211},
  date = {1979-09},
  doi = {10.1145/356778.356780},
+}
+
+@article{K1983ASGTFNFIRDT,
+ author = a_kent_william,
+ title = {A Simple Guide to Five Normal Forms in \glslink{rdb}{Relational Database} Theory},
+ xdata = {j_cacm},
+ volume = {26},
+ number = {2},
+ pages = {120--125},
+ date = {1982-09/1983-02},
+ doi = {10.1145/358024.358054},
+ url = {https://www.cs.dartmouth.edu/~cs61/Resources/Papers/CACM%20Kent%20Five%20Normal%20Forms.pdf},
+ urldate = {2025-05-03},
 }
 
 @book{K1997FA,
@@ -6472,6 +6542,17 @@
  volume = {{1:~Mathematics, Software}},
 }
 
+@proceedings{PROC1971DBSCCSS6,
+ title = {\glslink{dbs}{Data Base Systems}:~{C}ourant Computer Science Symposium~6},
+ editor = a_rustin_randall,
+ eventdate = {1971-05-24/1971-05-25},
+ venue = l_usa_new_york,
+ publisher = p_prentice_hall_englewood,
+ address = pa_prentice_hall_englewood,
+ date = {1972},
+ isbn = {013196741X},
+}
+
 @proceedings{PROC1971STOC,
  title = {Proceedings of the Third Annual {ACM} Symposium on Theory of Computing~{(STOC'1971)}},
  eventdate = {1971-05-03/1971-05-05},
@@ -6481,6 +6562,16 @@
  publisher = p_acm,
  address = pa_acm,
  isbn = {978-1-4503-7464-4}
+}
+
+@proceedings{PROC1971SIGFIDET,
+ editor = a_codd_edgar_frank # and # a_dean_jr_albert_l,
+ title = {{ACM}~{SIGFIDET} Workshop on Data Description, Access, and Control},
+ eventdate = {1971-11-11/1971-11-12},
+ venue = l_usa_san_diego,
+ publisher = p_acm,
+ address = pa_acm,
+ isbn = {978-1-4503-7300-5},
 }
 
 @proceedings{PROC1974SIGFIDET,
@@ -7642,6 +7733,22 @@
  chapter = {06},
  url = {https://dbs.academy.lv/lection/dbs_LS06EN_er2rm.pdf},
  urldate = {2025-04-20},
+}
+
+@inbook{S2024D:N,
+ crossref = {S2024D},
+ title = {Normalization},
+ chapter = {07a},
+ url = {https://dbs.academy.lv/lection/dbs_LS07ENa_normalization.pdf},
+ urldate = {2025-05-03},
+}
+
+@inbook{S2024D:RNDAFDNF,
+ crossref = {S2024D},
+ title = {{RDM}~Normalization. Data Anomalies. Functional Dependency. Normal Forms.},
+ chapter = {07},
+ url = {https://dbs.academy.lv/lection/dbs_LS07EN_normalization.pdf},
+ urldate = {2025-05-03},
 }
 
 @inbook{S2024D:THOD,
