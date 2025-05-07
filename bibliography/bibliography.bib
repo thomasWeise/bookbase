@@ -292,6 +292,7 @@
 @string { a_filaseta_michael = "Michael Filaseta" }
 @string { a_finucane_stephen = "Stephen Finucane" }
 @string { a_firing_eric = "Eric Firing" }
+@string { a_fisher_ken = "Ken Fisher" }
 @string { a_fitzpatrick_richard = "Richard Fitzpatrick" }
 @string { a_flannery_brian_p = "Brian P.\ Flannery" }
 @string { a_flight_robert_m = "Robert M.\ Flight" }
@@ -344,6 +345,7 @@
 @string { a_gonzalez_torres_raul_e = "Raul E.\ {Gonzalez Torres}" }
 @string { a_good_mary_l = "Mary L.\ Good" }
 @string { a_goodger_david = "David Goodger" }
+@string { a_goodin_dan = "Dan Goodin" }
 @string { a_goodwin_michael = "Michael Goodwin" }
 @string { a_gou_zhibin = "Zhibin Gou"}
 @string { a_graf_florian = "Florian Graf" }
@@ -868,6 +870,7 @@
 @string { a_steiner_benoit = "Benoit Steiner" }
 @string { a_stephens_ryan_k = "Ryan K.\ Stephens" }
 @string { a_stewart_chris = "Chris Stewart" }
+@string { a_stokes_jon = "Jon Stokes" }
 @string { a_stonebraker_michael = "Michael Stonebraker" }
 @string { a_storchaka_serhiy = "Serhiy Storchaka" }
 @string { a_straffin_jr_philip_d = "Philip D.\ {Straffin~Jr.}" }
@@ -923,6 +926,7 @@
 @string { a_van_mulbregt_paul = "Paul {van Mulbregt}" }
 @string { a_van_rossum_guido = "Guido {van Rossum}" }
 @string { a_van_rysdam = "Peter {van Rysdam}" }
+@string { a_van_schelven_klaas = "Klaas van Schelven" }
 @string { a_van_vugt_sander = "Sander {van Vugt}" }
 @string { a_vandenberg_scott_l = "Scott L.\ Vandenberg" }
 @string { a_vanderplas_jake = "Jake {VanderPlas}" }
@@ -1092,6 +1096,7 @@
 @string { l_netherlands_amsterdam = "{{Amsterdam}, {The~Netherlands}}" }
 @string { l_netherlands_dordrecht = "{{Dordrecht}, {The~Netherlands}}" }
 @string { l_netherlands_eindhoven = "{{Eindhoven}, {The~Netherlands}}" }
+@string { l_netherlands_utrecht = "{{Utrecht}, {The Netherlands}}" }
 @string { l_norway_sandnes = "{{Sandnes}, {Rogaland}, {Norway}}" }
 @string { l_portugal_lisbon = "{{Lisbon}, {Portugal}}" }
 @string { l_qatar_doha = "{{Doha}, {Qatar}}" }
@@ -1235,6 +1240,7 @@
 @string { p_blocshop = "{Blocshop~{s.r.o.}}" }
 @string { p_bornsql = "Born \glslink{SQL}{SQL}" }
 @string { p_bruhin_software = "{Bruhin Software}" }
+@string { p_bugsink = "{Bugsink~{B.V.}}" }
 @string { p_cahners = "{Cahners Publishing Company}" }
 @string { p_caltech = "{California Institute of Technology~({Caltech})}" }
 @string { p_cambridge_uni_press_ass = "{Cambridge University Press \& Assessment}" }
@@ -1248,6 +1254,7 @@
 @string { p_cnri = "{Corporation for National Research Initiatives~({CNRI})}" }
 @string { p_codeproject = "CodeProject" }
 @string { p_computer_history_museum = "{Computer History Museum~{(CHM)}}" }
+@string { p_conde_nast = "{Cond{\'e} Nast}" }
 @string { p_cornell_university_library = "{Cornell Universiy Library}" }
 @string { p_crc_press = "{{CRC} Press}" }
 @string { p_createspace = "{{CreateSpace} Independent Publishing Platform}" }
@@ -1466,6 +1473,7 @@
 @string { pa_blocshop = l_czech_republic_prague }
 @string { pa_bornsql = l_canada_calgary }
 @string { pa_bruhin_software = l_switzerland_winterthur }
+@string { pa_bugsink = l_netherlands_utrecht }
 @string { pa_cahners = l_usa_boston }
 @string { pa_caltech = l_usa_pasadena }
 @string { pa_cambridge_uni_press_ass = l_uk_cambridge }
@@ -1478,6 +1486,7 @@
 @string { pa_chart_io = l_usa_san_francisco }
 @string { pa_cnri = l_usa_reston }
 @string { pa_codeproject = l_canada_toronto }
+@string { pa_conde_nast = l_usa_new_york }
 @string { pa_cornell_university_library = l_usa_ithaca }
 @string { pa_computer_history_museum = l_usa_mountain_view }
 @string { pa_crc_press = l_usa_boca_raton }
@@ -2407,6 +2416,23 @@
  doi = {10.1016/J.JISA.2024.103871},
 }
 
+@collection{AT,
+ editor = a_fisher_ken # and # a_stokes_jon,
+ title = {Ars Technica},
+ date = {1998/2025},
+ publisher = p_conde_nast,
+ address = pa_conde_nast,
+}
+
+@incollection{AT:G2025AGCCBADFTSSCHW,
+ author = a_goodin_dan,
+ title = {\glslink{AI}{AI}\nobreakdash-generated code could be a disaster for the software supply chain. Here's why.},
+ date = {2025-04-29},
+ crossref = {AT},
+ url = {https://arstechnica.com/security/2025/04/ai-generated-code-could-be-a-disaster-for-the-software-supply-chain-heres-why},
+ urldate = {2025-05-08},
+}
+
 @book{AXSSGDMS1978FRODMS,
  author = {{ANSI/X3/SPARC}~Study Group, Database Management Systems},
  title = {Framework Report on \glslink{dbms}{Database Management Systems}},
@@ -2936,6 +2962,24 @@
  address = pa_oreilly,
  date = {2005-05},
  isbn = {9780596008956},
+}
+
+@collection{BSHETB,
+ title = {Bugsink -- Self-hosted Error Tracking:~{B}log},
+ publisher = p_bugsink,
+ address = pa_bugsink,
+ date = {2015/2025},
+ url = {https://www.bugsink.com},
+ urldate = {2025-05-08},
+}
+
+@incollection{BSHETB:VSK2025CIC,
+ author = a_van_schelven_klaas,
+ title = {Copilot Induced Crash},
+ crossref = {BSHETB},
+ date = {2025-01-15},
+ url = {https://www.bugsink.com/blog/copilot-induced-crash},
+ urldate = {2025-05-08},
 }
 
 @book{BT2021HPM,
