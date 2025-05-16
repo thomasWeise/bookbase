@@ -10,6 +10,7 @@ The first \glsreset{NF}\pgls{NF} in relational \pglspl{db}~\cite{C1970ARMODFLSDB
 %
 \newacronym[description={%
 The second \glsreset{NF}\pgls{NF} in relational \pglspl{db}~\cite{C1971FNOTDBRM,C1971NDBSABT,K1983ASGTFNFIRDT,D2003AITDS,EN2015FODS}.%
+\optionalRef{sec:normalForm:2}{ See also~\cref{sec:normalForm:2}.}%
 }]{2NF}{2NF}{second normal form}%
 %
 \newacronym[description={%
@@ -70,7 +71,14 @@ A \emph{database system} is the combination of a \gls{db} and a the correspondin
 Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}}%
 }]{ERD}{ERD}{entity relationship diagram}%
 %
-\newacronym[plural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
+\protected\gdef\funcDepb#1#2{#1\glslink{funcDep}{\ensuremath{\rightarrow}}#2}%
+\newacronym[longplural={functional dependencies},description={%
+A functional dependency exists between two groups of attributes~$Y$ and~$X$ if the values of~$X$ determine the values of~$Y$. %
+This is written as~$\funcDepb{X}{Y}$.%
+\optionalRef{def:functionalDependency}{ See also~\cref{def:functionalDependency}.}%
+}]{funcDep}{FD}{functional dependency}%
+%
+\newacronym[shortplural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 \newacronym{GUI}{GUI}{graphical user interface}%
 %
 \newacronym[description={The Hyper Text Markup Language~(HTML) is the text format used by the \gls{WWW}~\cite{T2024MHCFTB2,BL1991RQOHL,HBFLDNOP2014HAVAAAFHAX}.}]{HTML}{HTML}{Hyper Text Markup Language}%
