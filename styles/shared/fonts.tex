@@ -21,9 +21,13 @@
 \advance\@bb@quote@depth by -1\relax%
 }%
 %
-%% Put text in single quotes
+%% Put text in single quotes.
 %% #1 the text
 \protected\gdef\inSQuotes#1{`#1'}%
+%
+%% Put text in guillemots.
+%% #1 the text
+\protected\gdef\inGuillemot#1{\guillemotleft#1\guillemotright}%
 %
 %% Render text in the style to render a software name
 %% #1 the text
