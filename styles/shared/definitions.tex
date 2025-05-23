@@ -24,7 +24,14 @@ rightmargin=5pt,%
 font={},%
 nobreak=true%
 }%
+%
+%%% Define the definition environment based on the slides/book situation.
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\mdtheorem[style=definitionStyle]{definition}{\definitionautorefname}%
+}{%
 \mdtheorem[style=definitionStyle]{definition}{\definitionautorefname}[chapter]%
+}%
+%
 %% Setting up the proper title
 \xpatchcmd{\definition}{\refstepcounter}{\NR@gettitle{#1}\refstepcounter}{}{}%
 %

@@ -30,7 +30,7 @@ slidesDir="$currentDir/slides"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The slides directory is '$slidesDir'."
 
 lastLatexGit=""
-for dirName in "$slidesDir/"*; do
+for dirName in "$slidesDir/"[0-9]*; do
     dirName="$(basename "$dirName")"
     theDir="$slidesDir/$dirName"
     if [ -d "$theDir" ]; then
