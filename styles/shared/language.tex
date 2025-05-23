@@ -1,0 +1,13 @@
+%%
+%% Utilities for languages.
+%%
+%
+%%% This command must be called at the beginning of a document.
+\protected\gdef\toggleToGerman{%
+%
+\usepackage[ngerman]{babel}%
+\renewcommand{\definitionautorefname}{Definition}%
+\renewcommand{\@bestPracticeautorefname}{Gute Praxis}%
+\renewcommand{\@usefulToolautorefname}{Nützliches Werkzeug}%
+%
+}%

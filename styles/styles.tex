@@ -64,12 +64,15 @@
 \input{\bookbaseDir/styles/slides/backgrounds.tex}%
 }{}%
 %
+\input{\bookbaseDir/styles/shared/language.tex}%
+%
 \input{\bookbaseDir/notations/notations.sty}%
 %
 \ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/books/titlepage.tex}%
 \input{\bookbaseDir/styles/books/pagesetup.tex}%
 }{}%
+%
 %
 \makeglossaries%
 %
