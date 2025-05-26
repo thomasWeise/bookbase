@@ -52,11 +52,10 @@
 \protected\gdef\copyrightBlock#1{%
 \begin{flushleft}%
 Copyright~\textcopyright~#1\\[3pt]%
-\authorNamePrefix\ifx\relax\authorUrl\relax%
-\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\authorName}{\href{\authorUrl}{\authorName}}%
+\authorNamePrefix\ifx\relax\authorUrl\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\authorName}{\href{\authorUrl}{\authorName}}%
 ~(\expandafter\authorNameCN\authorNameCNSuffix)\\%
 at the \groupName~(\expandafter\groupNameCN, %
-\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\groupAbbreviation}{\href{\groupUrl}{\groupAbbreviation}}%
+\ifx\relax\groupUrl\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\groupAbbreviation}{\href{\groupUrl}{\groupAbbreviation}}%
 )\\%
 of the \schoolName~(\href{\schoolUrlCN}{\schoolNameCN})\\%
 of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\uniNameCN}),\\%
