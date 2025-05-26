@@ -24,6 +24,19 @@
 }%
 %
 %
+%% Locate a graphic at a specific position with a tight box around if:
+%% #1 [optional] reference, heigh-scaled to 0.5em
+%% #2 visibility passed to \only (set to {} for always-visible things)
+%% #3 the [] part of the graphic
+%% #4 the path to the graphic
+%% #5 the x-coordinate (between 0 and 1)
+%% #6 the y-coordinate (between 0 and 1)
+\gdef\locateGraphicTB{%
+\let\@@@locateGraphic@tb\tightbox%
+\@ifnextchar[{\@locateGraphicRef}{\@locateGraphicNoRef}%
+}
+%
+%
 %% Locate a graphic at a specific position:
 %% #1 [optional] reference, heigh-scaled to 0.5em
 %% #2 visibility passed to \only (set to {} for always-visible things)
@@ -32,18 +45,19 @@
 %% #5 the x-coordinate (between 0 and 1)
 %% #6 the y-coordinate (between 0 and 1)
 \gdef\locateGraphic{%
+\let\@@@locateGraphic@tb\relax%
 \@ifnextchar[{\@locateGraphicRef}{\@locateGraphicNoRef}%
 }
 %
 %% low-level implementation \locateGraphic without image source reference
 \def\@locateGraphicNoRef#1#2#3#4#5{%
-\locate{#1}{\includegraphics[#2]{#3}}{#4}{#5}%%
+\locate{#1}{\@@@locateGraphic@tb{\includegraphics[#2]{#3}}}{#4}{#5}%%
 }%
 %
 %% low-level implementation \locateGraphic with image source reference
 \def\@locateGraphicRef[#1]#2#3#4#5#6{%
 \locate{#2}{%
-\rlap{\includegraphics[#3]{#4}}%
+\rlap{\@@@locateGraphic@tb{\includegraphics[#3]{#4}}}%
 \vspace*{-0.05\paperheight}%
 \scalebox{0.5}{\mbox{\tiny{image~source:~\@bib@oldcite{#1}}}}%
 }{#5}{#6}%%

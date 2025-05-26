@@ -8,12 +8,14 @@
 \gdef\authorNameCNSuffix{教授}
 \xdef\authorEmail{tweise@hfuu.edu.cn}%
 \xdef\authorEmailB{tweise@ustc.edu.cn}%
-\xdef\authorUrl{http://iao.hfuu.edu.cn/5}%
+\global\let\authorUrl\relax%
+%\xdef\authorUrl{http://iao.hfuu.edu.cn/5}%
 %
 \xdef\groupName{Institute of Applied Optimization}%
 \xdef\groupAbbreviation{IAO}%
 \gdef\groupNameCN{应用优化研究所}%
-\xdef\groupUrl{https://iao.hfuu.edu.cn}%
+\global\let\groupUrl\relax%
+%\xdef\groupUrl{https://iao.hfuu.edu.cn}%
 %
 \xdef\schoolName{School of Artificial Intelligence and Big Data}%
 \gdef\schoolNameCN{人工智能与大数据学院}%
@@ -29,7 +31,16 @@
 %
 %% Setting up document properties used in slides
 \gdef\insertauthoremail{\href{mailto:\authorEmail}{\authorEmail}}%
+%
+\ifx\relax\authorUrl\relax%
+\expandafter\@firstoftwo%
+\else%
+\expandafter\@secondoftwo%
+\fi%
+{\global\let\insertauthorweb\relax}{%
 \gdef\insertauthorweb{\href{\authorUrl}{\authorUrl}}%
+}
+%
 \author{\authorName~(\expandafter\authorNameCN)}%
 \date{\today}%
 %
@@ -41,8 +52,12 @@
 \protected\gdef\copyrightBlock#1{%
 \begin{flushleft}%
 Copyright~\textcopyright~#1\\[3pt]%
-\authorNamePrefix\href{\authorUrl}{\authorName}~(\expandafter\authorNameCN\authorNameCNSuffix)\\%
-at the \groupName~(\expandafter\groupNameCN, \href{\groupUrl}{\groupAbbreviation})\\%
+\authorNamePrefix\ifx\relax\authorUrl\relax%
+\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\authorName}{\href{\authorUrl}{\authorName}}%
+~(\expandafter\authorNameCN\authorNameCNSuffix)\\%
+at the \groupName~(\expandafter\groupNameCN, %
+\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\groupAbbreviation}{\href{\groupUrl}{\groupAbbreviation}}%
+)\\%
 of the \schoolName~(\href{\schoolUrlCN}{\schoolNameCN})\\%
 of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\uniNameCN}),\\%
 in \cityName~(\cityNameCN)\\[6pt]%
