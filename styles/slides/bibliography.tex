@@ -21,3 +21,12 @@
 %% cite a reference without putting the reference in the text
 \gdef\nocite#1{\@bib@oldnocite{#1}\relax\global\advance\@bib@numcites by 1\relax}%
 %
+%% Renew the quotation environment.
+\global\let\@old@cquotation\cquotation%
+\protected\long\gdef\cquotation#1#2{%
+\begin{center}%
+\resizebox{0.9\paperwidth}{!}{%
+\fcolorbox{novice-hint-frame}{novice-hint-background}{\centering%
+\@old@cquotation{#1}{#2}%
+}}\end{center}%
+}%
