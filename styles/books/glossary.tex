@@ -22,26 +22,27 @@
 }{#3}%
 }%
 %
+\xdef\@bb@gls@doUseHyper{hyper=true}%
 %%
 %% Invoke the glossary term, but link only once per page.
 %%
 %% Print the glossary entry in the singular form.
 \protected\gdef\pgls#1{%
-\oncePerPage{@gls@#1}{\gls{#1}}{\gls[hyper=false]{#1}}%
+\oncePerPage{@gls@#1}{\expandafter\gls\expandafter[\@bb@gls@doUseHyper]{#1}}{\gls[hyper=false]{#1}}%
 }%
 %% Print the glossary entry in the singular form starting with capital letter.
 \protected\gdef\Pgls#1{%
-\oncePerPage{@gls@#1}{\Gls{#1}}{\Gls[hyper=false]{#1}}%
+\oncePerPage{@gls@#1}{\expandafter\Gls\expandafter[\@bb@gls@doUseHyper]{#1}}{\Gls[hyper=false]{#1}}%
 }%
 %
 %% Print the glossary entry in the plural form.
 \protected\gdef\pglspl#1{%
-\oncePerPage{@gls@#1}{\glspl{#1}}{\glspl[hyper=false]{#1}}%
+\oncePerPage{@gls@#1}{\expandafter\glspl\expandafter[\@bb@gls@doUseHyper]{#1}}{\glspl[hyper=false]{#1}}%
 }%
 %
 %% Print the glossary entry in the plural form starting with capital letter.
 \protected\gdef\Pglspl#1{%
-\oncePerPage{@gls@#1}{\Glspl{#1}}{\Glspl[hyper=false]{#1}}%
+\oncePerPage{@gls@#1}{\expandafter\Glspl\expandafter[\@bb@gls@doUseHyper]{#1}}{\Glspl[hyper=false]{#1}}%
 }%
 %
 %
@@ -50,7 +51,9 @@
 %% This environment cannot be recursively nested.
 \newenvironment{noglslink}{%
 \let\@noglossarylinks@old@glslink\glslink%
+\xdef\@bb@gls@doUseHyper{hyper=false}%
 \protected\gdef\glslink##1##2{##2}%
 }{%
 \global\let\glslink\@noglossarylinks@old@glslink%
+\xdef\@bb@gls@doUseHyper{hyper=true}%
 }%
