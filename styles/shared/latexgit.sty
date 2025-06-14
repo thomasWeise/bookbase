@@ -6,9 +6,9 @@
 %%
 %% latexgit.dtx  (with options: `package')
 %% This is a generated file.
-%%
+%% 
 %% Copyright (C) 2023--2025 by Thomas Weise <tweise@email.hfuu.edu.cn>
-%%
+%% 
 %% This file may be distributed and/or modified under the conditions of the
 %% The LaTeX Project Public License (LPPL) Version 1.3c  2008-05-04.
 %% The license can be found at
@@ -19,7 +19,7 @@
 %% This work is author-maintained, i.e., it can only be maintained by
 %% Thomas Weise.
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]%
-\ProvidesPackage{latexgit}[2025/06/14 0.9.1 improved documentation.]%
+\ProvidesPackage{latexgit}[2025/06/15 0.9.2 gitExec with empty ID permitted]%
 %%
 %%
 %%
@@ -51,14 +51,20 @@
 \noexpand\@latexgit@gitFile{\@latexgit@pA}{\@latexgit@pB}{%
 \@latexgit@pC}{\@latexgit@pD}}%
 }%
+\newcount\@latexgit@counter%  The counter for the dummy arguments of \gitExec
+\@latexgit@counter0\relax%    We start the counter at 0.
 %%
 %% Define a query to execute a command, optionally in a |git| repository.
-%% #1 is the request ID
+%% #1 is the request ID, leave empty if you do not want to access the output
 %% #2 is the repository URL, or empty if no repository is needed
 %% #3 is the path to a directory inside the repository or empty
 %% #4 is a command to be executed
 \protected\gdef\gitExec#1#2#3#4{%
 \edef\@latexgit@pA{#1}%  the request ID
+\ifx\@latexgit@pA\empty\relax\edef\@latexgit@pA{%
+@latexgit@dummy@\the\@latexgit@counter}%
+\global\advance\@latexgit@counter by 1% step the counter for the next dummy
+\fi%
 \edef\@latexgit@pB{#2}%  fully expand the repository URL, or empty
 \edef\@latexgit@pC{#3}%  fully expand the path into the repository, or empty
 \edef\@latexgit@pD{#4}%  fully expand the (optional) shell command
