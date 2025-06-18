@@ -37,9 +37,9 @@ else
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Setting up python interpreter as '$PYTHON_INTERPRETER'."
 fi
 
-latexGitProgram=("$PYTHON_INTERPRETER" "-m" "latexgit.aux")
-echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We will use latexgit like ${latexGitProgram[@]}."
-${latexGitProgram[@]} --version
+texgitProgram=("$PYTHON_INTERPRETER" "-m" "texgit.run")
+echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We will use texgit like ${texgitProgram[@]}."
+${texgitProgram[@]} --version
 makeIndexProgram="$(readlink -f "$(which makeindex)")"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We will use '$makeIndexProgram' to make the index."
 makeGlossariesProgram="$(readlink -f "$(which makeglossaries)")"
@@ -80,7 +80,7 @@ rm "$glsFile" || true
 rm "$idxFile" || true
 rm "$istFile" || true
 rm "$gloFile" || true
-rm "$documentName.latexgit.dummy" || true
+rm "$documentName.texgit.dummy" || true
 rm "$documentName.loa" || true
 rm "$documentName.lof" || true
 rm "$documentName.log" || true
@@ -168,9 +168,9 @@ while (("$additional" >= 0))  ; do
     fi
   done
 
-  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now applying latexgit as ${latexGitProgram[@]}."
-  "${latexGitProgram[@]}" "$documentName"
-  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished applying latexgit as ${latexGitProgram[@]}."
+  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now applying texgit as ${texgitProgram[@]}."
+  "${texgitProgram[@]}" "$documentName"
+  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished applying texgit as ${texgitProgram[@]}."
 
   if [ -f "$idxFile" ]; then
     echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File '$idxFile' exists, so we now apply the make-index program '$makeIndexProgram'."
@@ -325,7 +325,7 @@ rm "$glsFile" || true
 rm "$idxFile" || true
 rm "$istFile" || true
 rm "$gloFile" || true
-rm "$documentName.latexgit.dummy" || true
+rm "$documentName.texgit.dummy" || true
 rm "$documentName.loa" || true
 rm "$documentName.lof" || true
 rm "$documentName.log" || true

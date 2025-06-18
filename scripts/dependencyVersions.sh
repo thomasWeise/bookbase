@@ -82,24 +82,24 @@ if [ -n "$innerScript" ]; then
 fi
 
 # Get version of LaTeX-git Python package.
-latexgitPyVersion="$("$PYTHON_INTERPRETER" -m pip freeze 2>/dev/null | grep latexgit | sed -n 's/.*==*\([.0-9]*\)/\1/p')" || true
-latexgitPyVersion="$(sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]][[:space:]][[:space:]]*/ /g' -e 's/\.*$//'<<<"${latexgitPyVersion}")" || true
-if [ -n "$latexgitPyVersion" ]; then
-    echo "latexgit_py: $latexgitPyVersion"
+texgitPyVersion="$("$PYTHON_INTERPRETER" -m pip freeze 2>/dev/null | grep texgit | sed -n 's/.*==*\([.0-9]*\)/\1/p')" || true
+texgitPyVersion="$(sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]][[:space:]][[:space:]]*/ /g' -e 's/\.*$//'<<<"${texgitPyVersion}")" || true
+if [ -n "$texgitPyVersion" ]; then
+    echo "texgit_py: $texgitPyVersion"
 fi
 
 # Find path to LaTeX-git style.
 # This is where it is now.
-lgtfp="$scriptDir/../styles/shared/latexgit.sty"
+lgtfp="$scriptDir/../styles/shared/texgit.sty"
 if [ ! -f "$lgtfp" ]; then
   # This is where it used to be.
-  lgtfp="$scriptDir/../styles/latexgit.sty"
+  lgtfp="$scriptDir/../styles/texgit.sty"
 fi
 if [ -f "$lgtfp" ]; then
-  latexgitTexVersion="$(less "$lgtfp" 2>/dev/null | sed -n 's/.*\\ProvidesPackage{latexgit}\[[0-9\/]* *\([.0-9]*\) .*\].*/\1/p')" || true
-  latexgitTexVersion="$(sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]][[:space:]][[:space:]]*/ /g' -e 's/\.*$//'<<<"${latexgitTexVersion}")" || true
-  if [ -n "$latexgitTexVersion" ]; then
-      echo "latexgit_tex: $latexgitTexVersion"
+  texgitTexVersion="$(less "$lgtfp" 2>/dev/null | sed -n 's/.*\\ProvidesPackage{texgit}\[[0-9\/]* *\([.0-9]*\) .*\].*/\1/p')" || true
+  texgitTexVersion="$(sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]][[:space:]][[:space:]]*/ /g' -e 's/\.*$//'<<<"${texgitTexVersion}")" || true
+  if [ -n "$texgitTexVersion" ]; then
+      echo "texgit_tex: $texgitTexVersion"
   fi
 fi
 

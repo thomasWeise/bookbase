@@ -2,7 +2,7 @@
 %% Listings and Listing Styles.
 %%
 %%
-%% Use latexgit to place a listing.
+%% Use texgit to place a listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the post-processing
@@ -17,18 +17,18 @@
 }%
 %
 %%
-%% Use latexgit to place a Python listing.
+%% Use texgit to place a Python listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the post-processing
 %% #4 the label (lst: will be pre-pended)
 %% #5 the caption
 \protected\gdef\gitPython#1#2#3#4#5{%
-\gitCode{#1}{#2}{python3 -m latexgit.formatters.python #3}{#4}{#5}{,style=python_style}%
+\gitCode{#1}{#2}{python3 -m texgit.formatters.python #3}{#4}{#5}{,style=python_style}%
 }%
 %
 %%
-%% Use latexgit to place a Bash listing.
+%% Use texgit to place a Bash listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the label (lst: will be pre-pended)
@@ -38,7 +38,7 @@
 }%
 %
 %%
-%% Use latexgit to place a windows BAT listing.
+%% Use texgit to place a windows BAT listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the label (lst: will be pre-pended)
@@ -48,7 +48,7 @@
 }%
 %
 %%
-%% Use latexgit to place a plain text listing.
+%% Use texgit to place a plain text listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the label (lst: will be pre-pended)
@@ -57,7 +57,7 @@
 \gitCode{#1}{#2}{}{#3}{#4}{,style=text_style}%
 }%
 %
-%% Use latexgit to place a listing with program output.
+%% Use texgit to place a listing with program output.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the command
@@ -69,7 +69,7 @@
 \lstinputlisting[style=#6#5]{\gitFile{exec:#4}}%
 }%
 %
-%% Use latexgit to place a listing with tool output.
+%% Use texgit to place a listing with tool output.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the command
@@ -87,7 +87,7 @@
 \protected\gdef\gitPythonAndOutputFormatDefault{\gitPythonAndOutputFormat{text_style}}%
 \gitPythonAndOutputFormatDefault%
 %
-%% Use latexgit to place a listing with Python code and the program output.
+%% Use texgit to place a listing with Python code and the program output.
 %% #1 the git repository
 %% #2 the path to the directory
 %% #3 the path to the file inside the directory
@@ -99,7 +99,7 @@
 \expandafter\expandafter\expandafter\edef\expandafter\csname @gitPythonAndOutputFormat:exec:#5\endcsname{\@gitPythonAndOutputFormat}%
 \gitPythonAndOutputFormatDefault%
 %
-\gitLoad{lst:#5}{#1}{#2/#3}{python3 -m latexgit.formatters.python #4}%
+\gitLoad{lst:#5}{#1}{#2/#3}{python3 -m texgit.formatters.python #4}%
 \gitExec{exec:#5}{#1}{#2}{python3 #3}%
 %
 \begin{figure}[tb]%
@@ -113,7 +113,7 @@ $\downarrow$~~\expandafter\bashil{python3 #3}~~$\downarrow$%
 \end{figure}%
 }%
 %
-%% Use latexgit to place a listing with Bash code and the program output.
+%% Use texgit to place a listing with Bash code and the program output.
 %% #1 the git repository
 %% #2 the path to the directory
 %% #3 the path to the file inside the directory
@@ -137,7 +137,7 @@ $\downarrow$~~\expandafter\bashil{bash #3}~~$\downarrow$%
 }%
 %
 %
-%% Use latexgit to place a listing with code and the program output.
+%% Use texgit to place a listing with code and the program output.
 %% Ignore errors.
 %% #1 the git repository
 %% #2 the path to the directory
@@ -148,7 +148,7 @@ $\downarrow$~~\expandafter\bashil{bash #3}~~$\downarrow$%
 %% #6 the caption
 \protected\gdef\gitPythonAndErrorOutput#1#2#3#4#5#6{%
 %
-\gitLoad{lst:#5}{#1}{#2/#3}{python3 -m latexgit.formatters.python #4}%
+\gitLoad{lst:#5}{#1}{#2/#3}{python3 -m texgit.formatters.python #4}%
 \gitExec{exec:#5}{#1}{.}{./_scripts_/pythonIgnoreErrors.sh #2 #3}%
 %
 \begin{figure}[tb]%
@@ -163,7 +163,7 @@ $\downarrow$~~\expandafter\bashil{python3 #3}~~$\downarrow$%
 %
 %
 %%
-%% Use latexgit to place a SQL listing.
+%% Use texgit to place a SQL listing.
 %% #1 the git repository
 %% #2 the local path
 %% #3 the label (lst: will be pre-pended)
@@ -177,7 +177,7 @@ $\downarrow$~~\expandafter\bashil{python3 #3}~~$\downarrow$%
 \protected\gdef\gitSQLAndOutputFormatDefault{\gitSQLAndOutputFormat{tool_style_sql}}%
 \gitSQLAndOutputFormatDefault%
 %
-%% Use latexgit to place an SQL listing code and the program output.
+%% Use texgit to place an SQL listing code and the program output.
 %% #1 the git repository
 %% #2 the path to the directory
 %% #3 the path to the file inside the directory

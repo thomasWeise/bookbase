@@ -29,7 +29,7 @@ mkdir -p "$websiteDir"
 slidesDir="$currentDir/slides"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The slides directory is '$slidesDir'."
 
-lastLatexGit=""
+lasttexgit=""
 for dirName in "$slidesDir/"[0-9]*; do
     dirName="$(basename "$dirName")"
     theDir="$slidesDir/$dirName"
@@ -40,9 +40,9 @@ for dirName in "$slidesDir/"[0-9]*; do
 
             curDirGit="$theDir/__git__"
             rm -rf "$curDirGit"
-            if [ -n "$lastLatexGit" ]; then
-                mv "$lastLatexGit" "$theDir"
-                lastLatexGit=""
+            if [ -n "$lasttexgit" ]; then
+                mv "$lasttexgit" "$theDir"
+                lasttexgit=""
             fi
 
             cd "$theDir"
@@ -52,8 +52,8 @@ for dirName in "$slidesDir/"[0-9]*; do
 
             if [ -d "$curDirGit" ]; then
                 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Git directory is $curDirGit."
-                lastLatexGit="$(realpath "$curDirGit")"
-                echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Canonicalized git directory is $lastLatexGit."
+                lasttexgit="$(realpath "$curDirGit")"
+                echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Canonicalized git directory is $lasttexgit."
             fi
             cd "$currentDir"
         else
@@ -62,9 +62,9 @@ for dirName in "$slidesDir/"[0-9]*; do
     fi
 done
 
-if [ -d "$lastLatexGit" ]; then
-    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Cleaning up '$lastLatexGit'."
-    rm -rf "$lastLatexGit"
+if [ -d "$lasttexgit" ]; then
+    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Cleaning up '$lasttexgit'."
+    rm -rf "$lasttexgit"
 fi
 
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Rendering default html pages."
