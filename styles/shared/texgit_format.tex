@@ -1,0 +1,22 @@
+%%
+%% Some pre-defined texgit format commands.
+%
+%% The separator between the code and output Python listings.
+%% #1 the name of the python script
+\protected\gdef\listingSepPython#1{%
+$\downarrow$~~\expandafter\bashil{python3 #1}~~$\downarrow$%
+}%
+%
+%% The separator between the code and output Bash listings.
+%% #1 the name of the python script
+\protected\gdef\listingSepBash#1{%
+$\downarrow$~~\expandafter\bashil{bash #1}~~$\downarrow$%
+}%
+%
+%% Load the right formatting tools.
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/texgit_format.tex}%
+}{}%
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/texgit_format.tex}%
+}{}%

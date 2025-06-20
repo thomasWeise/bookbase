@@ -15,48 +15,6 @@
 \lstinputlisting[label={lst:#4}#6,caption={#5~(\href{\gitUrl{lst:#4}}{src})}]{\gitFile{lst:#4}}%
 \end{figure}%
 }%
-%
-%%
-%% Use texgit to place a Python listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the post-processing
-%% #4 the label (lst: will be pre-pended)
-%% #5 the caption
-\protected\gdef\gitPython#1#2#3#4#5{%
-\gitCode{#1}{#2}{python3 -m texgit.formatters.python #3}{#4}{#5}{,style=python_style}%
-}%
-%
-%%
-%% Use texgit to place a Bash listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the label (lst: will be pre-pended)
-%% #4 the caption
-\protected\gdef\gitBash#1#2#3#4{%
-\gitCode{#1}{#2}{}{#3}{#4}{,style=bash_style}%
-}%
-%
-%%
-%% Use texgit to place a windows BAT listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the label (lst: will be pre-pended)
-%% #4 the caption
-\protected\gdef\gitBat#1#2#3#4{%
-\gitCode{#1}{#2}{}{#3}{#4}{,style=bat_style}%
-}%
-%
-%%
-%% Use texgit to place a plain text listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the label (lst: will be pre-pended)
-%% #4 the caption
-\protected\gdef\gitText#1#2#3#4{%
-\gitCode{#1}{#2}{}{#3}{#4}{,style=text_style}%
-}%
-%
 %% Use texgit to place a listing with program output.
 %% #1 the git repository
 %% #2 the local path

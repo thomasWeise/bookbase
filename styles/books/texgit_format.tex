@@ -1,0 +1,125 @@
+%%
+%% Some pre-defined texgit format commands.
+%
+%% Place a listing with data from texgit.
+%% #1 the label (must put prefix manually!)
+%% #2 the caption
+%% #3 the style and formatting commands to use
+\protected\gdef\listingBox#1#2#3{%
+\begin{figure}[tb]%
+\centering%
+\edef\@lb@caption{}%
+\edef\@lb@url{\gitUrl{#1}}%
+\ifx\@lb@url\empty\relax\else%
+\ifx\@lb@url\@texgit@dummyUrl\relax\else%
+\def\@lb@caption{~(\expandafter\href{\@lb@url}{src})}%
+\fi\fi%
+\lstinputlisting[label={#1}#3,caption={#2\@lb@caption}]{\gitFile{#1}}%
+\end{figure}%
+}%
+%
+%% Place a Python listing with data from texgit.
+%% #1 the label (lst: is prepended)
+%% #2 the caption
+\protected\gdef\listingPython#1#2{%
+\listingBox{lst:#1}{#2}{,style=python_style}%
+}%
+%
+%% Place a Bash listing with data from texgit.
+%% #1 the label (lst: is prepended)
+%% #2 the caption
+\protected\gdef\listingBash#1#2{%
+\listingBox{lst:#1}{#2}{,style=bash_style}%
+}%
+%
+%% Place a Bat listing with data from texgit.
+%% #1 the label (lst: is prepended)
+%% #2 the caption
+\protected\gdef\listingBat#1#2{%
+\listingBox{lst:#1}{#2}{,style=bat_style}%
+}%
+%
+%% Place a txt listing with data from texgit.
+%% #1 the label (lst: is prepended)
+%% #2 the caption
+\protected\gdef\listingTxt#1#2{%
+\listingBox{lst:#1}{#2}{,style=text_style}%
+}%
+%
+%% Place a txt listing with data from texgit.
+%% #1 the label (exec: is prepended)
+%% #2 the caption
+\protected\gdef\listingToolOutput#1#2{%
+\listingBox{exec:#1}{#2}{,style=tool_style}%
+}%
+%
+%
+%% Place a listing with data from texgit.
+%% #1 the label
+%% #2 the caption of the source listing
+%% #3 the caption of the output listing
+%% #4 the style and formatting commands to use for the first listing
+%% #5 the style and formatting commands to use for the second listing
+%% #6 the separator if any
+%%
+\protected\gdef\listingDoubleBox#1#2#3#4#5#6{%
+\begin{figure}[tb]%
+\centering%
+%
+\edef\@ldb@outputFmt{#5}%
+\ifx\@ldb@outputFmt\empty\relax\edef\@ldb@outputFmt{,style=text_style}\fi%
+\lstinputlisting[label={lst:#1}#4,caption={#2}]{\gitFile{lst:#1}}%
+#6%
+\expandafter\lstinputlisting[label={exec:#1}\@ldb@outputFmt,caption={#3}]{\gitFile{exec:#1}}%
+\end{figure}%
+}%
+%
+%
+%% Place a Python listing with output.
+%% #1 the label
+%% #2 the name of the source file
+%% #3 the caption
+%% #4 the format of the output data
+%%
+\protected\gdef\listingPythonAndOutput#1#2#3#4{%
+\listingDoubleBox{#1}{%
+#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+}{%
+The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+}{,style=python_style}{#4}{%
+\listingSepPython{#2}%
+}%
+}%
+%
+%
+%% Place a Python listing with error output.
+%% #1 the label
+%% #2 the name of the source file
+%% #3 the caption
+%%
+\protected\gdef\listingPythonAndError#1#2#3{%
+\listingDoubleBox{#1}{%
+#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+}{%
+The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+}{,style=python_style}{,style=text_style}{%
+\listingSepPython{#2}%
+}%
+}%
+%
+%
+%% Place a Bash listing with output.
+%% #1 the label
+%% #2 the name of the source file
+%% #3 the caption
+%% #4 the format of the output data
+%%
+\protected\gdef\listingBashAndOutput#1#2#3#4{%
+\listingDoubleBox{#1}{%
+#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+}{%
+The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+}{,style=bash_style}{#4}{%
+\listingSepBash{#2}%
+}%
+}%
