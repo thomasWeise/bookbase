@@ -85,9 +85,7 @@
 \protected\gdef\listingPythonAndOutput#1#2#3#4{%
 \listingDoubleBox{#1}{%
 #3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
-}{%
-The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
-}{,style=python_style}{#4}{%
+}{\captionStdout{#1}{#2}}{,style=python_style}{#4}{%
 \listingSepPython{#2}%
 }%
 }%
@@ -101,9 +99,7 @@ The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\c
 \protected\gdef\listingPythonAndError#1#2#3{%
 \listingDoubleBox{#1}{%
 #3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
-}{%
-The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
-}{,style=python_style}{,style=text_style}{%
+}{\captionStdall{#1}{#2}}{,style=python_style}{,style=text_style}{%
 \listingSepPython{#2}%
 }%
 }%

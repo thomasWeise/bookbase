@@ -13,6 +13,14 @@ $\downarrow$~~\expandafter\bashil{python3 #1}~~$\downarrow$%
 $\downarrow$~~\expandafter\bashil{bash #1}~~$\downarrow$%
 }%
 %
+\protected\gdef\captionStdout#1#2{%
+The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+}%
+%
+\protected\gdef\captionStdall#1#2{%
+The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+}%
+%
 %% Load the right formatting tools.
 \ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/books/texgit_format.tex}%

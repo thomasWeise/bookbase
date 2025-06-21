@@ -50,6 +50,17 @@
 \gitExec{exec:#1}{\@bb@gitLoadRepo}{.}{./_scripts_/pythonIgnoreErrors.sh #3 #4}%
 }%
 %
+%% Execute Python code.
+%% #1 the label (exec:/lst: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo
+%% #3 the path to the directory
+%% #4 the path to the file inside the directory
+%% #5 the post-processing (if any)
+\protected\gdef\gitLoadAndExecPythonAndErrors#1#2#3#4#5{%
+\gitLoadPython{#1}{#2}{#3/#4}{#5}%
+\gitExecPythonAndErrors{#1}{#2}{#3}{#4}%
+}%
+%
 %% Execute bash shell code.
 %% #1 the label (exec: will be pre-pended)
 %% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo
