@@ -66,11 +66,12 @@
 \begin{figure}[tb]%
 \centering%
 %
-\edef\@ldb@outputFmt{#5}%
-\ifx\@ldb@outputFmt\empty\relax\edef\@ldb@outputFmt{,style=text_style}\fi%
 \lstinputlisting[label={lst:#1}#4,caption={#2}]{\gitFile{lst:#1}}%
 #6%
-\expandafter\lstinputlisting[label={exec:#1}\@ldb@outputFmt,caption={#3}]{\gitFile{exec:#1}}%
+\edef\@ldb@outputFmt{#5}%
+\ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{\lstinputlisting[label={exec:#1},style=text_style,caption={#3}]{\gitFile{exec:#1}}}%
+{\lstinputlisting[label={exec:#1}#5,caption={#3}]{\gitFile{exec:#1}}}%
 \end{figure}%
 }%
 %
