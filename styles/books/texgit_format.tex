@@ -46,6 +46,13 @@
 \listingBox{lst:#1}{#2}{,style=text_style}%
 }%
 %
+%% Place a SQL listing with data from texgit.
+%% #1 the label (lst: is prepended)
+%% #2 the caption
+\protected\gdef\listingSQL#1#2{%
+\listingBox{lst:#1}{#2}{,style=sql_style}%
+}%
+%
 %% Place a txt listing with data from texgit.
 %% #1 the label (exec: is prepended)
 %% #2 the caption

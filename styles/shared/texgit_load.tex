@@ -72,6 +72,33 @@
 \gitExec{exec:#1}{\@bb@gitLoadRepo}{#3}{bash #4}%
 }%
 %
+%
+%% Load SQL code.
+%% #1 the label (lst: will be pre-pended)
+%% #2 the git repository, if empty, we use \databasesCodeRepo
+%% #3 the local path
+\protected\gdef\gitLoadSQL#1#2#3{%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\databasesCodeRepo}\fi%
+\gitLoad{lst:#1}{\@bb@gitLoadRepo}{#3}{}%
+}%
+%
+%% Execute SQL code.
+%% This command is specifically for the databasesCode repo.
+%%
+%% #1 the label used RAW
+%% #2 the git repository, \databasesCodeRepo will be used if empty
+%% #3 the path to the directory
+%% #4 the path to the file inside the directory
+%% #5 the database to invoke it on, if any
+%% #6 the user to use
+%% #7 the password, if any
+\protected\gdef\gitExecSQLraw#1#2#3#4#5#6#7{%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\databasesCodeRepo}\fi%
+\gitExec{#1}{\@bb@gitLoadRepo}{.}{./_scripts_/postgres.sh #3 #4 #5 #6 #7}%
+}%
+%
 %% Execute SQL code.
 %% This command is specifically for the databasesCode repo.
 %%
@@ -83,9 +110,18 @@
 %% #6 the user to use
 %% #7 the password, if any
 \protected\gdef\gitExecSQL#1#2#3#4#5#6#7{%
-\edef\@bb@gitLoadRepo{#2}%
-\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\databasesCodeRepo}\fi%
-\gitExec{exec:#1}{\@bb@gitLoadRepo}{.}{./_scripts_/postgres.sh #3 #4 #5 #6 #7}%
+\gitExecSQLraw{exec:#1}{#2}{#3}{#4}{#5}{#6}{#7}%
 }%
 %
 %
+%% #1 the label (lexec: will be pre-pended to the output)
+%% #2 the git repository, \databasesCodeRepo will be used if empty
+%% #3 the path to the directory
+%% #4 the path to the file inside the directory
+%% #5 the database to invoke it on, if any
+%% #6 the user to use
+%% #7 the password, if any
+\protected\gdef\gitLoadAndExecSQL#1#2#3#4#5#6#7{%
+\gitLoadSQL{#1}{#2}{#3/#4}%
+\gitExecSQL{#1}{#2}{#3}{#4}{#5}{#6}{#7}%
+}%
