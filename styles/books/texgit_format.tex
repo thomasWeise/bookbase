@@ -91,7 +91,7 @@
 %%
 \protected\gdef\listingPythonAndOutput#1#2#3#4{%
 \listingDoubleBox{#1}{%
-#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+#3~(stored in file~\programUrl{#1}{#2}; output in~\cref{exec:#1})%
 }{\captionStdout{#1}{#2}}{,style=python_style}{#4}{%
 \listingSepPython{#2}%
 }%
@@ -105,7 +105,7 @@
 %%
 \protected\gdef\listingPythonAndError#1#2#3{%
 \listingDoubleBox{#1}{%
-#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+#3~(stored in file~\programUrl{#1}{#2}; output in~\cref{exec:#1})%
 }{\captionStdall{#1}{#2}}{,style=python_style}{,style=text_style}{%
 \listingSepPython{#2}%
 }%
@@ -120,10 +120,32 @@
 %%
 \protected\gdef\listingBashAndOutput#1#2#3#4{%
 \listingDoubleBox{#1}{%
-#3~(stored in file~\href{\gitUrl{lst:#1}}{\textil{#2}}; output in~\cref{exec:#1})%
+#3~(stored in file~\programUrl{#1}{#2}; output in~\cref{exec:#1})%
 }{%
-The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+\captionStdout{#1}{#2}%
 }{,style=bash_style}{#4}{%
 \listingSepBash{#2}%
 }%
+}%
+%
+%
+%% Place a Python listing with output.
+%% #1 the label
+%% #2 the name of the source file
+%% #3 the caption
+%% #4 the format of the output data
+%%
+\protected\gdef\listingSQLandOutput#1#2#3#4{%
+\edef\@lb@saos{#4}%
+\ifx\@lb@saos\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{\listingDoubleBox{#1}{%
+#3~(stored in file~\programUrl{#1}{#2}; output in~\cref{exec:#1})%
+}{\captionStdout{#1}{#2}}{,style=sql_style}{,style=tool_style_sql}{%
+\medskip%
+}}%
+{\listingDoubleBox{#1}{%
+#3~(stored in file~\programUrl{#1}{#2}; output in~\cref{exec:#1})%
+}{\captionStdout{#1}{#2}}{,style=sql_style}{#4}{%
+\medskip%
+}}%
 }%

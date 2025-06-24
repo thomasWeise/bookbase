@@ -13,12 +13,18 @@ $\downarrow$~~\expandafter\bashil{python3 #1}~~$\downarrow$%
 $\downarrow$~~\expandafter\bashil{bash #1}~~$\downarrow$%
 }%
 %
+%% Create a url to the given program.
+%% #1 the label, lst: will be prepended
+%% #2 the program name
+\protected\gdef\programUrl#1#2{%
+\href{\gitUrl{lst:#1}}{\textil{#2}}}%
+%
 \protected\gdef\captionStdout#1#2{%
-The \pgls{stdout} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+The \pgls{stdout} of the program~\programUrl{#1}{#2} given in~\cref{lst:#1}.%
 }%
 %
 \protected\gdef\captionStdall#1#2{%
-The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\href{\gitUrl{lst:#1}}{\textil{#2}} given in~\cref{lst:#1}.%
+The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl{#1}{#2} given in~\cref{lst:#1}.%
 }%
 %
 %% Load the right formatting tools.

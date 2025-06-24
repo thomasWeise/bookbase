@@ -2,66 +2,6 @@
 %% Listings and Listing Styles.
 %%
 %%
-%% Use texgit to place a listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the post-processing
-%% #4 the label (lst: will be pre-pended)
-%% #5 the caption
-%% #6 the style to use
-\protected\gdef\gitCode#1#2#3#4#5#6{%
-\gitLoad{lst:#4}{#1}{#2}{#3}%
-\begin{figure}[tb]%
-\lstinputlisting[label={lst:#4}#6,caption={#5~(\href{\gitUrl{lst:#4}}{src})}]{\gitFile{lst:#4}}%
-\end{figure}%
-}%
-%
-%
-%%
-%% Use texgit to place a SQL listing.
-%% #1 the git repository
-%% #2 the local path
-%% #3 the label (lst: will be pre-pended)
-%% #4 the caption
-\protected\gdef\gitSQL#1#2#3#4{%
-\gitCode{#1}{#2}{}{#3}{#4}{,style=sql_style}%
-}%
-%
-%%% Set the SQL output format, because sometimes we want to have different formats in the output
-\protected\gdef\gitSQLAndOutputFormat#1{\xdef\@gitSQLAndOutputFormat{#1}}%
-\protected\gdef\gitSQLAndOutputFormatDefault{\gitSQLAndOutputFormat{tool_style_sql}}%
-\gitSQLAndOutputFormatDefault%
-%
-%% Use texgit to place an SQL listing code and the program output.
-%% #1 the git repository
-%% #2 the path to the directory
-%% #3 the path to the file inside the directory
-%% #4 the database to invoke it on, if any
-%% #5 the user to use
-%% #6 the password, if any
-%% #7 the script to invoke
-%% #8 the label (lst: will be prepended to the program, exec: will be
-%%    pre-pended to the output)
-%% #9 the caption
-\protected\gdef\gitSQLAndOutput#1#2#3#4#5#6#7#8#9{%
-\expandafter\expandafter\expandafter\edef\expandafter\csname @gitSQLAndOutputFormat:exec:#8\endcsname{\@gitSQLAndOutputFormat}%
-\gitSQLAndOutputFormatDefault%
-%
-\gitLoad{lst:#8}{#1}{#2/#3}{}%
-\gitExec{exec:#8}{#1}{.}{_scripts_/#7 #2 #3 #4 #5 #6}%
-%
-\begin{figure}[tb]%
-\centering%
-\lstinputlisting[label={lst:#8},style=sql_style,caption={#9~(stored in file~\href{\gitUrl{lst:#8}}{\textil{#3}}; output in~\cref{exec:#8})}]{\gitFile{lst:#8}}%
-%
-\medskip%
-%
-\edef\@@@@gitOutputFmt{\csname @gitSQLAndOutputFormat:exec:#8\endcsname}%
-\lstinputlisting[label={exec:#8},style=\@@@@gitOutputFmt,caption={The \gls{stdout} resulting from the \sql\ statements in~\href{\gitUrl{lst:#8}}{\textil{#3}} given in~\cref{lst:#8}.}]{\gitFile{exec:#8}}%
-\end{figure}%
-}%
-%
-%
 %%
 %% The python syntax environment.
 %% Warning: If we do not use the minipage, this may or may not
