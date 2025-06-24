@@ -6,7 +6,7 @@
 # You can find it at https://thomasweise.github.io/texgit_py,
 # https://github.com/thomasWeise/texgit_py, or at
 # https://pypi.org/project/texgit.
-texgit == 0.9.5
+texgit == 0.9.6
 
 # minify_html is needed to minify html output.
 minify_html == 0.16.4
