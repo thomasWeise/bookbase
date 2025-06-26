@@ -19,7 +19,7 @@
 %% This work is author-maintained, i.e., it can only be maintained by
 %% Thomas Weise.
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]%
-\ProvidesPackage{texgit}[2025/06/20 0.9.6 now forcing pdflatex to crash if Python postprocessor is not applied]%
+\ProvidesPackage{texgit}[2025/06/26 0.9.7 now offering file names (via gitName) and escaped file names (via gitNameEsc)]%
 %%
 %%
 %%
@@ -128,6 +128,20 @@ https://thomasweise.github.io/texgit_tex/texgit.pdf%
 \gdef\gitUrl#1{%
 \expandafter\ifx\csname @texgit@url@#1\endcsname\relax%
 \@texgit@dummyUrl\else\csname @texgit@url@#1\endcsname\fi%
+}%
+%%
+%% Get the base name of the path associated with the request ID.
+%% #1 is the request ID
+\gdef\gitName#1{%
+\expandafter\ifx\csname @texgit@name@#1\endcsname\relax%
+\else\csname @texgit@name@#1\endcsname\fi%
+}%
+%%
+%% Get the base name of the path associated with the request ID.
+%% #1 is the request ID
+\gdef\gitNameEsc#1{%
+\expandafter\ifx\csname @texgit@escName@#1\endcsname\relax%
+\else\csname @texgit@escName@#1\endcsname\fi%
 }%
 \endinput
 %%

@@ -4,27 +4,30 @@
 %% The separator between the code and output Python listings.
 %% #1 the name of the python script
 \protected\gdef\listingSepPython#1{%
-$\downarrow$~~\expandafter\bashil{python3 #1}~~$\downarrow$%
+$\downarrow$~~\expandafter\inlinelistingbox{\texttt{python3~#1}}~~$\downarrow$%
 }%
 %
 %% The separator between the code and output Bash listings.
 %% #1 the name of the python script
 \protected\gdef\listingSepBash#1{%
-$\downarrow$~~\expandafter\bashil{bash #1}~~$\downarrow$%
+$\downarrow$~~\expandafter\inlinelistingbox{\texttt{bash~#1}}~~$\downarrow$%
 }%
 %
 %% Create a url to the given program.
 %% #1 the label, lst: will be prepended
-%% #2 the program name
-\protected\gdef\programUrl#1#2{%
-\href{\gitUrl{lst:#1}}{\textil{#2}}}%
+\protected\gdef\programUrl#1{%
+\href{\gitUrl{lst:#1}}{\texttt{\gitNameEsc{lst:#1}}}}%
 %
-\protected\gdef\captionStdout#1#2{%
-The \pgls{stdout} of the program~\programUrl{#1}{#2} given in~\cref{lst:#1}.%
+%% Get the stdout caption
+%% the label
+\protected\gdef\captionStdout#1{%
+The \pgls{stdout} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
 }%
 %
-\protected\gdef\captionStdall#1#2{%
-The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl{#1}{#2} given in~\cref{lst:#1}.%
+%% Get the stdout/stderr/exitcode caption
+%% #1 the label
+\protected\gdef\captionStdall#1{%
+The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
 }%
 %
 %% Load the right formatting tools.
