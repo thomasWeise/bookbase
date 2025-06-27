@@ -68,7 +68,7 @@
 \listingBox{#1}{lst:#2}{,style=python_style}{#3}{#4}{#5}{#6}%
 }%
 %
-%% Use texgit to place a Python listing.
+%% Use texgit to place an output listing.
 %% #1 the visibility
 %% #2 the label (exec: is added automatically)
 %% #3 the output format, leave empty for text
@@ -88,15 +88,41 @@
 %% #1 the visibility
 %% #2 the label
 %% #3 the style and formatting commands to use for the second listing
-%% #4 the file name
-%% #5 the location x
-%% #6 the location y
-%% #7 the goal width
-%% #8 the goal height
-\protected\gdef\listingPythonAndOutput#1#2#3#4#5#6#7#8{%
+%% #4 the location x
+%% #5 the location y
+%% #6 the goal width
+%% #7 the goal height
+\protected\gdef\listingPythonAndOutput#1#2#3#4#5#6#7{%
 \edef\@ldb@outputFmt{#3}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{,style=text_style}{\listingSepPython{#4}}{#5}{#6}{#7}{#8}}%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{#3}{\listingSepPython{#4}}{#5}{#6}{#7}{#8}}%
+{\listingDoubleBox{#1}{#2}{,style=python_style}{,style=text_style}{\listingSepPython{#2}}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{,style=python_style}{#3}{\listingSepPython{#2}}{#4}{#5}{#6}{#7}}%
 }%
 %
+%
+%% Use texgit to place a SQL listing.
+%% #1 the visibility
+%% #2 the label (lst: is added automatically)
+%% #3 the location x
+%% #4 the location y
+%% #5 the goal width
+%% #6 the goal height
+\protected\gdef\listingSQL#1#2#3#4#5#6{%
+\listingBox{#1}{lst:#2}{,style=sql_style}{#3}{#4}{#5}{#6}%
+}%
+%
+%
+%% Place a SQL listing and its output from texgit.
+%% #1 the visibility
+%% #2 the label
+%% #3 the style and formatting commands to use for the second listing
+%% #4 the location x
+%% #5 the location y
+%% #6 the goal width
+%% #7 the goal height
+\protected\gdef\listingSQLandOutput#1#2#3#4#5#6#7{%
+\edef\@ldb@outputFmt{#3}%
+\ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
+{\listingDoubleBox{#1}{#2}{,style=sql_style}{,style=tool_style_sql}{\smallskip}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{,style=sql_style}{#3}{\smallskip}{#4}{#5}{#6}{#7}}%
+}%
