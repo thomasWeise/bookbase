@@ -37,3 +37,12 @@ The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/texgit_format.tex}%
 }{}%
+%
+%% Print the argument listing as a syntax listing.
+%% #1 the argument command that is used as special syntax listing
+\protected\gdef\asSyntax#1{%
+\let\@old@lst@visiblespace\lst@visiblespace%
+\def\lst@visiblespace{{\color{listing-spaces}\@old@lst@visiblespace}}%
+#1%
+\let\lst@visiblespace\@old@lst@visiblespace%
+}%
