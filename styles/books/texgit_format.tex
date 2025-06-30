@@ -167,21 +167,8 @@ showspaces=#1%
 }%
 %
 %
-%%
-%% The SQL syntax environment.
-%% Warning: If we do not use the minipage, this may or may not
-%% cause strange errors like:
-%% "! Argument of ? has an extra }."
-\lstnewenvironment{sqlSyntax}[1][true]{%
-\center%
-\minipage{\linewidth}%
-\let\@old@lst@visiblespace\lst@visiblespace%
-\def\lst@visiblespace{{\color{listing-spaces}\@old@lst@visiblespace}}%
-\lstset{%
-style=sql_style,%
-showspaces=#1%
-}}{%
-\let\lst@visiblespace\@old@lst@visiblespace%
-\endminipage%
-\endcenter%
+%% An SQL Listing for syntax highlighthing.
+\protected\gdef\sqlSyntax#1#2{%
+\gitLoadSQL{#1}{}{#2}%
+\asSyntax{\lstinputlisting[style=sql_style]{\gitFile{lst:#1}}}%
 }%
