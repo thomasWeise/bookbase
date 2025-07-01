@@ -24,6 +24,12 @@ $\downarrow$~~\expandafter\inlinelistingbox{\texttt{bash~#1}}~~$\downarrow$%
 The \pgls{stdout} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
 }%
 %
+%% Get the stdout/stderr/exitcode caption
+%% #1 the label
+\protected\gdef\captionStdall#1{%
+The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
+}%
+%
 %% Print the argument listing as a syntax listing.
 %% #1 the argument command that is used as special syntax listing
 \protected\gdef\asSyntax#1{%
@@ -31,12 +37,6 @@ The \pgls{stdout} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
 \def\lst@visiblespace{{\color{listing-spaces}\@old@lst@visiblespace}}%
 #1%
 \let\lst@visiblespace\@old@lst@visiblespace%
-}%
-%
-%% Get the stdout/stderr/exitcode caption
-%% #1 the label
-\protected\gdef\captionStdall#1{%
-The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl{#1} given in~\cref{lst:#1}.%
 }%
 %
 %% Load the right formatting tools.

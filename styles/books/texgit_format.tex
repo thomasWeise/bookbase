@@ -154,13 +154,13 @@
 %% cause strange errors like:
 %% "! Argument of ? has an extra }."
 \gdef\@syntax@listing#1#2{%
-\center%
-\minipage{\linewidth}%
+\begin{center}%
+\begin{minipage}{\linewidth}%
 \asSyntax{%
 \lstinputlisting[style=#2,showspaces=true]{\gitFile{lst:#1}}%
 }%
-\endminipage%
-\endcenter%
+\end{minipage}%
+\end{center}%
 }
 %
 %% An SQL Listing for syntax highlighthing.
