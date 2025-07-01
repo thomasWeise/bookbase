@@ -126,3 +126,19 @@
 {\listingDoubleBox{#1}{#2}{,style=sql_style}{,style=tool_style_sql}{\smallskip}{#4}{#5}{#6}{#7}}%
 {\listingDoubleBox{#1}{#2}{,style=sql_style}{#3}{\smallskip}{#4}{#5}{#6}{#7}}%
 }%
+%
+%
+%% Use texgit to place a SQL listing.
+%% #1 the visibility
+%% #2 the label (lst: is added automatically)
+%% #3 the path to the file inside the repository
+%% #4 the location x
+%% #5 the location y
+%% #6 the goal width
+%% #7 the goal height
+\protected\gdef\sqlSyntax#1#2#3#4#5#6#7{%
+\gitLoadSQL{#2}{}{#3}%
+\asSyntax{%
+\listingBox{#1}{lst:#2}{,style=sql_style,showspaces=true}{#3}{#4}{#5}{#6}%
+}%
+}%

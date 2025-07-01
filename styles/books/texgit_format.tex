@@ -170,5 +170,6 @@ showspaces=#1%
 %% An SQL Listing for syntax highlighthing.
 \protected\gdef\sqlSyntax#1#2{%
 \gitLoadSQL{#1}{}{#2}%
-\asSyntax{\lstinputlisting[style=sql_style]{\gitFile{lst:#1}}}%
-}%
+\asSyntax{%
+\lstinputlisting[style=sql_style,showspaces=true]{\gitFile{lst:#1}}%
+}}%
