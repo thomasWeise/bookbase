@@ -147,20 +147,27 @@
 }%
 %
 %
+%% The internal syntax listing command.
+%% #1 the texgit label.
+%% #2 the style
+%% Warning: If we do not use the minipage, this may or may not
+%% cause strange errors like:
+%% "! Argument of ? has an extra }."
+\gdef\@syntax@listing#1#2{%
+\center%
+\minipage{\linewidth}%
+\asSyntax{%
+\lstinputlisting[style=#2,showspaces=true]{\gitFile{lst:#1}}%
+}%
+\endminipage%
+\endcenter%
+}
+%
 %% An SQL Listing for syntax highlighthing.
 %% #1 the path to the file
 \protected\gdef\sqlSyntax#1{%
 \gitLoadSQL{#1}{}{#1}%
-\center%
-%% Warning: If we do not use the minipage, this may or may not
-%% cause strange errors like:
-%% "! Argument of ? has an extra }."
-\minipage{\linewidth}%
-\asSyntax{%
-\lstinputlisting[style=sql_style,showspaces=true]{\gitFile{lst:#1}}%
-}%
-\endminipage%
-\endcenter%
+\@syntax@listing{#1}{sql_style}%
 }%
 %
 %
@@ -168,14 +175,5 @@
 %% #1 the path to the file
 \protected\gdef\pythonSyntax#1{%
 \gitLoadPython{#1}{}{#1}{}%
-\center%
-%% Warning: If we do not use the minipage, this may or may not
-%% cause strange errors like:
-%% "! Argument of ? has an extra }."
-\minipage{\linewidth}%
-\asSyntax{%
-\lstinputlisting[style=python_style,showspaces=true]{\gitFile{lst:#1}}%
-}%
-\endminipage%
-\endcenter%
+\@syntax@listing{#1}{python_style}%
 }%
