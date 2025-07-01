@@ -130,15 +130,14 @@
 %
 %% Use texgit to place a SQL listing.
 %% #1 the visibility
-%% #2 the label (lst: is added automatically)
-%% #3 the path to the file inside the repository
-%% #4 the location x
-%% #5 the location y
-%% #6 the goal width
-%% #7 the goal height
-\protected\gdef\sqlSyntax#1#2#3#4#5#6#7{%
-\gitLoadSQL{#2}{}{#3}%
+%% #2 the path to the file inside the repository
+%% #3 the location x
+%% #4 the location y
+%% #5 the goal width
+%% #6 the goal height
+\protected\gdef\sqlSyntax#1#2#3#4#5#6{%
+\gitLoadSQL{#2}{}{#2}%
 \asSyntax{%
-\listingBox{#1}{lst:#2}{,style=sql_style,showspaces=true}{#4}{#5}{#6}{#7}%
+\listingBox{#1}{lst:#2}{,style=sql_style,showspaces=true}{#3}{#4}{#5}{#6}%
 }%
 }%

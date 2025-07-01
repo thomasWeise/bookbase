@@ -147,29 +147,35 @@
 }%
 %
 %
-%%
-%% The python syntax environment.
+%% An SQL Listing for syntax highlighthing.
+%% #1 the path to the file
+\protected\gdef\sqlSyntax#1{%
+\gitLoadSQL{#1}{}{#1}%
+\center%
 %% Warning: If we do not use the minipage, this may or may not
 %% cause strange errors like:
 %% "! Argument of ? has an extra }."
-\lstnewenvironment{pythonSyntax}[1][true]{%
-\center%
 \minipage{\linewidth}%
-\let\@old@lst@visiblespace\lst@visiblespace%
-\def\lst@visiblespace{{\color{listing-spaces}\@old@lst@visiblespace}}%
-\lstset{%
-style=python_style,%
-showspaces=#1%
-}}{%
-\let\lst@visiblespace\@old@lst@visiblespace%
+\asSyntax{%
+\lstinputlisting[style=sql_style,showspaces=true]{\gitFile{lst:#1}}%
+}%
 \endminipage%
 \endcenter%
 }%
 %
 %
-%% An SQL Listing for syntax highlighthing.
-\protected\gdef\sqlSyntax#1#2{%
-\gitLoadSQL{#1}{}{#2}%
+%% A python Listing for syntax highlighthing.
+%% #1 the path to the file
+\protected\gdef\pythonSyntax#1{%
+\gitLoadPython{#1}{}{#1}{}%
+\center%
+%% Warning: If we do not use the minipage, this may or may not
+%% cause strange errors like:
+%% "! Argument of ? has an extra }."
+\minipage{\linewidth}%
 \asSyntax{%
-\lstinputlisting[style=sql_style,showspaces=true]{\gitFile{lst:#1}}%
-}}%
+\lstinputlisting[style=python_style,showspaces=true]{\gitFile{lst:#1}}%
+}%
+\endminipage%
+\endcenter%
+}%
