@@ -17,4 +17,4 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The script directory is '$scriptDir'."
 "$scriptDir/inVenv.sh" "$scriptDir/__slidesSingle.sh" "$1"
 
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished the slides building script."
-evince "slides/$1/$1.pdf"
+evince "slides/$1/$1.pdf" &
