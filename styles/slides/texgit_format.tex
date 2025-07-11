@@ -97,8 +97,8 @@
 \protected\gdef\listingPythonAndOutput#1#2#3#4#5#6#7{%
 \edef\@ldb@outputFmt{#3}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{,style=text_style}{\listingSepPython{#2}}{#4}{#5}{#6}{#7}}%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{#3}{\listingSepPython{#2}}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{,style=python_style}{,style=text_style}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{,style=python_style}{#3}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
 }%
 %
 %
