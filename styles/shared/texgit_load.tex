@@ -27,6 +27,16 @@
 \gitExec{exec:#1}{\@bb@gitLoadRepo}{#3}{python3 #4}%
 }%
 %
+%% Evaluate Python code as if it was passed to an interactive python session.
+%% #1 the label (exec: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo
+%% #3 the path to the file inside the directory
+\protected\gdef\gitEvalPython#1#2#3{%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\programmingWithPythonCodeRepo}\fi%
+\gitExec{exec:#1}{\@bb@gitLoadRepo}{.}{python3 ./_scripts_/repl.py #3}%
+}%
+%
 %% Execute Python code.
 %% #1 the label (exec:/lst: will be pre-pended)
 %% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo

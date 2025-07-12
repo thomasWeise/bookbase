@@ -146,6 +146,13 @@ emphstyle={[8]\@lstbasicstyle},%
 breaklines=true%
 }%
 %
+%% Style for Python console output
+\lstdefinestyle{python_console_style}{%
+style=python_style,%
+literate={>>>}{{{\color{red}>}{\color{red}>}{\color{red}>}}}3 %
+{...}{{\color{blue}...}}3%
+}%
+%
 %% Style for Tool Output
 \lstdefinestyle{tool_style}{%
 style=text_style,%
