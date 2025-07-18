@@ -136,6 +136,7 @@
 @string { a_brett_matthew = "Matthew Brett" }
 @string { a_bright_jonathan = "Jonathan Bright" }
 @string { a_broomall_john_m = "John M.\ Broomall" }
+@string { a_brown_alvin = "Alvin Brown" }
 @string { a_brown_ronald_h = "Ronald H.\ Brown" }
 @string { a_broy_manfred = "Manfred Broy" }
 @string { a_broytman_oleg = "Oleg Broytman" }
@@ -619,6 +620,7 @@
 @string { a_matthes_eric = "Eric Matthes" }
 @string { a_matthias_karl = "Karl Matthias" }
 @string { a_matthias_meg = "Meg Matthias" }
+@string { a_maxfield_clive = "Clive Maxfield" }
 @string { a_maxim_bruce_r = "Bruce R.\ Maxim" }
 @string { a_maximino_raquel = "Raquel Maximino" }
 @string { a_maxwell_aaron = "Aaron Maxwell" }
@@ -1041,6 +1043,7 @@
 @string { a_wilson_margaret_m = "Margaret M.\ Wilson" }
 @string { a_winslet_marianne = "Marianne Winslett" }
 @string { a_winter_collin = "Collin Winter" }
+@string { a_wjandrea = "{\href{https://stackoverflow.com/users/4518341}{wjandrea}}" }
 @string { a_woeginger_gerhard_j = "Gerhard J.\ Woeginger" }
 @string { a_wolf_gregor = "Gregor Wolf" }
 @string { a_wong_bernard = "Bernard Wong" }
@@ -1160,6 +1163,7 @@
 @string { l_qatar_doha = "{{Doha}, {Qatar}}" }
 @string { l_romania_bucharest = "{{Bucharest}~({Bucure{\c{s}}ti}), {Romania}}" }
 @string { l_russia_petropolis = "{{Petropolis} {(St.~Petersburg)}, {Russia}}" }
+@string { l_singapore = "{Singapore}" }
 @string { l_slovenia_maribor = "{{Maribor}, {{\v{S}}tajerska}, {Podravska}, {Slovenia}}" }
 @string { l_spain_leioa = "{{Leioa}, {Bizkaia}, {Spain}}" }
 @string { l_sweden_uppsala = "{{Uppsala}, {Sweden}}" }
@@ -1214,6 +1218,7 @@
 @string { l_usa_hanover = "{{Hanover}, {MD}, {USA}}" }
 @string { l_usa_highland_park = "{{Highland Park}, {NJ}, {USA}}" }
 @string { l_usa_hoboken = "{{Hoboken}, {NJ}, {USA}}" }
+@string { l_usa_huntsville = "{{Huntsville}, {AL}, {USA}}" }
 @string { l_usa_indianapolis = "{{Indianapolis}, {IN}, {USA}}" }
 @string { l_usa_irvine = "{{Irvine}, {CA}, {USA}}" }
 @string { l_usa_ithaca = "{{Ithaca}, {NY}, {USA}}" }
@@ -1289,6 +1294,7 @@
 @string { p_afips_press = "{American Federation of Information Processing Societies~{(AFIPS)}~Press}" }
 @string { p_afnlp = "{Asian Federation of Natural Language Processing~{(AFNLP)}}" }
 @string { p_ais = "{Association for Information Systems~{(AIS)}}" }
+@string { p_alipay_connect = "{Alipay Connect {Pte.}~{Lte.}}" }
 @string { p_amacom = "{AMACOM}" }
 @string { p_ams = "{American Mathematical Society~({AMS})}" }
 @string { p_ansi = "{American National Standards Institute~{(ANSI)}}" }
@@ -1328,6 +1334,7 @@
 @string { p_de_gruyter = "{Walter de~Gruyter {GmbH}}" }
 @string { p_deepseek_ai = "{DeepSeek{-}{AI}}"}
 @string { p_devcademy_media = "{DevCademy Media~{Inc.}}" }
+@string { p_diy_calculator = "{{DIY}~Calculator}" }
 @string { p_document_foundation = "{The Document Foundation}" }
 @string { p_drexel_university = "{Drexel University}" }
 @string { p_ecma = "{Ecma International}" }
@@ -1529,6 +1536,7 @@
 @string { pa_afips_press = l_usa_motvale }
 @string { pa_afnlp = "{\url{https://www.afnlp.org}}" }
 @string { pa_ais = l_usa_atlanta }
+@string { pa_alipay_connect = l_singapore }
 @string { pa_amacom = l_usa_new_york }
 @string { pa_ams = l_usa_providence }
 @string { pa_ansi = l_usa_washington_dc }
@@ -1569,6 +1577,7 @@
 @string { pa_de_gruyter = l_germany_berlin }
 @string { pa_deepseek_ai = l_china_hangzhou }
 @string { pa_devcademy_media = l_canada_vancouver }
+@string { pa_diy_calculator = l_usa_hanover }
 @string { pa_document_foundation = l_germany_berlin }
 @string { pa_drexel_university = l_usa_philadelphia }
 @string { pa_ecma = l_switzerland_geneva }
@@ -2496,6 +2505,22 @@
  xdata = {rep_ansi_standard},
  number = {{ANSI~X3.135\nobreakdashes-1986}},
  date = {1986},
+}
+
+@collection{APDOC,
+ title = {Alipay\textsuperscript{+} Documentation},
+ date = {2022},
+ publisher = p_alipay_connect,
+ address = pa_alipay_connect,
+ url = {https://docs.alipayplus.com},
+ urldate = {2025-07-18},
+}
+
+@incollection{APDOC:BR,
+ title = {Banker's Rounding},
+ crossref = {APDOC},
+ url = {https://docs.alipayplus.com/alipayplus/alipayplus/reconcile_mpp/bank_rounding},
+ urldate = {2025-07-18},
 }
 
 @book{AP2024WWS,
@@ -5732,6 +5757,17 @@
  date = {2024-02},
 }
 
+@inbook{MB2005RA1,
+ author = a_maxfield_clive # and # a_brown_alvin,
+ title = {Rounding Algorithms~101},
+ booktitle = {{DIY}~Calculator},
+ date = {2005},
+ publisher = p_diy_calculator,
+ address = pa_diy_calculator,
+ url = {https://www.clivemaxfield.com/diycalculator/popup-m-round.shtml}
+ urldate = {2025-07-18},
+}
+
 @article{MBBZ2021TWAGDTDLOSD,
  author = a_meyer_andre_n # and # a_barr_earl_t # and # a_bird_christian # and # a_zimmermann_thomas,
  title = {Today Was a Good Day:~The Daily Life of Software Developers},
@@ -8417,6 +8453,15 @@
  crossref = {SE:SO},
  url = {https://survey.stackoverflow.co/2024},
  urldate = {2025-06-01},
+}
+
+@incollection{SE:SO:WDP3RHTE,
+ editor = a_wjandrea,
+ title = {Why does \glslink{python}{Python 3} round half to even?},
+ date = {2012-05-31/2025-06-13},
+ crossref = {SE:SO},
+ url = {https://stackoverflow.com/questions/10825926},
+ urldate = {2025-07-18},
 }
 
 @incollection{SE:SO:WNUDOFTRC,
