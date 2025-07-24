@@ -15,7 +15,21 @@ date=comp,%
 ]{biblatex}%
 %
 %% Set our bibliography.
-\bibliography{\bookbaseDir/bibliography/bibliography}
+\bibliography{%
+\bookbaseDir/bibliography/prefix,%
+\bookbaseDir/bibliography/authors,%
+\bookbaseDir/bibliography/locations,%
+\bookbaseDir/bibliography/publishers,%
+\bookbaseDir/bibliography/addresses,%
+\bookbaseDir/bibliography/conference_series,%
+\bookbaseDir/bibliography/journals,%
+\bookbaseDir/bibliography/report_types,%
+\bookbaseDir/bibliography/series,%
+\bookbaseDir/bibliography/proceedings,%
+\bookbaseDir/bibliography/bibliography,%
+\bookbaseDir/bibliography/python_documentation,%
+\bookbaseDir/bibliography/postgres_documentation,%
+\bookbaseDir/bibliography/weise_thomas}%
 %
 %% Define formats for ISBNs and ISSNs that link to search engines.
 \xdef\isbnSearchEngineA{https://isbnsearch.org/isbn}%
