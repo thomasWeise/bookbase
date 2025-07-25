@@ -5,6 +5,18 @@
 %
 %
 %
+\newFunc{arithMean}{\ensuremath{\operatorname{mean}}}{mean(A)}{A}{%
+The \emph{arithmetic mean}~\arithMeanb{A} is an estimate of the expected value of a distribution from which a data sample was, well, sampled. %
+Its is computed on data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{n-1})$ as the sum of all $n$ elements~$\arrayIndex{a}{i}$ in the sample data~$A$ divided by the total number~$n$ of values, i.e., $\arithMeanb{A} = \frac{1}{n} \sum_{i=0}^{n-1} \arrayIndex{a}{i}$%
+}%
+%
+%
+%% Access an element in an array or list
+%% #1 the array
+%% #2 the element to access
+\protected\gdef\arrayIndex#1#2{\ensuremath{#1_{#2}}}%
+%
+%
 \newFunc{attrDomain}{\ensuremath{\operatorname{dom}}}{dom(a)}{a}{%
 the domain of an attribute~$a$\optionalRef{def:attributeDomain}{, see \cref{def:attributeDomain}}}%
 %
@@ -26,6 +38,11 @@ See also \cref{eq:factorial} and \cref{lst:functions:def_factorial}}%
 }}%
 %
 %
+\newFunc{geoMean}{\ensuremath{\operatorname{geom}}}{geom(A)}{A}{%
+The \emph{geometric mean}~\geomb{A} is the $n$\textsuperscript{th} root of the product of $n$ \emph{positive} values in a dataset~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{n-1})$ with $\arrayIndex{a}{i}>0$ for all~$i\in\intRange{0}{n}$, i.e., $\geomeanb{A} = \sqrt[n]{\prod_{i=0}^{n-1} \arrayIndex{a}{i}}=\exp{\left(\frac{1}{n} \sum_{i=0}^{n-1} \log{\arrayIndex{a}{i}} \right)}$%
+}%
+%
+%
 \newSymbol{integerNumbers}{\ensuremath{\mathSpace{Z}}}{Z}{%
 the set of the integers numbers including positive and negative numbers and~0, i.e., {\dots}, -3, -2, -1, 0, 1, 2, 3, {\dots}, and so on. %
 It holds that~$\integerNumbers\subset\realNumbers$%
@@ -41,6 +58,13 @@ sort={..},%
 description={\sloppy%
 with $i,j\in\integerNumbers$ and $i\leq j$ is the set that contains all integer numbers in the inclusive range from~$i$ to~$j$. %
 For example, \mbox{\intRange{5}{9}}~is equivalent to~\mbox{$\{5, 6, 7, 8, 9\}$}}%
+}%
+%
+%
+\newFunc{median}{\ensuremath{\operatorname{median}}}{median(A)}{A}{%
+The \emph{median}~\medianb{A} is the value separating the bigger-valued half from the smaller-valued half of a data sample or distribution. %
+Its estimate is the value right in the middle of a \emph{sorted} data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ where $\arrayIndex{a}{i-1}\leq \arrayIndex{a}{i} \; \forall i \in 1\dots (n-1)$ with an odd number of elements and the \arithMean\ of the two values in the middle if $n$ is even. %
+In other words, $\medianb{A} = \arrayIndex{a}{\frac{n-1}{2}}$ if $n$ is odd and $\frac{1}{2}\left(\mathNoTopSpacing{\arrayIndex{a}{\frac{n}{2}-1} + \arrayIndex{a}{\frac{n}{2}}}\right)$ otherwise, i.e., if $n$ is even%
 }%
 %
 %
@@ -99,3 +123,28 @@ the set of the positive real numbers, i.e., $\realNumbersP=\{x\in\realNumbers:x>
 \newFunc{relSchema}{\ensuremath{\operatorname{\Sigma}}}{Sigma(R)}{R}{%
 the relation schema of relation~$R$~\cite{SS2005EIDDDFDB:SDWSD2}\optionalRef{def:relationSchema}{, see \cref{def:relationSchema}}}%
 %
+%
+\protected\gdef\sampleQuantile#1#2#3{\ensuremath{\gls{sampleQuantileMark}^{#1}_{#2}(#3)}}%
+\newglossaryentry{sampleQuantileMark}{%
+type={symbols},
+name={\ensuremath{\operatorname{quantile}^k_q(A)}},%
+text={\ensuremath{\operatorname{quantile}}},%
+sort={quantilekqA},%
+description={%
+The \emph{$q$\nobreakdashes-quantiles} are the cut points that divide a sorted data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ where $\arrayIndex{a}{i-1}\leq \arrayIndex{a}{i} \; \forall i \in 1\dots (n-1)$ into $q$ equally-sized parts. %
+\sampleQuantile{k}{q}{A}~be the $k$\textsuperscript{th}~$q$\nobreakdashes-quantile, with~$k\in 1\dots (q-1)$, i.e., there are $q-1$ of the $q$\nobreakdashes-quantiles. %
+In the context of this book, define~$h=(n-1)\frac{k}{q}$. %
+\sampleQuantile{k}{q}{A}~then can be computed as \arrayIndex{a}{h} if $h$~is integer, i.e.,~$h\in\integerNumbers$, and as ~$\arrayIndex{a}{\lfloor h\rfloor}+\left(h-\lfloor h\rfloor\right)*\left(\arrayIndex{a}{\lfloor h\rfloor+1}-\arrayIndex{a}{\lfloor h\rfloor}\right)$ otherwise. %
+It holds that~$\sampleQuantile{2}{1}{A}=\medianb{A}$%
+}}%
+%
+%
+\newFunc{sampleStdDev}{\ensuremath{\operatorname{sd}}}{sd(A)}{A}{%
+The statistical estimate~\sampleStdDevb{A} of the \emph{standard deviation} of a data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ with $n$~observations is the square root of the estimated variance~$\sampleVarb{A}$, i.e., $\sampleStdDev{A} = \sqrt{\sampleVarb{A}}$%
+}%
+%
+%
+\newFunc{sampleVar}{\ensuremath{\operatorname{var}}}{var(A)}{A}{%
+The \emph{variance} of a distribution is the expectation of the squared deviation of the underlying random variable from its mean. %
+The variance~\sampleVarb{A} of a data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ with $n$~observations can be estimated as~$\sampleVarb{A} = \frac{1}{n-1} \sum_{i=0}^{n-1} \left(\arrayIndex{a}{i} - \arithMeanb{A}\right)^2$%
+}%

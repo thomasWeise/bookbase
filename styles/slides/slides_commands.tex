@@ -30,8 +30,15 @@
 \bigskip%
 %
 \huge{\inserttitle}\\%
+\ifx\insertsubtitle\@empty%
+\expandafter\@firstoftwo%
+\else%
+\expandafter\@secondoftwo%
+\fi%
+{}{%
 \medskip%
-\Large{\insertsubtitle}\\%
+\insertsubtitle\\%
+}%
 \bigskip%
 \large{\insertauthor}\\%
 %
