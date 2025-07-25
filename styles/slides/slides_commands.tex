@@ -7,6 +7,9 @@
 %%% graphics
 %%%
 %
+%
+\xdef\presentationEndName{Presentation End}%
+%
 \gdef\startPresentation{%
 %
 \begin{frame}%
@@ -160,7 +163,10 @@
 %
 \global\let\@framePatch\@framePatch@doNothing%
 %
-\@@@endSlide{Presentation End}{presentationEnd}%
+\@@@endSlide{\presentationEndName}{presentationEnd}%
+%
+%% reset listing size
+\def\@lstbasicstyle{\tiny\color{listing-text-color}\linespread{1.0}\ttfamily{}}%
 %
 \ifnum\@bib@numcites>0\relax%
 \expandafter\@firstoftwo%
