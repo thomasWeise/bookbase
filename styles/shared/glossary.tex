@@ -14,9 +14,9 @@
 %
 %% make sure that \acrfull counts as first use.
 \let\@oldacrfull\acrfull%
-\let\@oldcrfullpl\acrfullpl%
+\let\@oldacrfullpl\acrfullpl%
 \protected\gdef\acrfull#1{\@oldacrfull{#1}\glsunset{#1}}%
-\protected\gdef\acrfullpl#1{\@oldcrfullpl{#1}\glsunset{#1}}%
+\protected\gdef\acrfullpl#1{\@oldacrfullpl{#1}\glsunset{#1}}%
 \let\glspostdescription\relax%
 %
 %% Create a new symbol
