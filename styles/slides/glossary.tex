@@ -5,6 +5,36 @@
 \RequirePackage[acronyms,symbols,nonumberlist,nowarn]{glossaries}%
 \glsdisablehyper%
 %
+\xdef\glossariesSlidesTitle{Glossary}%
+%
+%%% We count the number of citations, in order to see if we need to print the bibliography.
+\newcount\@glossary@numentries%
+\@glossary@numentries=0%
+%
+\let\@old@gls\gls%
+\renewcommand{\gls}[2][]{%
+\@old@gls[#1]{#2}%
+\global\relax\global\advance\@glossary@numentries by 1\relax%
+}%
+%
+\let\@old@Gls\Gls%
+\renewcommand{\Gls}[2][]{%
+\@old@Gls[#1]{#2}%
+\global\relax\global\advance\@glossary@numentries by 1\relax%
+}%
+%
+\let\@old@glspl\glspl%
+\renewcommand{\glspl}[2][]{%
+\@old@glspl[#1]{#2}%
+\global\relax\global\advance\@glossary@numentries by 1\relax%
+}%
+%
+\let\@old@Glspl\Glspl%
+\renewcommand{\Glspl}[2][]{%
+\@old@Glspl[#1]{#2}%
+\global\relax\global\advance\@glossary@numentries by 1\relax%
+}%
+%
 %% Print the glossary entry in the singular form.
 \protected\gdef\pgls#1{\gls[hyper=false]{#1}}%
 %% Print the glossary entry in the singular form starting with capital letter.

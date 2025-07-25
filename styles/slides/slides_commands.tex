@@ -162,6 +162,21 @@
 %
 \@@@endSlide{Presentation End}{presentationEnd}%
 %
+\ifnum\@glossary@numentries>0\relax%
+\expandafter\@firstoftwo%
+\else%
+\expandafter\@secondoftwo%
+\fi{%
+%
+\def\newblock{\beamer@newblock}%
+%
+\begin{frame}[allowframebreaks,t]{\glossariesSlidesTitle}%
+\begin{tiny}%
+\printglossaries%
+\end{tiny}%
+\end{frame}%
+}{}%
+%
 \ifnum\@bib@numcites>0\relax%
 \expandafter\@firstoftwo%
 \else%
