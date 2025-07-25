@@ -19,3 +19,17 @@
 %% \dref{#1} produces something like "Section 1.2 (My Section's Title)"
 \protected\gdef\dref#1{\cref{#1}~(\begin{NoHyper}\titleref{#1}\end{NoHyper})}%
 %
+%% Put reference text only if a label exists.
+%% #1 the label to check
+%% #2 the text to be printed only if the label exists
+\protected\gdef\optionalRef#1#2{%
+\@ifundefined{r@#1}{}{#2}%
+}%
+%
+%% Put reference text only if a label exists.
+%% #1 the label to check
+%% #2 the text to be printed only if the label exists
+%% #3 the alternative text to be printed otherwise
+\protected\gdef\optionalRefElse#1#2#3{%
+\@ifundefined{r@#1}{#3}{#2}%
+}%
