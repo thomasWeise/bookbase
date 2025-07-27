@@ -85,3 +85,7 @@ description={\sloppy#4.}%
 \expandafter\protected\expandafter\gdef\csname#1Of\endcsname##1{\ensuremath{##1_{\gls{#1}}}}%
 }%
 %
+%% Put a full acronym with expansion into the text.
+%% #1 the label
+\protected\gdef\glsFull#1{\glsreset{#1}\gls{#1}}%
+\protected\gdef\glsFullpl#1{\glsreset{#1}\glspl{#1}}%
