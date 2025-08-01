@@ -31,6 +31,9 @@ An \emph{Application Programming Interface} is a set of rules or protocols that 
 %
 \newacronym[description={before Common Era, used to refer to the years that came before the birth of Jesus Christ. B.C.E.~is now often used instead of B.C.~especially in scientific writing.}]{BCE}{BCE}{before Common Era}%
 %
+%
+\newacronym[description={The \emph{Best Known Solution} for an instance of an optimization problem is the best solution (measured based on the objective values) that has ever been reported in literature. BKSes are not necessarily globally optimal, as in many instances of \npHard~problems, the true optima are unknown.},shortplural={BKSes}]{BKS}{BKS}{Best Known Solution}%
+%
 \newacronym[description={%
 \emph{Continuous Integration} is a software development process where developers integrate new code into a codebase hosted in a \gls{VCS}, after which automated tools run an automated build process including code analysis~(such as \pglspl{linter}) and \pgls{unitTest} execution~\cite{L2018PCIADACGWE}. %
 If the build succeeds and no errors or problems with the code are, the code may automatically be deployed~(if the CI~system is configured to do so).%
@@ -125,6 +128,15 @@ It was originally developed by the United States Air Force for data modeling, fo
 \emph{JavaScript Object Notation} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \gls{javascript}~\cite{E1999ELS} syntax.%
 \optionalRef{fig:jsonexample}{ An example of a \pgls{JSON} document is given in \cref{fig:jsonexample}.}%
 },sort={JSON}]{JSON}{JSON}{JavaScript Object Notation}%
+%
+\newacronym[shortplural={JSSP},description={%
+The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST} is one of the most prominent
+and well-studied scheduling tasks. %
+In a JSSP instance, there are $k$~machines and $m$~jobs. %
+Each job must be processed once by each machine in a job-specific sequence and has a job-specific processing time on each machine. %
+The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule which can complete all the jobs in the shortest time. %
+The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
+},sort={JSSP}]{JSSP}{JSSP}{Job Shop Scheduling Problem}%
 %
 \newacronym[description={Large Language Model, see, e.g., an \gls{AI} technique using (large/deep) neural networks to models trained on huge bodies of text to predict the next word in a text or conversation and continue to do so until a request is answered~\cite{M2024WALAHATUIGA}. %
 Typical examples include DeepSeek~ \cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCLZBXWDXGQLGLWCYQLCNLCDHGGHYWZZWZXXZZTLWLTHZWCDGZPWCJCLZCYWYZPL2024DRIRCILVRL} and GPT~\cite{RNSS2018ILUWUL}.}]{LLM}{LLM}{Large Language Model}%
