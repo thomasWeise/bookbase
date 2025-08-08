@@ -44,12 +44,12 @@ If the build succeeds and no errors or problems with the code are, the code may 
 Each row in the text file represents one row in the table or matrix. %
 The elements in the row are separated by a fixed delimiter, usually a comma~(\inQuotes{,}), sometimes a semicolon~(\inQuotes{;}). %
 \python\ offers some out-of-the-box CSV support in the \pythonilIdx{csv}~module~\cite{PSF:P3D:TPSL:CCFRAW}.%
-},sort={CSV}]{CSV}{CSV}{comma-separated values}%
+}]{CSV}{CSV}{comma-separated values}%
 %
 \newacronym[description={%
 \emph{Common Table Expressions} are \sql\ constructs for simplifying complex queries by allowing us to break them into smaller parts which are evaluated only once and, hence, can be reused. %
 CTEs~act as temporary named result sets created during query execution and discarded after query completion~\cite{PGDG:PD:WQCTE,FP2023LP,B2017MAMCTEAWFR}.%
-},sort={CTE}]{CTE}{CTE}{common table expression}%
+}]{CTE}{CTE}{common table expression}%
 %
 \newacronym[description={%
 A \emph{database} is an organized collection of structured information or data, typically stored electronically in a computer system. %
@@ -77,16 +77,37 @@ A \emph{database system} is the combination of a \gls{db} and a the correspondin
 \newacronym[shortplural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
 %
 \newacronym[description={%
-An \emph{evolutionary algorithm} is a metaheuristic optimization method that maintains a population of candidate solutions, which undergo selection~(where better solutions are chosen with higher probability) and reproduction~(where mutation and recombination create a new candidate solution from one or two existing ones, repectively)~\cite{W2009GOATAA,BFM1997EA}.%
-}]{algoEA}{EA}{evolutionary algorithm}%
+An \emph{evolutionary algorithm} is a metaheuristic optimization method that maintains a population of candidate solutions, which undergo selection~(where better solutions are chosen with higher probability) and reproduction~(where mutation and recombination create a new candidate solution from one or two existing ones, repectively)~\cite{W2009GOATAA,BFM1997HOEC}.%
+},sort={(1+1) ea}]{algoEA}{EA}{evolutionary algorithm}%
 %
 \newacronym[description={%
-Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}}%
+The \mbox{$(\mu+\lambda)$~EA} is an \glsFull{algoEA} where, in each generation, $\lambda$~offspring solutions are generated from the current population of $\mu$~parent solutions.
+The offspring and parent populations are merged, yielding $\mu+\lambda$~solutions, from which then the best $\mu$~solutions are ratained to form the parent population of the next generation. %
+If the search space is the bit strings of length~$n$, then this algorithm usually applies a mutation operator flipping each bit independently with probability~$1/n$.%
+},sort={(m+l) ea}]{algoEAmpl}{\mbox{$(\mu+\lambda)$~EA}}{\mbox{$(\mu+\lambda)$}~evolutionary algorithm}%
+%
+\newacronym[description={%
+The \mbox{$(1+1)$~EA} is a local search algorithm that retains the best solution~$x_c$ discovered so far during the search~\cite{DJW2002OTAOTOPOEA,CPD2018TAMPARAOEA}. %
+In each step, it applies a unary search operator to this best-so-far solution~$x_c$ and derives a new solution~$x_n$. %
+If the new solution~$x_n$ is \emph{better or equally good} when compared with~$x_c$, i.e., not worse, then it replaces it, i.e., is stored as the new~$x_c$. %
+If the search space are bit strings of length~$n$, then the \mbox{$(1+1)$~EA} uses a unary search operator that flips each bit independently with probability~$m/n$, where usually~$m=1$. %
+This operator is the main difference to~\glsFull{algoRLS}. %
+The \mbox{$(1+1)$~EA} is a special case of the \gls{algoEAmpl} where~$\mu=\lambda=1$.%
+}]{algoEAopo}{\mbox{$(1+1)$~EA}}{\mbox{$(1+1)$}~evolutionary algorithm}%
+%
+\newacronym[description={%
+Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}.}%
 }]{ERD}{ERD}{entity relationship diagram}%
+%
+\newacronym[description={%
+\emph{Frequency Fitness Assignment} is a algorithm plugin for optimization methods applied to discrete or combinatorial problems with not-too-many different possible objective values. %
+It replaces the objective values in all comparisons with their absolute encounter frequency so far during the search. %
+FFA has successfully been applied to the \gls{QAP}~\cite{CWTW2024FFAOWBFGSORLSOTQAP}.%
+}]{FFA}{FFA}{Frequency Fitness Assignment}%
 %
 \protected\gdef\funcDepb#1#2{#1\glslink{funcDep}{\ensuremath{\rightarrow}}#2}%
 \newacronym[longplural={functional dependencies},description={%
-A functional dependency exists between two groups of attributes~$Y$ and~$X$ if the values of~$X$ determine the values of~$Y$. %
+A \emph{functional dependency} exists between two groups of attributes~$Y$ and~$X$ if the values of~$X$ determine the values of~$Y$. %
 This is written as~$\funcDepb{X}{Y}$.%
 \optionalRef{def:functionalDependency}{ See also~\cref{def:functionalDependency}.}%
 }]{funcDep}{FD}{functional dependency}%
@@ -127,7 +148,7 @@ It was originally developed by the United States Air Force for data modeling, fo
 \newacronym[shortplural={JSON},description={%
 \emph{JavaScript Object Notation} is a data interchange format~\cite{E2017SE4TJDIS,RFC8259} based on \gls{javascript}~\cite{E1999ELS} syntax.%
 \optionalRef{fig:jsonexample}{ An example of a \pgls{JSON} document is given in \cref{fig:jsonexample}.}%
-},sort={JSON}]{JSON}{JSON}{JavaScript Object Notation}%
+}]{JSON}{JSON}{JavaScript Object Notation}%
 %
 \newacronym[shortplural={JSSP},description={%
 The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST} is one of the most prominent
@@ -136,7 +157,7 @@ In a JSSP instance, there are $k$~machines and $m$~jobs. %
 Each job must be processed once by each machine in a job-specific sequence and has a job-specific processing time on each machine. %
 The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule which can complete all the jobs in the shortest time. %
 The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
-},sort={JSSP}]{JSSP}{JSSP}{Job Shop Scheduling Problem}%
+}]{JSSP}{JSSP}{Job Shop Scheduling Problem}%
 %
 \newacronym[description={Large Language Model, see, e.g., an \gls{AI} technique using (large/deep) neural networks to models trained on huge bodies of text to predict the next word in a text or conversation and continue to do so until a request is answered~\cite{M2024WALAHATUIGA}. %
 Typical examples include DeepSeek~ \cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCLZBXWDXGQLGLWCYQLCNLCDHGGHYWZZWZXXZZTLWLTHZWCDGZPWCJCLZCYWYZPL2024DRIRCILVRL} and GPT~\cite{RNSS2018ILUWUL}.}]{LLM}{LLM}{Large Language Model}%
@@ -144,7 +165,7 @@ Typical examples include DeepSeek~ \cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHC
 %
 \newacronym[description={%
 The goal of satisfiaiblity problems is to find an assignment for $n$~Boolean variables that make a given Boolean formula~$F:\{0, 1\}^n \mapsto \{0, 1\}$ become true. %
-In the \emph{Maximum Satisfiability (MaxSAT)} problem~\cite{HS2004SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear as literals either directly or negated in $m$~\inQuotes{or} clauses, which
+In the \emph{Maximum Satisfiability~(MaxSAT)} problem~\cite{HS2004SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear as literals either directly or negated in $m$~\inQuotes{or} clauses, which
 are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
@@ -168,6 +189,14 @@ Typical examples are \python, \linux, \git, and \postgresql.}]{OSS}{OSS}{open so
 %
 \newacronym[description={Participatory Design~\cite{CWG1993PAJADATC,FMRSW1989OOSAATSDASD}}]{participatoryDesign}{PD}{Participatory Design}%
 %
+\newacronym[description={%
+The \emph{Quadratic Assignment Problem} is an optimization problem where the goal is to assign a set of $n$~facilities to a set of $n$~locations~\cite{KB1957APATLOEA,BCPP1998TQAP,LdABNHQ2007ASFTQAP,CWTW2024FFAOWBFGSORLSOTQAP}. %
+Such an assignment can be represented as a permutation~$x$ of the first $n$~natural numbers, where \arrayIndex{x}{i}~specifies the location where facility~$i$ should be placed. %
+For each QAP, a distance matrix~$D$ is given, where $D_{pq}$~specifies the distance from location~$p$ to location~$q$, as well as a flow matrix~$F$, where $F_{ij}$~is the amount of material flowing from facility~$i$ to facility~$j$. %
+The objective function~\objFun\ then rates a permutation~$x$ as~$f(x)=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale}{D_{x_i x_j}F_{ij}}$. %
+The QAP is \npComplete~\cite{SG1976PCAP}.%
+}]{QAP}{QAP}{Quadratic Assignment Problem}%
+%
 \newacronym[shortplural={RAD},description={Rapid Application Development~\cite{S2007OOSE,M1996RTWSS}}]{RAD}{RAD}{Rapid Application Development}%
 %
 \newacronym[shortplural={regexes},description={%
@@ -176,7 +205,25 @@ In \python, the \pythonilIdx{re} module offers functionality work with regular e
 In \postgresql, regex-based pattern matching is supported as well~\cite{PGDG:PD:PRE}.%
 }]{regex}{regex}{regular expression}%
 %
+\newacronym[description={%
+Randomized local search retains the best solution~$x_c$ discovered so far during the search and, in each step, it applies a unary search operator to this best-so-far solution~$x_c$ and derives a new solution~$x_n$. %
+If the new solution~$x_n$ is \emph{better or equally good} when compared with~$x_c$, i.e., not worse, then it replaces it, i.e., is stored as the new~$x_c$. %
+If the search space are bit strings of length~$n$, then RLS uses a unary search operator that flips exactly one bit. %
+This operator is the main difference to~\gls{algoEAopo}.%
+}]{algoRLS}{RLS}{randomized local search}%
+%
+\newacronym[description={%
+Simulated Annealing is a local search that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP}. %
+The probability to do so decreases over time and with the difference in objective values, i.e.,is the lower the worse the new solution is.%
+}]{algoSA}{SA}{Simulated Annealing}%
+%
 \newacronym[shortplural={SDLCs},description={Software Development Life Cycle~\cite{I2018SAH,N2024SEFDS}}]{SDLC}{SDLC}{Software Development Life Cycle}%
+%
+\newacronym[description={%
+The Standard Genetic Algorithm~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA} was the first population \gls{algoEA}. %
+It maintains a population of solutions and applies mutation and crossover to generate offspring solutions. %
+It uses fitness proportionate selection to choose which solutions should \inQuotes{survive} into the next generation, which today is considered a very bad design choice, see, e.g.,~\cite{W1989TGAASPWRBAORTIB}.%
+}]{algoSGA}{SGA}{Standard Genetic Algorithm}%
 %
 \newacronym[shortplural={SQL},description={%
 The \emph{Structured Query Language} is basically a programming language for querying and manipulating \glspl{rdb}~\cite{C20245YOQ,MS2001S1URLC,PGDG:PD:SC,SP2002STYSI2D,SPMP1998SI2TDDASVEI12T,T2018ISARD,ANSIX3135,DB2019HTTPS,ISO90751987,ISOIEC9707112023E}. %
@@ -234,6 +281,14 @@ The goal is to find the shortest round-trip tour that starts at one city, visits
 The TSP is one of the most well-known \npHard\ combinatorial optimization problems.%
 }]{TSP}{TSP}{Traveling Salesperson Problem}%
 %
+\newglossaryentry{uar}{%
+name={u.a.r.},%
+sort={u.a.r.},%
+long={uniformly at random},%
+description={uniformly at random, i.e., sampled according to the uniform distribution},%
+first={uniformly at random~(u.a.r.)}%
+}%
+%
 \newacronym[shortplural={UCS},description={%
 Universal Coded Character Set, see \gls{unicode}%
 }]{UCS}{UCS}{Universal Coded Character Set}%
@@ -280,12 +335,12 @@ Different from \gls{CSV}, elements in XML can be hierarchically nested, like~\te
 XML is one of most-used data interchange formats. %
 To process XML in \python, use the \pythonilIdx{defusedxml} library~\cite{H2021D0XBPFPSM}, as it protects against several security issues.%
 \optionalRef{fig:xmlexample}{ Another example of an \pgls{XML} ocument is given in \cref{fig:xmlexample}.}%
-},sort={XML}]{XML}{XML}{Extensible Markup Language}%
+}]{XML}{XML}{Extensible Markup Language}%
 %
 \newacronym[shortplural={YAML},description={%
 \emph{{YAML}~Ain't Markup Language\texttrademark} is a human-friendly data serialization language for all programming languages~\cite{DNMAASBE2021YAMLYV1,K2019ITXJY,CGTYB2022YFFDCAIE}. %
 It is widely used for configuration files in the DevOps environment. %
 See \url{https://yaml.org} for more information.%
 \optionalRef{fig:yamlexample}{ An example of a \pgls{YAML}-document is given in \cref{fig:yamlexample}.}%
-},sort={YAML}]{YAML}{YAML}{{YAML}~Ain't Markup Language\texttrademark}%
+}]{YAML}{YAML}{{YAML}~Ain't Markup Language\texttrademark}%
 %
