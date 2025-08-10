@@ -34,16 +34,20 @@
  isbn = {978-1-4503-7885-7},
 }
 
-@proceedings{PROC1968IFIP1,
+@mvproceedings{PROC1968IFIP,
  title = {World Congress on Information Processing~({IFIP'1968})},
  eventdate = {1966-08-05/1968-08-10},
  venue = l_uk_edinburgh,
  organization = pa_ifip # addr_sep # p_ifip,
- editor = a_morrell_a_j_h,
  publisher = p_north_holland,
  address = pa_north_holland,
- isbn = {0720420326},
  date = {1969},
+}
+
+@proceedings{PROC1968IFIP1,
+ crossref = {PROC1968IFIP},
+ editor = a_morrell_a_j_h,
+ isbn = {0720420326},
  volume = {{1:~Mathematics, Software}},
 }
 
@@ -187,14 +191,20 @@
  doi = {10.1109/ICEC.1997},
 }
 
-@proceedings{PROC2004SERP,
+@mvproceedings{PROC2004SERP,
  editor = a_arabnia_hamid_r # and # a_reza_hassan,
- title = {International Conference on Software Engineering Research and Practice~{(SERP'2004)}, Volume~2},
+ title = {International Conference on Software Engineering Research and Practice~{(SERP'2004)}},
  eventdate = {2004-06-21/2004-06-24},
  date = {2004},
  venue = l_usa_las_vegas,
  publisher = p_csrea_press,
  address = pa_csrea_press,
+}
+
+@proceedings{PROC2004SERP2,
+ crossref = {PROC2004SERP},
+ editor = a_arabnia_hamid_r # and # a_reza_hassan,
+ volume = {2},
  isbn = {1-932415-29-7}
 }
 
@@ -275,14 +285,21 @@
  issn = {1090-705X}
 }
 
-@proceedings{PROC2008SCSS2,
+@proceedings{PROC2008SCSS,
  editor = a_elleithy_khale_m,
- title = {Advanced Techniques in Computing Sciences and Software Engineering, Volume~{II} of the Proceedings of the 2008~International Conference on Systems, Computing Sciences and Software Engineering~{(SCSS'2008)}, part of the International Joint Conferences on Computer, Information, and Systems Sciences, and Engineering~{(CISSE'2008)}},
+ title = {2008~International Conference on Systems, Computing Sciences and Software Engineering~{(SCSS'2008)}, part of the International Joint Conferences on Computer, Information, and Systems Sciences, and Engineering~{(CISSE'2008)}},
  venue = l_usa_bridgeport,
  eventdate = {2008-12-05/2008-12-13},
  publisher = p_springer_dordrecht,
  address = pa_springer_dordrecht,
  date = {2009-12},
+ isbn = {978-90-481-3659-9},
+ doi = {10.1007/978-90-481-3660-5},
+}
+
+@proceedings{PROC2008SCSS2,
+ volume = {II:~{A}dvanced Techniques in Computing Sciences and Software Engineering},
+ crossref = {PROC2008SCSS},
  isbn = {978-90-481-3659-9},
  doi = {10.1007/978-90-481-3660-5},
 }
@@ -306,6 +323,24 @@
  venue = l_usa_portland_or,
  xdata = {c_gecco},
  isbn = {978-1-4503-0073-5},
+}
+
+@mvproceedings{PROC2010PPSN,
+ editor = a_schaefer_robert # and # a_cotta_carlos # and # a_kolodziej_joanna # and # a_rudolph_gunter,
+ title = {11th International Conference on Parallel Problem Solving from Nature~{(PPSN~XI)}},
+ venue = l_poland_krakow,
+ eventdate = {2010-09-11/2010-09-15},
+ xdata = {ser_lncs},
+ publisher = p_springer_verlag,
+ address = pa_springer_verlag,
+}
+
+@proceedings{PROC2010PPSN1,
+ crossref = {PROC2010PPSN},
+ volume = {{I}},
+ number = {6238},
+ doi = {10.1007/978-3-642-15844-5},
+ isbn = {978-3-642-15843-8},
 }
 
 @proceedings{PROC2011IJCNLPWTIM,
