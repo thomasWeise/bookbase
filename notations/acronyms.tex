@@ -197,7 +197,7 @@ Typical examples are \python, \linux, \git, and \postgresql.}]{OSS}{OSS}{open so
 The \emph{Quadratic Assignment Problem} is an optimization problem where the goal is to assign a set of $n$~facilities to a set of $n$~locations~\cite{KB1957APATLOEA,BCPP1998TQAP,LdABNHQ2007ASFTQAP,CWTW2024FFAOWBFGSORLSOTQAP}. %
 Such an assignment can be represented as a permutation~$x$ of the first $n$~natural numbers, where \arrayIndex{x}{i}~specifies the location where facility~$i$ should be placed. %
 For each QAP, a distance matrix~$D$ is given, where $D_{pq}$~specifies the distance from location~$p$ to location~$q$, as well as a flow matrix~$F$, where $F_{ij}$~is the amount of material flowing from facility~$i$ to facility~$j$. %
-The objective function~\objFun\ then rates a permutation~$x$ as~$f(x)=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale}{D_{x_i x_j}F_{ij}}$. %
+The objective function~$f$ then rates a permutation~$x$ as~$f(x)=\sum_{i=1}^{n}\sum_{j=1}^{n}{D_{x_i x_j}F_{ij}}$. %
 The QAP is \npComplete~\cite{SG1976PCAP}.%
 }]{QAP}{QAP}{Quadratic Assignment Problem}%
 %
