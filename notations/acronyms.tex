@@ -84,7 +84,7 @@ An \emph{evolutionary algorithm} is a metaheuristic optimization method that mai
 The \mbox{$(\mu+\lambda)$~EA} is an \glsFull{algoEA} where, in each generation, $\lambda$~offspring solutions are generated from the current population of $\mu$~parent solutions.
 The offspring and parent populations are merged, yielding $\mu+\lambda$~solutions, from which then the best $\mu$~solutions are ratained to form the parent population of the next generation. %
 If the search space is the bit strings of length~$n$, then this algorithm usually applies a mutation operator flipping each bit independently with probability~$1/n$.%
-},sort={(m+l) ea}]{algoEAmpl}{\mbox{$(\mu+\lambda)$~EA}}{\mbox{$(\mu+\lambda)$}~evolutionary algorithm}%
+},sort={(mu+lambda) EA}]{algoEAmpl}{\mbox{$(\mu+\lambda)$~EA}}{\mbox{$(\mu+\lambda)$}~evolutionary algorithm}%
 %
 \newacronym[description={%
 The \mbox{$(1+1)$~EA} is a local search algorithm that retains the best solution~$x_c$ discovered so far during the search~\cite{DJW2002OTAOTOPOEA,CPD2018TAMPARAOEA}. %
@@ -93,17 +93,21 @@ If the new solution~$x_n$ is \emph{better or equally good} when compared with~$x
 If the search space are bit strings of length~$n$, then the \mbox{$(1+1)$~EA} uses a unary search operator that flips each bit independently with probability~$m/n$, where usually~$m=1$. %
 This operator is the main difference to~\glsFull{algoRLS}. %
 The \mbox{$(1+1)$~EA} is a special case of the \gls{algoEAmpl} where~$\mu=\lambda=1$.%
-}]{algoEAopo}{\mbox{$(1+1)$~EA}}{\mbox{$(1+1)$}~evolutionary algorithm}%
+},sort={(1+1) EA}]{algoEAopo}{\mbox{$(1+1)$~EA}}{\mbox{$(1+1)$}~evolutionary algorithm}%
 %
 \newacronym[description={%
 Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}.}%
 }]{ERD}{ERD}{entity relationship diagram}%
 %
 \newacronym[description={%
+The \gls{algoEAopo} with \gls{algoFFA} plugged in.%
+},sort={(1+1) EA with FFA}]{algoFEAopo}{\mbox{$(1+1)$~FEA}}{\mbox{$(1+1)$~EA} with FFA}%
+%
+\newacronym[description={%
 \emph{Frequency Fitness Assignment} is a algorithm plugin for optimization methods applied to discrete or combinatorial problems with not-too-many different possible objective values. %
 It replaces the objective values in all comparisons with their absolute encounter frequency so far during the search. %
 FFA has successfully been applied to the \gls{QAP}~\cite{CWTW2024FFAOWBFGSORLSOTQAP}.%
-}]{FFA}{FFA}{Frequency Fitness Assignment}%
+}]{algoFFA}{FFA}{Frequency Fitness Assignment}%
 %
 \protected\gdef\funcDepb#1#2{#1\glslink{funcDep}{\ensuremath{\rightarrow}}#2}%
 \newacronym[longplural={functional dependencies},description={%

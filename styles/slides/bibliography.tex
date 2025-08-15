@@ -21,6 +21,15 @@
 %% cite a reference without putting the reference in the text
 \gdef\nocite#1{\@bib@oldnocite{#1}\relax\global\advance\@bib@numcites by 1\relax}%
 %
+%% Fixing strange citetitle issue.
+\let\@bib@oldcitetitle\citetitle%
+\protected\gdef\citetitle#1{%
+\let\@bib@old@glslink\glslink%
+\protected\gdef\glslink##1##2{##2}%
+\@bib@oldcitetitle{#1}%
+\let\glslink\@bib@old@glslink%
+}%
+%
 %% Renew the quotation environment.
 \global\let\@old@cquotation\cquotation%
 \protected\long\gdef\cquotation#1#2{%
