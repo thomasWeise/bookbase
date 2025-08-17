@@ -97,7 +97,7 @@
 
 @book{ABCC2006TTSPACS,
  author = a_applegate_david_lee # and # a_bixby_robert_e # and # a_chvatal_vasek # and # a_cook_william_john,
- title = {The \glslink{TSP}{Traveling Salesman Problem}:~{A} Computational Study},
+ title = {The \glslink{optTSP}{Traveling Salesman Problem}:~{A} Computational Study},
  date = {2007},
  xdata = {ser_psiam},
  edition = {2},
@@ -638,7 +638,7 @@
 
 @incollection{BCPP1998TQAP,
  author = a_burkard_rainer_e # and # a_cela_eranda # and # a_pardalos_panos_miltiades # and # a_pitsoulis_leonidas_s,
- title = {The \glslink{QAP}{Quadratic Assignment Problem}},
+ title = {The \glslink{optQAP}{Quadratic Assignment Problem}},
  crossref = {PDG1998HOCO},
  pages = {1713--1809},
  doi = {10.1007/978-1-4613-0303-9_27}
@@ -691,7 +691,7 @@
 
 @article{BDP1996TJSSPCANST,
  author = a_blazwicz_jacek # and # a_domschke_wolfgang # and # a_pesch_erwin,
- title = {The \glslink{JSSP}{Job Shop Scheduling Problem}:~{C}onventional and New Solution Techniques},
+ title = {The \glslink{optJSSP}{Job Shop Scheduling Problem}:~{C}onventional and New Solution Techniques},
  xdata = {j_ejor},
  volume = {93},
  number = {1},
@@ -1018,7 +1018,7 @@
 
 @article{C1985TATTTSPAESA,
  author = a_cerny_vladimir,
- title = {Thermodynamical Approach to the \glslink{TSP}{Traveling Salesman Problem}:~{A}n Efficient \glslink{algoSA}{Simulation Algorithm}},
+ title = {Thermodynamical Approach to the \glslink{optTSP}{Traveling Salesman Problem}:~{A}n Efficient \glslink{algoSA}{Simulation Algorithm}},
  xdata = {j_jotaa},
  number = {1},
  volume = {45},
@@ -1576,7 +1576,7 @@
 }
 
 @article{DBS2006ACO,
- title = {\glslink{ACO}{Ant Colony Optimization}},
+ title = {\glslink{algoACO}{Ant Colony Optimization}},
  author = a_dorigo_marco # and # a_birattari_mauro # and # a_stutzle_thomas,
  xdata = {j_cim},
  date = {2006-11},
@@ -1708,7 +1708,7 @@
 
 @article{DMC1996ASOBACOCA,
  author = a_dorigo_marco # and # a_maniezzo_vittorio # and # a_colorni_alberto,
- title = {\glslink{ACO}{Ant System}:~{O}ptimization by a Colony of Cooperating Agents},
+ title = {\glslink{algoACO}{Ant System}:~{O}ptimization by a Colony of Cooperating Agents},
  xdata = {j_itosmacpbc},
  number = {1},
  volume = {26},
@@ -1784,7 +1784,7 @@
 
 @book{DS2004ACO,
  author = a_dorigo_marco # and # a_stutzle_thomas,
- title = {\glslink{ACO}{Ant Colony Optimization}},
+ title = {\glslink{algoACO}{Ant Colony Optimization}},
  publisher = p_mit_press,
  address = pa_mit_press,
  date = {2004},
@@ -1887,6 +1887,14 @@
  crossref = {PROC2005ICSE},
  pages = {553--560},
  doi = {10.1109/ICSE.2005.1553601},
+}
+
+@inproceedings{ENT2001TTTPDABICOPAPOCP,
+ author = a_easton_kelly # and # a_nemhauser_george_l # and # a_trick_michael_a,
+ title = {The \glslink{optTTP}{Traveling Tournament Problem} Description and Benchmarks},
+ pages = {580--584},
+ crossref = {PROC2001CP},
+ doi = {10.1007/3-540-45578-7\_43},
 }
 
 @collection{EOEBEB,
@@ -2062,6 +2070,28 @@
  addendum = {Software Standard},
  url = {https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub184.pdf},
  urldate = {2025-03-29},
+}
+
+@techreport{FIPSPUB197,
+ author = a_dworkin_morris_j # and # a_barker_elaine # and # a_nechvatal_james_r # and # a_foti_james # and # a_bassham_lawrence_e # and # a_roback_e # and # a_dray_jr_james_f,
+ title = {Advanced Encryption Standard~{(\glslink{cryptoAES}{AES})}},
+ xdata = {rep_fips_standard},
+ number = {197},
+ date = {2001-11-26},
+ doi = {10.6028/NIST.FIPS.197},
+ url = {https://www.nist.gov/publications/advanced-encryption-standard-aes},
+ urldate = {2025-08-17},
+ addendum = {Updated/replaced by~\cite{FIPSPUB197upd1}}
+}
+
+@techreport{FIPSPUB197upd1,
+ title = {Advanced Encryption Standard~{(\glslink{cryptoAES}{AES})}},
+ xdata = {rep_fips_standard},
+ number = {197-upd1},
+ date = {2023-05-09},
+ doi = {10.6028/NIST.FIPS.197-upd1},
+ url = {https://csrc.nist.gov/pubs/fips/197/final},
+ urldate = {2025-08-17},
 }
 
 @article{FMRSW1989OOSAATSDASD,
@@ -2436,7 +2466,7 @@
 }
 
 @book{GP2002TTSPAIV,
- title = {The \glslink{TSP}{Traveling Salesman Problem} and its Variations},
+ title = {The \glslink{optTSP}{Traveling Salesman Problem} and its Variations},
  editor = a_gutin_gregory_z # and # a_punnen_abraham_p,
  xdata = {ser_coop},
  date = {2002-05},
@@ -2508,7 +2538,7 @@
 
 @collection{GWVM2000SHOSRITY2,
  editor = a_gent_ian_philip # and # a_walsh_tobi # and # a_van_maaren_hans,
- title = {{\glslink{MaxSAT}{SAT}2000} -- Highlights of Satisfiability Research in the Year~2000},
+ title = {{\glslink{optMaxSAT}{SAT}2000} -- Highlights of Satisfiability Research in the Year~2000},
  xdata = {ser_fiaiaa},
  number = {63},
  date = {2000-01},
@@ -2802,7 +2832,7 @@
 
 @article{HS2000LSAFSAEE,
  author = a_hoos_holger_h # and # a_stutzle_thomas,
- title = {Local Search Algorithms for \glslink{MaxSAT}{SAT}:~{A}n Empirical Evaluation},
+ title = {Local Search Algorithms for \glslink{optMaxSAT}{SAT}:~{A}n Empirical Evaluation},
  xdata = {j_joar},
  volume = {24},
  number = {4},
@@ -2815,7 +2845,7 @@
 
 @incollection{HS2000SAORFROS,
  author = a_hoos_holger_h # and # a_stutzle_thomas,
- title = {\glslink{SATLIB}{SATLIB}:~{A}n Online Resource for Research on \glslink{MaxSAT}{SAT}},
+ title = {\glslink{SATLIB}{SATLIB}:~{A}n Online Resource for Research on \glslink{optMaxSAT}{SAT}},
  crossref = {GWVM2000SHOSRITY2},
  pages = {283--292},
 }
@@ -3346,7 +3376,7 @@
 
 @article{KB1957APATLOEA,
  author = a_koopmans_tjalling_c # and # a_beckmann_martin,
- title = {\glslink{QAP}{Assignment Problems} and the Location of Economic Activities},
+ title = {\glslink{optQAP}{Assignment Problems} and the Location of Economic Activities},
  xdata = {j_e},
  pages = {53--76},
  date = {1957},
@@ -3357,7 +3387,7 @@
 
 @inproceedings{KBT2018POSOTAPIARSBOITS,
  author = a_kerschke_pascal # and # a_bossek_jakob # and # a_trautmann_heike,
- title = {Parameterization of State-of-the-Art Performance Indicators:~{A} Robustness Study based on Inexact {TSP} Solvers},
+ title = {Parameterization of State-of-the-Art Performance Indicators:~{A} Robustness Study based on Inexact \glslink{optTSP}{TSP} Solvers},
  crossref = {PROC2018GECCOc},
  pages = {1737--1744},
  doi = {10.1145/3205651.3208233},
@@ -3619,7 +3649,7 @@
 
 @article{LdABNHQ2007ASFTQAP,
  author = a_loiola_elaine_maria # and # a_de_abreu_nair_maria_maia # and # a_boaventura_netto_paulo_oswaldo # and # a_hahn_peter_m # and # a_querido_tania,
- title = {A Survey for the \glslink{QAP}{Quadratic Assignment Problem}},
+ title = {A Survey for the \glslink{optQAP}{Quadratic Assignment Problem}},
  xdata = {j_ejor},
  volume = {176},
  number = {2},
@@ -3658,7 +3688,7 @@
 
 @book{LLRKS1985TTSPAGTOCO,
  author = a_lawler_eugene_leighhton # and # a_lenstra_jan_karel # and # a_rinnooy_kan_alexaner_hendrik_george # and # a_shmoys_david_b,
- title = {The \glslink{TSP}{Traveling Salesman Problem}:~{A} Guided Tour of Combinatorial Optimization},
+ title = {The \glslink{optTSP}{Traveling Salesman Problem}:~{A} Guided Tour of Combinatorial Optimization},
  date = {1985-09},
  xdata = {ser_wisidmao},
  isbn = {0-471-90413-9}
@@ -3666,7 +3696,7 @@
 
 @incollection{LLRKS1993SASAAC,
  author = a_lawler_eugene_leighhton # and # a_lenstra_jan_karel # and # a_rinnooy_kan_alexaner_hendrik_george # and # a_shmoys_david_b,
- title = {Sequencing and \glslink{JSSP}{Scheduling}:~{A}lgorithms and Complexity},
+ title = {Sequencing and \glslink{optJSSP}{Scheduling}:~{A}lgorithms and Complexity},
  crossref = {GRKZ1993PPAI},
  date = {1993},
  chapter = {9},
@@ -4157,6 +4187,17 @@
  isbn = {978-0-596-00965-6},
 }
 
+@article{O2002CACJCTEATI,
+ author = a_overill_richard_e,
+ title = {Codes and Ciphers:~{J}ulius {C}aesar, The {E}nigma, and the {I}nternet},
+ xdata = {j_jolac},
+ volume = {12},
+ number = {3},
+ pages = {543},
+ date = {2002-06},
+ doi = {10.1093/LOGCOM/12.3.543},
+}
+
 @article{O2007OTHTMIMIOHWCFTPWMIH,
  title = {\glslink{oracleDB}{Oracle} Timeline:~{H}ighlighting the most important moments in Oracle's history, with commentary from the people who made it happen},
  xdata = {j_ptegtoa},
@@ -4580,7 +4621,7 @@
 
 @article{R1991ATSPL,
  author = a_reinelt_gerhard,
- title = {\glslink{TSPLib}{TSPLIB} {--} {A} \glslink{TSP}{Traveling Salesman Problem} Library},
+ title = {\glslink{TSPLib}{TSPLIB} {--} {A} \glslink{optTSP}{Traveling Salesman Problem} Library},
  xdata = {j_ojoc},
  number = {4},
  volume = {3},
@@ -4884,15 +4925,6 @@
  isbn = {0072465638},
 }
 
-@book{RS2025DERORD,
- title = {{DB\nobreakdashes-Engines} Ranking of \glslink{rdb}{Relational} \glslink{dbms}{DBMS}~(June~2025)},
- date = {2025-06},
- publisher = p_redgate_software,
- address = pa_redgate_software,
- url = {https://db-engines.com/en/ranking/relational+dbms},
- urldate = {2025-06-01},
-}
-
 @book{RMHOSMUUIIIIOPPTRS1997UNG,
  title = {\glslink{UML}{UML} Notation Guide},
  publisher = pa_rational_software # addr_sep # p_rational_software # and # pa_microsoft # addr_sep # p_microsoft # and # pa_hewlett_packard # addr_sep # p_hewlett_packard # and # pa_oracle # addr_sep # p_oracle # and # pa_sterling_software # addr_sep # p_sterling_software # and # pa_mci_systemhouse # addr_sep # p_mci_systemhouse # and # pa_unisys # addr_sep # p_unisys # and # pa_icon_computing # addr_sep # p_icon_computing # and # pa_intellicorp # addr_sep # p_intellicorp # and # pa_ilogix # addr_sep # p_ilogix # and # pa_ibm # addr_sep # p_ibm # and # pa_objectime # addr_sep # p_objectime # and # pa_platinum_technology # addr_sep # p_platinum_technology # and # pa_ptech # addr_sep # p_ptech # and # pa_taskon # addr_sep # p_taskon # and # pa_reich_technologies # addr_sep # p_reich_technologies # and # pa_softeam # addr_sep # p_softeam,
@@ -4921,6 +4953,26 @@
  date = {2018-06-11},
  url = {https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf},
  urldate = {2025-04-28},
+}
+
+@book{RS2025DERORD,
+ title = {{DB\nobreakdashes-Engines} Ranking of \glslink{rdb}{Relational} \glslink{dbms}{DBMS}~(June~2025)},
+ date = {2025-06},
+ publisher = p_redgate_software,
+ address = pa_redgate_software,
+ url = {https://db-engines.com/en/ranking/relational+dbms},
+ urldate = {2025-06-01},
+}
+
+@article{RSA1978AMFODSAPKC,
+ author = a_rivest_ronald_linn # and # a_shamir_adi # and # a_adleman_leonard_m,
+ title = {A Method for Obtaining Digital Signatures and Public-Key Cryptosystems},
+ xdata = {j_cacm},
+ volume = {21},
+ number = {2},
+ pages = {120--126},
+ date = {1978-02},
+ doi = {10.1145/359340.359342},
 }
 
 @incollection{RV2008NCPAPM,
@@ -5966,6 +6018,14 @@
  urldate = {2024-06-27}
 }
 
+@inproceedings{VTvdB2023TCFGATHFECTTTP,
+ author = a_verduin_kristian # and # a_thomson_sarah_louise # and # a_van_den_berg_daan,
+ title = {Too Constrained for \glslink{algoSGA}{Genetic Algorithms}. {T}oo Hard for \glslink{algoEA}{Evolutionary Computing}. {T}he \glslink{optTTP}{Traveling Tournament Problem}},
+ crossref = {PROC2023IJCCI},
+ pages = {246--257},
+ doi = {10.5220/0012192100003595},
+}
+
 @book{VV2022LF,
  author = a_van_vugt_sander,
  title = {\glslink{linux}{Linux} Fundamentals},
@@ -6140,6 +6200,15 @@
  date = {2001-06},
  xdata = {ser_tmksidms},
  isbn = {1558605088},
+}
+
+@book{Y2006MCFCTR,
+ author = a_young_anne_l,
+ title = {Mathematical Ciphers:~{F}rom {C}aesar to \glslink{cryptoRSA}{RSA}},
+ xdata = {ser_mw},
+ number = {25},
+ date = {2006},
+ isbn = {0821837303},
 }
 
 @book{Y2011YGEM,
