@@ -33,9 +33,12 @@
 %% Renew the quotation environment.
 \global\let\@old@cquotation\cquotation%
 \protected\long\gdef\cquotation#1#2{%
+\let\@@old@quotation@cite\cite%
+\let\cite\bracketCite%
 \begin{center}%
 \resizebox{0.9\paperwidth}{!}{%
 \fcolorbox{novice-hint-frame}{novice-hint-background}{\centering%
 \@old@cquotation{#1}{#2}%
 }}\end{center}%
+\let\cite\@@old@quotation@cite%
 }%
