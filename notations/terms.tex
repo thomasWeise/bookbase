@@ -92,10 +92,12 @@ Otherwise it fails.%
 name={escape sequence},%
 description={%
 Escaping is the process of presenting \inQuotes{forbidden} characters or symbols in a sequence of characters or symbols. %
-In \python, string escapes allow us to include otherwise impossible characters, such as string delimiters, in a string. %
+In \python~\cite{programmingWithPython}, string escapes allow us to include otherwise impossible characters, such as string delimiters, in a string. %
 Each such character is represented by an \emph{escape sequence}, which usually starts with the backslash character~(\inQuotes{\textbackslash})~\cite{PSF:P3D:TPLR:ES}. %
 In \python\ strings, the escape sequence~\textil{\\"}, for example, stands for \textil{\"}, the escape sequence~\textil{\\\\} stands for~\textil{\\}, and the escape sequence~\textil{\\n} stands for a newline or linebreak character\optionalRef{sec:str:escaping}{, see \cref{sec:str:escaping}}. %
-In \python\ \pglspl{fstring}, the escape sequence~\textil{\{\{} stands for a single curly brace~\textil{\{}.%
+In \python\ \pglspl{fstring}, the escape sequence~\textil{\{\{} stands for a single curly brace~\textil{\{}.
+In \postgresql~\cite{databases}, similar \pgls{C}\nobreakdashes-style escapes~(starting with \inQuotes{\textbackslash}) are supported~\cite{PGDG:PD:SC2}.%
+%
 }%
 }%
 %

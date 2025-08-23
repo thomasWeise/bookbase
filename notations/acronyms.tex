@@ -247,7 +247,7 @@ You find the \sql\ commands supported by \postgresql\ in the reference~\cite{PGD
 \protected\gdef\sql{\pgls{SQL}}%
 %
 \newacronym[description={\sloppy%
-A \sql\ injection attack is a web attack that is used to target data stored in \dbms\ by injecting malicious input into code that constructs \sql\ queries by string concatenation in order to subvert application functionality and perform unauthorized operations~\cite{ASO2024SIADPP,KDP2024AOSIAITCAIWA,CMCVGHRDCAAFL2023SIADINFD,databases}. %
+A \sql\ injection attack is an attack that is used to target data stored in \dbms\ by injecting malicious input into code that constructs \sql\ queries by string concatenation in order to subvert application functionality and perform unauthorized operations~\cite{ASO2024SIADPP,KDP2024AOSIAITCAIWA,CMCVGHRDCAAFL2023SIADINFD,S2008SI,databases}. %
 In order to prevent such attacks, queries to \pglspl{db} should \emph{never} be constructed via string concatenation or the likes of \python\ \glspl{fstring}. %
 Assume that \pythonil{user_id} was a string variable in a \python\ program and we construct the query \pythonil{f"SELECT * FROM data WHERE user_id = \{user_id\}"}. %
 Notice that the \textil{\{user_in\}} will be replaced with the value of variable~\pythonil{user_id} during \gls{strinterpolation}. %
