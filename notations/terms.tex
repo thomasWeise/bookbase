@@ -187,6 +187,20 @@ JavaScript is the predominant programming language used in websites to develop i
 }%
 %
 %
+\newglossaryentry{literal}{%
+name={literal},%
+description={%
+A literal is a specific concrete value, something that is written down as-is~\cite{PSF:STWP:L,PEP586}. %
+In \python, for example, \pythonil{\"abc\"}~is a string literal, \pythonil{5}~is an integer literal, and \pythonil{23.3}~is a \pythonil{float} literal. %
+In contrast, \pythonil{sin(3)} is not a literal. %
+Also, while \pythonil{5} is an integer literal, if we create a variable~\pythonil{a = 5} then \pythonil{a} is not a literal either~(it is a variable). %
+Hence, literals are values that the \python\ interpreter reads directly from the source code and creates as objects in memory. %
+They are not something that is the result from a computation or the result of a variable lookup. %
+Python supports some \pglspl{typeHint} for literals, including the type \pythonilIdx{LiteralString} for string literals and the type~\pythonilIdx{Literal[xyz]} for arbitrary literals~\pythonil{xyz}.%
+}%
+}%
+%
+%
 \newglossaryentry{locale}{%
 name={locale},%
 description={%
