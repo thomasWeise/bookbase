@@ -31,7 +31,7 @@
 %% #7 the goal height
 \protected\gdef\listingBox#1#2#3#4#5#6#7{%
 \locateListingBox{#1}{
-\lstinputlisting[label={#2}#3]{\gitFile{#2}}%
+\lstinputlisting[#3]{\gitFile{#2}}%
 }{#4}{#5}{#6}{#7}%
 }%
 %
@@ -50,12 +50,12 @@
 \locateListingBox{#1}{%
 \centering%
 %
-\lstinputlisting[label={lst:#2}#3]{\gitFile{lst:#2}}%
+\lstinputlisting[#3]{\gitFile{lst:#2}}%
 #5%
 \edef\@ldb@outputFmt{#4}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\lstinputlisting[label={exec:#2},style=text_style]{\gitFile{exec:#2}}}%
-{\lstinputlisting[label={exec:#2}#4]{\gitFile{exec:#2}}}%
+{\lstinputlisting[style=text_style]{\gitFile{exec:#2}}}%
+{\lstinputlisting[#4]{\gitFile{exec:#2}}}%
 }{#6}{#7}{#8}{#9}%
 }%
 %
@@ -67,7 +67,7 @@
 %% #5 the goal width
 %% #6 the goal height
 \protected\gdef\listingPython#1#2#3#4#5#6{%
-\listingBox{#1}{lst:#2}{,style=python_style}{#3}{#4}{#5}{#6}%
+\listingBox{#1}{lst:#2}{style=python_style}{#3}{#4}{#5}{#6}%
 }%
 %
 %% Use texgit to place an output listing.
@@ -81,8 +81,8 @@
 \protected\gdef\listingOutput#1#2#3#4#5#6#7{%
 \edef\@ldb@outputFmt{#3}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\listingBox{#1}{exec:#2}{,style=text_style}{#4}{#5}{#6}{#7}}%
-{\listingBox{#1}{exec:#2}{,style=#3}{#4}{#5}{#6}{#7}}%
+{\listingBox{#1}{exec:#2}{style=text_style}{#4}{#5}{#6}{#7}}%
+{\listingBox{#1}{exec:#2}{#3}{#4}{#5}{#6}{#7}}%
 }%
 %
 %
@@ -97,8 +97,8 @@
 \protected\gdef\listingPythonAndOutput#1#2#3#4#5#6#7{%
 \edef\@ldb@outputFmt{#3}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{,style=text_style}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
-{\listingDoubleBox{#1}{#2}{,style=python_style}{#3}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{style=python_style}{style=text_style}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{style=python_style}{#3}{\listingSepPython{\gitNameEsc{lst:#2}}}{#4}{#5}{#6}{#7}}%
 }%
 %
 %
@@ -110,7 +110,7 @@
 %% #5 the goal width
 %% #6 the goal height
 \protected\gdef\listingSQL#1#2#3#4#5#6{%
-\listingBox{#1}{lst:#2}{,style=sql_style}{#3}{#4}{#5}{#6}%
+\listingBox{#1}{lst:#2}{style=sql_style}{#3}{#4}{#5}{#6}%
 }%
 %
 %
@@ -125,8 +125,8 @@
 \protected\gdef\listingSQLandOutput#1#2#3#4#5#6#7{%
 \edef\@ldb@outputFmt{#3}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
-{\listingDoubleBox{#1}{#2}{,style=sql_style}{,style=tool_style_sql}{\smallskip}{#4}{#5}{#6}{#7}}%
-{\listingDoubleBox{#1}{#2}{,style=sql_style}{#3}{\smallskip}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{style=sql_style}{style=tool_style_sql}{\smallskip}{#4}{#5}{#6}{#7}}%
+{\listingDoubleBox{#1}{#2}{style=sql_style}{#3}{\smallskip}{#4}{#5}{#6}{#7}}%
 }%
 %
 %
@@ -140,6 +140,6 @@
 \protected\gdef\sqlSyntax#1#2#3#4#5#6{%
 \gitLoadSQL{#2}{}{#2}%
 \asSyntax{%
-\listingBox{#1}{lst:#2}{,style=sql_style,showspaces=true}{#3}{#4}{#5}{#6}%
+\listingBox{#1}{lst:#2}{style=sql_style,showspaces=true}{#3}{#4}{#5}{#6}%
 }%
 }%
