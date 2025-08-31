@@ -70,6 +70,19 @@
 \listingBox{#1}{lst:#2}{style=python_style}{#3}{#4}{#5}{#6}%
 }%
 %
+%% Use texgit to place a Python listing.
+%% #1 the visibility
+%% #2 the label (lst: is added automatically)
+%% #3 the location x
+%% #4 the location y
+%% #5 the goal width
+%% #6 the goal height
+\protected\gdef\listingPythonSyntax#1#2#3#4#5#6{%
+\asSyntax{%
+\listingBox{#1}{lst:#2}{style=python_style,showspaces=true}{#3}{#4}{#5}{#6}%
+}%
+}%
+%
 %% Use texgit to place an output listing.
 %% #1 the visibility
 %% #2 the label (exec: is added automatically)
