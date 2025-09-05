@@ -211,6 +211,15 @@ Typical examples are \python, \linux, \git, and \postgresql.}]{OSS}{OSS}{open so
 \newacronym[description={Participatory Design~\cite{CWG1993PAJADATC,FMRSW1989OOSAATSDASD}}]{participatoryDesign}{PD}{Participatory Design}%
 %
 \newacronym[description={%
+\emph{Probability Density Function}~\cite{AS1972HOMFWFGAMT,EHP2000SD,W2007HBOSDFE} of a continuous random variable~${\mathcal{X}}$ that can take on values from range~$\Omega\subseteq\realNumbers$ is a function~$f_{\mathcal{X}}:\Omega\mapsto\realNumbersP$ such that%
+\begin{itemize}%
+\item $f_{\mathcal{X}}(x)>0$ for all $x\in\Omega$ (non-negativity),%
+\item $\int_{\Omega} f_{\mathcal{X}}(x)dx = 1$ (normalization), and%
+\item the probability that $x\in A$ for all $A\subseteq\Omega$ is $\int_A f_{\mathcal{X}}(x)dx$.%
+\end{itemize}%
+}]{mathPDF}{PDF}{Probability Density Function}%
+%
+\newacronym[description={%
 The \emph{Quadratic Assignment Problem} is an optimization problem where the goal is to assign a set of $n$~facilities to a set of $n$~locations~\cite{KB1957APATLOEA,BCPP1998TQAP,LdABNHQ2007ASFTQAP,CWTW2024FFAOWBFGSORLSOTQAP}. %
 Such an assignment can be represented as a permutation~$x$ of the first $n$~natural numbers, where \arrayIndex{x}{i}~specifies the location where facility~$i$ should be placed. %
 For each QAP, a distance matrix~$D$ is given, where $D_{pq}$~specifies the distance from location~$p$ to location~$q$, as well as a flow matrix~$F$, where $F_{ij}$~is the amount of material flowing from facility~$i$ to facility~$j$. %
