@@ -15,11 +15,15 @@
 %% #1 the text
 \protected\gdef\inQuotes#1{%
 \advance\@bb@quote@depth by 1\relax%
-\ifcase\@bb@quote@depth``\or`\or\guillemotleft\else\guilsinglleft\fi%
+\ifcase\@bb@quote@depth\iq@l@dquot\or`\or\guillemotleft\else\guilsinglleft\fi%
 #1%
-\ifcase\@bb@quote@depth''\or'\or\guillemotright\else\guilsinglright\fi%
+\ifcase\@bb@quote@depth\iq@r@dquot\or'\or\guillemotright\else\guilsinglright\fi%
 \advance\@bb@quote@depth by -1\relax%
 }%
+%% The left and right double quote characters used in "inQuotes".
+%% Can be overwritten in German language
+\xdef\iq@l@dquot{``}%
+\xdef\iq@r@dquot{''}%
 %
 %% Put text in single quotes.
 %% #1 the text
