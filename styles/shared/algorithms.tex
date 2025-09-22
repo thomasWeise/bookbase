@@ -27,3 +27,7 @@
 \input{\bookbaseDir/styles/books/algorithms.tex}%
 }{}%
 %
+\ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/slides/algorithms.tex}%
+}{}%
+%
