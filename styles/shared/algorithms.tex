@@ -31,3 +31,28 @@
 \input{\bookbaseDir/styles/slides/algorithms.tex}%
 }{}%
 %
+%%
+%% We have two commands for comments in algorithms.
+%%
+%% The command `'\algoCmtInline` offers a right-justified comment to be used
+%% inside primitives, such as \If or \For loops.
+%% It takes a single parameter, namely the comment text.
+%% `\algoCmtEndline` is to be used at the end of normal lines (and ends them).
+%%
+%% Commands can be enabled using \algoCommentsOn, which is the default.
+%% They can also be disabled using \algoCommentsOff.
+%
+%% Turn on all comments: The comments issued via `\algoCmt`
+%% will be printed.
+\protected\gdef\algoCommentsOn{%
+\protected\gdef\algoCmtInline##1{\comment*[f]{##1}}%
+\protected\gdef\algoCmtEndline##1{\comment*[r]{##1}}%
+}%
+\algoCommentsOn%
+%
+%% Turn on all comments: The comments issued via `\algoCmt`
+%% will NOT be printed.
+\protected\gdef\algoCommentsOff{%
+\protected\gdef\algoCmtInline##1{}%
+\protected\gdef\algoCmtEndline##1{\;}%
+}%
