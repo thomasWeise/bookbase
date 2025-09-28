@@ -47,8 +47,15 @@ for dirName in "${@:3}"; do
 
             cd "$theDir"
             "$scriptDir/pdflatex.sh" "$docName"
-            "$scriptDir/pdfsizeopt.sh" "$dirName.pdf" "$websiteDir/$dirName.pdf"
-            rm "$dirName.pdf"
+            if [[ $(declare -p NO_PDF_OPT 2>/dev/null) != declare\ ?x* ]]; then
+              echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Minifying slide '$dirName.pdf'."
+              "$scriptDir/pdfsizeopt.sh" "$dirName.pdf" "$websiteDir/$dirName.pdf"
+              rm "$dirName.pdf"
+              echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Done minifying slide '$dirName.pdf'."
+            else
+              echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Not slide '$dirName.pdf', because NO_PDF_OPT is specified."
+              mv "$dirName.pdf" "$websiteDir/$dirName.pdf"
+            fi
 
             if [ -d "$curDirGit" ]; then
                 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Git directory is $curDirGit."
