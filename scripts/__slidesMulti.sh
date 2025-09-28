@@ -53,7 +53,7 @@ for dirName in "${@:3}"; do
               rm "$dirName.pdf"
               echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Done minifying slide '$dirName.pdf'."
             else
-              echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Not slide '$dirName.pdf', because NO_PDF_OPT is specified."
+              echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Not minifying slide '$dirName.pdf', because NO_PDF_OPT is specified."
               mv "$dirName.pdf" "$websiteDir/$dirName.pdf"
             fi
 
