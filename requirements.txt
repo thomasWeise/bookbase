@@ -6,13 +6,13 @@
 # You can find it at https://thomasweise.github.io/texgit_py,
 # https://github.com/thomasWeise/texgit_py, or at
 # https://pypi.org/project/texgit.
-texgit == 0.9.9
+texgit == 0.9.10
 
 # minify_html is needed to minify html output.
 minify_html == 0.16.4
 
 # for converting the additional markdown files to HTML
-markdown == 3.8
+markdown == 3.9
 
 # for converting files to HTML
-Pygments == 2.19.1
+Pygments == 2.19.2
