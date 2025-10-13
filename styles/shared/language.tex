@@ -22,4 +22,9 @@
 %% Fix double quotes in "inQuotes"
 \gdef\iq@l@dquot{\glqq}%
 \gdef\iq@r@dquot{\grqq}%
+%
+%
+%% Provide an English word.
+%% #1 the English word, as alternative for a work in another language
+\protected\gdef\inEN##1{(engl.\ \emph{##1})}%
 }%
