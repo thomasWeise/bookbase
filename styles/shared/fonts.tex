@@ -55,3 +55,15 @@
 \RequirePackage{pifont}%
 \protected\gdef\greenYes{\textbf{\textcolor{greenYesColor}{\ding{51}}}}%
 \protected\gdef\redNo{\textbf{\textcolor{redNoColor}{\ding{55}}}}%
+%
+%% Change the font size relative to the current size.
+%% #1 the amount of points to change, can be positive (starting with +; untested) or negative (starting with -)
+%% #2 the text to render
+%% based on https://tex.stackexchange.com/questions/365024
+\protected\gdef\changeFontSizeRel#1#2{%
+\begingroup%
+\fontsize{\dimexpr\f@size pt#1pt}{\f@baselineskip}\selectfont%
+#2
+\endgroup%
+}%
+%

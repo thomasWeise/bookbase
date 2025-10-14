@@ -26,5 +26,9 @@
 %
 %% Provide an English word.
 %% #1 the English word, as alternative for a work in another language
-\protected\gdef\inEN##1{{\color{lang-text-color}\scalebox{0.95}{(\textsc{{\color{lang-name-color}EN}:}~\emph{##1})}}}%
+\protected\gdef\inEN##1{{\color{lang-text-color}{%
+\changeFontSizeRel{-1.15}{%
+({\color{lang-name-color}EN}:~\emph{##1})%
+}%
+}}}%
 }%
