@@ -88,8 +88,8 @@ do
      -dUNROLLFORMS \
      -sDEVICE=pdfwrite \
      -sOutputFile="$tempFileDst" "$tempFileSrc" \
-     -c "<</NeverEmbed [ ]>> setdistillerparams" \
-     -c "/PreserveAnnotTypes [/Link] def" \
+#    -c "<</NeverEmbed [ ]>> setdistillerparams" \
+#    -c "/PreserveAnnotTypes [/Link] def" \
      -q
 
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We filtered '$tempFileSrc' to '$tempFileDst' using ghostscript."
