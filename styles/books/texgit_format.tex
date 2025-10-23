@@ -1,13 +1,20 @@
 %%
 %% Some pre-defined texgit format commands.
 %
+%% The placement for listing boxes
+\protected\gdef\listingFrame#1{%
+\begin{figure}[tb]%
+\centering%
+#1%
+\end{figure}%
+}%
+%
 %% Place a listing with data from texgit.
 %% #1 the label (must put prefix manually!)
 %% #2 the caption
 %% #3 the style and formatting commands to use
 \protected\gdef\listingBox#1#2#3{%
-\begin{figure}[tb]%
-\centering%
+\listingFrame{%
 \edef\@lb@caption{}%
 \edef\@lb@url{\gitUrl{#1}}%
 \ifx\@lb@url\empty\relax\else%
@@ -15,7 +22,7 @@
 \def\@lb@caption{~(\expandafter\href{\@lb@url}{src})}%
 \fi\fi%
 \lstinputlisting[label={#1}#3,caption={#2\@lb@caption}]{\gitFile{#1}}%
-\end{figure}%
+}%
 }%
 %
 %% Place a Python listing with data from texgit.
@@ -70,16 +77,14 @@
 %% #6 the separator if any
 %%
 \protected\gdef\listingDoubleBox#1#2#3#4#5#6{%
-\begin{figure}[tb]%
-\centering%
-%
+\listingFrame{%
 \lstinputlisting[label={lst:#1}#4,caption={#2}]{\gitFile{lst:#1}}%
 #6%
 \edef\@ldb@outputFmt{#5}%
 \ifx\@ldb@outputFmt\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi%
 {\lstinputlisting[label={exec:#1},style=text_style,caption={#3}]{\gitFile{exec:#1}}}%
 {\lstinputlisting[label={exec:#1}#5,caption={#3}]{\gitFile{exec:#1}}}%
-\end{figure}%
+}%
 }%
 %
 %

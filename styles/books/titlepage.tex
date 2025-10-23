@@ -13,7 +13,12 @@
 \strut\vfill\strut%
 %
 {\color{titlepage-title}\resizebox{0.9\linewidth}{!}{\bfseries\thetitle}}%
+%
+\ifdefined\subtitle\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\\[0.4cm]%
+{\color{titlepage-title}\resizebox{0.8\linewidth}{!}{\bfseries\subtitle}}%
 \\[2cm]%
+}{\\[2cm]}%
 %
 \resizebox{0.5\linewidth}{!}{\authorName~(\authorNameCN)}%
 \\[2cm]%

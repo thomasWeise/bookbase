@@ -1,0 +1,19 @@
+%%
+%% Commands for including questions
+%
+%%% And environment for questions
+%%% #1 the question title
+\newenvironment{question}[1]{%
+\let\@question@old@listingFrame\listingFrame%
+%
+\protected\gdef\listingFrame##1{\begin{center}\begin{minipage}{\linewidth}##1\end{minipage}\end{center}}%
+%
+\noindent\begin{minipage}{\linewidth}%
+\hsection{#1}%
+}{%
+\par\noindent%
+\endhsection%
+\end{minipage}%
+\global\let\listingFrame\@question@old@listingFrame%
+\par%
+}%
