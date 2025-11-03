@@ -157,7 +157,7 @@ description={%
 The \emph{$q$\nobreakdashes-quantiles} are the cut points that divide a sorted data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ where $\arrayIndex{a}{i-1}\leq \arrayIndex{a}{i} \; \forall i \in 1\dots (n-1)$ into $q$ equally-sized parts. %
 \sampleQuantile{k}{q}{A}~be the $k$\textsuperscript{th}~$q$\nobreakdashes-quantile, with~$k\in 1\dots (q-1)$, i.e., there are $q-1$ of the $q$\nobreakdashes-quantiles. %
 In the context of this book, define~$h=(n-1)\frac{k}{q}$. %
-\sampleQuantile{k}{q}{A}~then can be computed as \arrayIndex{a}{h} if $h$~is integer, i.e.,~$h\in\integerNumbers$, and as ~$\arrayIndex{a}{\lfloor h\rfloor}+\left(h-\lfloor h\rfloor\right)*\left(\arrayIndex{a}{\lfloor h\rfloor+1}-\arrayIndex{a}{\lfloor h\rfloor}\right)$ otherwise. %
+\sampleQuantile{k}{q}{A}~then can be computed as \arrayIndex{a}{h} if $h$~is integer, i.e.,~$h\in\integerNumbers$, and as~$\arrayIndex{a}{\lfloor h\rfloor}+\left(h-\lfloor h\rfloor\right)*\left(\arrayIndex{a}{\lfloor h\rfloor+1}-\arrayIndex{a}{\lfloor h\rfloor}\right)$ otherwise. %
 It holds that~$\sampleQuantile{2}{1}{A}=\medianb{A}$%
 }}%
 %
