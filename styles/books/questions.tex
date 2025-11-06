@@ -23,7 +23,11 @@
 }%
 }{%
 \par\noindent%
-\endhsection%
+\ifx\@@@quest@title\empty\relax%
+\expandafter\@firstoftwo%
+\else%
+\expandafter\@secondoftwo%
+\fi{}{\endhsection}%
 \end{minipage}%
 \global\let\listingFrame\@question@old@listingFrame%
 \bigskip\par%
