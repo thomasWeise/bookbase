@@ -23,12 +23,22 @@
 \gdef\iq@l@dquot{\glqq}%
 \gdef\iq@r@dquot{\grqq}%
 %
+}%
+%
+%% Format text to be in a specific language
+%% #1 the language
+%% #2 the word
+\protected\gdef\inLang#1#2{{\color{lang-text-color}{%
+\changeFontSizeRel{-1.15}{%
+(\changeFontSizeRel{-1.15}{\color{lang-name-color}#1}:~\emph{#2})%
+}}}%
+}%
 %
 %% Provide an English word.
 %% #1 the English word, as alternative for a work in another language
-\protected\gdef\inEN##1{{\color{lang-text-color}{%
-\changeFontSizeRel{-1.15}{%
-(\changeFontSizeRel{-1.15}{\color{lang-name-color}EN}:~\emph{##1})%
-}%
-}}}%
-}%
+\protected\gdef\inEN#1{\inLang{EN}{#1}}%
+%
+%% Provide an German word.
+%% #1 the German word, as alternative for a work in another language
+\protected\gdef\inDE#1{\inLang{DE}{#1}}%
+%
