@@ -16,7 +16,6 @@ Its is computed on data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\ar
 %% #2 the element to access
 \protected\gdef\arrayIndex#1#2{\ensuremath{#1_{#2}}}%
 %
-%
 \newFunc{attrDomain}{\ensuremath{\operatorname{dom}}}{dom(a)}{a}{%
 the domain of an attribute~$a$\optionalRef{def:attributeDomain}{, see \cref{def:attributeDomain}}}%
 %
@@ -34,6 +33,23 @@ In other words, \bigOmegab{g(x)}~describes a lower bound for function growth}%
 In other words, \bigThetab{g(x)}~describes an exact order of function growth}%
 %
 %
+%
+\protected\gdef\complexConj#1{\ensuremath{\overline{#1}}\glslink{complexConj}{\strut}}%
+\newglossaryentry{complexConj}{%
+type={symbols},
+name={\complexConj{z}},%
+text={\complexConj{z}},%
+sort={z},%
+description={\sloppy%
+The conjugate~\complexConj{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\complexConj{z}=a-b\imaginaryUnit$~\cite{VDC2022AITCN}. %
+You get the complex conjugate of a complex number by flipping the sign of the imaginary part.%
+}}%
+%
+\newSymbol{complexNumbers}{\ensuremath{\mathSpace{C}}}{C}{%
+the set of complex numbers is defined as~$\complexNumbers=\{(a,b): a,b\in\realNumbers\}$. %
+Complex numbers~$z$ are often written in the standard form~$z=a+b\imaginaryUnit$, where \imaginaryUnit~is the so-called imaginary unit with~$\imaginaryUnit^2=-1$~\cite{VDC2022AITCN}.
+}%
+%
 \protected\gdef\factorial#1{\ensuremath{#1\gls{factorialMark}}}%
 \newglossaryentry{factorialMark}{%
 type={symbols},
@@ -50,6 +66,13 @@ See also \cref{eq:factorial} and \cref{lst:functions:def_factorial}}%
 The \emph{geometric mean}~\geoMeanb{A} is the $n$\textsuperscript{th} root of the product of $n$ \emph{positive} values in a dataset~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{n-1})$ with $\arrayIndex{a}{i}>0$ for all~$i\in\intRange{0}{n}$, i.e., $\geoMeanb{A} = \sqrt[n]{\prod_{i=0}^{n-1} \arrayIndex{a}{i}}=\exp{\left(\frac{1}{n} \sum_{i=0}^{n-1} \log{\arrayIndex{a}{i}} \right)}$%
 }%
 %
+\newSymbol{imaginaryUnit}{\ensuremath{\mathbf{\mathrm{i}}}}{i}{%
+The imaginary unit~\imaginaryUnit, which can also be written as~$\imaginaryUnit=(0,1)\in\complexNumbers$, is defined as~$\imaginaryUnit=\sqrt{-1}$ and~$\imaginaryUnit^2=-1$~\cite{VDC2022AITCN}%
+}%
+%
+\newFunc{imaginaryPart}{\ensuremath{\operatorname{Im}}}{Im(z)}{z}{%
+The \emph{imaginary part}~\imaginaryPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\imaginaryPartb{z}=b$~\cite{VDC2022AITCN}%
+}%
 %
 \newSymbol{integerNumbers}{\ensuremath{\mathSpace{Z}}}{Z}{%
 the set of the integers numbers including positive and negative numbers and~0, i.e., {\dots}, -3, -2, -1, 0, 1, 2, 3, {\dots}, and so on. %
@@ -142,6 +165,10 @@ It holds that~$\integerNumbers\subset\rationalNumbers$ and $\rationalNumbers\sub
 \newSymbol{realNumbersP}{\ensuremath{\mathSpace{R}^+}}{R+}{%
 the set of the positive real numbers, i.e., $\realNumbersP=\{x\in\realNumbers:x>0\}$}%
 %
+%
+\newFunc{realPart}{\ensuremath{\operatorname{Re}}}{Re(z)}{z}{%
+The \emph{real part}~\realPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\realPartb{z}=a$~\cite{VDC2022AITCN}%
+}%
 %
 \newFunc{relSchema}{\ensuremath{\operatorname{\Sigma}}}{Sigma(R)}{R}{%
 the relation schema of relation~$R$~\cite{SS2005EIDDDFDB:SDWSD2}\optionalRef{def:relationSchema}{, see \cref{def:relationSchema}}}%
