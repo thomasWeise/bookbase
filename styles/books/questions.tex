@@ -1,6 +1,10 @@
 %%
 %% Commands for including questions
 %
+
+\global\newcount\@number@of@questions%
+\global\@number@of@questions0\relax%
+%
 %%% And environment for questions
 %%% #1 the question title
 \newenvironment{question}[1]{%
@@ -18,8 +22,10 @@
 \fi{%
 {\textbf{\@last@question@title~(continued/fortgesetzt)}\par}%
 }{%
-\hsection{\@@@quest@title}%
-\gdef\@last@question@title{\thesection~#1}%
+\global\advance\@number@of@questions by 1\relax%
+\xdef\@number@of@questions@txt{~(Q\the\@number@of@questions)}%
+\hsection{\@@@quest@title\@number@of@questions@txt}%
+\gdef\@last@question@title{\thesection~#1\@number@of@questions@txt}%
 }%
 }{%
 \par\noindent%
