@@ -1,7 +1,10 @@
 %%
 %% Commands for including questions
+%%
+%% Questions in my courses are always formulated bi-lingually in
+%% English and German language. Therefore, these commands here are built
+%% to support bi-lingual data.
 %
-
 \global\newcount\@number@of@questions%
 \global\@number@of@questions0\relax%
 %
@@ -10,8 +13,9 @@
 \newenvironment{question}[1]{%
 \let\@question@old@listingFrame\listingFrame%
 %
-\protected\gdef\listingFrame##1{\begin{center}\begin{minipage}{\linewidth}##1\end{minipage}\end{center}}%
+\protected\gdef\listingFrame##1{\begin{center}\resizebox{0.95\linewidth}{!}{\begin{minipage}{1.06\linewidth}##1\end{minipage}}\end{center}}%
 %
+\noindent\begin{mdframed}[linecolor=question-frame-color,linewidth=1pt,roundcorner=2pt,backgroundcolor=question-background-color,nobreak=true]%
 \noindent\begin{minipage}{\linewidth}%
 %
 \def\@@@quest@title{#1}%
@@ -35,6 +39,48 @@
 \expandafter\@secondoftwo%
 \fi{}{\endhsection}%
 \end{minipage}%
+\end{mdframed}%
 \global\let\listingFrame\@question@old@listingFrame%
 \bigskip\par%
 }%
+%
+%% A section header that is both English and German.
+%% #1 the english title
+%% #2 the German title
+\protected\gdef\hsectionENDE#1#2{\hsection{#1{ / }#2}}%
+%
+%%% And environment for questions
+%%% #1 the english title
+%%% #2 the German title
+\newenvironment{questionENDE}[2]{%
+\begin{question}{#1{ / }#2}%
+}{%
+\end{question}%
+}%
+%
+%% The frame inside of which \qEN and \qDE work.
+%% #1 the contents of the frame, such as \qEN and \qDE invocations
+\protected\gdef\qFrame#1{\begin{itemize}#1\end{itemize}}%
+%
+%% The english version of a question
+%% #1 the question
+\protected\gdef\@ENmark{%
+\fcolorbox{question-en-frame-color}{question-en-background-color}{EN}%%
+}%
+\protected\gdef\qEN#1{\item[\@ENmark] #1}
+%
+%% The German version of a question
+%% #1 the question
+\protected\gdef\@DEmark{%
+\fcolorbox{question-de-frame-color}{question-de-background-color}{DE}%%
+}%
+\protected\gdef\qDE#1{\item[\@DEmark] #1}
+%
+%% The command to print an english + german question task.
+%% Equivalent to a question frame with an English+German version.
+%% #1 the English text
+%% #2 the German text
+\protected\gdef\qENDE#1#2{%
+\qFrame{\qEN{#1}\qDE{#2}}%
+}%
+%
