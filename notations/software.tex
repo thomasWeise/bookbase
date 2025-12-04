@@ -213,11 +213,23 @@ text={\softwareStyle{macOS}},%
 name={macOS},%
 sort={macOS},%
 description={%
-or Mac~OS is the operating system that powers Apple Mac(intosh) computers~\cite{S2025MAPAMAIE2}. %
+or Mac~OS is the operating system that powers Apple Mac(intosh) computers~\cite{S2025MAPAMAIE2,RRJ2008MFUG}. %
 Learn more at \url{https://www.apple.com/macos}.%
 }%
 }%
 \protected\gdef\macOS{\pgls{macOS}}%
+%
+%
+\newglossaryentry{macPorts}{%
+text={\softwareStyle{MacPorts}},%
+name={MacPorts},%
+sort={MacPorts},%
+description={%
+is an abstraction layer that allows you to compile, install, upgrade, and use \pgls{OSS} software, often from the \linux\ realm, on \pgls{macOS}~\cite{RRJ2008MFUG}.
+As such, it is a bit similar to \pgls{MSYS2}, which is for \microsoftWindows. %
+Learn more at \url{https://www.macports.org}.%
+}%
+}%
 %
 %
 \newglossaryentry{mariadb}{%
@@ -332,6 +344,7 @@ Learn more at \url{https://thomasweise.github.io/moptipy}.%
 %
 \newacronym[sort={MSYS2},description={
 Minimal SYStem~2~(MSYS2) is a collection of tools and libraries from the \linux\ world providing an environment for building, installing, and running native \microsoftWindows\ software~\cite{TO2024BCCAIGTMCCAMC:MS}. %
+It is a bit similar to \pgls{macPorts}, which is for \pgls{macOS}. %
 Learn more at \url{https://www.msys2.org}.}]{MSYS2}{\softwareStyle{MSYS2}}{Minimal {SYStem}~2}%
 %
 %
@@ -647,6 +660,16 @@ Learn more at \url{https://docs.python.org/3/library/venv.html}~\cite{PSF:P3D:TP
 }%
 }%
 \protected\gdef\venv{\pgls{venv}}%
+%
+%
+\newglossaryentry{xcode}{%
+text={\softwareStyle{Xcode}},%
+name={Xcode},%
+sort={Xcode},%
+description={%
+is offers the tools for developing, \glslink{unitTest}{testing}, and distributing applications as well as an \pgls{ide} for Apple platforms such as \pgls{macOS} and \pgls{appleIOS}~\cite{S2025IPFB}.%
+}%
+}%
 %
 %
 \newglossaryentry{yEd}{%
