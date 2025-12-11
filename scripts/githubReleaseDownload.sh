@@ -26,13 +26,24 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The script directory is '$scriptDir'."
 
 download="$(realpath "$scriptDir/download.sh")"
 
+mkdir -p "$repo"
+cd "$repo"
 while [ 1 ]; do
     echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Getting files to download."
     set +o errexit
-    files="$(curl -s https://api.github.com/repos/$user/$repo/releases/latest | grep browser_download_url | sed -re 's/.*: "([^"]+)".*/\1/')"
+    data="$(curl -s https://api.github.com/repos/$user/$repo/releases/latest)"
     retcode="$?"
     set -o errexit
-      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Get retcor=$retcode and files '$files'."
+    if [ "$retcode" -ne 0 ]; then
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Get retcode='$retcode'."
+      sleep 1s
+      continue
+    fi
+
+    set +o errexit
+    files="$(grep browser_download_url <<< "$data" | sed -re 's/.*: "([^"]+)".*/\1/')"
+    retcode="$?"
+    set -o errexit
     if [ "$retcode" -eq 0 ]; then
       for file in $files; do
         set +o errexit
@@ -41,9 +52,29 @@ while [ 1 ]; do
         set -o errexit
         if [ "$retcode" -ne 0 ]; then continue 2; fi; # check return value, break if successful (0)
       done
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Done downloading attached files."
+    else
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): No attached files."
+    fi
+
+    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now getting zip ball."
+    set +o errexit
+    file="$(grep zipball_url <<< "$data" | sed -re 's/.*: "([^"]+)".*/\1/')"
+    retcode="$?"
+    set -o errexit
+    if [ "$retcode" -eq 0 ]; then
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Got zip ball '$file'."
+      set +o errexit
+      "$download" "$file"
+      retcode="$?"
+      set -o errexit
+      if [ "$retcode" -ne 0 ]; then continue 2; fi; # check return value, break if successful (0)
+      echo "$(date +'%0Y-%0m-%0d %0R:%0S'): File donwloaded, now renaming it."
+      file="${file##*/}"
+      mv "$file" "${repo}_zipball_${file}.zip"
       echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We are done."
       exit 0
-    fi; # check return value, break if successful (0)
+    fi
     echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Error when trying to download releases '$@', trying again after 1 second."
     sleep 1s;
 done;

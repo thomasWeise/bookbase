@@ -26,24 +26,9 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The git release download script is '$gitDo
 
 mkdir -p _package_releases_
 cd _package_releases_
-mkdir pycommons
-cd pycommons
 "$gitReleaseDownload" "pycommons"
-cd ..
-
-mkdir texgit_py
-cd texgit_py
 "$gitReleaseDownload" "texgit_py"
-cd ..
-
-mkdir texgit_tex
-cd texgit_tex
 "$gitReleaseDownload" "texgit_tex"
-cd ..
-
-mkdir bookbase
-cd bookbase
 "$gitReleaseDownload" "bookbase"
-cd ..
 
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Done with the standard sources download script."
