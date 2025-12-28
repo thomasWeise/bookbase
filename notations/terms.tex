@@ -341,6 +341,21 @@ It is also common to refer to the computer running the \gls{server} processes as
 \protected\gdef\server{\pgls{server}}%
 %
 %
+\newglossaryentry{sha512}{%
+name={SHA\nobreakdashes-512},%
+text={SHA\nobreakdashes-512},%
+description={\sloppy%
+SHA\nobreakdashes-512~is a cryptographic hash function belonging to the \emph{Secure Hash Algorithm~2} family~\cite{FIPSPUB180D4}. %
+It is a one-way function that computes a checksum of 512~bits from data of arbitrary length. %
+For the same data, the same checksum is computed. %
+From the checksum, you cannot obtain the original data. %
+Under \python, you can use \pythonil{from hashlib import sha512} to get such a digest from a text string~\pythonil{s} via~\pythonil{bytearray(sha512(s.encode("utf8")).digest())}. %
+Since the digest works with binary data, we first need to convert the text to such data. %
+Here, we did this by encoding the string to \pgls{utf8}.%
+}%
+}%
+%
+%
 \newglossaryentry{significand}{%
 name={significand},%
 description={%

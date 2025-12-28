@@ -224,6 +224,12 @@ There are several normal forms, \pgls{1NF}, \pgls{2NF}, \pgls{3NF}, and so on, e
 \newacronym[shortplural={OSSes},description={Open source software, i.e., software that can freely be used, whose source code is made availabe in the internet, and which is usually developed cooperatively over the internet as well~\cite{HNZ2024TVOOSS}. %
 Typical examples are \python, \linux, \git, and \postgresql.}]{OSS}{OSS}{open source software}%
 %
+\newacronym[description={%
+A Permuted Congruential Generator~(PCG) is a pseudo-random number generator~\cite{ON2014PAFOSFSESGAFRNG}. %
+Under \numpy, a 64\nobreakdashes-bit PCG is offered as a default method for generating seeding random number sequences~\cite{N2025N:PCG6BP}. %
+You can import it via \pythonil{from numpy.random import PCG64, Generator} and then create it from an \pythonil{int} seed~\pythonil{h} via \pythonil{Generator(PCG64(h))}.%
+}]{randPCG}{PCG}{Permuted Congruential Generator}%
+%
 \newacronym[description={Participatory Design~\cite{CWG1993PAJADATC,FMRSW1989OOSAATSDASD}}]{participatoryDesign}{PD}{Participatory Design}%
 %
 \newacronym[description={%
