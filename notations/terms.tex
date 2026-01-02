@@ -2,6 +2,20 @@
 %%
 %
 %
+\newglossaryentry{algoAstar}{%
+name={\mbox{\ensuremath{\text{A}^{\star}}}~Algorithm},%
+sort={A* Algorithm},%
+description={%
+The \pgls{algoAstar} is an a greedy best-first-first search for finding the shortest path between two locations~\cite{HNR1968AFBFTHDOMCP,P1997AAP}. %
+The algorithm iteratively constructs the shortest path. %
+It maintains a list of current candidate paths. %
+For choosing the next candidate path whose end node should be expanded, it computes a value~$f(p)$ of these paths~$p$. %
+$f(p)$~is the sum of the cost~$g(p)$ so far incurred by the path as well as a heuristic~$h(p)$ predicting the cost from the current end of the path to the goal. %
+$h(p)$~must never overestimate that cost.%
+}%
+}%
+%
+%
 \newglossaryentry{bias}{%
 name={bias},%
 description={%
