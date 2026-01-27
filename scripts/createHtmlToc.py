@@ -111,12 +111,10 @@ with StringIO() as sio:
             sio.write("<ul class='toc'>")
             last_depth += 1
         sio.write(f"<li class='toc'><a href='#{key}'>{txt}</a>")
-    while last_depth > 0:
-        if last_depth == 1:
-            sio.write("</li><li class='toc'><a href='/'>Home</a>")
+    while last_depth > 1:
         sio.write("</li></ul>")
         last_depth -= 1
-    sio.write("</div>")
+    sio.write("</li><li class='toc'><a href='/'>Home</a></li></ul></div>")
     sio.seek(0)
     toc_text = sio.read()
 
