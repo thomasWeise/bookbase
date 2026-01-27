@@ -112,6 +112,8 @@ with StringIO() as sio:
             last_depth += 1
         sio.write(f"<li class='toc'><a href='#{key}'>{txt}</a>")
     while last_depth > 0:
+        if last_depth == 1:
+            sio.write("</li><li class='toc'><a href='/'>Home</a>")
         sio.write("</li></ul>")
         last_depth -= 1
     sio.write("</div>")
