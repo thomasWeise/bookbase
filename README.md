@@ -1,6 +1,11 @@
 # bookbase
 
-Shared files in my book and teaching material building projects.
+These are the shared files in my book and teaching material building projects.
+The files, bibliography, and scripts in this repository are used by several of my writing and teaching projects, including:
+
+- [Programming with Python](https://thomasweise.github.io/programmingWithPython)
+- [Databases](https://thomasweise.github.io/databases)
+- [Talks](https://thomasweise.github.io/talks)
 
 ## License
 With the exceptions below, the files here are under the Attribution-NonCommercial-ShareAlike 4.0 International license (CC&nbsp;BY&#8209;NC&#8209;SA&nbsp;4.0), see [http://creativecommons.org/licenses/by-nc-sa/4.0/](http://creativecommons.org/licenses/by-nc-sa/4.0/) for a summary.
@@ -12,7 +17,6 @@ It is under the GNU GENERAL PUBLIC LICENSE Version 2, June 1991 and the copyrigh
 ## Contact
 If you have any questions or suggestions, please contact
 Prof. Dr. Thomas Weise (汤卫思教授)
-at the Institute of Applied Optimization (应用优化研究所, IAO)
 of the School of Artificial Intelligence and Big Data ([人工智能与大数据学院](http://www.hfuu.edu.cn/aibd))
 of [Hefei University](http://www.hfuu.edu.cn/english/) ([合肥大学](http://www.hfuu.edu.cn/)),
 in Hefei, Anhui, China (中国安徽省合肥市)
