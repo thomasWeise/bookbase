@@ -25,7 +25,7 @@ It is under the GNU GENERAL PUBLIC LICENSE Version 2, June 1991 and the copyrigh
 
 ## Contact
 If you have any questions or suggestions, please contact
-Prof. Dr. Thomas Weise (汤卫思教授)
+Prof. Dr.  [Thomas Weise](https://thomasweise.github.io) (汤卫思教授)
 of the School of Artificial Intelligence and Big Data ([人工智能与大数据学院](http://www.hfuu.edu.cn/aibd))
 of [Hefei University](http://www.hfuu.edu.cn/english/) ([合肥大学](http://www.hfuu.edu.cn/)),
 in Hefei, Anhui, China (中国安徽省合肥市)
