@@ -1,4 +1,4 @@
-[![build](https://github.com/thomasWeise/bookbase/actions/workflows/build.yml/badge.svg)](https://github.com/thomasWeise/bookbase/actions/workflows/build.yml)
+[![build](https://github.com/thomasWeise/bookbase/actions/workflows/build.yaml/badge.svg)](https://github.com/thomasWeise/bookbase/actions/workflows/build.yml)
 [![https://thomasweise.github.io](https://shields.io/badge/home-thomasweise.github.io-009000)](https://thomasweise.github.io)
 
 # bookbase
