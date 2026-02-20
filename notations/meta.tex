@@ -9,13 +9,6 @@
 \xdef\authorEmail{tweise@hfuu.edu.cn}%
 \xdef\authorEmailB{tweise@ustc.edu.cn}%
 \global\let\authorUrl\relax%
-%\xdef\authorUrl{http://iao.hfuu.edu.cn/5}%
-%
-\xdef\groupName{Institute of Applied Optimization}%
-\xdef\groupAbbreviation{IAO}%
-\gdef\groupNameCN{应用优化研究所}%
-\global\let\groupUrl\relax%
-%\xdef\groupUrl{https://iao.hfuu.edu.cn}%
 %
 \xdef\schoolName{School of Artificial Intelligence and Big Data}%
 \gdef\schoolNameCN{人工智能与大数据学院}%
@@ -54,10 +47,7 @@
 Copyright~\textcopyright~#1\\[3pt]%
 \authorNamePrefix\ifx\relax\authorUrl\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\authorName}{\href{\authorUrl}{\authorName}}%
 ~(\expandafter\authorNameCN\authorNameCNSuffix)\\%
-at the \groupName~(\expandafter\groupNameCN, %
-\ifx\relax\groupUrl\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\groupAbbreviation}{\href{\groupUrl}{\groupAbbreviation}}%
-)\\%
-of the \schoolName~(\href{\schoolUrlCN}{\schoolNameCN})\\%
+at the \schoolName~(\href{\schoolUrlCN}{\schoolNameCN})\\%
 of \href{\uniUrl}{\uniName}~(\href{\uniUrlCN}{\uniNameCN}),\\%
 in \cityName~(\cityNameCN)\\[6pt]%
 Contact me via email to \expandafter\href{mailto:\authorEmail}{\authorEmail}\ifx\relax\authorEmailB\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{}{ with CC to~\expandafter\href{mailto:\authorEmailB}{\authorEmailB}}.%
