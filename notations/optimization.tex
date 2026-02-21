@@ -1,0 +1,54 @@
+%%% Optimization Notation
+%%%
+%
+%
+\newSubscript{bestSoFar}{\ensuremath{b}}{.b}{the subscript~$b$ denotes that $\circ$ is the best-so-far element of an optimization process}%
+%
+\newFunc{decode}{\ensuremath{\gamma}}{g(x)}{\sespel}{%
+The decoding function~$\gamma:\searchSpace\mapsto\solutionSpace$ translates point from the search space~\searchSpace\ to one point~\solution\ in the solution space~\solutionSpace. %
+It is a very common case that~$\searchSpace=\solutionSpace$ and that the decoding function~\decode\ is the identity mapping.%
+}%
+%
+\newSuperscript{globalOptimum}{\ensuremath{\star}}{.*}{the superscript $\star$~symbol denotes that $\circ$ is a global optimum, i.e., there is no better solution than~$\circ$}%
+%
+\newSymbol{instance}{\ensuremath{\mathcal{I}}}{I}{%
+the problem instance data, i.e., the data that is the input of the optimization algorithm. %
+The solution space~\solutionSpace\ and the objective function~\objFun\ as well as all components building on top of them are defined based on the concrete values in~\instance. %
+For example, in an~\emph{instance} of the \pgls{optTSP} could define the number~$n$ of cities and their distances. %
+If our solutions are permutations of cities, then $n$~is also the dimension of~\solutionSpace. %
+The objective function~\objFun\ accesses the city distances to compute the tour lengths.%
+}%
+%
+\newSuperscript{localOptimum}{\ensuremath{\times}}{.*}{the superscript $\times$~symbol denotes that $\circ$ is a local optimum, i.e., no solution that can be reached within one search step from~$\circ$ is better than~$\circ$}%
+%
+\newSymbol{searchSpace}{\ensuremath{\mathSpace{X}}}{X}{%
+The search space~\searchSpace\ is the space through which an optimization algorithm navigates in order to find good solutions. %
+The search operators of metaheuristics are used to sample points~$\sespel\in\searchSpace$, for example. %
+While it is often the case, these are not necessarily the same data structures that the user is interested in. %
+It is also common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated, like a Gantt chart. %
+Then, the user only cares about the solutions~$\solution\in\solutionSpace$ and not about the search space~\searchSpace. %
+A decoding~$\decode:\searchSpace\mapsto\solutionSpace$ is employed to translate the~$\sespel\in\searchSpace$ to~$\solution=\decodeb{\sespel}$ with~$\solution\in\solutionSpace$.%
+}%
+%
+\newSymbol{sespel}{\ensuremath{x}}{x}{%
+a point in the search Space~\searchSpace.%
+}%
+%
+\newSymbol{solutionSpace}{\ensuremath{\mathSpace{Y}}}{Y}{%
+the set of candidate solutions of an optimization problem is called the~\emph{solution space}~\solutionSpace. %
+The solution space corresponds to the data structure holding the candidate solutions~\solution. %
+These are the elements that are passed to the user after the optimization process is completed. %
+They are also the parameters of the objective function(s)~$\objFun:\solutionSpace\mapsto\realNumbers$.%
+}%
+%
+\newSymbol{solution}{\ensuremath{y}}{y}{%
+a candidate solution~$\solution\in\solutionSpace$ is one possible solution to an optimization problem. %
+After the optimization process is completed, one or multiple such solutions are passed to the user.%
+}%
+%
+\newFunc{objFun}{\ensuremath{f}}{f(y)}{\solution}{%
+The \emph{objective function}~$\objFun:\solutionSpace\mapsto\realNumbers$ can compute a cost or rating for each candidate solution~\solution\ in the solution space~\solutionSpace. %
+The smaller this value, the better the solution, i.e., in the context of this work, objective functions are subject to minimization. %
+Objective functions are not necessarily continuous and it is also quite common that they have integer or natural numbers as results, e.g., we often have~$\objFun:\solutionSpace\mapsto\naturalNumbersZ$ instead of ~$\objFun:\solutionSpace\mapsto\realNumbers$.%
+}%
+%

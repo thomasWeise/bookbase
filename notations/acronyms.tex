@@ -41,6 +41,12 @@ The year 1~BCE comes directly before the year 1~\pgls{CE}~\cite{SA2016ZALDTDVATU
 \newacronym[description={The \emph{Best Known Solution} for an instance of an optimization problem is the best solution (measured based on the objective values) that has ever been reported in literature. BKSes are not necessarily globally optimal, as in many instances of \npHard~problems, the true optima are unknown.},shortplural={BKSes}]{BKS}{BKS}{Best Known Solution}%
 %
 \newacronym[description={%
+The \emph{Bin Packing Problem}~\cite{S2018ITCAPOPMASM,DF1992CAPIPADATAB} is one of the classical problems from \pgls{fieldOR}. %
+The goal is to pack a set of objects into containers, using as few containers as possible. %
+Different flavors of BPPs can be distinguished, e.g., by the number of dimensions~\cite{DIM2016BPACSPMMAEA,LMM2002TDPPAS} that the objects and containers have, and/or whether the objects can be rotated~\cite{ZWvdBTLTW2024RLSFTDBPAANRFFFA}, as well as other constraints and limitations.%
+}]{optBPP}{BPP}{Bin Packing Problem}%
+%
+\newacronym[description={%
 The time notation \emph{Common Era} is a non-religious but chronological equivalent alternative to the traditional \emph{Anno Domini~(AD)} notation, which refers to the years \emph{after} the birth of Jesus Christ~\cite{C2015ITCBNBASISL}. %
 The years~CE are counted upwards, i.e., the smaller they are, the farther they are in the past. %
 The year 1~CE comes directly after the year 1~\pgls{BCE}~\cite{SA2016ZALDTDVATUM:EOYZIACIAAPCWSOABCAB,EOEBEB:CCHDE}.}]{CE}{CE}{Common Era}%
@@ -133,6 +139,10 @@ This is written as~$\funcDepb{X}{Y}$.%
 1~FE equals to one evaluated candidate solution during the optimization process.%
 }]{objFE}{FE}{objective function evaluation}%
 %
+\newacronym[shortplural={FSSPs},description={%
+The \emph{Flow Shop Scheduling Problem} is a variant of a \pgls{optJSSP} where all products go through the same sequence of machines~\cite{J1954OTATSPSWSTI}.%
+}]{optFSSP}{FSSP}{Flow Shop Scheduling Problem}%
+%
 \newacronym[shortplural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 %
 \newacronym[description={%
@@ -182,10 +192,10 @@ Another common usage is receiving data over a network~(input) or sending data ov
 \optionalRef{fig:jsonexample}{ An example of a \pgls{JSON} document is given in \cref{fig:jsonexample}.}%
 }]{JSON}{JSON}{JavaScript Object Notation}%
 %
-\newacronym[shortplural={JSSP},description={%
-The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST} is one of the most prominent
+\newacronym[shortplural={JSSPs},description={%
+The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST,CGLL1995STAIA} is one of the most prominent
 and well-studied scheduling tasks. %
-In a JSSP instance, there are $k$~machines and $m$~jobs. %
+In a JSSP instance, there are $k$~machines and $m$~jobs~\cite{T1993BFBSP}. %
 Each job must be processed once by each machine in a job-specific sequence and has a job-specific processing time on each machine. %
 The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule which can complete all the jobs in the shortest time. %
 The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
@@ -256,7 +266,7 @@ The \emph{Quadratic Assignment Problem} is an optimization problem where the goa
 Such an assignment can be represented as a permutation~$x$ of the first $n$~natural numbers, where \arrayIndex{x}{i}~specifies the location where facility~$i$ should be placed. %
 For each QAP, a distance matrix~$D$ is given, where $D_{pq}$~specifies the distance from location~$p$ to location~$q$, as well as a flow matrix~$F$, where $F_{ij}$~is the amount of material flowing from facility~$i$ to facility~$j$. %
 The objective function~$f$ then rates a permutation~$x$ as~$f(x)=\sum_{i=1}^{n}\sum_{j=1}^{n}{D_{x_i x_j}F_{ij}}$. %
-The QAP is \npComplete~\cite{SG1976PCAP}.%
+The QAP is \npComplete~\cite{SGA1976PCAP}.%
 }]{optQAP}{QAP}{Quadratic Assignment Problem}%
 %
 \newacronym[shortplural={RAD},description={Rapid Application Development~\cite{S2007OOSE,M1996RTWSS,BDCMT1999RADRAER}}]{RAD}{RAD}{Rapid Application Development}%
@@ -340,7 +350,7 @@ They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
 \newacronym[description={%
 In an instance of the \emph{Traveling Salesperson Problem}, also known as \emph{Traveling Salesman Problem}, a set of $n$~cities or locations as well as the distances between them are defined~\cite{ABCC2006TTSPACS,LLRKS1985TTSPAGTOCO,GP2002TTSPAIV,WCLTTCMY2014BOAAOSFFTTSP,LWLvdBTW2024ATTSPWFFAAHA,WWCTL2016GVLSTIOPSOEAP}. %
 The goal is to find the shortest round-trip tour that starts at one city, visits all the other cities one time each, and returns to the origin. %
-The TSP is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GP2002TTSPAIV}.%
+The TSP is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV}.%
 }]{optTSP}{TSP}{Traveling Salesperson Problem}%
 %
 \newacronym[description={%
@@ -399,7 +409,7 @@ The most popular distributed VCS is \gls{git}. %
 %
 \newacronym[description={微信, produced by Tencent~(腾讯公司) is the most-used messenger application in China. %
 It integrates payment capabilities, video and voice chats, as well as social plugins and location-based services. %
-See also \url{https://weixin.qq.com/}.}]{wechat}{WeChat}{微信}%
+See also \url{https://weixin.qq.com}.}]{wechat}{WeChat}{微信}%
 %
 \newacronym[shortplural={XML},description={%
 \sloppy%
