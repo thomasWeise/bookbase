@@ -41,7 +41,7 @@ if [ "$needCleanup" = true ]; then
     echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Deleting virtual environment '$venvDir'."
     rm -rf "$venvDir"
   else
-    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): '$venvDir' is not a directory?."
+    echo "$(date +'%0Y-%0m-%0d %0R:%0S'): '$venvDir' is not a directory?"
   fi
 fi
 
