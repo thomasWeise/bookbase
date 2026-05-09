@@ -182,3 +182,16 @@
 \gitLoadPython{#1}{}{#1}{}%
 \@syntax@listing{#1}{python_style}%
 }%
+%
+%% Place a C listing with output.
+%% #1 the label
+%% #2 the caption
+%% #3 the format of the output data
+%%
+\protected\gdef\listingCandOutput#1#2#3{%
+\listingDoubleBox{#1}{%
+#2~(stored in file~\programUrl{#1}; output in~\cref{exec:#1})%
+}{\captionStdout{#1}}{,style=c_style}{#3}{%
+\expandafter\listingSepPython{\gitNameEsc{lst:#1}}%
+}%
+}%

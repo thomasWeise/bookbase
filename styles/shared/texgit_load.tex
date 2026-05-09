@@ -135,3 +135,51 @@
 \gitLoadSQL{#1}{#2}{#3/#4}%
 \gitExecSQL{#1}{#2}{#3}{#4}{#5}{#6}{#7}%
 }%
+%
+%
+%% Load C code.
+%% #1 the label (lst: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithCCodeRepo
+%% #3 the local path
+%% #4 the post-processing (if any)
+\protected\gdef\gitLoadC#1#2#3#4{%
+\edef\@bb@gitLoadPost{#4}%
+%\ifx\@bb@gitLoadPost\empty\relax\else%
+%\edef\@bb@gitLoadPost{python3 -m texgit.formatters.python \@bb@gitLoadPost}%
+%\fi%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\programmingWithCCodeRepo}\fi%
+\gitLoad{lst:#1}{\@bb@gitLoadRepo}{#3}{\@bb@gitLoadPost}%
+}%
+%
+%% Execute C code.
+%% #1 the label (exec: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithCCodeRepo
+%% #3 the path to the directory
+%% #4 the path to the file(s) inside the directory
+\protected\gdef\gitExecC#1#2#3#4{%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\programmingWithCCodeRepo}\fi%
+\gitExec{exec:#1}{\@bb@gitLoadRepo}{.}{./_scripts_/gccCompileAndRun.sh #3 #4}%
+}%
+%
+%% Evaluate Python code as if it was passed to an interactive python session.
+%% #1 the label (exec: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo
+%% #3 the path to the file inside the directory
+\protected\gdef\gitEvalPython#1#2#3{%
+\edef\@bb@gitLoadRepo{#2}%
+\ifx\@bb@gitLoadRepo\empty\relax\edef\@bb@gitLoadRepo{\programmingWithPythonCodeRepo}\fi%
+\gitExec{exec:#1}{\@bb@gitLoadRepo}{.}{python3 ./_scripts_/repl.py #3}%
+}%
+%
+%% Execute Python code.
+%% #1 the label (exec:/lst: will be pre-pended)
+%% #2 the git repository, if empty, we use \programmingWithPythonCodeRepo
+%% #3 the path to the directory
+%% #4 the path to the file inside the directory
+%% #5 the post-processing (if any)
+\protected\gdef\gitLoadAndExecPython#1#2#3#4#5{%
+\gitLoadPython{#1}{#2}{#3/#4}{#5}%
+\gitExecPython{#1}{#2}{#3}{#4}%
+}%

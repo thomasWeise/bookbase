@@ -13,6 +13,12 @@ $\downarrow$~~\expandafter\inlinelistingbox{\texttt{python3~#1}}~~$\downarrow$%
 $\downarrow$~~\expandafter\inlinelistingbox{\texttt{bash~#1}}~~$\downarrow$%
 }%
 %
+%% The separator between the code and output C listings.
+%% #1 the name of the C script
+\protected\gdef\listingSepC#1{%
+$\downarrow$~~compile and run~~$\downarrow$%
+}%
+%
 %% Create a hyperlink based on the program name and program url to the given program.
 %% #1 the label, lst: will be prepended
 \protected\gdef\programUrl#1{%
@@ -46,3 +52,4 @@ The \pgls{stdout}, \pgls{stderr}, and \pgls{exitCode} of the program~\programUrl
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/texgit_format.tex}%
 }{}%
+%
