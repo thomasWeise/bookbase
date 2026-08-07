@@ -208,12 +208,13 @@
 %%% Print the title of a shared slide
 %%% If "\sharedSlideTitle" is defined, then it is used and cleared.
 %%% Otherwise, #1 is used.
-\xdef\sharedSlideTitle{}%
-\protected\gdef\sharedframetitle#1{%
-\ifx\sharedSlideTitle\empty\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+%%% requires an \global\let\sharedSlideTitle\relax% after the frame
+\global\let\sharedSlideTitle\relax%
+%
+\gdef\sharedframetitle#1{%
+\ifx\sharedSlideTitle\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \expandafter\frametitle{#1}%
 }{%
 \expandafter\frametitle{\sharedSlideTitle}%
-\xdef\sharedSlideTitle{}%
 }%
 }%
