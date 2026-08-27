@@ -18,7 +18,7 @@ jobs:
             ./scripts/inVenv.sh ./scripts/renderStandardPages.sh . "/home/runner/work/bookbase/bookbase/website/" bookbase "https://thomasweise.github.io/bookbase"
 # deploy to github pages
       - name: deploy documentation
-        uses: JamesIves/github-pages-deploy-action@94f3c658273cf92fb48ef99e5fbc02bd2dc642b2
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages
           folder: /home/runner/work/bookbase/bookbase/website/
