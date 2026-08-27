@@ -299,7 +299,19 @@ fi
 if (("$latexWarningsCount" < 1)) ; then
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): compilation finished successfully, no significant errors found."
 else
-  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): compilation has not finished successfully, there were some fishy LaTeX warnings. Please check:$latexWarningString"
+  echo "$(date +'%0Y-%0m-%0d %0R:%0S'): compilation has failed, there were some fishy LaTeX warnings. Please check:$latexWarningString"
+  if [ "$GITHUB_ACTIONS" = "true" ]; then
+      if [ -f "$logFile" ]; then
+        echo "======================== Start of '$logFile' ========================."
+        cat "$logFile"
+        echo "======================== End of '$logFile' ========================."
+      fi
+      if [ -f "$blgFile" ] ; then
+        echo "======================== Start of '$blgFile' ========================."
+        cat "$blgFile"
+        echo "======================== End of '$blgFile' ========================."
+      fi
+  fi
   exit 1
 fi
 
