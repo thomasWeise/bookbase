@@ -301,15 +301,31 @@ if (("$latexWarningsCount" < 1)) ; then
 else
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): compilation has failed, there were some fishy LaTeX warnings. Please check:$latexWarningString"
   if [ "$GITHUB_ACTIONS" = "true" ]; then
-      if [ -f "$logFile" ]; then
-        echo "======================== Start of '$logFile' ========================."
-        cat "$logFile"
-        echo "======================== End of '$logFile' ========================."
+      "$scriptDir/catFile.sh" "$logFile" || true
+      "$scriptDir/catFile.sh" "$blgFile" || true
+      "$scriptDir/catFile.sh" "$auxFile" || true
+      "$scriptDir/catFile.sh" "$acnFile" || true
+      "$scriptDir/catFile.sh" "$acrFile" || true
+      "$scriptDir/catFile.sh" "$algFile" || true
+      "$scriptDir/catFile.sh" "$glgFile" || true
+      "$scriptDir/catFile.sh" "$gloFile" || true
+      "$scriptDir/catFile.sh" "$glsFile" || true
+      "$scriptDir/catFile.sh" "$idxFile" || true
+      "$scriptDir/catFile.sh" "$istFile" || true
+      "$scriptDir/catFile.sh" "$gloFile" || true
+      "$scriptDir/catFile.sh" "$slgFile" || true
+      "$scriptDir/catFile.sh" "$sloFile" || true
+      "$scriptDir/catFile.sh" "$slsFile" || true
+
+      if [ -d "$currentDir/__git__/realms/output/" ]; then
+        cd "$currentDir/__git__/realms/output/"
+        find -type f -execdir "$scriptDir/catFile.sh" "{}" \;
+        cd "$currentDir"
       fi
-      if [ -f "$blgFile" ] ; then
-        echo "======================== Start of '$blgFile' ========================."
-        cat "$blgFile"
-        echo "======================== End of '$blgFile' ========================."
+      if [ -d "$currentDir/__git__/realms/postprocessed/" ]; then
+        cd "$currentDir/__git__/realms/postprocessed/"
+        find -type f -execdir "$scriptDir/catFile.sh" "{}" \;
+        cd "$currentDir"
       fi
   fi
   exit 1
