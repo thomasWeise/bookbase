@@ -15,6 +15,9 @@
 \let\@bib@oldnocite\nocite%
 \let\bracketCite\cite%
 %
+% We make the superscript citations a bit smaller.
+% They do not need to be big, just visible.
+\renewcommand*{\mkbibsuperscript}[1]{\textsuperscript{\tiny{#1}}}%
 %
 %% cite a as superscript in the text
 \gdef\cite#1{\supercite{#1}\strut\relax\global\advance\@bib@numcites by 1\relax}%
