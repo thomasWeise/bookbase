@@ -24,8 +24,9 @@ The objective function~\objFun\ accesses the city distances to compute the tour 
 \newSymbol{searchSpace}{\ensuremath{\mathSpace{X}}}{X}{%
 The search space~\searchSpace\ is the space through which an optimization algorithm navigates in order to find good solutions. %
 The search operators of metaheuristics are used to sample points~$\sespel\in\searchSpace$, for example. %
-While it is often the case, these are not necessarily the same data structures that the user is interested in. %
-It is also common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated, like a Gantt chart. %
+On many benchmark problems, the objective functions~\objFun\ directly evaluate the elements~$\sespel\in\searchSpace$, i.e., are defined as~$\objFun:\searchSpace\mapsto\realNumbers$. %
+However, very often these elements~\sespel\ are not the same data structures that the user is interested in and/or that the objective functions evaluate: %
+It is common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated, like a Gantt chart. %
 Then, the user only cares about the solutions~$\solution\in\solutionSpace$ and not about the search space~\searchSpace. %
 A decoding~$\decode:\searchSpace\mapsto\solutionSpace$ is employed to translate the~$\sespel\in\searchSpace$ to~$\solution=\decodeb{\sespel}$ with~$\solution\in\solutionSpace$.%
 }%
