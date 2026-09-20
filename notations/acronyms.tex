@@ -39,7 +39,7 @@ The years BCE are counted down, i.e., the larger the year, the farther in the pa
 The year 1~BCE comes directly before the year 1~\pgls{CE}~\cite{SA2016ZALDTDVATUM:EOYZIACIAAPCWSOABCAB,EOEBEB:CCHDE}.}]{BCE}{BCE}{before Common Era}%
 %
 \newacronym[description={%
-The Binary Integer Problem~(BinInt) is a benchmark problem for bit-string based black-box search~\cite{TGG1998DCDATSSOP,ZWWW2026WFFAFTSIFGLS}. %
+The \emph{Binary Integer Problem} is a benchmark problem for bit-string based black-box search~\cite{TGG1998DCDATSSOP,ZWWW2026WFFAFTSIFGLS}. %
 It is very similar to \gls{optOneMax}: %
 It tries to maximize the number of \texttt{1}~bits in the bit string of a chosen dimension~$n$. %
 Different from \gls{optOneMax}, where each bit has the same weight in the objective function, the bits of \mbox{BinInt} have a exponentially increasing weight: %
@@ -127,7 +127,7 @@ Entity relationship diagrams show the relationships between objects, e.g., betwe
 }]{ERD}{ERD}{entity relationship diagram}%
 %
 \newacronym[description={%
-The European Space Agency~(ESA) is an international organization dedicated to space exploration, research, and technology development. %
+The \emph{European Space Agency} is an international organization dedicated to space exploration, research, and technology development. %
 Learn more at \url{https://www.esa.int}.%
 }]{orgESA}{ESA}{European Space Agency}%
 %
@@ -172,7 +172,7 @@ The \emph{Flow Shop Scheduling Problem} is a variant of a \pgls{optJSSP} where a
 }]{optFSSP}{FSSP}{Flow Shop Scheduling Problem}%
 
 \newacronym[description={%
-The Genetic and Evolutionary Computation Conference~(GECCO) is one of the largest conferences in the field of \pglspl{algoEA}. %
+The \emph{Genetic and Evolutionary Computation Conference} is one of the largest conferences in the field of \pglspl{algoEA}. %
 It has been established in~1999 and its proceedings are published by~ACM. %
 Learn more at \url{https://sig.sigevo.org/GECCOs}.%
 }]{eventGECCO}{GECCO}{Genetic and Evolutionary Computation Conference}%
@@ -191,11 +191,13 @@ These tree datastructures often represent programs or mathematical expressions.%
 %
 \newacronym{GUI}{GUI}{graphical user interface}%
 %
-\newacronym[description={The Hyper Text Markup Language~(HTML) is the text format used by the \gls{WWW}~\cite{T2024MHCFTB2,BL1991RQOHL,HBFLDNOP2014HAVAAAFHAX}.}]{HTML}{HTML}{Hyper Text Markup Language}%
+\newacronym[description={%
+The \emph{Hyper Text Markup Language} is the text format used by the \gls{WWW}~\cite{T2024MHCFTB2,BL1991RQOHL,HBFLDNOP2014HAVAAAFHAX}.}]{HTML}{HTML}{Hyper Text Markup Language}%
 %
 \newacronym[description={The Hyper Text Transfer Protocol~(HTTP) is the protocol linking web browsers to web \pglspl{server} in the \gls{WWW}~\cite{BL1991RQOHL,RFC1945,RFC2068,RFC9110,G2017HP}.}]{HTTP}{HTTP}{Hyper Text Transfer Protocol}%
 %
-\newacronym[description={The Hypertext Transfer Protocol Secure~(HTTPS) is the encrypted variant of~\gls{HTTP} where data is sent over~\gls{TLS}~\cite{RFC9110,S2021SCG2HTH}.}]{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}%
+\newacronym[description={%
+The \emph{Hypertext Transfer Protocol Secure} is the encrypted variant of~\gls{HTTP} where data is sent over~\gls{TLS}~\cite{RFC9110,S2021SCG2HTH}.}]{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}%
 %
 \newacronym{HR}{HR}{human resources department}%
 %
@@ -269,6 +271,14 @@ In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Jump~\cite{W
 }]{optJump}{\mbox{Jump}}{\mbox{Jump}}%
 %
 \newacronym[description={%
+\emph{Low-Autocorrelation Binary Sequences} are bit strings of length~$n$ whose autocorrelation is as low as possible~\cite{M1996ESFLABS,MZB1998ESFLABS,GCF2007AMAFTLABSP,P2013IBABFLABS}. %
+This means that sub-sequences of any length~$1\leq k <n$ should ideally never repeat. %
+The objective function~$\objFun:\{0,1\}^n\mapsto\naturalNumbersZ$ represents the energy of a bit string~\sespel\ and is subject to minimization. %
+We can define it as~$\objFunb{\sespel}=\sum_{k=1}^{n-1}\left(\sum_{i=0}^{n-1-k} \arrayIndex{s}{i} \cdot \arrayIndex{s}{i+k}\right)^2$ with~$\arrayIndex{s}{j}=2\arrayIndex{\sespel}{j}-1$. %
+Such sequences are needed for communication- and radar-like applications.%
+},shortplural={LABS}]{optLABS}{LABS}{Low-Autocorrelation Binary Sequence}%
+%
+\newacronym[description={%
 The LeadingOnes problem is a benchmark problem for bit-string based black-box search~\cite{R1997CPOEA,W1989TGAASPWRBAORTIB,ZWWW2026WFFAFTSIFGLS}. %
 It tries to maximize the number of \emph{leading}~\texttt{1}~bits in the bit string of a chosen dimension~$n$. %
 Different from \gls{optOneMax}, the contribution to the objective value of the bit at index~$i$ thus depends on the state of all the bits \emph{before} this index. %
@@ -289,14 +299,18 @@ It is fully separable, i.e., we can optimize each variable separately.%
 Typical examples include DeepSeek~\cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCLZBXWDXGQLGLWCYQLCNLCDHGGHYWZZWZXXZZTLWLTHZWCDGZPWCJCLZCYWYZPL2024DRIRCILVRL} and GPT~\cite{RNSS2018ILUWUL}.}]{LLM}{LLM}{Large Language Model}%
 %
 \newacronym[description={%
-Many types of software for which new versions appear regularly offer so-called \emph{long-term support}~(LTS) versions. %
+Many types of software for which new versions appear regularly offer so-called \emph{long-term support} versions. %
 Such versions are guaranteed to be supported for a longer-than-usual time. %
 The \ubuntu\ \pgls{OS} releases a new \pgls{LTS} version every two years~\cite{C2024TULARC}, for example.%
 }]{LTS}{LTS}{long-term support}%
 %
 \newacronym[description={%
+A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined by a local search before it enters the population~\cite{W2009GOATAA}.%
+}]{algoMA}{MA}{Memetic Algorithm}%
+%
+\newacronym[description={%
 The goal of satisfiability problems is to find an assignment for $n$~Boolean variables that make a given Boolean formula~$F:\{0, 1\}^n \mapsto \{0, 1\}$ become true. %
-In the \emph{Maximum Satisfiability~(MaxSAT)} problem~\cite{HS2004SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
+In the \emph{Maximum Satisfiability} problem~(MaxSAT)~\cite{HS2004SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
 are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
@@ -338,7 +352,7 @@ It encompasses the development and application of problem-solving methods and te
 Typical examples are \python, \linux, \git, and \postgresql.}]{OSS}{OSS}{open source software}%
 %
 \newacronym[description={%
-A Permuted Congruential Generator~(PCG) is a pseudo-random number generator~\cite{ON2014PAFOSFSESGAFRNG}. %
+A \emph{Permuted Congruential Generator} is a pseudo-random number generator~\cite{ON2014PAFOSFSESGAFRNG}. %
 Under \numpy, a 64\nobreakdashes-bit PCG is offered as a default method for generating seeding random number sequences~\cite{N2025N:PCG6BP}. %
 You can import it via \pythonil{from numpy.random import PCG64, Generator} and then create it from an \pythonil{int} seed~\pythonil{h} via \pythonil{Generator(PCG64(h))}.%
 }]{randPCG}{PCG}{Permuted Congruential Generator}%
@@ -452,11 +466,12 @@ If you run a program in a \gls{terminal}, then the text that a process writes to
 },sort={stdout}]{stdout}{\texttt{stdout}}{standard output stream}%
 %
 \newacronym[description={%
-The Space Optimization Competition~(SpOC) is a competition organized by the Advanced Concepts Team of \pgls{orgESA} at \pgls{eventGECCO} since~2022, where various optimization problems related to space exploration and travel are posed and researchers worldwide can compete. %
+The \emph{Space Optimization Competition} is a competition organized by the Advanced Concepts Team of \pgls{orgESA} at \pgls{eventGECCO} since~2022, where various optimization problems related to space exploration and travel are posed and researchers worldwide can compete. %
 Learn more at \url{https://optimise.esa.int}.%
 }]{eventSpOC}{SpOC}{Space Optimization Competition}%
 %
-\newacronym[shortplural={SVG},description={The Scalable Vector Graphics~(SVG) format is an \pgls{XML}-based format for vector graphics~\cite{DDGLMSWFJJ2011SVGSSE}. %
+\newacronym[shortplural={SVG},description={%
+The \emph{Scalable Vector Graphics} format is an \pgls{XML}-based format for vector graphics~\cite{DDGLMSWFJJ2011SVGSSE}. %
 Vector graphics are composed of geometric shapes like lines, rectangles, circles, and text. %
 As opposed to raster / pixel graphics, they can be scaled seamlessly and without artifacts. %
 They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
@@ -477,7 +492,7 @@ The TSP is one of the most well-known \npHard\ combinatorial optimization proble
 }]{optTSP}{TSP}{Traveling Salesperson Problem}%
 %
 \newacronym[description={%
-The \emph{Traveling Tournament Problem}~(TTP) is the combinatorial optimization problem of both efficiently and fairly organizing a tournament of $n$~teams that play against each other in a pairwise fashion~\cite{ENT2001TTTPDABICOPAPOCP,XWvdBW2024RLSVNVFFAOTTTP}. %
+The \emph{Traveling Tournament Problem} is the combinatorial optimization problem of both efficiently and fairly organizing a tournament of $n$~teams that play against each other in a pairwise fashion~\cite{ENT2001TTTPDABICOPAPOCP,XWvdBW2024RLSVNVFFAOTTTP}. %
 The efficient part boils down to arranging the games such that the total travel length is short, which is somewhat similar to the classical \gls{optTSP}. %
 Initially, each team is at its home location. %
 On each day, a team needs to travel if its scheduled game is not at its present location. %
@@ -508,7 +523,7 @@ Universal Coded Character Set, see \gls{unicode}%
 }]{UCS}{UCS}{Universal Coded Character Set}%
 %
 \newacronym[description={%
-The Unified Modeling Language~(UML) is a graphical language for visualizing, specifying, constructing, and documenting the artifacts of distributed object systems~\cite{OMG2017OUMLOU,RMHOSMUUIIIIOPPTRS1997UNG,BRJ1999TUMLRM,F2003UDABGTTSOML}}]{UML}{UML}{Unified Modeling Language}%
+The \emph{Unified Modeling Language} is a graphical language for visualizing, specifying, constructing, and documenting the artifacts of distributed object systems~\cite{OMG2017OUMLOU,RMHOSMUUIIIIOPPTRS1997UNG,BRJ1999TUMLRM,F2003UDABGTTSOML}}]{UML}{UML}{Unified Modeling Language}%
 %
 \newacronym[description={%
 A \emph{Uniform Resource Locator} identifies a resource in the \gls{WWW} and a way to obtain it by describing a network access mechanism. %
