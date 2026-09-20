@@ -38,6 +38,16 @@ The time notation \emph{before \glslink{CE}{Common Era}} is a non-religious but 
 The years BCE are counted down, i.e., the larger the year, the farther in the past. %
 The year 1~BCE comes directly before the year 1~\pgls{CE}~\cite{SA2016ZALDTDVATUM:EOYZIACIAAPCWSOABCAB,EOEBEB:CCHDE}.}]{BCE}{BCE}{before Common Era}%
 %
+\newacronym[description={%
+The Binary Integer Problem~(BinInt) is a benchmark problem for bit-string based black-box search~\cite{TGG1998DCDATSSOP,ZWWW2026WFFAFTSIFGLS}. %
+It is very similar to \gls{optOneMax}: %
+It tries to maximize the number of \texttt{1}~bits in the bit string of a chosen dimension~$n$. %
+Different from \gls{optOneMax}, where each bit has the same weight in the objective function, the bits of \mbox{BinInt} have a exponentially increasing weight: %
+The bit string is treated as a binary-encoded integer whose value should be maximized. %
+The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
+It is fully separable, i.e., we can optimize each variable separately.%
+}]{optBinInt}{\mbox{BinInt}}{\mbox{Binary Integer}}%
+%
 \newacronym[description={The \emph{Best Known Solution} for an instance of an optimization problem is the best solution (measured based on the objective values) that has ever been reported in literature. BKSes are not necessarily globally optimal, as in many instances of \npHard~problems, the true optima are unknown.},shortplural={BKSes}]{BKS}{BKS}{Best Known Solution}%
 %
 \newacronym[description={%
@@ -95,7 +105,7 @@ A \emph{database system} is the combination of a \gls{db} and a the correspondin
 %
 \newacronym[description={%
 An \emph{evolutionary algorithm} is a metaheuristic optimization method that maintains a population of candidate solutions, which undergo selection~(where better solutions are chosen with higher probability) and reproduction~(where mutation and recombination create a new candidate solution from one or two existing ones, repectively)~\cite{W2009GOATAA,BFM1997HOEC}.%
-},sort={(1+1) ea}]{algoEA}{EA}{evolutionary algorithm}%
+}]{algoEA}{EA}{evolutionary algorithm}%
 %
 \newacronym[description={%
 The \mbox{$(\mu+\lambda)$~EA} is an \glsFull{algoEA} where, in each generation, $\lambda$~offspring solutions are generated from the current population of $\mu$~parent solutions.
@@ -123,14 +133,26 @@ Learn more at \url{https://www.esa.int}.%
 %
 %
 \newacronym[description={%
-The \gls{algoEAopo} with \gls{algoFFA} plugged in.%
-},sort={(1+1) EA with FFA}]{algoFEAopo}{\mbox{$(1+1)$~FEA}}{\mbox{$(1+1)$~EA} with FFA}%
+The \gls{algoEAopo} with \gls{algoFFA} plugged in~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}. %
+On the discrete bit-string domains, this algorithm has a very specific structure: %
+Its unary search operator flips each bit with probability~$1/n$, where $n$~is the dimension of the search space, distinguishing it from the unary operator in \gls{algoFRLS} which flips exactly one bit. %
+On other domains, such as permutations, the term is used synonymously with \gls{algoFRLS}.%
+},sort={(1+1) EA with FFA}]{algoFEAopo}{\mbox{$(1+1)$~FEA}}{$(1+1)$~EA with FFA}%
 %
 \newacronym[description={%
-\emph{Frequency Fitness Assignment} is a algorithm plugin for optimization methods applied to discrete or combinatorial problems with not-too-many different possible objective values. %
+\emph{Frequency Fitness Assignment} is a algorithm plugin for optimization methods applied to discrete or combinatorial problems with not-too-many different possible objective values~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,WWWTDY2014FFA}. %
 It replaces the objective values in all comparisons with their absolute encounter frequency so far during the search. %
-FFA has successfully been applied to the \gls{optQAP}~\cite{CWTW2024FFAOWBFGSORLSOTQAP}.%
+FFA has successfully been applied to the \gls{optMaxSAT}~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE}, the \gls{optTSP}~\cite{LWLvdBW2022STTSPUFFA,LWLvdBTW2024ATTSPWFFAAHA}, and the \gls{optQAP}~\cite{CWTW2024FFAOWBFGSORLSOTQAP,TOvdBLW2024ESTAEFFFA}, amongst others. %
+Its properties have been intensely researched on discrete benchmark functions such as \gls{optOneMax}, \gls{optLeadingOnes}, \gls{optTrap}, \gls{optTwoMax}, \gls{optJump}, and \gls{optPlateau}~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}. %
+The most common realizations of FFA so far are the \glsShort{algoFEAopo} and \glsShort{algoFRLS}.%
 }]{algoFFA}{FFA}{Frequency Fitness Assignment}%
+%
+\newacronym[description={%
+The \gls{algoRLS} with \gls{algoFFA} plugged in~\cite{ZWWW2026WFFAFTSIFGLS}. %
+On the discrete bit-string domains, this algorithm has a very specific structure: %
+Its unary search operator flips exactly one bit, distinguishing it from the unary operator in the \gls{algoFEAopo}, which flips each bit with probability~$1/n$.
+On other domains, such as permutations, we use the term synonymously with \gls{algoFEAopo}.%
+},sort={RLS with FFA}]{algoFRLS}{FRLS}{RLS with FFA}%
 %
 \protected\gdef\funcDepb#1#2{#1\glslink{funcDep}{\ensuremath{\rightarrow}}#2}%
 \newacronym[longplural={functional dependencies},description={%
@@ -154,6 +176,11 @@ The Genetic and Evolutionary Computation Conference~(GECCO) is one of the larges
 It has been established in~1999 and its proceedings are published by~ACM. %
 Learn more at \url{https://sig.sigevo.org/GECCOs}.%
 }]{eventGECCO}{GECCO}{Genetic and Evolutionary Computation Conference}%
+%
+\newacronym[description={%
+The Greedy~$(2+1)$~GA is an \gls{algoEA} for bit-string based search spaces~\cite{S2012CSUBBA,S2017HCSUBBAIGA,CPD2018TAMPARAOEA,CPD2018ASPFTUOCIBBO}. %
+It was shown to be twice as fast as any mutation-only \gls{algoEA} on \gls{optOneMax}~\cite{S2012CSUBBA,S2017HCSUBBAIGA}.%
+},sort={Greedy (2+1) GA}]{algoG2P1GA}{Greedy~$(2+1)$~GA}{Greedy~$(2+1)$~Genetic Algorithm}%
 %
 \newacronym[shortplural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 %
@@ -196,6 +223,26 @@ The term is commonly used as reading data from files~(input) and writing data to
 Another common usage is receiving data over a network~(input) or sending data over a network~(output).%
 }]{inOut}{I/O}{Input/Output}%
 %
+\newacronym[description={%
+The Ising models~(\glsShort{optIsing1D}, \glsShort{optIsing2D}) are benchmark problems for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,F2004APUBFAMBAOTTDIM,FW2005TODIMMVR,ZWWW2026WFFAFTSIFGLS}. %
+Here, a neighborhood is defined around each bit. %
+The bit needs to have the same value as all bits in the neighborhood. %
+Thus, we try to achieve that all bits have the same value. %
+The problems are highly epistatic, as all variables interact with some other variables.%
+}]{optIsing}{Ising Model}{Ising Model}%
+%
+\newacronym[description={%
+The 1D~\glsShort{optIsing} is a benchmark problem for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,FW2005TODIMMVR,ZWWW2026WFFAFTSIFGLS}. %
+The bits are arranged in a one-dimensional ring and we try to minimize the number of bits that have different values than their neighbors.
+The problems are highly epistatic, as all variables interact with some other variables.%
+}]{optIsing1D}{Ising~1D}{1-Dimensional Ising Model}%
+%
+\newacronym[description={%
+The 2D~\glsShort{optIsing} is a benchmark problem for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,F2004APUBFAMBAOTTDIM,ZWWW2026WFFAFTSIFGLS}. %
+The bits are arranged in a two-dimensional torus and we try to minimize the number of bits that have different values than their neighbors.
+The problems are highly epistatic, as all variables interact with some other variables.%
+}]{optIsing2D}{Ising~2D}{2-Dimensional Ising Model}%
+%
 \newacronym{IT}{IT}{information technology}%
 \newacronym[description={Joint Application Development~\cite{CWG1993PAJADATC,M1996RTWSS}}]{JAD}{JAD}{Joint Application Development}%
 %
@@ -212,6 +259,31 @@ Each job must be processed once by each machine in a job-specific sequence and h
 The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule which can complete all the jobs in the shortest time. %
 The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
 }]{optJSSP}{JSSP}{Job Shop Scheduling Problem}%
+%
+\newacronym[description={%
+The Jump problem is a benchmark problem for bit-string based black-box search~\cite{DJW2002OTAOTOPOEA,FQW2018ELDBOAWHTMO,ZWWW2026WFFAFTSIFGLS}. %
+Like the \gls{optOneMax}, it tries to maximize the number of \texttt{1}~bits in a bit string of chosen length~$n$. %
+However, the solutions representing the last $\omega$~bits around the optimum to flip are deceptive, meaning that they are actually worse and getting worse than surrounding solutions.
+This means that, the larger~$\omega$, the larger the deceptive basin around the optimum that an algorithm needs to cross. %
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Jump~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.
+}]{optJump}{\mbox{Jump}}{\mbox{Jump}}%
+%
+\newacronym[description={%
+The LeadingOnes problem is a benchmark problem for bit-string based black-box search~\cite{R1997CPOEA,W1989TGAASPWRBAORTIB,ZWWW2026WFFAFTSIFGLS}. %
+It tries to maximize the number of \emph{leading}~\texttt{1}~bits in the bit string of a chosen dimension~$n$. %
+Different from \gls{optOneMax}, the contribution to the objective value of the bit at index~$i$ thus depends on the state of all the bits \emph{before} this index. %
+The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
+Different from \gls{optOneMax}, it is not separable, i.e., we can optimize each variable separately.%
+}]{optLeadingOnes}{\mbox{LeadingOnes}}{\mbox{LeadingOnes}}%
+%
+\newacronym[description={%
+The Linear Harmonic Function is a benchmark problem for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,DJW2002OTAOTOPOEA,ZWWW2026WFFAFTSIFGLS}. %
+It is very similar to \gls{optOneMax}: %
+It tries to maximize the number of \texttt{1}~bits in the bit string of a chosen dimension~$n$. %
+Different from \gls{optOneMax}, where each bit has the same weight in the objective function, the bits of \mbox{LinHarm} have a linear increasing weight. %
+The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
+It is fully separable, i.e., we can optimize each variable separately.%
+}]{optLinHarm}{\mbox{LinHarm}}{\mbox{Linear Harmonic Function}}%
 %
 \newacronym[description={Large Language Model, see, e.g., an \gls{AI} technique using (large/deep) neural networks to models trained on huge bodies of text to predict the next word in a text or conversation and continue to do so until a request is answered~\cite{M2024WALAHATUIGA}. %
 Typical examples include DeepSeek~\cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCLZBXWDXGQLGLWCYQLCNLCDHGGHYWZZWZXXZZTLWLTHZWCDGZPWCJCLZCYWYZPL2024DRIRCILVRL} and GPT~\cite{RNSS2018ILUWUL}.}]{LLM}{LLM}{Large Language Model}%
@@ -234,10 +306,24 @@ The MaxSAT problem is \npComplete~\cite{C1971TCOTPP}.%
 \newacronym[shortplural={ML},description={Machine Learning, see, e.g.,~\cite{SSBD2014UMLFTTA}}]{ML}{ML}{Machine Learning}%
 %
 \newacronym[description={%
+The N\nobreakdashes-Queens Problem is a benchmark problem for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,ZWWW2026WFFAFTSIFGLS}. %
+The goal is to arrange $N$~queens on an $N\times N$~chessboard so that none can attack the other. %
+The search space has thus dimension~$n=N^2$, with each bit standing for a field and encoding whether or not a queen is placed there. %
+The problem is quite epistatic.%
+}]{optNQueens}{N\nobreakdashes-Queens}{N\nobreakdashes-Queens}%
+%
+\newacronym[description={%
 The \emph{normal forms} define guidelines for the design of relational \pglspl{db} with the goal to avoid redundancy and to prevent inconsistencies and anomalies~\cite{K1983ASGTFNFIRDT,D2003AITDS,EN2015FODS,S2024D:N,S2024D:RNDAFDNF}. %
 There are several normal forms, \pgls{1NF}, \pgls{2NF}, \pgls{3NF}, and so on, each more restrictive than the other.%
 \optionalRef{sec:db:normalization}{ See also~\cref{sec:db:normalization}.}%
 }]{NF}{NF}{normal form}%
+%
+\newacronym[description={%
+\mbox{OneMax} is the simplest possible benchmark problem for bit-string based black-box search~\cite{DJW2006UALBFRSHIBBO,M1992HGARWMAH,ZWWW2026WFFAFTSIFGLS}. %
+The goal is to maximize the number of \texttt{1}~bits in the bit string of a chosen dimension~$n$. %
+The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
+It is fully separable, i.e., we can optimize each variable separately.%
+}]{optOneMax}{\mbox{OneMax}}{\mbox{OneMax}}%
 %
 \newacronym[shortplural={OOP},description={Object-Oriented Programming~\cite{S2007OOSE}}]{OOP}{OOP}{Object-Oriented Programming}%
 %
@@ -263,6 +349,12 @@ You can import it via \pythonil{from numpy.random import PCG64, Generator} and t
 The \emph{Portable Document Format}~\cite{A2024WDPM,A2008P3DMPDFP1P1} is the format in which provide this book. %
 It is the standard format for the exchange of documents in the internet.%
 }]{formatPDF}{PDF}{Portable Document Format}%
+%
+\newacronym[description={%
+The Plateau problem is a benchmark problem for bit-string based black-box search~\cite{AD2018PRAFP,ZWWW2026WFFAFTSIFGLS}. %
+It is structured exactly like \gls{optJump}, but instead of being deceptive, the last $\omega$~bits to flip around the optimum are neutral. %
+This means that, the larger~$\omega$, the larger the neutral plane around the optimum that an algorithm needs to cross.%
+}]{optPlateau}{\mbox{Plateau}}{\mbox{Plateau}}%
 %
 \newacronym[description={%
 \emph{Probability Density Function}~\cite{AS1972HOMFWFGAMT,EHP2000SD,W2007HBOSDFE} of a continuous random variable~${\mathcal{X}}$ that can take on values from range~$\Omega\subseteq\realNumbers$ is a function~$f_{\mathcal{X}}:\Omega\mapsto\realNumbersP$ such that%
@@ -302,6 +394,11 @@ The probability to do so decreases over time and with the difference in objectiv
 }]{algoSA}{SA}{Simulated Annealing}%
 %
 \newacronym[shortplural={SDLCs},description={Software Development Life Cycle~\cite{I2018SAH,N2024SEFDS}}]{SDLC}{SDLC}{Software Development Life Cycle}%
+%
+\newacronym[description={%
+The Self-Adjusting~$(1+(\lambda,\lambda))$~GA is a theory-inspired \gls{algoEA} for bit string-based search spaces~\cite{CPD2018TAMPARAOEA}.
+It has linear runtime on the \gls{optOneMax} problem~\cite{DD2018OSASAPCFT1LLGA}.%
+},sort={Self-Adjusting (1+(l,l)) GA}]{algoSAGA}{Self-Adjusting~$(1+(\lambda,\lambda))$~GA}{Self-Adjusting~$(1+(\lambda,\lambda))$~Genetic Algorithm}%
 %
 \newacronym[description={%
 The Standard Genetic Algorithm~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA} was the first population \gls{algoEA}. %
@@ -365,6 +462,13 @@ They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
 \newacronym[description={Transport Layer Security, a protol for encrypted communication over the internet~\cite{RFC8446,DS2024TCID,S2021SCG2HTH}, used by, e.g., \gls{HTTPS}.}]{TLS}{TLS}{Transport Layer Security}%
 %
 \newacronym[description={%
+The Trap problem is a benchmark problem for bit-string based black-box search~\cite{ZWWW2026WFFAFTSIFGLS,DJW2002OTAOTOPOEA,NB2003AAOTBOSEAOTF}. %
+It is structured exactly like \gls{optOneMax}, however the worst and the best solution are swapped. %
+This makes the problem highly deceptive, as following the \inQuotes{gradient} in the search space leads the search away from the global optimum. %
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.
+}]{optTrap}{\mbox{Trap}}{\mbox{Trap}}%
+%
+\newacronym[description={%
 In an instance of the \emph{Traveling Salesperson Problem}, also known as \emph{Traveling Salesman Problem}, a set of $n$~cities or locations as well as the distances between them are defined~\cite{ABCC2006TTSPACS,LLRKS1985TTSPAGTOCO,GP2002TTSPAIV,WCLTTCMY2014BOAAOSFFTTSP,LWLvdBTW2024ATTSPWFFAAHA,WWCTL2016GVLSTIOPSOEAP}. %
 The goal is to find the shortest round-trip tour that starts at one city, visits all the other cities one time each, and returns to the origin. %
 The TSP is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV}.%
@@ -381,6 +485,13 @@ The fair part is represented in several constraints, such as doubleRoundRobin, c
 The TTP is \npHard~\cite{VTvdB2023TCFGATHFECTTTP}.%
 %
 }]{optTTP}{TTP}{Traveling Tournament Problem}%
+%
+\newacronym[description={%
+The TwoMax problem is a benchmark problem for bit-string based black-box search~\cite{FQW2018ELDBOAWHTMO,VHGN2002FTTIMEAHSP,ZWWW2026WFFAFTSIFGLS}. %
+It has a global and a local optimum, both of about the same size, at opposite ends of the search space. %
+A strict local search will thus converge to either of them with the same probability and get trapped there, therefore either solving the problem to optimality or failing to do so. %
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime on TwoMax~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.
+}]{optTwoMax}{\mbox{TwoMax}}{\mbox{TwoMax}}%
 %
 \newglossaryentry{uar}{%
 name={u.a.r.},%
@@ -421,6 +532,11 @@ A \emph{Version Control System} is a software which allows you to manage and pre
 A distributed VCS allows multiple users to work on the same code and upload their changes to the server, which then preserves the change history.
 The most popular distributed VCS is \gls{git}. %
 }]{VCS}{VCS}{Version Control Systems}%
+%
+\newacronym[description={%
+The W\nobreakdashes-Model is a tunable benchmark function for bit-string based black-box search~\cite{WW2018DFOCOPATTWBPFST,WNSRG2008ATMFMOERANFL}.%
+It allows you to adjust the amount of ruggedness, deceptiveness, epistasis, and uniform neutrality in the search space.%
+}]{optWModel}{W\nobreakdashes-Model}{W\nobreakdashes-Model}%
 %
 \newacronym[description={World Wide Web~\cite{BL1991RQOHL,DDD2011IWWWHTP}}]{WWW}{WWW}{World Wide Web}%
 %
