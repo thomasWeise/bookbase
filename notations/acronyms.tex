@@ -178,7 +178,14 @@ Learn more at \url{https://sig.sigevo.org/GECCOs}.%
 }]{eventGECCO}{GECCO}{Genetic and Evolutionary Computation Conference}%
 %
 \newacronym[description={%
-The Greedy~$(2+1)$~GA is an \gls{algoEA} for bit-string based search spaces~\cite{S2012CSUBBA,S2017HCSUBBAIGA,CPD2018TAMPARAOEA,CPD2018ASPFTUOCIBBO}. %
+A Genetic Algorithm is an \gls{algoEA} for bit-string based search spaces~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA}. %
+It is a population-based metaheuristic applying a unary and a binary search operater as well as a selection scheme. %
+The original GA is the \glsFull{algoSGA}, which today is considered outdated. %
+Modern variants are the \gls{algoG2P1GA} and the \gls{algoSAGA} as well as bit-string based \glspl{algoEAmpl}.%
+}]{algoGA}{GA}{Genetic Algorithm}%
+%
+\newacronym[description={%
+The Greedy~$(2+1)$~GA~\cite{S2012CSUBBA,S2017HCSUBBAIGA,CPD2018TAMPARAOEA,CPD2018ASPFTUOCIBBO} is an \gls{algoEA} for bit-string based search spaces, i.e., a \gls{algoGA}. %
 It was shown to be twice as fast as any mutation-only \gls{algoEA} on \gls{optOneMax}~\cite{S2012CSUBBA,S2017HCSUBBAIGA}.%
 },sort={Greedy (2+1) GA}]{algoG2P1GA}{Greedy~$(2+1)$~GA}{Greedy~$(2+1)$~Genetic Algorithm}%
 %
@@ -415,7 +422,7 @@ It has linear runtime on the \gls{optOneMax} problem~\cite{DD2018OSASAPCFT1LLGA}
 },sort={Self-Adjusting (1+(l,l)) GA}]{algoSAGA}{Self-Adjusting~$(1+(\lambda,\lambda))$~GA}{Self-Adjusting~$(1+(\lambda,\lambda))$~Genetic Algorithm}%
 %
 \newacronym[description={%
-The Standard Genetic Algorithm~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA} was the first population \gls{algoEA}. %
+The Standard \glslink{algoGA}{Genetic Algorithm}~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA} was the first \gls{algoEA}. %
 It maintains a population of solutions and applies mutation and crossover to generate offspring solutions. %
 It uses fitness proportionate selection to choose which solutions should \inQuotes{survive} into the next generation, which today is considered a very bad design choice, see, e.g.,~\cite{W1989TGAASPWRBAORTIB}.%
 }]{algoSGA}{SGA}{Standard Genetic Algorithm}%
