@@ -317,7 +317,7 @@ A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined
 %
 \newacronym[description={%
 The goal of satisfiability problems is to find an assignment for $n$~Boolean variables that make a given Boolean formula~$F:\{0, 1\}^n \mapsto \{0, 1\}$ become true. %
-In the \emph{Maximum Satisfiability} problem~(MaxSAT)~\cite{HS2004SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
+In the \emph{Maximum Satisfiability} problem~(MaxSAT)~\cite{HS2005SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
 are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
@@ -428,7 +428,7 @@ It uses fitness proportionate selection to choose which solutions should \inQuot
 }]{algoSGA}{SGA}{Standard Genetic Algorithm}%
 %
 \newacronym[description={%
-\emph{Stochastic local search} or \emph{local search} for short, is one of the simplest \gls{metaheuristic} search paradigms: %
+\emph{Stochastic local search} or \emph{local search} for short, is one of the simplest \gls{metaheuristic} search paradigms~\cite{HS2005SLSFAA}: %
 A single \inQuotes{current} candidate solution is maintained and new solutions are sampled from its neighborhood. %
 If these solutions are deemed interesting based on their objective value, they replace the \inQuotes{current}. %
 The cycle continues. %
@@ -502,7 +502,7 @@ In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap~\cite{W
 }]{optTrap}{\mbox{Trap}}{\mbox{Trap}}%
 %
 \newacronym[description={%
-\emph{Tabu Search} is one of the most successful \glspl{algoSLS}. %
+\emph{Tabu Search} is one of the most successful \glspl{algoSLS}~\cite{G1989TSP1,G1990TSP2,GTdW1993AUGTTS}. %
 In order to avoid returning to previous solutions, it declares certain solutions or search moves as \inQuotes{tabu.} %
 For example, if a bit in a discrete problem has been flipped by the search operator, it may be forbidden to flip the bit again for some time, thus preventing the algorithm from getting trapped in a cycle. %
 This rule may be overridden if a new best-so-far solution is discovered that outperforms all previous solutions, in which case it would be accepted~(this is the so-called aspiration criterion).%
