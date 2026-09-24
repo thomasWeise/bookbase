@@ -104,7 +104,7 @@ A \emph{database system} is the combination of a \gls{db} and a the correspondin
 \newacronym[shortplural={DSes},description={Data Science, see, e.g.,~\cite{G2019DSFSFPWP}.}]{DS}{DS}{Data Science}%
 %
 \newacronym[description={%
-An \emph{evolutionary algorithm} is a metaheuristic optimization method that maintains a population of candidate solutions, which undergo selection~(where better solutions are chosen with higher probability) and reproduction~(where mutation and recombination create a new candidate solution from one or two existing ones, repectively)~\cite{W2009GOATAA,BFM1997HOEC}.%
+An \emph{evolutionary algorithm} is a \gls{metaheuristic} optimization method that maintains a population of candidate solutions, which undergo selection~(where better solutions are chosen with higher probability) and reproduction~(where mutation and recombination create a new candidate solution from one or two existing ones, repectively)~\cite{W2009GOATAA,BFM1997HOEC}.%
 }]{algoEA}{EA}{evolutionary algorithm}%
 %
 \newacronym[description={%
@@ -179,7 +179,7 @@ Learn more at \url{https://sig.sigevo.org/GECCOs}.%
 %
 \newacronym[description={%
 A Genetic Algorithm is an \gls{algoEA} for bit-string based search spaces~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA}. %
-It is a population-based metaheuristic applying a unary and a binary search operater as well as a selection scheme. %
+It is a population-based \gls{metaheuristic} applying a unary and a binary search operater as well as a selection scheme. %
 The original GA is the \glsFull{algoSGA}, which today is considered outdated. %
 Modern variants are the \gls{algoG2P1GA} and the \gls{algoSAGA} as well as bit-string based \glspl{algoEAmpl}.%
 }]{algoGA}{GA}{Genetic Algorithm}%
@@ -192,7 +192,7 @@ It was shown to be twice as fast as any mutation-only \gls{algoEA} on \gls{optOn
 \newacronym[shortplural={GIGO},description={Garbage In--Garbage Out, see, e.g.,~\cite{PKBCBR2005GIGOAELAOMBEUP}}]{GIGO}{GIGO}{Garbage In--Garbage Out}%
 %
 \newacronym[description={%
-Genetic Programming~\cite{K1993GPOTPOCBMONS,PLM2008AFGTGP,W2009GOATAA,WT2012EDAWGP} is the application of metaheuristic optimization, usually in form of an \glspl{algoEA}, to a search space comprised of tree datastructures. %
+Genetic Programming~\cite{K1993GPOTPOCBMONS,PLM2008AFGTGP,W2009GOATAA,WT2012EDAWGP} is the application of \gls{metaheuristic} optimization, usually in form of an \glspl{algoEA}, to a search space comprised of tree datastructures. %
 These tree datastructures often represent programs or mathematical expressions.%
 }]{algoGP}{GP}{Genetic Programming}%
 %
@@ -410,7 +410,7 @@ This operator is the main difference to~\gls{algoEAopo}.%
 }]{algoRLS}{RLS}{randomized local search}%
 %
 \newacronym[description={%
-Simulated Annealing is a local search that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP}. %
+Simulated Annealing is a \gls{algoSLS} that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP}. %
 The probability to do so decreases over time and with the difference in objective values, i.e.,is the lower the worse the new solution is.%
 }]{algoSA}{SA}{Simulated Annealing}%
 %
@@ -426,6 +426,15 @@ The Standard \glslink{algoGA}{Genetic Algorithm}~\cite{G1989GA,DJ2006ECAUA,W2009
 It maintains a population of solutions and applies mutation and crossover to generate offspring solutions. %
 It uses fitness proportionate selection to choose which solutions should \inQuotes{survive} into the next generation, which today is considered a very bad design choice, see, e.g.,~\cite{W1989TGAASPWRBAORTIB}.%
 }]{algoSGA}{SGA}{Standard Genetic Algorithm}%
+%
+\newacronym[description={%
+\emph{Stochastic local search} or \emph{local search} for short, is one of the simplest \gls{metaheuristic} search paradigms: %
+A single \inQuotes{current} candidate solution is maintained and new solutions are sampled from its neighborhood. %
+If these solutions are deemed interesting based on their objective value, they replace the \inQuotes{current}. %
+The cycle continues. %
+Basic examples are \gls{algoRLS} and \gls{algoEAopo}. %
+More complex examples that add mechanisms to escape local optima on top of the SLS paradigm are \gls{algoTS} and \gls{algoSA}.%
+},shortplural={SLSes},longplural={stochastic local searches}]{algoSLS}{SLS}{stochastic local search}%
 %
 \newacronym[shortplural={SOTA},description={State-of-the-Art, i.e., the best-performing methods for a field or problem type}]{SOTA}{SOTA}{state-of-the-art}%
 %
@@ -491,6 +500,13 @@ It is structured exactly like \gls{optOneMax}, however the worst and the best so
 This makes the problem highly deceptive, as following the \inQuotes{gradient} in the search space leads the search away from the global optimum. %
 In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.
 }]{optTrap}{\mbox{Trap}}{\mbox{Trap}}%
+%
+\newacronym[description={%
+\emph{Tabu Search} is one of the most successful \glspl{algoSLS}. %
+In order to avoid returning to previous solutions, it declares certain solutions or search moves as \inQuotes{tabu.} %
+For example, if a bit in a discrete problem has been flipped by the search operator, it may be forbidden to flip the bit again for some time, thus preventing the algorithm from getting trapped in a cycle. %
+This rule may be overridden if a new best-so-far solution is discovered that outperforms all previous solutions, in which case it would be accepted~(this is the so-called aspiration criterion).%
+}]{algoTS}{TS}{Tabu Search}%
 %
 \newacronym[description={%
 In an instance of the \emph{Traveling Salesperson Problem}, also known as \emph{Traveling Salesman Problem}, a set of $n$~cities or locations as well as the distances between them are defined~\cite{ABCC2006TTSPACS,LLRKS1985TTSPAGTOCO,GP2002TTSPAIV,WCLTTCMY2014BOAAOSFFTTSP,LWLvdBTW2024ATTSPWFFAAHA,WWCTL2016GVLSTIOPSOEAP}. %
