@@ -4,22 +4,42 @@
 %
 \newSubscript{bestSoFar}{\ensuremath{b}}{.b}{the subscript~$b$ denotes that $\circ$ is the best-so-far element of an optimization process}%
 %
+%
 \newFunc{decode}{\ensuremath{\gamma}}{g(x)}{\sespel}{%
 The decoding function~$\gamma:\searchSpace\mapsto\solutionSpace$ translates point from the search space~\searchSpace\ to one point~\solution\ in the solution space~\solutionSpace. %
 It is a very common case that~$\searchSpace=\solutionSpace$ and that the decoding function~\decode\ is the identity mapping%
 }%
 %
+%
 \newSuperscript{globalOptimum}{\ensuremath{\star}}{.*}{the superscript $\star$~symbol denotes that $\circ$ is a global optimum, i.e., there is no better solution than~$\circ$}%
+%
 %
 \newSymbol{instance}{\ensuremath{\mathcal{I}}}{I}{%
 the problem instance data, i.e., the data that is the input of the optimization algorithm. %
 The solution space~\solutionSpace\ and the objective function~\objFun\ as well as all components building on top of them are defined based on the concrete values in~\instance. %
-For example, in an~\emph{instance} of the \pgls{optTSP} could define the number~$n$ of cities and their distances. %
-If our solutions are permutations of cities, then $n$~is also the dimension of~\solutionSpace. %
+For example, in an~\emph{instance} of the \pgls{optTSP} could define the number~\scale\ of cities and their distances. %
+If our solutions are permutations of cities, then \scale~is also the dimension of~\solutionSpace. %
 The objective function~\objFun\ accesses the city distances to compute the tour lengths%
 }%
 %
+%
 \newSuperscript{localOptimum}{\ensuremath{\times}}{.*}{the superscript $\times$~symbol denotes that $\circ$ is a local optimum, i.e., no solution that can be reached within one search step from~$\circ$ is better than~$\circ$}%
+%
+%
+\newSymbol{scale}{\ensuremath{n}}{n}{%
+We usually use~\scale\ to denote the scale, i.e., the size of the problem to solve. %
+For example, %
+in a \gls{optTSP}, this may be the number of cities, %
+in a discrete benchmark problem such as \gls{optOneMax} or \gls{optTrap}, this may be the number of bits over which the problem is defined, %
+in a \gls{optQAP}, this may be the number of facilities and locations, and %
+in a \gls{optMaxSAT}~problem, this may be the number of variables that are input to the Boolean formula that we want to become true. %
+There are also problems where the scale is not defined straightforwardly like this. %
+For example, in a \gls{optJSSP}, we have a number of machines and a number of jobs, which together define the size of the problem. %
+But even then, the scale~\scale\ relates to the size of the solution space~\solutionSpace, and, hence, also of the search space~\searchSpace, which usually grow exponentially with~\scale. %
+And this is already the main issue: %
+The larger~\scale, the (exponentially) larger the number of possible solutions and thus, the larger the runtime of algorithms.%
+}%
+%
 %
 \newSymbol{searchSpace}{\ensuremath{\mathSpace{X}}}{X}{%
 The search space~\searchSpace\ is the space through which an optimization algorithm navigates in order to find good solutions. %
@@ -31,9 +51,11 @@ Then, the user only cares about the solutions~$\solution\in\solutionSpace$ and n
 A decoding~$\decode:\searchSpace\mapsto\solutionSpace$ is employed to translate the~$\sespel\in\searchSpace$ to~$\solution=\decodeb{\sespel}$ with~$\solution\in\solutionSpace$%
 }%
 %
+%
 \newSymbol{sespel}{\ensuremath{x}}{x}{%
-a point in the search Space~\searchSpace%
+a point in the search space~\searchSpace%
 }%
+%
 %
 \newSymbol{solutionSpace}{\ensuremath{\mathSpace{Y}}}{Y}{%
 the set of candidate solutions of an optimization problem is called the~\emph{solution space}~\solutionSpace. %
@@ -42,10 +64,12 @@ These are the elements that are passed to the user after the optimization proces
 They are also the parameters of the objective function(s)~$\objFun:\solutionSpace\mapsto\realNumbers$%
 }%
 %
+%
 \newSymbol{solution}{\ensuremath{y}}{y}{%
 a candidate solution~$\solution\in\solutionSpace$ is one possible solution to an optimization problem. %
 After the optimization process is completed, one or multiple such solutions are passed to the user%
 }%
+%
 %
 \newFunc{objFun}{\ensuremath{f}}{f(y)}{\solution}{%
 The \emph{objective function}~$\objFun:\solutionSpace\mapsto\realNumbers$ can compute a cost or rating for each candidate solution~\solution\ in the solution space~\solutionSpace. %
