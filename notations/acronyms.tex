@@ -41,6 +41,19 @@ An \emph{Application Programming Interface} is a set of rules or protocols that 
 %
 %
 \newacronym[description={%
+\emph{Branch and bound} is a family of optimization methods that combines systematic exploration of the search space with both and objective function~\objFun\ subject to minimization and a lower bound function~\cite{LMSK1963AAFTTSP}. %
+The idea is that we divide the search space into two sets. %
+We then pick the set that seems more interesting and divide it again. %
+We do this recursively until we have arrived at a set of size~1, which is our first solution~\solution. %
+We can compute its objective value~$z=\objFunb{\solution}$. %
+Now we continue with the sets that we have created and not yet explored. %
+However, we can discard all sets for which the lower bound of the solution quality is~$\geq z$, because they can never give us a better solution than~\solution. %
+If we have divided another set down to size~1 and it yields a better solution than~\solution, of cause we update these values. %
+Eventually, we have either discarded or fully expanded all sets -- and then the solution we got must be optimal.%
+}]{algoBB}{B\&B}{branch and bound}%
+%
+%
+\newacronym[description={%
 The time notation \emph{before \glslink{CE}{Common Era}} is a non-religious but chronological equivalent alternative to the traditional \emph{Before Christ~(BC)} notation, which refers to the years \emph{before} the birth of Jesus Christ~\cite{C2015ITCBNBASISL}. %
 The years BCE are counted down, i.e., the larger the year, the farther in the past. %
 The year 1~BCE comes directly before the year 1~\pgls{CE}~\cite{SA2016ZALDTDVATUM:EOYZIACIAAPCWSOABCAB,EOEBEB:CCHDE}.}]{BCE}{BCE}{before Common Era}%
@@ -148,6 +161,12 @@ The \mbox{$(1+1)$~EA} is a special case of the \gls{algoEAmpl} where~$\mu=\lambd
 %
 %
 \newacronym[description={%
+\emph{Edge assembly crossover} is a binary operator to be used inside a \gls{algoEA} for the \gls{optTSP}~\cite{NK1997EACAHPGAFTTSP,NS2012ANGAFTATSP,NK2013APGAUEACFTTSP}. %
+It belongs to the \gls{SOTA} on that field.%
+}]{algoEAX}{EAX}{edge assembly crossover}%
+%
+%
+\newacronym[description={%
 Entity relationship diagrams show the relationships between objects, e.g., between the tables in a \db\ and how they reference each other~\cite{C2002ERMHEFTALL,C1975TRMTAUVOD,C1976TERMTAUVOD,KW2012ASHOTEDAIM,WF1995DHQDM,B1990CMERMO,S2024D:CDMERDE,B2025DS:AGTTERDE}\optionalRef{sec:erd}{, see \cref{sec:erd}.}%
 }]{ERD}{ERD}{entity relationship diagram}%
 %
@@ -210,11 +229,19 @@ Learn more at \url{https://sig.sigevo.org/GECCOs}.%
 %
 %
 \newacronym[description={%
-A Genetic Algorithm is an \gls{algoEA} for bit-string based search spaces~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA}. %
+A \emph{Genetic Algorithm} is an \gls{algoEA} usually for bit-string based search spaces~\cite{G1989GA,DJ2006ECAUA,W2009GOATAA,BFM1997HOEC,M1996GADSEP,M1998AITGA}~(although many researchers use the terms \glsShort{algoEA} and \glsShort{algoGA} synonymously). %
 It is a population-based \gls{metaheuristic} applying a unary and a binary search operater as well as a selection scheme. %
 The original GA is the \glsFull{algoSGA}, which today is considered outdated. %
 Modern variants are the \gls{algoG2P1GA} and the \gls{algoSAGA} as well as bit-string based \glspl{algoEAmpl}.%
 }]{algoGA}{GA}{Genetic Algorithm}%
+%
+%
+\newacronym[description={%
+\emph{Generalized Partition Crossover}~(GPX) is a binary operator for \glsShortpl{algoEA} for the \gls{optTSP}~\cite{WHH2010AHGAFTTSPUGPC}. %
+It is \emph{respectful}, because the generated tour inherits all edges common to both parents. %
+It is \emph{transmits alleles}, because it only uses edges that occur in at least one parent. %
+It belongs to the \gls{SOTA} on the \glsShort{optTSP}, especially if used in conjunction with~\gls{algoLKH}~\cite{THW2018ERITLKHTSH}.%
+}]{algoGPX}{GPX}{Generalized Partition Crossover}%
 %
 %
 \newacronym[description={%
@@ -324,6 +351,20 @@ The objective function~$\objFun:\{0,1\}^{\scale}\mapsto\naturalNumbersZ$ represe
 We can define it as~$\objFunb{\sespel}=\sum_{k=1}^{\scale-1}\left(\sum_{i=0}^{\scale-1-k} \arrayIndex{s}{i} \cdot \arrayIndex{s}{i+k}\right)^2$ with~$\arrayIndex{s}{j}=2\arrayIndex{\sespel}{j}-1$. %
 Such sequences are needed for communication engineering~\cite{MDW2015NESFLLABS,BBB2017LABSOIMFARPTAT,BB2018AHAFALABSPWOLAHMF}, cryptography\cite{MDW2015NESFLLABS,D2022NCOBSWHMF}, as well as modulation pulses in radar and sonar ranging\cite{PM2016LABS}.%
 },shortplural={LABS}]{optLABS}{LABS}{Low-Autocorrelation Binary Sequence}%
+%
+%
+\newacronym[description={%
+The \emph{Lin-Kernighan}~(LK) algorithm~\cite{LK1973AEHAFTTSP} is a \gls{algoSLS} method for the \gls{optTSP}. %
+The LK algorithm performs iterative $k$-opt moves, i.e., in each step, it constructs the two sets~$X$ and~$Y$~of $k$~edges such that removing the edges in~$X$ from the current tour~$T$ and then adding the edges from~$Y$ to~$T$ results in a better tour.%
+The LK~algorithm is one of the most classical approaches to the~\glsShort{optTSP}.%
+}]{algoLK}{LK}{Lin-Kernighan}%
+%
+%
+\newacronym[description={%
+The \emph{Lin-Kernighan-Helsgaun} algorithm~\cite{H2009GKOSFTLKTH,H2000AEIOTLKTSH} is a \gls{algoSLS} method for the \gls{optTSP} based on the \glsFull{algoLK} algorithm~\cite{LK1973AEHAFTTSP}. %
+LKH\nobreakdashes-1 was proposed in~\cite{H2000AEIOTLKTSH} and LKH\nobreakdashes-2 in~\cite{H2009GKOSFTLKTH}. %
+It holds the record in the \citetitle{C2013WT}~\cite{C2013WT} as of 2025.%
+}]{algoLKH}{LKH}{Lin-Kernighan Helsgaun}%
 %
 %
 \newacronym[description={%
