@@ -67,6 +67,14 @@ Here, the \gls{client} can be some \gls{terminal} software shipping with the \pg
 }}%
 %
 %
+\newglossaryentry{Concorde}{%
+text={Concorde},%
+name={Concorde},%
+sort={Concorde},%
+description={%
+is an exact solver for the \gls{optTSP}\cite{C1997CTS,ABCC2006TTSPACS,C2012IPOTTSMATLOC}, which could even solve the largest instance of \gls{TSPLib}~(with 85\decSep900~cities) to optimality.%
+}}%
+%
 %
 \newglossaryentry{docstring}{%
 name={docstring},%
@@ -507,6 +515,17 @@ The repository \url{https://github.com/shredderzwj/TSPLIB} contains the data. %
 Additionally, you may also check \url{https://github.com/thomasWeise/tspSuite}, which contains all the \gls{TSPLib} instances as well as \gls{Java} code to load them.
 The \gls{TSPLib} contains 110~instances of symmetric \glsShortpl{optTSP} with scales~\scale\ ranging from 14 to 85\decSep900, but 93~instances have less than 2000~nodes. %
 There also are 19~asymmetric \glsShortpl{optTSP} with scales~$\scale\in\intRange{17}{443}$.%
+}}%
+%
+%
+\newglossaryentry{TSPSuite}{%
+name={{TSP}~Suite},%
+plural={{TSP}~Suite},%
+description={%
+is a open source benchmarking framework for the \gls{optTSP} written in \gls{Java}\cite{WCLTTCMY2014BOAAOSFFTTSP}. %
+It uses the instances of the \gls{TSPLib} and offers both automated experiment execution as well as several metrics to measure runtime. %
+It is available at \url{https://thomasweise.github.io/tspSuite} and has been used in many research works, such as~\cite{WWCTL2016GVLSTIOPSOEAP}. %
+It can be viewed as a predecessor of \moptipy.%
 }}%
 %
 %
