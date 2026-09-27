@@ -26,6 +26,14 @@ The objective function~\objFun\ accesses the city distances to compute the tour 
 \newSuperscript{localOptimum}{\ensuremath{\times}}{.*}{the superscript $\times$~symbol denotes that $\circ$ is a local optimum, i.e., no solution that can be reached within one search step from~$\circ$ is better than~$\circ$}%
 %
 %
+%
+\newSymbol{matrixDistance}{\ensuremath{A}}{A}{%
+the $\scale\times\scale$~distance matrix, i.e., \matrixIndex{\matrixDistance}{a}{b} indicates the distance between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
+A distance matrix can be symmetric, in which case~$\matrixIndex{\matrixDistance}{a}{b}=\matrixIndex{\matrixDistance}{b}{a}~\forall a,b\in\intRange{1}{\scale}$. %
+Distance matrices represent the problem instance data in~\glspl{optTSP} and part of the instance data of~\glspl{optQAP}%
+}%
+%
+%
 \newSymbol{scale}{\ensuremath{n}}{n}{%
 We usually use~\scale\ to denote the scale, i.e., the size of the problem to solve. %
 For example, %

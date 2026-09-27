@@ -345,6 +345,15 @@ is, in \python, done by the operator \pythonil{\%} that computes the remainder o
 \optionalRef{sec:int}{ Modulo division is mentioned in \cref{sec:int}.}%
 }}%
 %
+%
+\newglossaryentry{algoNuWLS}{%
+name={NuWLS},%
+plural={NuWLS},%
+sort={NuWLS},
+description={%
+a \gls{algoSLS} algorithm by \textcite{CCL2023NILSFWPMBNWT} for solving the (Weighted) Partial \gls{optMaxSAT} problem.%
+}}%
+%
 \newglossaryentry{optOneMax}{%
 text={OneMax},%
 name={OneMax},%
@@ -513,8 +522,8 @@ is a library of benchmark instances for the \glsFull{optTSP}~\cite{R2016T,R1991A
 Its original \gls{URL} was available until 2025 and then became defunct. %
 The repository \url{https://github.com/shredderzwj/TSPLIB} contains the data. %
 Additionally, you may also check \url{https://github.com/thomasWeise/tspSuite}, which contains all the \gls{TSPLib} instances as well as \gls{Java} code to load them.
-The \gls{TSPLib} contains 110~instances of symmetric \glsShortpl{optTSP} with scales~\scale\ ranging from 14 to 85\decSep900, but 93~instances have less than 2000~nodes. %
-There also are 19~asymmetric \glsShortpl{optTSP} with scales~$\scale\in\intRange{17}{443}$.%
+The \gls{TSPLib} contains 110~instances of the \glsFullpl{optSTSP} with scales~\scale\ ranging from 14 to 85\decSep900, but 93~instances have less than 2000~nodes. %
+There also are 19~\glsFullpl{optATSP} with scales~$\scale\in\intRange{17}{443}$.%
 }}%
 %
 %
@@ -623,6 +632,15 @@ It comes with its own package installation directory. %
 Multiple different virtual environments can be installed on a system. %
 This allows different applications to use different versions of the same packages without conflict, because we can simply install these applications into different \glspl{virtualEnvironment}.%
 \optionalRef{sec:venvAndPycharm}{ See \cref{sec:venvAndPycharm} for details.}%
+}}%
+%
+%
+\newglossaryentry{algoWalkSAT}{%
+name={WalkSAT},%
+plural={WalkSAT},%
+sort={WalkSAT},
+description={%
+a \gls{algoSLS} algorithm by \textcite{SKC1994NSFILS} for solving the \gls{optMaxSAT} problem.%
 }}%
 %
 %

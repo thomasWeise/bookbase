@@ -92,6 +92,13 @@ For example, \mbox{\intRange{5}{9}}~is equivalent to~\mbox{$\{5, 6, 7, 8, 9\}$}}
 }%
 %
 %
+%% Access an element in matrix or list
+%% #1 the array
+%% #2 the vertical index
+%% #3 the horizontal index
+\protected\gdef\matrixIndex#1#2#3{\ensuremath{#1\scalebox{0.85}{\ensuremath{[#2,#3]}}}}%
+%
+%
 \newFunc{median}{\ensuremath{\operatorname{median}}}{median(A)}{A}{%
 The \emph{median}~\medianb{A} is the value separating the bigger-valued half from the smaller-valued half of a data sample or distribution. %
 Its estimate is the value right in the middle of a \emph{sorted} data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{n-1})$ where $\arrayIndex{a}{i-1}\leq \arrayIndex{a}{i} \; \forall i \in 1\dots (n-1)$ with an odd number of elements and the \arithMean\ of the two values in the middle if $n$ is even. %
