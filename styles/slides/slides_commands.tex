@@ -131,12 +131,24 @@
 \fi\fi%
 }%
 %
+%% Insert the section header slide
 \AtBeginSection[]{%
 \begin{frame}%
 \locateGraphic{}{width=0.2\paperwidth}{\courseUrlQR}{0.775}{0.61}%
 \centering%
 \usebeamerfont{title}%
 \insertsectionhead%
+\end{frame}
+}%
+%
+%% Insert the sub-section header slide
+\AtBeginSubsection[]{%
+\begin{frame}%
+\locateGraphic{}{width=0.2\paperwidth}{\courseUrlQR}{0.775}{0.61}%
+\centering%
+\usebeamerfont{title}%
+\insertsectionhead\\[10pt]%
+\insertsubsectionhead%
 \end{frame}
 }%
 %
