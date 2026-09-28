@@ -413,7 +413,9 @@ The \ubuntu\ \pgls{OS} releases a new \pgls{LTS} version every two years~\cite{C
 %
 %
 \newacronym[description={%
-A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined by a local search before it enters the population~\cite{W2009GOATAA}.%
+A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined by a \gls{algoSLS} before it enters the population~\cite{W2009GOATAA}. %
+Als \glsShort{algoSLS}, we can use, e.g., \glsShort{algoRLS}, but \gls{algoTS}~\cite{FF1993GHFTQAP} is maybe a better choise. %
+Some \gls{SOTA} algorithms in some domains may be classified as \glsShortpl{algoMA}, e.g., \glsFull{algoLKH} basically uses a population that is refined via a local search.%
 }]{algoMA}{MA}{Memetic Algorithm}%
 %
 %
@@ -508,8 +510,15 @@ This operator is the main difference to~\gls{algoEAopo}.%
 %
 %
 \newacronym[description={%
-Simulated Annealing is a \gls{algoSLS} that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP}. %
-The probability to do so decreases over time and with the difference in objective values, i.e.,is the lower the worse the new solution is.%
+\emph{Reactive Tabu Search} is a variant of \gls{algoTS} where the length of the tabu list is adapted to the problem and to the current evolution of the search, and an escape strategy for diversifying the search is used when that is not sufficient~\cite{BT1994SAATSITLRACOQT,BT1994TRTS,BT1995LSWMBR,BT1995TNNWTRTS}. %
+It has successfully been applied to a wide range of problems, from the \gls{optQAP}~\cite{BT1994SAATSITLRACOQT,BT1994TRTS}, to Knapsack problems~\cite{BT1994TRTS,BT1995LSWMBR}, the N-K~landscape~\cite{BT1995LSWMBR} to the training of neural networks~\cite{BT1995TNNWTRTS}.%
+}]{algoRTS}{RTS}{Reactive Tabu Search}%
+%
+%
+\newacronym[description={%
+\emph{Simulated Annealing} is a \gls{algoSLS} that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP,W2009GOATAA}. %
+The probability to do so decreases over time and with the difference in objective values, i.e.,is the lower the worse the new solution is. %
+\glsShort{algoSA} performed well on a variety of problems, including the \glsShort{optQAP}~\cite{TB1994AISAAFTQAP,M2003AMSAAFTQAP}.%
 }]{algoSA}{SA}{Simulated Annealing}%
 %
 %
@@ -616,7 +625,8 @@ They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
 \emph{Tabu Search} is one of the most successful \glspl{algoSLS}~\cite{G1989TSP1,G1990TSP2,GTdW1993AUGTTS}. %
 In order to avoid returning to previous solutions, it declares certain solutions or search moves as \inQuotes{tabu.} %
 For example, if a bit in a discrete problem has been flipped by the search operator, it may be forbidden to flip the bit again for some time, thus preventing the algorithm from getting trapped in a cycle. %
-This rule may be overridden if a new best-so-far solution is discovered that outperforms all previous solutions, in which case it would be accepted~(this is the so-called aspiration criterion).%
+This rule may be overridden if a new best-so-far solution is discovered that outperforms all previous solutions, in which case it would be accepted~(this is the so-called aspiration criterion). %
+\glsShort{algoTS} has performed well on the \glsShort{optQAP}~\cite{T1991RTSFTQAP,T1995COISFTQAP}.%
 }]{algoTS}{TS}{Tabu Search}%
 %
 %
