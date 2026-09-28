@@ -419,11 +419,12 @@ A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined
 %
 \newacronym[description={%
 The goal of satisfiability problems is to find an assignment for \scale~Boolean variables that make a given Boolean formula~$F:\{0, 1\}^{\scale} \mapsto \{0, 1\}$ become true. %
-In the \emph{Maximum Satisfiability} problem~(MaxSAT)~\cite{HS2005SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
+In the \emph{Maximum Satisfiability} problem~(\glsShort{optMaxSAT})~\cite{HS2005SLSFAA}, $F$~is given in conjunctive normal form, i.e., the variables appear either directly or negated in $m$~\inQuotes{or} clauses, which
 are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
-The MaxSAT problem is \npComplete~\cite{C1971TCOTPP} and exhibits low epistasis but deceptiveness~\cite{RW1998GABITMD}, making it hard for local searches.%
+The \glsShort{optMaxSAT} problem is \npComplete~\cite{C1971TCOTPP} and exhibits low epistasis but deceptiveness~\cite{RW1998GABITMD}, making it hard for local searches. %
+Typical benchmark instances can be found in~\gls{SATLIB}.%
 }]{optMaxSAT}{MaxSAT}{Maximum Satisfiability}%
 %
 %
@@ -484,7 +485,8 @@ Such an assignment can be represented as a permutation~\sespel\ of the first \sc
 For each \glsShort{optQAP} instance, a distance matrix~\matrixDistance\ is given, where \matrixIndex{\matrixDistance}{a}{b}~specifies the distance from location~$a$ to location~$b$, as well as a flow matrix~\matrixFlow, where \matrixIndex{\matrixFlow}{i}{j}~is the amount of material flowing~(e.g., daily)~from facility~$i$ to facility~$j$. %
 The objective function~\objFunb{\sespel} then rates a permutation~\sespel\ as~$\objFunb{\sespel}=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale} \matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{j}}*\matrixIndex{\matrixFlow}{i}{j}$. %
 The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP}. %
-The \glsShort{optQAP} has applications such as building layout~\cite{E1977HLAAQAP,CNTSA2021HLDRAAQAPWGD,KP1978CALD}, keyboard layout~\cite{BO1977EVSMQZ}, circuit design~\cite{EW1990OSOSTFSM}, wiring~\cite{S1961TBWPAPA}, and scheduling~\cite{S2011SISBSMSWST}.%
+The \glsShort{optQAP} has applications such as building layout~\cite{E1977HLAAQAP,CNTSA2021HLDRAAQAPWGD,KP1978CALD}, keyboard layout~\cite{BO1977EVSMQZ}, circuit design~\cite{EW1990OSOSTFSM}, wiring~\cite{S1961TBWPAPA}, and scheduling~\cite{S2011SISBSMSWST}. %
+Typical benchmark instances can be found in~\gls{QAPLib}.%
 }]{optQAP}{QAP}{Quadratic Assignment Problem}%
 %
 %
@@ -626,6 +628,7 @@ The \glsShort{optTSP} has many applications\cite{ABCC2006TTSPACS}, including in 
 Solutions are often encoded as permutations~\sespel\ of the first~\scale\ natural numbers, where each city gets a number and the order of numbers in the permutation corresponds to the order of cities in the tour. %
 The distances between the \scale~cities are usually given in a $\scale\times\scale$~distance matrix~\matrixDistance, where \matrixIndex{\matrixDistance}{a}{b} is the distance from city~$a$ to city~$b$ with~$a,b\in\intRange{1}{\scale}$. %
 Then, the objective function subject to minimization is~$\objFunb{\sespel}=\matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{\scale}}{\arrayIndex{\sespel}{1}}+\sum_{i=1}^{\scale-1}\matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{i+1}}$. %
+Typical benchmark instances can be found in \gls{TSPLib}~\cite{R2016T,R1991ATSPL}, the 8th~DIMACS challenge\cite{JMGR20008DICTTSP,JM2002EAOHFTS,JGMYZZ2002EAOHFTS}, and the \citetitle{C2013WT} repository\cite{C2013WT}.%
 }]{optTSP}{TSP}{Traveling Salesperson Problem}%
 %
 %
