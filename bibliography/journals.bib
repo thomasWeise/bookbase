@@ -349,6 +349,13 @@
  address = pa_informs
 }
 
+@xdata{j_ijops,
+ journal = {International Journal of Planning and Scheduling},
+ publisher = p_inderscience,
+ address = pa_inderscience,
+ issn = {2044-494X},
+}
+
 @xdata{j_ijorad,
  journal = {{IBM}~Journal of Research and Development},
  publisher = pa_ieee # addr_sep # p_ieee # and # pa_ibm # addr_sep # p_ibm,
@@ -462,6 +469,13 @@
  issn = {0925-5001}
 }
 
+@xdata{j_jobe,
+ journal = {Journal of Building Engineering},
+ publisher = p_elsevier,
+ address = pa_elsevier,
+ issn = {2352-7102}
+}
+
 @xdata{j_jocsic,
  journal = {Journal of Computing Sciences in Colleges~{(JCSC)}},
  publisher = p_acm,
@@ -506,8 +520,7 @@
 
 @xdata{j_jors,
  journal = {The Journal of the \glslink{fieldOR}{Operational Research} Society~({JORS})},
- publisher = p_taylor_and_francis,
- address = pa_taylor_and_francis,
+ publisher = pa_taylor_and_francis # addr_sep # p_taylor_and_francis # and # pa_springer_nature_limited # addr_sep # p_springer_nature_limited,
  issn = {0160-5682}
 }
 
@@ -570,6 +583,13 @@
  publisher = p_taylor_and_francis,
  address = pa_taylor_and_francis,
  issn = {0025-570X},
+}
+
+@xdata{j_mor,
+ journal = {Mathematical Methods of \glslink{fieldOR}{Operations Research}~({MMOR})},
+ address = pa_springer_nature_limited,
+ publisher = p_springer_nature_limited,
+ issn = {1432-2994}
 }
 
 @xdata{j_mpc,
@@ -800,8 +820,8 @@
 }
 
 @xdata{j_zor,
- journal = {Zeitschrift f{\"u}r \glslink{fieldOR}{Operations Research}~({ZOR}) -- Methods and Models of Operations Research},
- publisher = p_physica_verlag,
- address = pa_physica_verlag,
+ journal = {Zeitschrift f{\"u}r \glslink{fieldOR}{Operations Research}~({ZOR})},
+ journalsubtitle = {Mathematical Methods of Operations Research~({MMOR})},
+ publisher = pa_physica_verlag # addr_sep # p_physica_verlag # {; now~} # pa_springer_nature_limited # addr_sep # p_springer_nature_limited,
  issn = {0340-9422}
 }

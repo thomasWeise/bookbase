@@ -377,7 +377,7 @@ Such sequences are needed for communication engineering~\cite{MDW2015NESFLLABS,B
 %
 \newacronym[description={%
 The \emph{Lin-Kernighan}~(LK) algorithm~\cite{LK1973AEHAFTTSP} is a \gls{algoSLS} method for the \gls{optTSP}. %
-The LK algorithm performs iterative $k$-opt moves, i.e., in each step, it constructs the two sets~$X$ and~$Y$~of $k$~edges such that removing the edges in~$X$ from the current tour~$T$ and then adding the edges from~$Y$ to~$T$ results in a better tour.%
+The LK algorithm performs iterative $k$\nobreakdashes-opt moves, i.e., in each step, it constructs the two sets~$X$ and~$Y$~of $k$~edges such that removing the edges in~$X$ from the current tour~$T$ and then adding the edges from~$Y$ to~$T$ results in a better tour.%
 The LK~algorithm is one of the most classical approaches to the~\glsShort{optTSP}.%
 }]{algoLK}{LK}{Lin-Kernighan}%
 %
@@ -480,10 +480,11 @@ It is the standard format for the exchange of documents in the internet.%
 %
 \newacronym[description={%
 The \emph{Quadratic Assignment Problem} is an optimization problem where the goal is to assign a set of \scale~facilities to a set of \scale~locations~\cite{KB1957APATLOEA,BCPP1998TQAP,LdABNHQ2007ASFTQAP,CWTW2024FFAOWBFGSORLSOTQAP}. %
-Such an assignment can be represented as a permutation~$x$ of the first \scale~natural numbers, where \arrayIndex{x}{i}~specifies the location where facility~$i$ should be placed. %
-For each QAP, a distance matrix~$D$ is given, where $D_{pq}$~specifies the distance from location~$p$ to location~$q$, as well as a flow matrix~$F$, where $F_{ij}$~is the amount of material flowing from facility~$i$ to facility~$j$. %
-The objective function~\objFunb{\sespel} then rates a permutation~$x$ as~$\objFunb{x}=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale}{D_{x_i x_j}F_{ij}}$. %
-The QAP is \npComplete~\cite{SGA1976PCAP}.%
+Such an assignment can be represented as a permutation~\sespel\ of the first \scale~natural numbers, where \arrayIndex{\sespel}{i}~specifies the location where facility~$i$ should be placed. %
+For each \glsShort{optQAP} instance, a distance matrix~\matrixDistance\ is given, where \matrixIndex{\matrixDistance}{a}{b}~specifies the distance from location~$a$ to location~$b$, as well as a flow matrix~\matrixFlow, where \matrixIndex{\matrixFlow}{i}{j}~is the amount of material flowing~(e.g., daily)~from facility~$i$ to facility~$j$. %
+The objective function~\objFunb{\sespel} then rates a permutation~\sespel\ as~$\objFunb{\sespel}=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale} \matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{j}}*\matrixIndex{\matrixFlow}{i}{j}$. %
+The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP}. %
+The \glsShort{optQAP} has applications such as building layout~\cite{E1977HLAAQAP,CNTSA2021HLDRAAQAPWGD,KP1978CALD}, keyboard layout~\cite{BO1977EVSMQZ}, circuit design~\cite{EW1990OSOSTFSM}, wiring~\cite{S1961TBWPAPA}, and scheduling~\cite{S2011SISBSMSWST}.%
 }]{optQAP}{QAP}{Quadratic Assignment Problem}%
 %
 %
@@ -620,7 +621,8 @@ This rule may be overridden if a new best-so-far solution is discovered that out
 \newacronym[description={%
 In an instance of the \emph{Traveling Salesperson Problem}, also known as \emph{Traveling Salesman Problem}, a set of \scale~cities or locations as well as the distances between them are given~\cite{ABCC2006TTSPACS,LLRKS1985TTSPAGTOCO,GP2002TTSPAIV,WCLTTCMY2014BOAAOSFFTTSP,LWLvdBTW2024ATTSPWFFAAHA,WWCTL2016GVLSTIOPSOEAP}. %
 The goal is to find the shortest round-trip tour that starts at one city, visits all the other cities one time each, and returns to the origin. %
-The TSP is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV}. %
+The \glsShort{optTSP} is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV}. %
+The \glsShort{optTSP} has many applications\cite{ABCC2006TTSPACS}, including in transportation, logistics, (circuit) plotting and drilling problems\cite{GJR1991OCOPADMACS}, telescope aiming, and genome sequencing. %
 Solutions are often encoded as permutations~\sespel\ of the first~\scale\ natural numbers, where each city gets a number and the order of numbers in the permutation corresponds to the order of cities in the tour. %
 The distances between the \scale~cities are usually given in a $\scale\times\scale$~distance matrix~\matrixDistance, where \matrixIndex{\matrixDistance}{a}{b} is the distance from city~$a$ to city~$b$ with~$a,b\in\intRange{1}{\scale}$. %
 Then, the objective function subject to minimization is~$\objFunb{\sespel}=\matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{\scale}}{\arrayIndex{\sespel}{1}}+\sum_{i=1}^{\scale-1}\matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{i+1}}$. %

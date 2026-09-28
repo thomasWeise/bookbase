@@ -28,9 +28,17 @@ The objective function~\objFun\ accesses the city distances to compute the tour 
 %
 %
 \newSymbol{matrixDistance}{\ensuremath{A}}{A}{%
-the $\scale\times\scale$~distance matrix, i.e., \matrixIndex{\matrixDistance}{a}{b} indicates the distance between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
+the $\scale\times\scale$~distance matrix. %
+\matrixIndex{\matrixDistance}{a}{b} indicates the distance between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
 A distance matrix can be symmetric, in which case~$\matrixIndex{\matrixDistance}{a}{b}=\matrixIndex{\matrixDistance}{b}{a}~\forall a,b\in\intRange{1}{\scale}$. %
 Distance matrices represent the problem instance data in~\glspl{optTSP} and part of the instance data of~\glspl{optQAP}%
+}%
+%
+%
+\newSymbol{matrixFlow}{\ensuremath{B}}{B}{%
+the $\scale\times\scale$~flow matrix. %
+\matrixIndex{\matrixFlow}{a}{b} flow of goods between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
+Flow matrices are one half of the problem instance data of~\glspl{optQAP}%
 }%
 %
 %
