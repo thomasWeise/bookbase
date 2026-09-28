@@ -486,7 +486,7 @@ The \emph{Quadratic Assignment Problem} is an optimization problem where the goa
 Such an assignment can be represented as a permutation~\sespel\ of the first \scale~natural numbers, where \arrayIndex{\sespel}{i}~specifies the location where facility~$i$ should be placed. %
 For each \glsShort{optQAP} instance, a distance matrix~\matrixDistance\ is given, where \matrixIndex{\matrixDistance}{a}{b}~specifies the distance from location~$a$ to location~$b$, as well as a flow matrix~\matrixFlow, where \matrixIndex{\matrixFlow}{i}{j}~is the amount of material flowing~(e.g., daily)~from facility~$i$ to facility~$j$. %
 The objective function~\objFunb{\sespel} then rates a permutation~\sespel\ as~$\objFunb{\sespel}=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale} \matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{j}}*\matrixIndex{\matrixFlow}{i}{j}$. %
-The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP}. %
+The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP,DPST2006MFHOSATSEAGAACMACS}. %
 The \glsShort{optQAP} has applications such as building layout~\cite{E1977HLAAQAP,CNTSA2021HLDRAAQAPWGD,KP1978CALD}, keyboard layout~\cite{BO1977EVSMQZ}, circuit design~\cite{EW1990OSOSTFSM}, wiring~\cite{S1961TBWPAPA}, and scheduling~\cite{S2011SISBSMSWST}. %
 Typical benchmark instances can be found in~\gls{QAPLib}.%
 }]{optQAP}{QAP}{Quadratic Assignment Problem}%

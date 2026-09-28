@@ -37,7 +37,7 @@ Distance matrices represent the problem instance data in~\glspl{optTSP} and part
 %
 \newSymbol{matrixFlow}{\ensuremath{B}}{B}{%
 the $\scale\times\scale$~flow matrix. %
-\matrixIndex{\matrixFlow}{a}{b} flow of goods between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
+\matrixIndex{\matrixFlow}{a}{b} is the flow of goods between locations~$a$ and~$b$ with~$a,b\in\intRange{1}{\scale}$. %
 Flow matrices are one half of the problem instance data of~\glspl{optQAP}%
 }%
 %
@@ -59,7 +59,7 @@ The larger~\scale, the (exponentially) larger the number of possible solutions a
 %
 \newSymbol{searchSpace}{\ensuremath{\mathSpace{X}}}{X}{%
 The search space~\searchSpace\ is the space through which an optimization algorithm navigates in order to find good solutions. %
-The search operators of metaheuristics are used to sample points~$\sespel\in\searchSpace$, for example. %
+The search operators of \glspl{metaheuristic} are used to sample points~$\sespel\in\searchSpace$, for example. %
 On many benchmark problems, the objective functions~\objFun\ directly evaluate the elements~$\sespel\in\searchSpace$, i.e., are defined as~$\objFun:\searchSpace\mapsto\realNumbers$. %
 However, very often these elements~\sespel\ are not the same data structures that the user is interested in and/or that the objective functions evaluate: %
 It is common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated, like a Gantt chart. %

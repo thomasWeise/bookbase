@@ -13,11 +13,11 @@
 
 @inproceedings{CWTW2024FFAOWBFGSORLSOTQAP,
  author = a_chen_jiayang # and # a_wu_zhize # and # a_thomson_sarah_louise # and # a_weise_thomas,
- title = {\glslink{algoFFA}{Frequency Fitness Assignment}:~{O}ptimization Without Bias for Good Solution Outperforms Randomized Local Search on the \glslink{optQAP}{Quadratic Assignment Problem}},
+ title = {\glslink{algoFFA}{Frequency Fitness Assignment}:~{O}ptimization Without Bias for Good Solution Outperforms \glslink{algoRLS}{Randomized Local Search} on the \glslink{optQAP}{Quadratic Assignment Problem}},
  crossref = {PROC2024IJCCI},
  pages = {27--37},
  doi = {10.5220/0012888600003837},
- keywords = {own,FFA,QAP,moptipy}
+ keywords = {own,FFA,QAP,moptipy,RLS}
 }
 
 @techreport{TLSYW2010BFFTC2SSACOLSGO,
@@ -51,7 +51,7 @@
 
 @inproceedings{LWTWW2024GSIWIFFTTSP,
  author = a_liang_tianyu # and # a_wu_zhize # and # a_thurer_matthias # and # a_wagner_markus # and # a_weise_thomas,
- title = {Generating Small Instances with Interesting Features for the Traveling Salesperson Problem},
+ title = {Generating Small Instances with Interesting Features for the \glslink{optTSP}{Traveling Salesperson Problem}},
  crossref = {PROC2024IJCCI},
  pages = {173--180},
  publisher = p_scitepress,
@@ -90,6 +90,7 @@
  crossref = {PROC2024PPSN1},
  doi = {10.1007/978-3-031-70055-2_23},
  keywords = {own,QAP,FFA,SA},
+ addendum = {Explores \gls{algoRLS}, \gls{algoFRLS}, and \gls{algoSA} on the \gls{optQAP}.}
 }
 
 @book{W2009GOATAA,
@@ -131,6 +132,7 @@
  date = {2014-08},
  doi = {10.1109/MCI.2014.2326101},
  keywords = {own,benchmarking,TSP},
+ addendum = {Applies a multitude of algorithms including \glspl{algoSLS}, \glspl{algoEA}, \glspl{algoMA}, \gls{algoACO}, and EDAs to the \gls{TSPLib} instances.}
 }
 
 @inproceedings{WLCW2021SJSSPWUABFGS,
@@ -140,6 +142,7 @@
  doi = {10.1145/3449726.3463124},
  crossref = {PROC2021GECCOc},
  keywords = {own,FFA,JSSP},
+ addendum = {Applies \gls{algoFFA} to the \gls{optJSSP}.}
 }
 
 @inproceedings{WNSRG2008ATMFMOERANFL,
@@ -148,6 +151,7 @@
  crossref = {PROC2008GECCO},
  doi = {10.1145/1389095.1389252},
  pages = {795--802},
+ addendum = {The original paper introducing the \gls{optWModel}.}
 }
 
 @inproceedings{WNT2010AAOAB,
@@ -203,9 +207,9 @@
 
 @inproceedings{WW2018DFOCOPATTWBPFST,
  author = a_weise_thomas # and # a_wu_zijun,
- title = {Difficult Features of Combinatorial Optimization Problems and the Tunable {W{-}Model} Benchmark Problem for Simulating Them},
+ title = {Difficult Features of Combinatorial Optimization Problems and the Tunable \glslink{optWModel}{W\nobreakdashes-Model} Benchmark Problem for Simulating Them},
  crossref = {PROC2018GECCO},
- doi = {10.1145/3205651.3208240}
+ doi = {10.1145/3205651.3208240},
 }
 
 @inproceedings{WW2023RSDEWASSAA,
@@ -215,6 +219,7 @@
  pages = {1891--1899},
  doi = {10.1145/3583133.3596306},
  keywords = {own,benchmarking,moptipy},
+ addendum = {Introduces the experiment execution and data collection facilities of \moptipy.}
 }
 
 @article{WWCTL2016GVLSTIOPSOEAP,
@@ -237,7 +242,8 @@
  number = {4},
  pages = {533--554},
  date = {2019},
- doi = {10.1080/0952813X.2019.1574908}
+ doi = {10.1080/0952813X.2019.1574908},
+ addendum = {Explores algorithm implementation issues using the \gls{TSPSuite}.}
 }
 
 @article{WWLC2021FFAMOAIUBTOTOFV,
@@ -261,7 +267,8 @@
  pages = {980--992},
  date = {2023},
  doi = {10.1109/TEVC.2022.3191698},
- keywords = {own,MaxSAT,FFA,discrete}
+ keywords = {own,MaxSAT,FFA,discrete},
+ addendum = {Applies many \gls{algoFFA}-based algorithm variants to problems such as \gls{optOneMax}, \gls{optLeadingOnes}, \gls{optLinHarm}, \gls{optTwoMax}, \gls{optTrap}, \gls{optJump}, \gls{optPlateau}, \gls{optIsing}, and \gls{optNQueens}.}
 }
 
 @article{WWQLT2018ADCOAAPIBAWATCFEDASAIF,
@@ -272,12 +279,13 @@
  pages = {366--382},
  date = {2018-12},
  doi = {10.1016/J.ASOC.2018.08.030},
- keywords = {own,benchmarking,clustering,FFA,combinatoric,Wmodel}
+ keywords = {own,benchmarking,clustering,FFA,combinatoric,Wmodel},
+ addendum = {Finds clusters of algorithm behavior on the \gls{optWModel}.}
 }
 
 @inproceedings{WWTY2014EEIAWGP,
  author = a_weise_thomas # and # a_wan_mingxu # and # a_tang_ke # and # a_yao_xin,
- title = {Evolving Exact Integer Algorithms with Genetic Programming},
+ title = {Evolving Exact Integer Algorithms with \gls{algoGP}{Genetic Programming}},
  crossref = {PROC2024CEC},
  pages = {1816--1823},
  doi = {10.1109/CEC.2014.6900292},
@@ -293,7 +301,8 @@
  pages = {226--243},
  date = {2014-04},
  doi = {10.1109/TEVC.2013.2251885},
- keywords = {own,FFA,MAXSAT,GP,algorithmSynthesis,continuous,classification}
+ keywords = {own,FFA,MAXSAT,GP,algorithmSynthesis,continuous,classification},
+ addendum = {The article introducing \gls{algoFFA}.}
 }
 
 @inproceedings{XWvdBW2024RLSVNVFFAOTTTP,
@@ -330,6 +339,7 @@
  doi = {10.1145/3795095.3805098},
  pages = {233--242},
  keywords = {own,RLS,FFA,discrete,benchmarking},
+ addendum = {Explores \gls{algoEAopo}, \gls{algoFEAopo}, \gls{algoRLS}, and \gls{algoFRLS} as well as hybrid algorithms on a variety of discrete benchmarks such as \gls{optOneMax}, \gls{optLeadingOnes}, \gls{optLinHarm}, \gls{optBinInt}, \gls{optTwoMax}, \gls{optTrap}, \gls{optJump}, \gls{optPlateau}, \gls{optIsing}, \gls{optNQueens} and also applies them to the search for \glspl{optLABS}.}
 }
 
 %% Our own book references.
