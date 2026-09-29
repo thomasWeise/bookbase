@@ -239,7 +239,7 @@ This is written as~$\funcDepb{X}{Y}$.%
 %
 %
 \newacronym[shortplural={FSSPs},description={%
-The \emph{Flow Shop Scheduling Problem} is a variant of a \pgls{optJSSP} where all products go through the same sequence of machines~\cite{J1954OTATSPSWSTI}.%
+The \emph{Flow Shop Scheduling Problem} is a variant of a \pgls{optJSSP} where all products go through the same sequence of machines~\cite{J1954OTATSPSWSTI,GLLRK1977OAAIDSASAS}.%
 }]{optFSSP}{FSSP}{Flow Shop Scheduling Problem}%
 %
 %
@@ -315,10 +315,20 @@ It was originally developed by the United States Air Force for data modeling, fo
 }]{IDEF1X}{IDEF1X}{Integration Definition for Information Modeling}%
 %
 %
-\newacronym[description={Input Method Editor~\cite{PROC2011IJCNLPWTIM}}]{IME}{IME}{input method editor}%
+\newacronym[description={Input Method Editor~\cite{PROC2011IJCNLPWTIM}.}]{IME}{IME}{input method editor}%
 %
 %
-\newacronym[description={The Information Management System developed by IBM for the Apollo space program was the first \dbms\ using a hierarchical data model~\cite{KLBGNLWBS2012ITIYCGTIIMS,KLBGNLWBS2012ITIYCGTIIMS,BBP2007TBOI,KC2024DS:ITD}}]{softIMS}{IMS}{Information Management System}%
+\newacronym[description={%
+An \emph{iterated local search} is a variant of the \gls{algoSLS} which applies cycles of local search and perturbation~\cite{S2006ILSFTQAP}. %
+First, an initial solution is generated and refined by the local search. %
+Then the cycle begins: A perturbation, i.e., a large search move that likely destroys a good part of the solution, is applied. %
+The resulting new solution is refined by local search. %
+Then, an acceptance criterion decides whether we should use this or the previous solution to continue in the next cycle. %
+\glsShort{algoILS} has successfully been applied to the \gls{optQAP}.%
+}]{algoILS}{ILS}{iterated local search}%
+%
+%
+\newacronym[description={The Information Management System developed by IBM for the Apollo space program was the first \dbms\ using a hierarchical data model~\cite{KLBGNLWBS2012ITIYCGTIIMS,KLBGNLWBS2012ITIYCGTIIMS,BBP2007TBOI,KC2024DS:ITD}.}]{softIMS}{IMS}{Information Management System}%
 %
 %
 \newacronym[description={%
@@ -357,12 +367,11 @@ On a similar class of problems, the \gls{algoEAopo} has an exponential expected 
 %
 %
 \newacronym[shortplural={JSSPs},description={%
-The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST,CGLL1995STAIA} is one of the most prominent
-and well-studied scheduling tasks. %
-In a JSSP instance, there are $k$~machines and $m$~jobs~\cite{T1993BFBSP}. %
+The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST,CGLL1995STAIA,GLLRK1977OAAIDSASAS} is one of the most prominent and well-studied scheduling tasks. %
+In a \glsShort{optJSSP} instance, there are \jsspMachines~machines and \jsspJobs~jobs~\cite{T1993BFBSP}. %
 Each job must be processed once by each machine in a job-specific sequence and has a job-specific processing time on each machine. %
 The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule which can complete all the jobs in the shortest time. %
-The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
+The \glsShort{optJSSP} is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
 }]{optJSSP}{JSSP}{Job Shop Scheduling Problem}%
 %
 %
@@ -371,7 +380,9 @@ The JSSP is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
 This means that sub-sequences of any length~$1\leq k <\scale$ should ideally never repeat. %
 The objective function~$\objFun:\{0,1\}^{\scale}\mapsto\naturalNumbersZ$ represents the energy of a bit string~\sespel\ and is subject to minimization. %
 We can define it as~$\objFunb{\sespel}=\sum_{k=1}^{\scale-1}\left(\sum_{i=0}^{\scale-1-k} \arrayIndex{s}{i} \cdot \arrayIndex{s}{i+k}\right)^2$ with~$\arrayIndex{s}{j}=2\arrayIndex{\sespel}{j}-1$. %
-Such sequences are needed for communication engineering~\cite{MDW2015NESFLLABS,BBB2017LABSOIMFARPTAT,BB2018AHAFALABSPWOLAHMF}, cryptography\cite{MDW2015NESFLLABS,D2022NCOBSWHMF}, as well as modulation pulses in radar and sonar ranging\cite{PM2016LABS}.%
+Such sequences are needed for communication engineering~\cite{MDW2015NESFLLABS,BBB2017LABSOIMFARPTAT,BB2018AHAFALABSPWOLAHMF}, cryptography\cite{MDW2015NESFLLABS,D2022NCOBSWHMF}, as well as modulation pulses in radar and sonar ranging\cite{PM2016LABS}. %
+The \glsShort{optLABS} is \npHard~\cite{T2021CNAOTELOTLABSP}. %
+The \gls{SOTA} on \glsShort{optLABS} contains~\cite{DBN2020EGOLABS,D2022NCOBSWHMF,MDW2015NESFLLABS,BB2022CSOLSSBSWHMF,BB2018AHAFALABSPWOLAHMF}.%
 },shortplural={LABS}]{optLABS}{LABS}{Low-Autocorrelation Binary Sequence}%
 %
 %
@@ -486,9 +497,10 @@ The \emph{Quadratic Assignment Problem} is an optimization problem where the goa
 Such an assignment can be represented as a permutation~\sespel\ of the first \scale~natural numbers, where \arrayIndex{\sespel}{i}~specifies the location where facility~$i$ should be placed. %
 For each \glsShort{optQAP} instance, a distance matrix~\matrixDistance\ is given, where \matrixIndex{\matrixDistance}{a}{b}~specifies the distance from location~$a$ to location~$b$, as well as a flow matrix~\matrixFlow, where \matrixIndex{\matrixFlow}{i}{j}~is the amount of material flowing~(e.g., daily)~from facility~$i$ to facility~$j$. %
 The objective function~\objFunb{\sespel} then rates a permutation~\sespel\ as~$\objFunb{\sespel}=\sum_{i=1}^{\scale}\sum_{j=1}^{\scale} \matrixIndex{\matrixDistance}{\arrayIndex{\sespel}{i}}{\arrayIndex{\sespel}{j}}*\matrixIndex{\matrixFlow}{i}{j}$. %
-The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP,DPST2006MFHOSATSEAGAACMACS}. %
+The \glsShort{optQAP} is \npComplete~\cite{SGA1976PCAP,DPST2006MFHOSATSEAGAACMACS} and even among this problem class, is considered as particularly hard for \glspl{metaheuristic}~\cite{LdABNHQ2007ASFTQAP,BAP2015MAFTQAPPAC,S2006ILSFTQAP,BCPP1998TQAP}. %
 The \glsShort{optQAP} has applications such as building layout~\cite{E1977HLAAQAP,CNTSA2021HLDRAAQAPWGD,KP1978CALD}, keyboard layout~\cite{BO1977EVSMQZ}, circuit design~\cite{EW1990OSOSTFSM}, wiring~\cite{S1961TBWPAPA}, and scheduling~\cite{S2011SISBSMSWST}. %
-Typical benchmark instances can be found in~\gls{QAPLib}.%
+Typical benchmark instances can be found in~\gls{QAPLib}. %
+\Gls{SOTA} algorithms for the \glsShort{optQAP} include~\cite{M2012AIOTITSAFTQAP,BAP2015MAFTQAPPAC,FF1993GHFTQAP,TG1997AMFTQAP,T1991RTSFTQAP,MF1999ACOMATSAACFTQAP}.%
 }]{optQAP}{QAP}{Quadratic Assignment Problem}%
 %
 %
@@ -633,7 +645,7 @@ This rule may be overridden if a new best-so-far solution is discovered that out
 \newacronym[description={%
 In an instance of the \emph{Traveling Salesperson Problem}, also known as \emph{Traveling Salesman Problem}, a set of \scale~cities or locations as well as the distances between them are given~\cite{ABCC2006TTSPACS,LLRKS1985TTSPAGTOCO,GP2002TTSPAIV,WCLTTCMY2014BOAAOSFFTTSP,LWLvdBTW2024ATTSPWFFAAHA,WWCTL2016GVLSTIOPSOEAP}. %
 The goal is to find the shortest round-trip tour that starts at one city, visits all the other cities one time each, and returns to the origin. %
-The \glsShort{optTSP} is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV}. %
+The \glsShort{optTSP} is one of the most well-known \npHard\ combinatorial optimization problems~\cite{GJ1979CAIAGTTTONC,GP2002TTSPAIV,K1988TCOOP}. %
 The \glsShort{optTSP} has many applications\cite{ABCC2006TTSPACS}, including in transportation, logistics, (circuit) plotting and drilling problems\cite{GJR1991OCOPADMACS}, telescope aiming, and genome sequencing. %
 Solutions are often encoded as permutations~\sespel\ of the first~\scale\ natural numbers, where each city gets a number and the order of numbers in the permutation corresponds to the order of cities in the tour. %
 The distances between the \scale~cities are usually given in a $\scale\times\scale$~distance matrix~\matrixDistance, where \matrixIndex{\matrixDistance}{a}{b} is the distance from city~$a$ to city~$b$ with~$a,b\in\intRange{1}{\scale}$. %

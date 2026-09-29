@@ -17,9 +17,19 @@ It is a very common case that~$\searchSpace=\solutionSpace$ and that the decodin
 \newSymbol{instance}{\ensuremath{\mathcal{I}}}{I}{%
 the problem instance data, i.e., the data that is the input of the optimization algorithm. %
 The solution space~\solutionSpace\ and the objective function~\objFun\ as well as all components building on top of them are defined based on the concrete values in~\instance. %
-For example, in an~\emph{instance} of the \pgls{optTSP} could define the number~\scale\ of cities and their distances. %
+For example, in an~\emph{instance} of the \pgls{optTSP} could define the number~\scale\ of cities and their distances as distance matrix~\matrixDistance. %
 If our solutions are permutations of cities, then \scale~is also the dimension of~\solutionSpace. %
 The objective function~\objFun\ accesses the city distances to compute the tour lengths%
+}%
+%
+%
+\newSymbol{jsspJobs}{\ensuremath{k}}{k}{%
+the number of jobs in an instance of the \glsShort{optJSSP}%
+}%
+%
+%
+\newSymbol{jsspMachines}{\ensuremath{m}}{m}{%
+the number of machines in an instance of the \glsShort{optJSSP}%
 }%
 %
 %
