@@ -63,7 +63,7 @@ In this case, one may consider the \glsShort{optSTSP} as a special case of the \
 %
 %
 \newacronym[description={%
-\emph{Branch and bound} is a family of optimization methods that combines systematic exploration of the search space with both and objective function~\objFun\ subject to minimization and a lower bound function~\cite{LMSK1963AAFTTSP}. %
+\emph{Branch and bound} is a family of optimization methods that combines systematic exploration of the search space with both and objective function~\objFun\ subject to minimization and a lower bound function. %
 The idea is that we divide the search space into two sets. %
 We then pick the set that seems more interesting and divide it again. %
 We do this recursively until we have arrived at a set of size~1, which is our first solution~\solution. %
@@ -71,7 +71,8 @@ We can compute its objective value~$z=\objFunb{\solution}$. %
 Now we continue with the sets that we have created and not yet explored. %
 However, we can discard all sets for which the lower bound of the solution quality is~$\geq z$, because they can never give us a better solution than~\solution. %
 If we have divided another set down to size~1 and it yields a better solution than~\solution, of cause we update these values. %
-Eventually, we have either discarded or fully expanded all sets -- and then the solution we got must be optimal.%
+Eventually, we have either discarded or fully expanded all sets -- and then the solution we got must be optimal. %
+\glsShort{algoBB}-algorithms have been applied to the \gls{optTSP}~\cite{LMSK1963AAFTTSP} and the \gls{optJSSP}~\cite{CP1989AAFSTJSP}, for instance.%
 }]{algoBB}{B\&B}{branch and bound}%
 %
 %
@@ -319,7 +320,7 @@ It was originally developed by the United States Air Force for data modeling, fo
 %
 %
 \newacronym[description={%
-An \emph{iterated local search} is a variant of the \gls{algoSLS} which applies cycles of local search and perturbation~\cite{S2006ILSFTQAP}. %
+An \emph{iterated local search} is a variant of the \gls{algoLS} which applies cycles of local search and perturbation~\cite{S2006ILSFTQAP}. %
 First, an initial solution is generated and refined by the local search. %
 Then the cycle begins: A perturbation, i.e., a large search move that likely destroys a good part of the solution, is applied. %
 The resulting new solution is refined by local search. %
@@ -371,7 +372,18 @@ The \emph{Job Shop Scheduling Problem}~\cite{LLRKS1993SASAAC,BDP1996TJSSPCANST,C
 In a \glsShort{optJSSP} instance, there are \jsspMachines~machines and \jsspJobs~jobs~\cite{T1993BFBSP}. %
 Each job must be processed once by each machine in a job-specific sequence and has a job-specific processing time on each machine. %
 The goal is to find an assignment of jobs to machines that results in an overall shortest makespan, i.e., the schedule~(\gls{ganttChart}) which can complete all the jobs in the shortest time. %
-The \glsShort{optJSSP} is \npComplete~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA}.%
+The \glsShort{optJSSP} is \npComplete~\cite{LLRK1981RDIDSASAS,LLRKS1993SASAAC,CPW1998AROMSCAAA}. %
+The 8~most common sets of \glsShort{optJSSP} benchmark instances are~\instFormat{abz}~\cite{ABZ1988TSBPFJSS}, %
+\instFormat{dmu}~\cite{DMU1998BFSSP}, %
+\instFormat{ft}~\cite{FT1963PLCOLJSSR}, %
+\instFormat{la}~\cite{L1984RCPSAEIOHSTS}, %
+\instFormat{orb}~\cite{AC1991ACSOTJSSP}, %
+\instFormat{swv}~\cite{SWV1992NSSFSPWATJSS}, %
+\instFormat{ta}~\cite{T1993BFBSP}, and %
+\instFormat{yn}~\cite{YN1992AGAATLSJSI}.%
+Their data can be found (sometimes partially) in several repositories, such as the \gls{ORLib}~\cite{B1990OLDTPBEM,B1990WTOL}, \cite{S2019JSSPH}, and \cite{W2019JRDAIOTJSSP}, the latter of which also contains many results from existing works. %
+Encodings based on permutations with repetition are proposed in~\cite{GTK1994SJSSPBGA,B1995AGPATJSSWGA,BMK1996OPRFSP,SIS1997NESFSJSPBGA} and used in~\cite{WWLC2021FFAMOAIUBTOTOFV}. %
+The \gls{SOTA} of the \glsShort{optJSSP} includes~\cite{H2002PJSSP,SS2018BBOVBCACSOJSS,PLC2015ATSPRATSTJSSP,ZSRQ2008SNROTSAATTJSSP,PSV2010SJSSPUTPOBABV,GR2014AEAGMWABRKGAFJSS,VLS2015FDSFCBS}.%
 }]{optJSSP}{JSSP}{Job Shop Scheduling Problem}%
 %
 %
@@ -417,6 +429,12 @@ Typical examples include DeepSeek~\cite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCL
 %
 %
 \newacronym[description={%
+A \emph{local search} is an algorithm where a single \inQuotes{current} candidate solution is maintained and new solutions are selected from its neighborhood in each step. %
+Most \glsShortpl{algoLS} are randomized, i.e., \glsFull{algoSLS}.%
+},shortplural={LSes}]{algoLS}{LS}{local search}%
+%
+%
+\newacronym[description={%
 Many types of software for which new versions appear regularly offer so-called \emph{long-term support} versions. %
 Such versions are guaranteed to be supported for a longer-than-usual time. %
 The \ubuntu\ \pgls{OS} releases a new \pgls{LTS} version every two years~\cite{C2024TULARC}, for example.%
@@ -424,9 +442,10 @@ The \ubuntu\ \pgls{OS} releases a new \pgls{LTS} version every two years~\cite{C
 %
 %
 \newacronym[description={%
-A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined by a \gls{algoSLS} before it enters the population~\cite{W2009GOATAA}. %
-Als \glsShort{algoSLS}, we can use, e.g., \glsShort{algoRLS}, but \gls{algoTS}~\cite{FF1993GHFTQAP} is maybe a better choise. %
-Some \gls{SOTA} algorithms in some domains may be classified as \glsShortpl{algoMA}, e.g., \glsFull{algoLKH} basically uses a population that is refined via a local search.%
+A \emph{Memetic Algorithm} is an \gls{algoEA} where each new solution is refined by a \gls{algoLS} before it enters the population~\cite{W2009GOATAA}. %
+As \glsShort{algoLS}, we can use, e.g., \glsShort{algoRLS}, but \gls{algoTS}~\cite{FF1993GHFTQAP,CPL2016AHEATSTJSSP} is maybe a better choise. %
+Some \gls{SOTA} algorithms in some domains may be classified as \glsShortpl{algoMA}, e.g., \glsFull{algoLKH} basically uses a population that is refined via a local search. %
+\glsShortpl{algoMA} also worked well on the \glsShort{optJSSP}~\cite{CPL2016AHEATSTJSSP,H2002PJSSP} and the \glsShort{optTSP}~\cite{FF1993GHFTQAP}.%
 }]{algoMA}{MA}{Memetic Algorithm}%
 %
 %
@@ -530,7 +549,7 @@ It has successfully been applied to a wide range of problems, from the \gls{optQ
 \newacronym[description={%
 \emph{Simulated Annealing} is a \gls{algoSLS} that sometimes accepts a worse solution~\cite{KGV1983OBSA,C1985TATTTSPAESA,DPSW1982MCTICO,P1970AMCMFTASOCTOCOP,W2009GOATAA}. %
 The probability to do so decreases over time and with the difference in objective values, i.e.,is the lower the worse the new solution is. %
-\glsShort{algoSA} performed well on a variety of problems, including the \glsShort{optQAP}~\cite{TB1994AISAAFTQAP,M2003AMSAAFTQAP}.%
+\glsShort{algoSA} performed well on a variety of problems, including the \glsShort{optQAP}~\cite{TB1994AISAAFTQAP,M2003AMSAAFTQAP} and the \glsShort{optJSSP}~\cite{PSV2010SJSSPUTPOBABV}.%
 }]{algoSA}{SA}{Simulated Annealing}%
 %
 %
@@ -551,8 +570,8 @@ It uses fitness proportionate selection to choose which solutions should \inQuot
 %
 %
 \newacronym[description={%
-\emph{Stochastic local search} or \emph{local search} for short, is one of the simplest \gls{metaheuristic} search paradigms~\cite{HS2005SLSFAA}: %
-A single \inQuotes{current} candidate solution is maintained and new solutions are sampled from its neighborhood. %
+\emph{Stochastic local search} is a \glsFull{algoLS}, one of the simplest \gls{metaheuristic} search paradigms~\cite{HS2005SLSFAA}: %
+A single \inQuotes{current} candidate solution is maintained and new solutions are \emph{stochastically} sampled from its neighborhood, i.e., in a way that involves random numbers. %
 If these solutions are deemed interesting based on their objective value, they replace the \inQuotes{current}. %
 The cycle continues. %
 Basic examples are \gls{algoRLS} and \gls{algoEAopo}. %
@@ -634,11 +653,11 @@ They are stored losslessly.}]{SVG}{SVG}{Scalable Vector Graphics}%
 %
 %
 \newacronym[description={%
-\emph{Tabu Search} is one of the most successful \glspl{algoSLS}~\cite{G1989TSP1,G1990TSP2,GTdW1993AUGTTS}. %
+\emph{Tabu Search} is one of the most successful \glspl{algoSLS}~\cite{G1989TSP1,G1990TSP2,GTdW1993AUGTTS,W2008TS}. %
 In order to avoid returning to previous solutions, it declares certain solutions or search moves as \inQuotes{tabu.} %
 For example, if a bit in a discrete problem has been flipped by the search operator, it may be forbidden to flip the bit again for some time, thus preventing the algorithm from getting trapped in a cycle. %
 This rule may be overridden if a new best-so-far solution is discovered that outperforms all previous solutions, in which case it would be accepted~(this is the so-called aspiration criterion). %
-\glsShort{algoTS} has performed well on the \glsShort{optQAP}~\cite{T1991RTSFTQAP,T1995COISFTQAP,M2005ATSAFTQAP,M2012AIOTITSAFTQAP,BT1994SAATSITLRACOQT,BT1994TRTS}.%
+\glsShort{algoTS} has performed well on the \glsShort{optQAP}~\cite{T1991RTSFTQAP,T1995COISFTQAP,M2005ATSAFTQAP,M2012AIOTITSAFTQAP,BT1994SAATSITLRACOQT,BT1994TRTS} and on the \glsShort{optJSSP}~\cite{NS1996AFTSAFTJSP,PM2000ATSMGBSBFTJSSP,SS2018BBOVBCACSOJSS,PLC2015ATSPRATSTJSSP,ZSRQ2008SNROTSAATTJSSP}.%
 }]{algoTS}{TS}{Tabu Search}%
 %
 %
