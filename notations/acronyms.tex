@@ -72,7 +72,7 @@ Now we continue with the sets that we have created and not yet explored. %
 However, we can discard all sets for which the lower bound of the solution quality is~$\geq z$, because they can never give us a better solution than~\solution. %
 If we have divided another set down to size~1 and it yields a better solution than~\solution, of cause we update these values. %
 Eventually, we have either discarded or fully expanded all sets -- and then the solution we got must be optimal. %
-\glsShort{algoBB}-algorithms have been applied to the \gls{optTSP}~\cite{LMSK1963AAFTTSP} and the \gls{optJSSP}~\cite{CP1989AAFSTJSP}, for instance.%
+\glsShort{algoBB}-algorithms have been applied to the \gls{optTSP}~\cite{LMSK1963AAFTTSP}, the \gls{optJSSP}~\cite{CP1989AAFSTJSP}, and maritime logistics~\cite{XL2018NLBAEMFTCBAP}, for instance.%
 }]{algoBB}{B\&B}{branch and bound}%
 %
 %
@@ -100,8 +100,38 @@ It is fully separable, i.e., we can optimize each variable separately.%
 \newacronym[description={%
 The \emph{Bin Packing Problem}~\cite{S2018ITCAPOPMASM,DF1992CAPIPADATAB} is one of the classical problems from \pgls{fieldOR}. %
 The goal is to pack a set of objects into containers, using as few containers as possible. %
-Different flavors of BPPs can be distinguished, e.g., by the number of dimensions~\cite{DIM2016BPACSPMMAEA,LMM2002TDPPAS} that the objects and containers have, and/or whether the objects can be rotated~\cite{ZWvdBTLTW2024RLSFTDBPAANRFFFA}, as well as other constraints and limitations.%
-}]{optBPP}{BPP}{Bin Packing Problem}%
+Different flavors of \glsShortpl{optBPP} can be distinguished, e.g., by the number of dimensions~\cite{DIM2016BPACSPMMAEA,LMM2002TDPPAS} that the objects and containers have~(see, e.g., the \glsShort{optBPP2D}), and/or whether the objects can be rotated~\cite{ZWvdBTLTW2024RLSFTDBPAANRFFFA}, as well as other constraints and limitations. %
+Both the one- and two-dimensional \glsShort{obtBPP} are strongly \npHard~\cite{LMV2002RAOTDBPP}. %
+}]{optBPP}{BP}{Bin Packing Problem}%
+%
+%
+\newacronym[description={%
+In the two-dimensional \gls{optBPP}, the goal is to pack rectangles into rectangular bins without overlap and such that their edges are parallel to the edges of the bins~\cite{LMM2002TDPPAS,LMV2002RAOTDBPP,IdLMMM2021ESTFTDCAP}. %
+The \glsShort{optBPP2D} is strongly \npHard~\cite{LMV2002RAOTDBPP}. %
+The variants of this problem include the \glsShort{optBPP2DnoRotFree}, \glsShort{optBPP2DrotFree}, \glsShort{optBPP2DnoRotGuil}, and \glsShort{optBPP2DrotGuil}~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP}. %
+\glsShortpl{optBPP2D} have many practical applications, including cutting~(wood, glas)~\cite{LMV2002RAOTDBPP}, packing~(transportation, warehouse)~\cite{LMV2002RAOTDBPP}, and newspaper page layout~\cite{SH2008ALOPNP}.%
+}]{optBPP2D}{2BP}{two-dimensional Bin Packing Problem}%
+%
+%
+\newacronym[description={%
+In the oriented \gls{optBPP2D} with free cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, but can otherwise be arranged freely~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA}.%
+}]{optBPP2DnoRotFree}{2BP{\textbar}O{\textbar}F}{oriented two-dimensional Bin Packing Problem with free cuts}%
+%
+%
+\newacronym[description={%
+In the oriented \gls{optBPP2D} with guillotine cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, and must be arranged such that they can be extracted by edge-to-edge cuts~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP}.%
+}]{optBPP2DnoRotGuil}{2BP{\textbar}O{\textbar}G}{oriented two-dimensional Bin Packing Problem with guillotine cuts}%
+%
+%
+\newacronym[description={%
+In this variant of the \gls{optBPP2D} with free cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be and can freely be arranged~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZLWvdBTW2024RLSOT2RBPPWIR,ZWvdBTLTW2024RLSFTDBPAANRFFFA}. %
+Besides packing and cutting, this problem also occurs in scheduling and build formation in additive manufacturing~\cite{PSTM2024SIORAMSNASOOAMSMTT,LZ2018SBPMSWTDBPC}.%
+}]{optBPP2DrotFree}{2BP{\textbar}R{\textbar}F}{two-dimensional Bin Packing Problem with free cuts and rotation}%
+%
+%
+\newacronym[description={%
+In this variant of the \gls{optBPP2D} with guillotine cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be, but must be arranged such that they can be extracted by edge-to-edge cuts~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP}.%
+}]{optBPP2DrotGuil}{2BP{\textbar}R{\textbar}G}{two-dimensional Bin Packing Problem with guillotine cuts and rotation}%
 %
 %
 \newacronym[description={%
@@ -114,6 +144,12 @@ The year 1~CE comes directly after the year 1~\pgls{BCE}~\cite{SA2016ZALDTDVATUM
 \emph{Continuous Integration} is a software development process where developers integrate new code into a codebase hosted in a \gls{VCS}, after which automated tools run an automated build process including code analysis~(such as \pglspl{linter}) and \pgls{unitTest} execution~\cite{L2018PCIADACGWE}. %
 If the build succeeds and no errors or problems with the code are, the code may automatically be deployed~(if the CI~system is configured to do so).%
 }]{continuousIntegration}{CI}{Continuous Integration}%
+%
+%
+\newacronym[description={%
+The \emph{Cutting Stock Problem} is about cutting shapes of a larger shape while reducing waste~\cite{LMV2002RAOTDBPP}. %
+It is closely related to the \gls{optBPP}.%
+}]{optCSP}{CSP}{Cutting Stock Problem}%
 %
 %
 \newacronym[description={%
