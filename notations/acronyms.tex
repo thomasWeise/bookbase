@@ -55,6 +55,20 @@ An \emph{Application Programming Interface} is a set of rules or protocols that 
 %
 %
 \newacronym[description={%
+An \inQuotes{almost-square} be a rectangle with size~$i\times(i+1)$ with~$i\in\naturalNumbersO$. %
+The \emph{almost-squares-in-almost-squares} problem~\cite{vdBBMSB2016ASIASSTFI} is a special case of the~\glsShort{optBPP2DrotFree}. %
+Here, almost-square rectangles of sizes $1\times2$, $2\times3$, \dots, $\scale\times(\scale+1)$ must be placed into an almost-square bin without waste. %
+This requires that there exists a natural number~$p\in\naturalNumbersO$ such that~$p(p+1)=\sum_{i=1}^{\scale}i(i+1)$~\cite{vdBBMSB2016ASIASSTFI}. %
+There are exacty five \glsShort{optAsqas} instances~\cite{vdBBMSB2016ASIASSTFI}, namely with bin sizes~%
+$1\times2$ for $\scale=1$, $p=1$, %
+$5\times4$ for $\scale=3$, $p=4$, %
+$15\times16$ for $\scale=8$, $p=15$, %
+$55\times56$ for $\scale=20$, $p=55$, and%
+$119\times120$ for $\scale=34$, $p=119$.%
+}]{optAsqas}{Asqas}{almost-squares-in-almost-squares}%
+%
+%
+\newacronym[description={%
 The general case for \glsShortpl{optTSP} are \emph{asymmetric Traveling Salesperson Problems}, where the $\scale\times\scale$~distance matrix~\matrixDistance\ does not need to be symmetric. %
 In other words, it is possible that $\exists a,b\in\intRange{1}{\scale}$ with $\matrixIndex{\matrixDistance}{a}{b}\neq\matrixIndex{\matrixDistance}{b}{a}$. %
 Notice that while such index tuple \emph{may} exist, this is not always or necessarily the case. %
@@ -72,7 +86,7 @@ Now we continue with the sets that we have created and not yet explored. %
 However, we can discard all sets for which the lower bound of the solution quality is~$\geq z$, because they can never give us a better solution than~\solution. %
 If we have divided another set down to size~1 and it yields a better solution than~\solution, of cause we update these values. %
 Eventually, we have either discarded or fully expanded all sets -- and then the solution we got must be optimal. %
-\glsShort{algoBB}-algorithms have been applied to the \gls{optTSP}~\cite{LMSK1963AAFTTSP}, the \gls{optJSSP}~\cite{CP1989AAFSTJSP}, and maritime logistics~\cite{XL2018NLBAEMFTCBAP}, for instance.%
+\glsShort{algoBB}-algorithms have been applied to the \gls{optTSP}~\cite{LMSK1963AAFTTSP}, the \gls{optJSSP}~\cite{CP1989AAFSTJSP}, the \gls{optBPP2DnoRotFree}~\cite{MV1998ESOTTDFBPP}, and maritime logistics~\cite{XL2018NLBAEMFTCBAP}, for instance.%
 }]{algoBB}{B\&B}{branch and bound}%
 %
 %
@@ -114,7 +128,7 @@ The variants of this problem include the \glsShort{optBPP2DnoRotFree}, \glsShort
 %
 %
 \newacronym[description={%
-In the oriented \gls{optBPP2D} with free cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, but can otherwise be arranged freely~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA}.%
+In the oriented \gls{optBPP2D} with free cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, but can otherwise be arranged freely~\cite{MV1998ESOTTDFBPP,LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA}.%
 }]{optBPP2DnoRotFree}{2BP{\textbar}O{\textbar}F}{oriented two-dimensional Bin Packing Problem with free cuts}%
 %
 %
@@ -124,8 +138,9 @@ In the oriented \gls{optBPP2D} with guillotine cuts, the rectangles to pack have
 %
 %
 \newacronym[description={%
-In this variant of the \gls{optBPP2D} with free cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be and can freely be arranged~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZLWvdBTW2024RLSOT2RBPPWIR,ZWvdBTLTW2024RLSFTDBPAANRFFFA}. %
-Besides packing and cutting, this problem also occurs in scheduling and build formation in additive manufacturing~\cite{PSTM2024SIORAMSNASOOAMSMTT,LZ2018SBPMSWTDBPC}.%
+In this variant of the \gls{optBPP2D} with free cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be and can freely be arranged~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZLWvdBTW2024RLSOT2RBPPWIR,ZWvdBTLTW2024RLSFTDBPAANRFFFA,B1982PRPAHA}. %
+Besides packing and cutting, this problem also occurs in scheduling and build formation in additive manufacturing~\cite{PSTM2024SIORAMSNASOOAMSMTT,LZ2018SBPMSWTDBPC}. %
+The \gls{optAsqas} problem~\cite{vdBBMSB2016ASIASSTFI} is also a~\glsShort{optBPP2DrotFree}.%
 }]{optBPP2DrotFree}{2BP{\textbar}R{\textbar}F}{two-dimensional Bin Packing Problem with free cuts and rotation}%
 %
 %
@@ -147,7 +162,7 @@ If the build succeeds and no errors or problems with the code are, the code may 
 %
 %
 \newacronym[description={%
-The \emph{Cutting Stock Problem} is about cutting shapes of a larger shape while reducing waste~\cite{LMV2002RAOTDBPP}. %
+The \emph{Cutting Stock Problem} is about cutting shapes of a larger shape while reducing waste~\cite{LMV2002RAOTDBPP,MAVdC2010AFMFTTDGCSP}. %
 It is closely related to the \gls{optBPP}.%
 }]{optCSP}{CSP}{Cutting Stock Problem}%
 %
