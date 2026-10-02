@@ -437,6 +437,18 @@ is a library of 136 benchmark instances for the \glsFull{optQAP}~\cite{BKR1997QA
 }}%
 %
 %
+\newglossaryentry{algoRandomKeys}{%
+text={Random Keys encoding},%
+name={Random Keys encoding},%
+sort={Random Keys encoding},%
+description={%
+is a decoding procedure~$\decode:\searchSpace\mapsto\solutionSpace$ that maps a continuous search space~$\searchSpace\subset[0,1]^{\scale}$ which is a subset of the \scale\nobreakdashes-dimensional real numbers to the space~\solutionSpace\ of permutations of the first \scale~natural numbers~\cite{B1992GARKFSAO,B1994GAARKFSAO}. %
+For example, on $\scale=5$, the vector~$\sespel=(0.49, 0.91, 0.33, 0.75, 0.51)$ is translated to the permutation~$\solution=(3, 1, 5, 4, 2)$, because $\arrayIndex{\sespel}{3}=0.33$ has the smallest value, putting~$3$ at the beginning, $\arrayIndex{\sespel}{1}=0.49$ the second-smallest, placing~$1$ second, {\dots}, and $\arrayIndex{\sespel}{2}=0.91$ being the largest value meaning that the last number in~\solution\ will be~$2$~\cite{B1992GARKFSAO}. %
+The advantage of the encoding is that we can search in \searchSpace\ applying arbitrary mathematical operators, crossover, and mutation procedures, but will always get correct permutations. %
+The disadvantage is that $|\searchSpace|\gg|\solutionSpace|$ and that there actually is no meaning underpinning moves in~\searchSpace\ in relation to their projected result in~\solutionSpace.%
+}}%
+%
+%
 \newglossaryentry{rdb}{%
 name={relational database},%
 description={%

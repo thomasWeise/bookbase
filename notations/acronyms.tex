@@ -128,7 +128,9 @@ The variants of this problem include the \glsShort{optBPP2DnoRotFree}, \glsShort
 %
 %
 \newacronym[description={%
-In the oriented \gls{optBPP2D} with free cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, but can otherwise be arranged freely~\cite{MV1998ESOTTDFBPP,LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA}.%
+In the oriented \gls{optBPP2D} with free cuts, the rectangles to pack have fixed orientations, i.e., cannot be rotated, but can otherwise be arranged freely~\cite{MV1998ESOTTDFBPP,LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA}. %
+Permutation-based search spaces can be used for this problem by using the \gls{algoIBL} encoding. %
+The \gls{SOTA} for this problem comprises~\cite{GR2013ABRKGAF2A3BPP,ZWvdBTLTW2024RLSFTDBPAANRFFFA,BDC2015RHHAFTOONO2BPP,CGRS2020PACATSMTOOSFT2BPP,BS2013ST2BPPBMOAHEA,PAVOT2010AHGVAFTATDBP}.%
 }]{optBPP2DnoRotFree}{2BP{\textbar}O{\textbar}F}{oriented two-dimensional Bin Packing Problem with free cuts}%
 %
 %
@@ -140,13 +142,25 @@ In the oriented \gls{optBPP2D} with guillotine cuts, the rectangles to pack have
 \newacronym[description={%
 In this variant of the \gls{optBPP2D} with free cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be and can freely be arranged~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP,ZLWvdBTW2024RLSOT2RBPPWIR,ZWvdBTLTW2024RLSFTDBPAANRFFFA,B1982PRPAHA}. %
 Besides packing and cutting, this problem also occurs in scheduling and build formation in additive manufacturing~\cite{PSTM2024SIORAMSNASOOAMSMTT,LZ2018SBPMSWTDBPC}. %
-The \gls{optAsqas} problem~\cite{vdBBMSB2016ASIASSTFI} is also a~\glsShort{optBPP2DrotFree}.%
+The \gls{optAsqas} problem~\cite{vdBBMSB2016ASIASSTFI} is also a~\glsShort{optBPP2DrotFree}. %
+Search spaces based on signed permutations can be used for this problem by using the \gls{algoIBL} encoding. %
+The \gls{SOTA} for this problem comprises~\cite{GR2013ABRKGAF2A3BPP,ZLWvdBTW2024RLSOT2RBPPWIR,ZWvdBTLTW2024RLSFTDBPAANRFFFA,BDC2015RHHAFTOONO2BPP,CGRS2020PACATSMTOOSFT2BPP}.%
 }]{optBPP2DrotFree}{2BP{\textbar}R{\textbar}F}{two-dimensional Bin Packing Problem with free cuts and rotation}%
 %
 %
 \newacronym[description={%
 In this variant of the \gls{optBPP2D} with guillotine cuts, the rectangles to pack can be rotated by~$90^{\circ}$ if need be, but must be arranged such that they can be extracted by edge-to-edge cuts~\cite{LMV1999HAMAFACOTDBPP,LMV2002RAOTDBPP}.%
 }]{optBPP2DrotGuil}{2BP{\textbar}R{\textbar}G}{two-dimensional Bin Packing Problem with guillotine cuts and rotation}%
+%
+%
+\newacronym[description={%
+The \emph{Biased Random Key Genetic Algorithm} is a \gls{algoEA} with a continuous search space~$\searchSpace\subset[0,1]^{\scale}$ and a decoding function~\decode\ translating this space to something else and biased, uniform, and elitist mating strategies~\cite{LPAR2025BRKGAAR,GR2010BRKGAFCO}.%
+The \emph{bias} comes from the fact that one of the parents used for the binary operation is biased to be of higher fitness
+than the other parent~\cite{GR2010BRKGAFCO}. %
+Often, \decode\ is the \gls{algoRandomKeys}~\cite{B1992GARKFSAO,B1994GAARKFSAO} procedure translating \searchSpace\ to permutations of the first \scale~natural numbers~\cite{GR2014AEAGMWABRKGAFJSS}. %
+Sometimes, it is actually a \gls{algoMA} further refining the translation result with a \gls{algoLS}~\cite{GR2014AEAGMWABRKGAFJSS}. %
+Sometimes the permutations are then further translated to more complex data structures, such as \glspl{ganttChart} for the \gls{optJSSP}~\cite{GR2014AEAGMWABRKGAFJSS}, or packing plans for \gls{optBPP2D} 3D~packing~\cite{GR2013ABRKGAF2A3BPP}.%
+}]{algoBRKGA}{BRKGA}{Biased Random Key Genetic Algorithm}%
 %
 %
 \newacronym[description={%
@@ -328,9 +342,18 @@ It was shown to be twice as fast as any mutation-only \gls{algoEA} on \gls{optOn
 %
 %
 \newacronym[description={%
-Genetic Programming~\cite{K1993GPOTPOCBMONS,PLM2008AFGTGP,W2009GOATAA,WT2012EDAWGP} is the application of \gls{metaheuristic} optimization, usually in form of an \glspl{algoEA}, to a search space comprised of tree datastructures. %
+\emph{Genetic Programming}~\cite{K1993GPOTPOCBMONS,PLM2008AFGTGP,W2009GOATAA,WT2012EDAWGP} is the application of \gls{metaheuristic} optimization, usually in form of an \glspl{algoEA}, to a search space comprised of tree datastructures. %
 These tree datastructures often represent programs or mathematical expressions.%
 }]{algoGP}{GP}{Genetic Programming}%
+%
+%
+\newacronym[description={%
+A \emph{Greedy Randomized Adaptive Search Procedure} is a \gls{metaheuristic} where each cycle consists of two main components~\cite{FR1995GRASP,FR2009AABOGP1A,FR2009AABOGP2A}: %
+First, a starting point is generated using a heuristic method~(as opposed to being randomly sampled). %
+Then, a \gls{algoLS} is applied to refine the solution. %
+Then, another cycle starts and proceeds in the same way. %
+The overall best solution is retained as result.%
+}]{algoGRASP}{GRASP}{Greedy Randomized Adaptive Search Procedure}%
 %
 %
 \newacronym{GUI}{GUI}{graphical user interface}%
@@ -356,6 +379,24 @@ It often offers functionality such as editing source code, debugging, testing, o
 For \python, we recommend using \pycharm. %
 On Apple systems, \pgls{xcode} is often used.%
 }]{ide}{IDE}{Integrated Development Environment}%
+%
+%
+\newacronym[description={%
+The \emph{improved bottom left} heuristic is a one-shot algorithm constructing a solution for \gls{optBPP2D}~\cite{LT1999AIBAFGAOTOPOR}. %
+For the \gls{optBPP2DnoRotFree} problem variant, the input of the \glsShort{algoIBL} algorithm is a permutation of the first~\scale\ natural numbers, each number identifying one rectangle to be packed. %
+For the \gls{optBPP2DrotFree} problem flavor, the permutation elements are signed, where a negative sign indicates a rotation by~$90^{\circ}$~\cite{LT1999AIBAFGAOTOPOR}. %
+In~\cite{ZWvdBTLTW2024RLSFTDBPAANRFFFA,ZLWvdBTW2024RLSOT2RBPPWIR} it is adapted to a multi-bin situation as follows: %
+The algorithm iterates over the (potentially signed) permutation~\sespel\ and places the rectangles into the packing plan in the prescribed order. %
+It first places the rectangle outside on top of the current bin~$b$, with its bottom-right corner onto the top-right corner of the current bin~$b$. %
+It then moves the rectangle downwards and leftwards as far as possible, prioritizing the downward movement whenever possible. %
+If the rectangle cannot be moved any further, it checks if it is completely contained in the bin~$b$. %
+If yes, it can remain there. %
+Otherwise, a new bin is opened~($b\gets b+1$) and the rectangle is placed at its bottom-left corner. %
+Once a new bin is opened, this bin is used for all further insertions. %
+\Gls{algoIBL} is suitable as a decoding function~\decode\ inside an \gls{algoEA}~\cite{LT1999AIBAFGAOTOPOR}. %
+Historically, it improves upon the {BL}~algorithm~\cite{J1996OGAFTPOP}: %
+That algorithm cannot represent all possible optimal packings using a permutation, but the \gls{algoIBL} can~\cite{LT1999AIBAFGAOTOPOR}.%
+}]{algoIBL}{IBL}{Improved Bottom Left}%
 %
 %
 \newacronym[description={Integrated Data Store was developed by \citeauthor{B2009TOOTIDSITFDAD} in 1961/62 at General Electric was the first \dbms\ using a network-based data model~\cite{B2009TOOTIDSITFDAD,B1965SFRAP}}]{softIDS}{IDS}{Integrated Data Store}%
@@ -732,7 +773,7 @@ On each day, a team needs to travel if its scheduled game is not at its present 
 On the last day, each team may need to travel back home unless their last game is a home game. %
 The total travel length sums up the lengths of all travels over all teams. %
 The fair part is represented in several constraints, such as doubleRoundRobin, compactness, maxStreak, and noRepeat. %
-The TTP is \npHard~\cite{VTvdB2023TCFGATHFECTTTP}.%
+The \glsShort{optTTP} is \npHard~\cite{VTvdB2023TCFGATHFECTTTP}.%
 }]{optTTP}{TTP}{Traveling Tournament Problem}%
 %
 %
@@ -781,6 +822,28 @@ A \emph{Version Control System} is a software which allows you to manage and pre
 A distributed VCS allows multiple users to work on the same code and upload their changes to the server, which then preserves the change history.
 The most popular distributed VCS is \gls{git}. %
 }]{VCS}{VCS}{Version Control Systems}%
+%
+%
+\newacronym[description={%
+\emph{Variable Neighborhood Descend}; see \gls{algoVNS}. %
+}]{algoVND}{VND}{Variable Neighborhood Descend}%
+%
+%
+\newacronym[description={%
+\emph{Variable Neighborhood Search} is a \gls{metaheuristic} framework combining a systematic change of neighborhood with \gls{algoLS}~\cite{MH1997VNS,HMMP2008VNSMAA}. %
+A \emph{neighborhood} structure in \gls{algoLS} defines which solutions can be reached from a given solution within one search step. %
+Usually, one uses a single unary operator and, hence, has a single neighborhood structure. %
+However, for many problems, we can easily design many operators. %
+For permutations, for example, one operator may swap two elements, another one may reverse a section of the permutation, and yet another one, while yet another one may rotate a subsequence one step to the left or right~\cite{WCLTTCMY2014BOAAOSFFTTSP}. %
+In the \glsShort{algoVNS} framework, a multiple neighborhoods are investigated in a systematic fashion. %
+Assume that we have a list of neighborhood structures. %
+\Gls{algoVND} works in a deterministic fashion. %
+It finds the best solution that can be reached in one step from the current solution under the current neighborhood. %
+If this is better than the current solution, we accept it and continue with the first neighborhood. %
+Otherwise, we continue with the next neighborhood in the list. %
+In Basic \gls{algoVNS}, instead of picking the best move from the current neighborhood, the first improving move is used. %
+Also, at the beginning of each cycle, a random point from the current neighborhood around the current solution is chosen as starting point.%
+}]{algoVNS}{VNS}{Variable Neighborhood Search}%
 %
 %
 \newacronym[description={%

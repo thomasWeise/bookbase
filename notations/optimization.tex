@@ -7,7 +7,10 @@
 %
 \newFunc{decode}{\ensuremath{\gamma}}{g(x)}{\sespel}{%
 The decoding function~$\gamma:\searchSpace\mapsto\solutionSpace$ translates point from the search space~\searchSpace\ to one point~\solution\ in the solution space~\solutionSpace. %
-It is a very common case that~$\searchSpace=\solutionSpace$ and that the decoding function~\decode\ is the identity mapping%
+It is a very common case that~$\searchSpace=\solutionSpace$ and that the decoding function~\decode\ is the identity mapping. %
+Examples for encodings that translate from a simple search space~\searchSpace\ to a complex solution data structure~\solutionSpace\ are the \gls{algoIBL} algorithm that translates (potentially signed) permutations to two-dimensional packings on the \gls{optBPP2D}, the permutation-based encoding of \glspl{ganttChart} for the \gls{optJSSP} from~\cite{GTK1994SJSSPBGA,B1995AGPATJSSWGA,BMK1996OPRFSP,SIS1997NESFSJSPBGA,WLCW2021SJSSPWUABFGS}, or the permutation-based encoding of game plans for the \gls{optTTP} from~\cite{XWvdBW2024RLSVNVFFAOTTTP}. %
+Encodings can also translate between types of search spaces. %
+The \gls{algoRandomKeys}, for example, translates from~$[0,1]^{\scale}$ to permutations of the first \scale~natural numbers.%
 }%
 %
 %
@@ -75,7 +78,7 @@ The search space~\searchSpace\ is the space through which an optimization algori
 The search operators of \glspl{metaheuristic} are used to sample points~$\sespel\in\searchSpace$, for example. %
 On many benchmark problems, the objective functions~\objFun\ directly evaluate the elements~$\sespel\in\searchSpace$, i.e., are defined as~$\objFun:\searchSpace\mapsto\realNumbers$. %
 However, very often these elements~\sespel\ are not the same data structures that the user is interested in and/or that the objective functions evaluate: %
-It is common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated, like a Gantt chart. %
+It is common that the search space~\searchSpace\ is a simple and plain data structure that can be tackled with standard operations or mathematical tools, such as real vectors~$\realNumbers^n$, permutations, or bit strings, whereas the solution space~\solutionSpace\ can be something more complicated. %
 Then, the user only cares about the solutions~$\solution\in\solutionSpace$ and not about the search space~\searchSpace. %
 A decoding~$\decode:\searchSpace\mapsto\solutionSpace$ is employed to translate the~$\sespel\in\searchSpace$ to~$\solution=\decodeb{\sespel}$ with~$\solution\in\solutionSpace$%
 }%
