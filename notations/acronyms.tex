@@ -352,7 +352,9 @@ A \emph{Greedy Randomized Adaptive Search Procedure} is a \gls{metaheuristic} wh
 First, a starting point is generated using a heuristic method~(as opposed to being randomly sampled). %
 Then, a \gls{algoLS} is applied to refine the solution. %
 Then, another cycle starts and proceeds in the same way. %
-The overall best solution is retained as result.%
+The overall best solution is retained as result. %
+Many examples for applications of \glsShortpl{algoGRASP} are listed in~\cite{FR2009AABOGP2A}. %
+\glsShort{algoGRASP} in combination with \glsShort{algoVND} has been applied to the \gls{optBPP2DnoRotFree} in~\cite{PAVOT2010AHGVAFTATDBP}.%
 }]{algoGRASP}{GRASP}{Greedy Randomized Adaptive Search Procedure}%
 %
 %
@@ -548,7 +550,7 @@ are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
 The \glsShort{optMaxSAT} problem is \npComplete~\cite{C1971TCOTPP} and exhibits low epistasis but deceptiveness~\cite{RW1998GABITMD}, making it hard for local searches. %
-Typical benchmark instances can be found in~\gls{SATLIB}.%
+Typical benchmark instances can be found in~\gls{SATLIB}, which contains smaller-scale instances, and the up-to-date \gls{optMaxSATEvaluation}, providing \gls{SOTA} benchmarks, algorithms, and results.%
 }]{optMaxSAT}{MaxSAT}{Maximum Satisfiability}%
 %
 %
@@ -832,6 +834,7 @@ The most popular distributed VCS is \gls{git}. %
 %
 \newacronym[description={%
 \emph{Variable Neighborhood Descend}; see \gls{algoVNS}. %
+\glsShort{algoVND} in combination with \glsShort{algoGRASP} has been applied to the \gls{optBPP2DnoRotFree} in~\cite{PAVOT2010AHGVAFTATDBP}.%
 }]{algoVND}{VND}{Variable Neighborhood Descend}%
 %
 %
