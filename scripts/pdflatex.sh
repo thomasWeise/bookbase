@@ -131,7 +131,7 @@ while (("$additional" >= 0))  ; do
 
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now running ${texProgram[@]}."
   set +o errexit
-  "${texProgram[@]}" "$documentName"
+  "${texProgram[@]}" -cnf-line=extra_mem_top=134217728 -cnf-line=extra_mem_bot=134217728 -cnf-line=main_memory=134217728 "$documentName"
   retVal=$?
   set -o errexit
   if(("$retVal" != 0)) ; then
