@@ -23,7 +23,9 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The relative document path is '$relativeDo
 documentName="${relativeDocumentPath%%.*}"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The base name of the document is '$documentName'."
 
-texProgram=("$(which pdflatex)" "-halt-on-error" "-interaction=nonstopmode" "$documentName")
+memSize="2097152"
+poolSize="$(($memSize * 16))"
+texProgram=("$(which pdflatex)" "-cnf-line" "extra_mem_top=$memSize" "-cnf-line" "extra_mem_bot=$memSize" "-cnf-line" "main_memory=$memSize" "-cnf-line" "hash_extra=$memSize" "-cnf-line" "pool_size=$poolSize" "-cnf-line" "max_strings=$memSize" "-halt-on-error" "-interaction=nonstopmode" "$documentName")
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): We will use ${texProgram[@]} to compile the document."
 "${texProgram[0]}" --version
 bibProgram="$(readlink -f "$(which biber)")"
@@ -131,7 +133,7 @@ while (("$additional" >= 0))  ; do
 
   echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Now running ${texProgram[@]}."
   set +o errexit
-  "${texProgram[@]}" -cnf-line=extra_mem_top=134217728 -cnf-line=extra_mem_bot=134217728 -cnf-line=main_memory=134217728 -cnf-line=font_mem_size=134217728 -cnf-line=pool_size=134217728 -cnf-line=buf_size=134217728 "$documentName"
+  "${texProgram[@]}"
   retVal=$?
   set -o errexit
   if(("$retVal" != 0)) ; then
