@@ -16,6 +16,7 @@ echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Welcome to the book building script."
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): The script directory is '$scriptDir'."
 
+export NO_PDF_OPT="Yes"
 "$scriptDir/inVenv.sh" "$scriptDir/__bookMake.sh" "$1" "$2" "$3"
 
 echo "$(date +'%0Y-%0m-%0d %0R:%0S'): Finished the book building script."
