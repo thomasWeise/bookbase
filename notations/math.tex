@@ -88,6 +88,7 @@ text={..},%
 sort={..},%
 description={\sloppy%
 with $i,j\in\integerNumbers$ and $i\leq j$ is the set that contains all integer numbers in the inclusive range from~$i$ to~$j$. %
+It always holds that $\intRange{i}{j}\subset\integerNumbers$. %
 For example, \mbox{\intRange{5}{9}}~is equivalent to~\mbox{$\{5, 6, 7, 8, 9\}$}}%
 }%
 %
@@ -108,13 +109,13 @@ In other words, $\medianb{A} = \arrayIndex{a}{\frac{n-1}{2}}$ if $n$ is odd and 
 %
 \newSymbol{naturalNumbersO}{\ensuremath{\mathSpace{N}_1}}{N1}{%
 the set of the natural numbers \emph{excluding}~0, i.e., 1, 2, 3, 4, and so on. %
-It holds that~$\naturalNumbersO\subset\integerNumbers$%
+It holds that~$\naturalNumbersO\subset\integerNumbers$ and that~$\naturalNumbersO=\naturalNumbersZ\setminus\{0\}$%
 }%
 %
 %
 \newSymbol{naturalNumbersZ}{\ensuremath{\mathSpace{N}_0}}{N0}{%
 the set of the natural numbers \emph{including}~0, i.e., 0, 1, 2, 3, and so on. %
-It holds that~$\naturalNumbersZ\subset\integerNumbers$%
+It holds that~$\naturalNumbersZ\subset\integerNumbers$ and that~$\naturalNumbersZ=\naturalNumbersO\cup\{0\}$%
 }%
 %
 %
