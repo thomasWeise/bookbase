@@ -613,7 +613,7 @@ description={%
 The Trap problem is a benchmark problem for bit-string based black-box search~\cite{ZWWW2026WFFAFTSIFGLS,DJW2002OTAOTOPOEA,NB2003AAOTBOSEAOTF}. %
 It is structured exactly like \gls{optOneMax}, however the worst and the best solution are swapped. %
 This makes the problem highly deceptive, as following the \inQuotes{gradient} in the search space leads the search away from the global optimum. %
-For bit strings of length~\scale, the objective function~\objFunb{\sespel} of the minimization variant is~$0$ if~$\left\lVert \sespel \right\rVert_1 = 0$ and $\scale - \left\lVert \sespel \right\rVert_1 - 1$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
+For bit strings of length~\scale, the objective function~\objFunb{\sespel} of the minimization variant is~$0$ if~$\left\lVert \sespel \right\rVert_1 = 0$ and $\scale - \left\lVert \sespel \right\rVert_1 + 1$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
 An \gls{algoEAopo} will converge to the resulting local optimum and thus have an expected runtime of \bigThetab{\scale^{\scale}}\cite{DJW2002OTAOTOPOEA}. %
 In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap, seemingly in~\bigOb{\scale^2 \ln{\scale}}~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
 }}%
