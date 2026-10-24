@@ -30,6 +30,20 @@ $h(p)$~must never overestimate that cost.%
 }}%
 %
 %
+\newglossaryentry{bankersRounding}{%
+name={banker's rounding},%
+description={%
+means rounding a real number to the closest integer and, in case of ties, to the closest \emph{even} integer~\cite{PWZLZZLW2025HIOIBFPRA,APDOC:BR}. %
+Since ties can only occur for numbers ending in~\textil{.5}, this means that all numbers of the form~\textil{z.5} will be rounded to~\textil{z+1} if \textil{z} is odd and to \textil{z} if \textil{z} is even. %
+This is different from the \inQuotes{normal} understanding of rounding as we often learn in school, where all numbers of the form \textil{z.5} are rounded to~\textil{z+1}. %
+\Pgls{bankersRounding} has the advantage that it is not biased in any direction~\cite{MB2005RA1,SE:SO:WDP3RHTE}. %
+If~\textil{z.5} is always rounded toward~\textil{z+1} and we have many numbers of the form~\textil{z.5}, then the sum or average of the results tends to be somewhat larger than the sum or average of the unrounded numbers. %
+\Pgls{bankersRounding} avoids this problem by sometimes rounding numbers ending in~\textil{5} to larger and sometimes to smaller values. %
+In the IEEE Floating\nobreakdashes-Point Arithmetic Standard~754~\cite{IEEE2019ISFFPA}, this method corresponds to the \emph{roundTiesToEven} direction introduced in its section \emph{4.3.1~Rounding-direction attributes to nearest}. %
+\python\ uses \pgls{bankersRounding} in its \pythonilIdx{round} function~\cite{PSF:P3D:TPSL:BIF}, whereas \pgls{Java}'s~\pythonil{Math.round} uses the \inQuotes{school-type} rounding~\cite{O2024JPSEJDKV2AS}. %
+}}%
+%
+%
 \newglossaryentry{bias}{%
 name={bias},%
 description={%
