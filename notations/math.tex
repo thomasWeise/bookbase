@@ -21,17 +21,17 @@ the domain of an attribute~$a$\optionalRef{def:attributeDomain}{, see \cref{def:
 %
 %
 \newFunc{bigO}{\ensuremath{\mathcal{O}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)\forall x\geq x_0$}~\cite{B1894DAZDVPB,L1909HDLVDVDP,K1976BOABOABT,K1997FA}. %
+\mbox{If $f(x)=\bigOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN,B1894DAZDVPB,L1909HDLVDVDP,K1976BOABOABT,K1997FA}. %
 In other words, \bigOb{g(x)}~describes an upper bound for function growth}%
 %
 \newFunc{bigOmega}{\ensuremath{\mathbf{\Omega}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigOmegab{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$f(x)\geq c*g(x)\geq 0\forall x\geq x_0$}~\cite{K1976BOABOABT,K1997FA}. %
+\mbox{If $f(x)=\bigOmegab{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$f(x)\geq c*g(x)\geq 0$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN,K1976BOABOABT,K1997FA}. %
 In other words, \bigOmegab{g(x)}~describes a lower bound for function growth}%
 %
 \newFunc{bigTheta}{\ensuremath{\mathbf{\Theta}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigThetab{g(x)}$,} then $f(x)=\bigOb{g(x)}$ and $f(x)=\bigOmegab{g(x)}$~\cite{K1976BOABOABT,K1997FA}. %
-In other words, \bigThetab{g(x)}~describes an exact order of function growth}%
-%
+\mbox{If $f(x)=\bigThetab{g(x)}$,} then $f(x)=\bigOb{g(x)}$ and $f(x)=\bigOmegab{g(x)}$~\cite{K1976BOABOABT,K1997FA}, meaning that there exist positive constants~$c_1,c_2,x_0\in\realNumbersP$ such that~$0\leq c_1 g(x)\leq f(x)\leq c_2 g(x)$ for all~$x\geq x_0$~\cite{CLRS2009ITA:AN}. %
+In other words, \bigThetab{g(x)}~describes an exact order of function growth.%
+}%
 %
 %
 \protected\gdef\complexConj#1{\ensuremath{\overline{#1}}\glslink{complexConj}{\strut}}%
@@ -90,6 +90,21 @@ description={\sloppy%
 with $i,j\in\integerNumbers$ and $i\leq j$ is the set that contains all integer numbers in the inclusive range from~$i$ to~$j$. %
 It always holds that $\intRange{i}{j}\subset\integerNumbers$. %
 For example, \mbox{\intRange{5}{9}}~is equivalent to~\mbox{$\{5, 6, 7, 8, 9\}$}}%
+}%
+%
+%
+\newFunc{littleO}{\ensuremath{\mathbf{o}}}{o(g(x))}{g(x)}{%
+\mbox{If $f(x)=\littleOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$ \emph{all}~$c\in\realNumbersP$~\cite{CLRS2009ITA:AN}. %
+Different from \bigOb{g(x)}, \littleOb{g(x)} holds for \emph{all} constants~$c>0$, whereas~\bigOb{g(x)} implies the existence of \emph{some} constant~$c>0$. %
+This basically means that $f(x)$ becomes insignificant compared to~$g(x)$ as~$x_0$ grows toward infinity. %
+It is often written that~$\lim_{x_0\to\infty} \frac{f(x)}{g(x)} = 0$. %
+In other words, \littleOb{g(x)}~describes an upper bound for function growth that is not asymptotically tight, i.e., an upper bound that grows faster than~$f(x)$%
+}%
+%
+\newFunc{littleOmega}{\ensuremath{\mathbf{\omega}}}{w(g(x))}{g(x)}{%
+\mbox{If $f(x)=\littleOmegab{g(x)}$,} then for every positive constant~$c>0$, there exists a number~$x_0\in\realNumbersP$ such that~\mbox{$0\leq c*g(x)< f(x)$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN}. %
+In other words, $f(x)=\littleOmegab{g(x)}$ if and only if $g(x)=\littleOb{f(x)}$. %
+In other words, \littleOmega\ describes a lower bound that is not asymptotically tight%
 }%
 %
 %
