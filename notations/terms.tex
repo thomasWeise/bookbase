@@ -71,6 +71,22 @@ is a programming language, which is very successful in system programming situat
 \protected\gdef\proglangc{\pgls{C}}%
 %
 %
+\newglossaryentry{caseInsensitive}{%
+name={case-insensitive},%
+description={%
+refers to a way to compare text and characters, in which uppercase letters like~\inQuotes{A} or~\inQuotes{Z}, respectively, are considered to be equal to their lowercase counterparts such as~\inQuotes{a} and~\inQuotes{z}, respectively. %
+It is thus the opposite of \pgls{caseSensitive} comparisons, where the letters are considered to be the different.%
+}}%
+%
+%
+\newglossaryentry{caseSensitive}{%
+name={case-sensitive},%
+description={%
+refers to a way to compare text and characters, in which uppercase letters like~\inQuotes{A} or~\inQuotes{Z} are considered to be different from lowercase letters like~\inQuotes{a} and~\inQuotes{z}. %
+It is thus the opposite of \pgls{caseInsensitive} comparisons, where the letters are considered to be the same. %
+In \python\pythonIdx{str!case-sensitive}, \pgls{Java}, and \proglangc, most string operations such as sorting, equality comparison, and finding are \pgls{caseSensitive}.%
+}}%
+%
 \newglossaryentry{client}{%
 text={client},%
 name={client},%
