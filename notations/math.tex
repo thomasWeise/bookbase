@@ -7,7 +7,8 @@
 %
 \newFunc{arithMean}{\ensuremath{\operatorname{mean}}}{mean(A)}{A}{%
 The \emph{arithmetic mean}~\arithMeanb{A} is an estimate of the expected value of a distribution from which a data sample~$A$ was, well, sampled. %
-Its is computed on data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{\scale-1})$ as the sum of all \scale\ elements~$\arrayIndex{a}{i}$ in the sample data~$A$ divided by the total number~\scale\ of values, i.e., $\arithMeanb{A} = \frac{1}{\scale} \sum_{i=0}^{\scale-1} \arrayIndex{a}{i}$%
+Its is computed on data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{\scale-1})$ as the sum of all \scale\ elements~$\arrayIndex{a}{i}$ in the sample data~$A$ divided by the total number~\scale\ of values, i.e., $\arithMeanb{A} = \frac{1}{\scale} \sum_{i=0}^{\scale-1} \arrayIndex{a}{i}$. %
+In \python, you can use function \pythonIdx{statistics!mean}\pythonilIdx{mean} from the module \pythonilIdx{statistics} to compute the arithmetic mean%
 }%
 %
 %
@@ -67,7 +68,7 @@ The \emph{geometric mean}~\geoMeanb{A} is the \scale\textsuperscript{th} root of
 The formula using $\exp$ and $\ln$ is equivalent to the product formula. %
 However, due to the limited range of floating point numbers on computers~\cite{IEEE2019ISFFPA}, the product formula may lead to an overflow or underflow and the $\exp$\nobreakdashes-$\ln$ method is more reliable. %
 In~\cite{FW1986HNTLWSTCWTSBR}, it is shown that the geometric mean is the only reasonable measure of average when dealing with normalized data, where the \glslink{arithMean}{arithmetic mean} or \glslink{median}{median} become unreliable. %
-In \python, you can use function \pythonIdx{statistics!geometric\_mean}\pythonilIdx{geometric_mean} from the module \pythonilIdx{statistics} to compute the geometric mean%
+In \python, you can use function \pythonIdx{statistics!geometric\_mean}\pythonil{geometric_mean}\pythonIdx{geometric\_mean} from the module \pythonilIdx{statistics} to compute the geometric mean%
 }%
 %
 \newSymbol{imaginaryUnit}{\ensuremath{\mathbf{\mathrm{i}}}}{i}{%
@@ -122,7 +123,8 @@ In other words, \littleOmega\ describes a lower bound that is not asymptotically
 \newFunc{median}{\ensuremath{\operatorname{median}}}{median(A)}{A}{%
 The \emph{median}~\medianb{A} is the value separating the bigger-valued half from the smaller-valued half of a data sample or distribution. %
 Its estimate is the value right in the middle of a \emph{sorted} data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{\scale-1})$ where $\arrayIndex{a}{i-1}\leq \arrayIndex{a}{i} \; \forall i \in 1\dots (\scale-1)$ with an odd number of elements and the \arithMean\ of the two values in the middle if \scale\ is even. %
-In other words, $\medianb{A} = \arrayIndex{a}{\frac{\scale-1}{2}}$ if \scale\ is odd and $\frac{1}{2}\left(\mathNoTopSpacing{\arrayIndex{a}{\frac{\scale}{2}-1} + \arrayIndex{a}{\frac{\scale}{2}}}\right)$ otherwise, i.e., if \scale\ is even%
+In other words, $\medianb{A} = \arrayIndex{a}{\frac{\scale-1}{2}}$ if \scale\ is odd and $\frac{1}{2}\left(\mathNoTopSpacing{\arrayIndex{a}{\frac{\scale}{2}-1} + \arrayIndex{a}{\frac{\scale}{2}}}\right)$ otherwise, i.e., if \scale\ is even. %
+In \python, you can use function \pythonIdx{statistics!median}\pythonilIdx{median} from the module \pythonilIdx{statistics} to compute the median%
 }%
 %
 %
@@ -212,12 +214,14 @@ The \emph{$q$\nobreakdashes-quantiles} are the cut points that divide a sorted d
 \sampleQuantile{k}{q}{A}~be the $k$\textsuperscript{th}~$q$\nobreakdashes-quantile, with~$k\in 1\dots (q-1)$, i.e., there are $q-1$ of the $q$\nobreakdashes-quantiles. %
 In the context of this book, define~$h=(\scale-1)\frac{k}{q}$. %
 \sampleQuantile{k}{q}{A}~then can be computed as \arrayIndex{a}{h} if $h$~is integer, i.e.,~$h\in\integerNumbers$, and as~$\arrayIndex{a}{\lfloor h\rfloor}+\left(h-\lfloor h\rfloor\right)*\left(\arrayIndex{a}{\lfloor h\rfloor+1}-\arrayIndex{a}{\lfloor h\rfloor}\right)$ otherwise. %
-It holds that~$\sampleQuantile{2}{1}{A}=\medianb{A}$%
+It holds that~$\sampleQuantile{2}{1}{A}=\medianb{A}$. %
+In \python, you can use function \pythonIdx{statistics!quantiles}\pythonilIdx{quantiles} from the module \pythonilIdx{statistics} to compute quantiles%
 }}%
 %
 %
 \newFunc{sampleStdDev}{\ensuremath{\operatorname{sd}}}{sd(A)}{A}{%
-The statistical estimate~\sampleStdDevb{A} of the \emph{standard deviation} of a data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{\scale-1})$ with \scale~observations is the square root of the estimated variance~$\sampleVarb{A}$, i.e., $\sampleStdDev{A} = \sqrt{\sampleVarb{A}}$%
+The statistical estimate~\sampleStdDevb{A} of the \emph{standard deviation} of a data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{\scale-1})$ with \scale~observations is the square root of the estimated variance~$\sampleVarb{A}$, i.e., $\sampleStdDev{A} = \sqrt{\sampleVarb{A}}$. %
+In \python, you can use function \pythonIdx{statistics!stdev}\pythonilIdx{stdev} from the module \pythonilIdx{statistics} to compute the standard deviation%
 }%
 %
 %
