@@ -60,18 +60,25 @@ Flow matrices are one half of the problem instance data of~\glspl{optQAP}%
 %
 \newSymbol{scale}{\ensuremath{n}}{n}{%
 We usually use the value~$\scale\in\naturalNumbersZ$ to denote the \emph{scale}, i.e., the size of the problem to solve. %
+%
 This notion is very general in computer science and not limited to optimization. %
 For example, %
 if we sort a list or search in a list, the scale~\scale\ is the length of the list, i.e., the number of elements in it. %
 In a \gls{optTSP}, this may be the number of cities. %
+%
 In a discrete benchmark problem such as \gls{optOneMax} or \gls{optTrap}, this may be the number of bits over which the problem is defined. %
 In a \gls{optQAP}, this may be the number of facilities and locations. %
 In a \gls{optMaxSAT}~problem, this may be the number of variables that are input to the Boolean formula that we want to become true. %
+%
 There are also problems where the scale is not defined straightforwardly like this. %
 For example, in a \gls{optJSSP}, we have a number of machines and a number of jobs, which together define the size of the problem. %
 But even then, the scale~\scale\ relates to the size of the solution space~\solutionSpace, and, hence, also of the search space~\searchSpace, which usually grow exponentially with~\scale. %
 And this is already the main issue: %
-The larger~\scale, the (exponentially) larger the number of possible solutions and thus, the larger the runtime of algorithms%
+The larger~\scale, the (exponentially) larger the number of possible solutions and thus, the larger the runtime of algorithms. %
+This is known as the \inQuotes{curse of dimensionality}~\cite{B1957DP,CMB2015MTCODAIEOPSOADE}. %
+%
+Scales~\scale\ are also often used in conjunction with the \bigO\nobreakdashes-notation to denote algorithm complexity. %
+For example, comparison-based sorting a list of~\scale~items takes~\bigThetab{\scale\log{\scale}}~steps~\cite{K1998SAS}~(because they need~$\lceil\log_2 \factorial{\scale}\rceil$~comparisons in the worst case)%
 }%
 %
 %
