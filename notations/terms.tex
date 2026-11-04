@@ -238,6 +238,18 @@ an infinitesimal value is immeasurably or incalculably small, i.e., arbitrarily 
 }}%
 %
 %
+\newglossaryentry{irrational}{%
+name={irrational},%
+plural={irrational},%
+description={%
+An \emph{irrational} number~$z$ is a real number that cannot be expressed as fraction~$\tfrac{p}{q}$ of two integers~$p\in\integerNumbers$ and~$q\in\naturalNumbersO$~\cite{W2024MAWWR:IN,B1991IWNT}. %
+In other words, it holds that $z\in\realNumbers$ and $z\not\in\rationalNumbers$. %
+The set of irrational numbers could be denoted as~$\realNumbers\setminus\rationalNumbers$. %
+Irrational numbers have decimal expansions that neither terminate nor become periodic. %
+Examples of irrational numbers are $\sqrt{2}$, \numberGoldenRatio, \numberPi, and \numberE.%
+}}%
+%
+%
 \newglossaryentry{optIsing}{%
 text={Ising Model},%
 name={Ising Model},%
@@ -632,6 +644,16 @@ is a technique used in \pglspl{db} to keep track of the creation and/or modifica
 For each table in a \pgls{rdb} to which it is applied, an additional column with datatype~\sqlilIdx{TIMESTAMP}~\cite{PGDG:PD:DTT} is added for the creation timestamp. %
 This column is usually annotated as \sqlil{NOT NULL DEFAULT CURRENT_TIMESTAMP}\sqlIdx{CURRENT\_TIMESTAMP}~\cite{PGDG:PD:DTFAO}, meaning that the \dbms\ will automatically store the current date and time when a row is created. %
 If data can be changed, then another column for the last update time can be added to the table as well.%
+}}%
+%
+%
+\newglossaryentry{transcendental}{%
+name={transcendental},%
+plural={transcendental},%
+description={%
+A \emph{transcendental} number is a number that is not the root of any integer polynomial, meaning that it is not an algebraic number of any degree~\cite{W2024MAWWR:TN}. %
+Every real transcendental number must also be \gls{irrational}, since a rational number is, by definition, an algebraic number of degree one~\cite{W2024MAWWR:TN}. %
+Examples of transcendental numbers are \numberPi\ and \numberE.%
 }}%
 %
 %
