@@ -6,14 +6,14 @@
 name={2DPackLib},%
 plural={2DPackLib},%
 description={%
-is a library of benchmark instances for the \glsFull{optBPP2D}~\cite{IdLMM20222ATDCAPL,IdLMM20212}.%
-The website of this benchmark set is \citeurl{IdLMM20212}~\cite{IdLMM20212}. %
+is a library of benchmark instances for the \glsFull{optBPP2D}\scite{IdLMM20222ATDCAPL,IdLMM20212}.%
+The website of this benchmark set is \citeurl{IdLMM20212}\scite{IdLMM20212}. %
 The benchmark set contains two-dimensional instances of the Strip Packing, \gls{optBPP}, \gls{optCSP}, and Knapsack problems. %
 The \gls{optBPP2D} instances are from three groups:~%
-The 10~instances of type \instFormat{beng}~\cite{B1982PRPAHA} have both bin and item dimensions drawn from uniform distributions, between 20 and 200~items, and the largest bin size \mbox{is~$(40,25)$}.%
-The \instFormat{class} instances~\cite{BW1987TDFBPA,MV1998ESOTTDFBPP} are divided into 10~classes based on the bin and item dimensions, the former of which ranges from \mbox{$(10,10)$} \mbox{to~$(300, 300)$.} %
+The 10~instances of type \instFormat{beng}\scite{B1982PRPAHA} have both bin and item dimensions drawn from uniform distributions, between 20 and 200~items, and the largest bin size \mbox{is~$(40,25)$}.%
+The \instFormat{class} instances\scite{BW1987TDFBPA,MV1998ESOTTDFBPP} are divided into 10~classes based on the bin and item dimensions, the former of which ranges from \mbox{$(10,10)$} \mbox{to~$(300, 300)$.} %
 Each class is divided into five groups with $\{20,40,60,80,100\}$~items with 10~instances each. %
-The set \instFormat{A}~\cite{MAVdC2010AFMFTTDGCSP} offers 43~instances with 13~to 809~items and bin sizes of either \mbox{$(2750, 1220)$}, \mbox{$(2550, 2100)$}, or \mbox{$(2470, 2080)$}.%
+The set \instFormat{A}\scite{MAVdC2010AFMFTTDGCSP} offers 43~instances with 13~to 809~items and bin sizes of either \mbox{$(2750, 1220)$}, \mbox{$(2550, 2100)$}, or \mbox{$(2470, 2080)$}.%
 }}%
 %
 %
@@ -21,7 +21,7 @@ The set \instFormat{A}~\cite{MAVdC2010AFMFTTDGCSP} offers 43~instances with 13~t
 name={\mbox{\ensuremath{\text{A}^{\star}}}~Algorithm},%
 sort={A* Algorithm},%
 description={%
-The \pgls{algoAstar} is an a greedy best-first-first search for finding the shortest path between two locations~\cite{HNR1968AFBFTHDOMCP,P1997AAP}. %
+The \pgls{algoAstar} is an a greedy best-first-first search for finding the shortest path between two locations\scite{HNR1968AFBFTHDOMCP,P1997AAP}. %
 The algorithm iteratively constructs the shortest path. %
 It maintains a list of current candidate paths. %
 For choosing the next candidate path whose end node should be expanded, it computes a value~$f(p)$ of these paths~$p$. %
@@ -33,14 +33,14 @@ $h(p)$~must never overestimate that cost.%
 \newglossaryentry{bankersRounding}{%
 name={banker's rounding},%
 description={%
-means rounding a real number to the closest integer and, in case of ties, to the closest \emph{even} integer~\cite{APDOC:BR,PWZLZZLW2025HIOIBFPRA}. %
+means rounding a real number to the closest integer and, in case of ties, to the closest \emph{even} integer\scite{APDOC:BR,PWZLZZLW2025HIOIBFPRA}. %
 Since ties can only occur for numbers ending in~\textil{.5}, this means that all numbers of the form~\textil{z.5} will be rounded to~\textil{z+1} if \textil{z} is odd and to \textil{z} if \textil{z} is even. %
 This is different from the \inQuotes{normal} understanding of rounding as we often learn in school, where all numbers of the form \textil{z.5} are rounded to~\textil{z+1}. %
-\Pgls{bankersRounding} has the advantage that it is not biased in any direction~\cite{MB2005RA1,SE:SO:WDP3RHTE}. %
+\Pgls{bankersRounding} has the advantage that it is not biased in any direction\scite{MB2005RA1,SE:SO:WDP3RHTE}. %
 If~\textil{z.5} is always rounded toward~\textil{z+1} and we have many numbers of the form~\textil{z.5}, then the sum or average of the results tends to be somewhat larger than the sum or average of the unrounded numbers. %
 \Pgls{bankersRounding} avoids this problem by sometimes rounding numbers ending in~\textil{5} to larger and sometimes to smaller values. %
-In the IEEE Floating\nobreakdashes-Point Arithmetic Standard~754~\cite{IEEE2019ISFFPA}, this method corresponds to the \emph{roundTiesToEven} direction introduced in its section \emph{4.3.1~Rounding-direction attributes to nearest}. %
-\python\ uses \pgls{bankersRounding} in its \pythonilIdx{round} function~\cite{PSF:P3D:TPSL:BIF:R}, whereas \pgls{Java}'s~\pythonil{Math.round} uses the \inQuotes{school-type} rounding~\cite{O2024JPSEJDKV2AS}. %
+In the IEEE Floating\nobreakdashes-Point Arithmetic Standard~754\scite{IEEE2019ISFFPA}, this method corresponds to the \emph{roundTiesToEven} direction introduced in its section \emph{4.3.1~Rounding-direction attributes to nearest}. %
+\python\ uses \pgls{bankersRounding} in its \pythonilIdx{round} function\scite{PSF:P3D:TPSL:BIF:R}, whereas \pgls{Java}'s~\pythonil{Math.round} uses the \inQuotes{school-type} rounding\scite{O2024JPSEJDKV2AS}. %
 }}%
 %
 %
@@ -49,7 +49,7 @@ name={bias},%
 description={%
 The bias is subtracted from the value stored in the \gls{exponent} field of a floating point number. %
 This allows for representing both positive and negative exponents. %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the bias is~1023.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout\scite{IEEE2019ISFFPA,H1997IS7FPN}, the bias is~1023.%
 \optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }}%
 %
@@ -66,7 +66,7 @@ text={\softwareStyle{C}},%
 name={C},%
 sort={C},%
 description={%
-is a programming language, which is very successful in system programming situations~\cite{ISOIEC98892017PLCWDOS,D2024MCFABAFITTCPL,programmingWithC}.%
+is a programming language, which is very successful in system programming situations\scite{ISOIEC98892017PLCWDOS,D2024MCFABAFITTCPL,programmingWithC}.%
 }}%
 \protected\gdef\proglangc{\pgls{C}}%
 %
@@ -104,7 +104,7 @@ text={\gls{client}\nobreakdashes-\gls{server} architecture},%
 name={client-server architecture},%
 sort={client-server architecture},%
 description={%
-is a system design where a central \gls{server} receives requests from one or multiple \glspl{client}~\cite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBEB:CSA}. %
+is a system design where a central \gls{server} receives requests from one or multiple \glspl{client}\scite{RCKS2019PNP,B1996CSA,OHE1999CSSG,RF2020FOSAAEA,EOEBEB:CSA}. %
 These requests and responses are usually sent over network connections. %
 A typical example of such a system is the \gls{WWW}, where web \glspl{server} host websites and make them available to web browsers, the \glspl{client}. %
 Another typical example is the structure of \gls{db} software, where a central \gls{server}, the \pgls{dbms}, offers access to the \gls{db} to the different \glspl{client}. %
@@ -124,8 +124,8 @@ is an exact solver for the \gls{optTSP}\cite{C1997CTS,ABCC2006TTSPACS,C2012IPOTT
 \newglossaryentry{docstring}{%
 name={docstring},%
 description={%
-Docstrings are special string constants in \python\ that contain documentation for modules or functions~\cite{PEP257}. %
-They must be delimited by~\pythonil{"""..."""}\pythonIdx{\textquotedbl\textquotedbl\textquotedbl\idxdots\textquotedbl\textquotedbl\textquotedbl}~\cite{PEP257,PEP8}.%
+Docstrings are special string constants in \python\ that contain documentation for modules or functions\scite{PEP257}. %
+They must be delimited by~\pythonil{"""..."""}\pythonIdx{\textquotedbl\textquotedbl\textquotedbl\idxdots\textquotedbl\textquotedbl\textquotedbl}\scite{PEP257,PEP8}.%
 }}%
 %
 %
@@ -141,7 +141,7 @@ name={doctest},%
 description={%
 \emph{doctests} are \pglspl{unitTest} in the form of as small pieces of code in the \glspl{docstring} that look like interactive \python\ sessions.
 The first line of a statement in such a \python\ snippet is indented with \python{>>>}\pythonIdx{>\strut>\strut>} and the following lines by \pythonil{...}\pythonIdx{\idxdots}.
-These snippets can be executed by modules like \pythonilIdx{doctest}~\cite{PSF:P3D:TPSL:DTIPE} or tools such as \pytest~\cite{KPDT2024PD:HTRD}.
+These snippets can be executed by modules like \pythonilIdx{doctest}\scite{PSF:P3D:TPSL:DTIPE} or tools such as \pytest\scite{KPDT2024PD:HTRD}.
 Their output is the compared to the text following the snippet in the \gls{docstring}.
 If the output matches this text, the test succeeds.
 Otherwise it fails.%
@@ -152,18 +152,18 @@ Otherwise it fails.%
 name={escape sequence},%
 description={%
 Escaping is the process of presenting \inQuotes{forbidden} characters or symbols in a sequence of characters or symbols. %
-In \python~\cite{programmingWithPython}, string escapes allow us to include otherwise impossible characters, such as string delimiters, in a string. %
-Each such character is represented by an \emph{escape sequence}, which usually starts with the backslash character~(\inQuotes{\textbackslash})~\cite{PSF:P3D:TPLR:ES}. %
+In \python\scite{programmingWithPython}, string escapes allow us to include otherwise impossible characters, such as string delimiters, in a string. %
+Each such character is represented by an \emph{escape sequence}, which usually starts with the backslash character~(\inQuotes{\textbackslash})\scite{PSF:P3D:TPLR:ES}. %
 In \python\ strings, the escape sequence~\textil{\\"}, for example, stands for \textil{\"}, the escape sequence~\textil{\\\\} stands for~\textil{\\}, and the escape sequence~\textil{\\n} stands for a newline or linebreak character\optionalRef{sec:str:escaping}{, see \cref{sec:str:escaping}}. %
 In \python\ \pglspl{fstring}, the escape sequence~\textil{\{\{} stands for a single curly brace~\textil{\{}.
-In \postgresql~\cite{databases}, similar \pgls{C}\nobreakdashes-style escapes~(starting with \inQuotes{\textbackslash}) are supported~\cite{PGDG:PD:SC2}.%
+In \postgresql\scite{databases}, similar \pgls{C}\nobreakdashes-style escapes~(starting with \inQuotes{\textbackslash}) are supported\scite{PGDG:PD:SC2}.%
 }}%
 %
 %
 \newglossaryentry{exitCode}{%
 name={exit code},%
 description={%
-When a process terminates, it can return a single integer value~(the exit status code) to indicate success or failure~\cite{J2024PTOGBSI8IS12E:TAP}. %
+When a process terminates, it can return a single integer value~(the exit status code) to indicate success or failure\scite{J2024PTOGBSI8IS12E:TAP}. %
 Per convention, an exit code of~0 means success. %
 Any non-zero exit code indicates an error. %
 Under \python, you can terminate the current process at any time by calling \pythonilIdx{exit} and optionally passing in the exit code that should be returned. %
@@ -177,7 +177,7 @@ name={exponent},%
 description={%
 The exponent is the part of a floating point number that stores a power of~2 with which the \gls{significand} is multiplied. %
 This allows for covering a wide range of different precisions and representing both very large and very small numbers. %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 11~bits with a \gls{bias} of~1023.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout\scite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 11~bits with a \gls{bias} of~1023.%
 \optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }}%
 %
@@ -187,7 +187,7 @@ name={f\nobreakdashes-string},%
 plural={f\nobreakdashes-strings},%
 sort={f-string},
 description={%
-let you include the results of expressions in strings~\cite{PEP498,PSF:P3D:TPT:FSL,M2017WAFSIPAHCIUT,B2023PFS,DEVC:WFAAPODSCMIP,G2025MFIP}. %
+let you include the results of expressions in strings\scite{PEP498,PSF:P3D:TPT:FSL,M2017WAFSIPAHCIUT,B2023PFS,DEVC:WFAAPODSCMIP,G2025MFIP}. %
 They can contain expressions~(in curly braces) like \pythonil{f\"a\{6-1\}b\"} that are then transformed to text via \gls{strinterpolation}, which turns the string to~\pythonil{\"a5b\"}. %
 \Pglspl{fstring} are delimited by \pythonil{f"..."}\pythonIdx{f\textquotedbl\idxdots\textquotedbl}. %
 \optionalRef{sec:fstrings}{ f\nobreakdashes-strings are discussed in \cref{sec:fstrings}.}%
@@ -199,7 +199,7 @@ name={Gantt chart},%
 text={{Gantt} chart},%
 sort={Gantt chart},
 description={%
-\Glspl{ganttChart} are two-dimensional diagrams illustrating the steps of a process~\cite{W2003GCACA,K2000SORCP}. %
+\Glspl{ganttChart} are two-dimensional diagrams illustrating the steps of a process\scite{W2003GCACA,K2000SORCP}. %
 Their horizontal axis represents the time, the vertical axis represents work packages, machines, or workers. %
 In the diagram area, bars located at certain vertical locations indicate that the work package, machine, or worker is processed or works at the time range covered by the bar as projected to the horizontal axis.%
 }}%
@@ -208,7 +208,7 @@ In the diagram area, bars located at certain vertical locations indicate that th
 \newglossaryentry{git}{%
 name={Git},%
 description={%
-is a distributed \glsreset{VCS}\gls{VCS} which allows multiple users to work on the same code while preserving the history of the code changes~\cite{S2023LG,T2024BGAGVCPMATFTND}. %
+is a distributed \glsreset{VCS}\gls{VCS} which allows multiple users to work on the same code while preserving the history of the code changes\scite{S2023LG,T2024BGAGVCPMATFTND}. %
 Learn more at \url{https://git-scm.com}.%
 }}%
 \protected\gdef\git{\pgls{git}}%
@@ -225,7 +225,7 @@ Learn more at \url{https://gitee.com}.%
 \newglossaryentry{github}{%
 name={GitHub},%
 description={%
-is a website where software projects can be hosted and managed via the \gls{git} \gls{VCS}~\cite{PRGWSUdVLFTEKPKFBV2016TSRFTAOGAG,T2024BGAGVCPMATFTND}. %
+is a website where software projects can be hosted and managed via the \gls{git} \gls{VCS}\scite{PRGWSUdVLFTEKPKFBV2016TSRFTAOGAG,T2024BGAGVCPMATFTND}. %
 Learn more at \url{https://github.com}.%
 }}%
 \protected\gdef\github{\pgls{github}}%
@@ -234,7 +234,7 @@ Learn more at \url{https://github.com}.%
 \newglossaryentry{infinitesimal}{%
 name={infinitesimal},%
 description={%
-an infinitesimal value is immeasurably or incalculably small, i.e., arbitrarily close to but greater than zero~\cite{EOWM2025MWAMTD:I,KS2013LITFTMIATFFBTRAB}.%
+an infinitesimal value is immeasurably or incalculably small, i.e., arbitrarily close to but greater than zero\scite{EOWM2025MWAMTD:I,KS2013LITFTMIATFFBTRAB}.%
 }}%
 %
 %
@@ -242,7 +242,7 @@ an infinitesimal value is immeasurably or incalculably small, i.e., arbitrarily 
 name={irrational},%
 plural={irrational},%
 description={%
-An \emph{irrational} number~$z$ is a real number that cannot be expressed as fraction~$\tfrac{p}{q}$ of two integers~$p\in\integerNumbers$ and~$q\in\naturalNumbersO$~\cite{W2024MAWWR:IN,B1991IWNT}. %
+An \emph{irrational} number~$z$ is a real number that cannot be expressed as fraction~$\tfrac{p}{q}$ of two integers~$p\in\integerNumbers$ and~$q\in\naturalNumbersO$\scite{W2024MAWWR:IN,B1991IWNT}. %
 In other words, it holds that $z\in\realNumbers$ and $z\not\in\rationalNumbers$. %
 The set of irrational numbers could be denoted as~$\realNumbers\setminus\rationalNumbers$. %
 Irrational numbers have decimal expansions that neither terminate nor become periodic. %
@@ -255,7 +255,7 @@ text={Ising Model},%
 name={Ising Model},%
 sort={Ising Model},%
 description={%
-The Ising models are benchmark problems for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,F2004APUBFAMBAOTTDIM,FW2005TODIMMVR,ZWWW2026WFFAFTSIFGLS}. %
+The Ising models are benchmark problems for bit-string based black-box search\scite{DYHWSB2020BDOHWI,F2004APUBFAMBAOTTDIM,FW2005TODIMMVR,ZWWW2026WFFAFTSIFGLS}. %
 Here, a neighborhood is defined around each bit. %
 The bit needs to have the same value as all bits in the neighborhood structure~$T$. %
 Thus, we try to achieve that all bits have the same value. %
@@ -269,7 +269,7 @@ text={\softwareStyle{Java}},%
 name={Java},%
 sort={Java},%
 description={%
-is another very successful programming language, with roots in the \gls{C}~family of languages~\cite{LNL2020LJ,B2008EJ}.%
+is another very successful programming language, with roots in the \gls{C}~family of languages\scite{LNL2020LJ,B2008EJ}.%
 }}%
 %
 %
@@ -277,7 +277,7 @@ is another very successful programming language, with roots in the \gls{C}~famil
 name={JavaScript},%
 sort={JavaScript},%
 description={%
-JavaScript is the predominant programming language used in websites to develop interactive contents for display in browsers~\cite{E1999ELS}.%
+JavaScript is the predominant programming language used in websites to develop interactive contents for display in browsers\scite{E1999ELS}.%
 }}%
 %
 %
@@ -286,20 +286,20 @@ text={Jump},%
 name={Jump},%
 sort={Jump},%
 description={%
-The Jump problem is a benchmark problem for bit-string based black-box search~\cite{DJW2002OTAOTOPOEA,FQW2018ELDBOAWHTMO,ZWWW2026WFFAFTSIFGLS}. %
+The Jump problem is a benchmark problem for bit-string based black-box search\scite{DJW2002OTAOTOPOEA,FQW2018ELDBOAWHTMO,ZWWW2026WFFAFTSIFGLS}. %
 Like the \gls{optOneMax}, it tries to maximize the number of \texttt{1}~bits in a bit string of chosen length~\scale. %
 However, the solutions representing the last $\omega$~bits around the optimum to flip are deceptive, meaning that they are actually worse and getting worse than surrounding solutions. %
 The objective function~\objFunb{\sespel} of the minimization variant is~${\scale} - \left\lVert \sespel \right\rVert_1$ if~$\left\lVert \sespel \right\rVert_1 = \scale$ or~$\left\lVert \sespel \right\rVert_1 \leq \scale - \omega$ hold, and ${\omega} + \left\lVert \sespel \right\rVert_1$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
 This means that, the larger~$\omega$, the larger the deceptive basin around the optimum that an algorithm needs to cross. %
-An \gls{algoEAopo} will converge to the resulting local optimum and thus have an expected runtime of \bigThetab{\scale^{\omega}+\scale\ln{\scale}}~\cite{DJW2002OTAOTOPOEA}.%
-In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Jump, seemingly in~\bigOb{\scale^2 \ln{\scale}}~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
+An \gls{algoEAopo} will converge to the resulting local optimum and thus have an expected runtime of \bigThetab{\scale^{\omega}+\scale\ln{\scale}}\scite{DJW2002OTAOTOPOEA}.%
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Jump, seemingly in~\bigOb{\scale^2 \ln{\scale}}\scite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
 }}%
 %
 %
 \newglossaryentry{literal}{%
 name={literal},%
 description={%
-A literal is a specific concrete value, something that is written down as-is~\cite{PSF:STWP:L,PEP586}. %
+A literal is a specific concrete value, something that is written down as-is\scite{PSF:STWP:L,PEP586}. %
 In \python, for example, \pythonil{\"abc\"}~is a string literal, \pythonil{5}~is an integer literal, and \pythonil{23.3}~is a \pythonil{float} literal. %
 In contrast, \pythonil{sin(3)} is not a literal. %
 Also, while \pythonil{5} is an integer literal, if we create a variable~\pythonil{a = 5} then \pythonil{a} is not a literal either~(it is a variable). %
@@ -312,9 +312,9 @@ Python supports some \pglspl{typeHint} for literals, including the type \pythoni
 \newglossaryentry{locale}{%
 name={locale},%
 description={%
-A \gls{locale} corresponds basically to a selection of country or culture for a system or application~\cite{J2024PTOGBSI8IS12E:L}. %
+A \gls{locale} corresponds basically to a selection of country or culture for a system or application\scite{J2024PTOGBSI8IS12E:L}. %
 The \gls{locale} then determines a set of country- or culture-dependent settings, such as the text representation for money or dates, or what decimal separators are used.%
-A good example is, for example, that American English readers will interpret the date~7/4/2000 as July~4th, 2000, whereas British English readers will read this as the 7th~of April, 2000~\cite{CDE:D}. %
+A good example is, for example, that American English readers will interpret the date~7/4/2000 as July~4th, 2000, whereas British English readers will read this as the 7th~of April, 2000\scite{CDE:D}. %
 It is therefore important that software printing dates knows whether it is running on an American or British English~PC.%
 }}%
 %
@@ -324,7 +324,7 @@ text={metaheuristic},%
 name={metaheuristic},%
 sort={metaheuristic},%
 description={%
-A \emph{metaheuristic} is an optimization algorithm which performs a cycle of trial and error during which candidate solutions are sampled from the solution space~\solutionSpace\ and evaluated using an objective function~$\objFun:\solutionSpace\mapsto\realNumbers$~\cite{GK2003HOM,W2009GOATAA}. %
+A \emph{metaheuristic} is an optimization algorithm which performs a cycle of trial and error during which candidate solutions are sampled from the solution space~\solutionSpace\ and evaluated using an objective function~$\objFun:\solutionSpace\mapsto\realNumbers$\scite{GK2003HOM,W2009GOATAA}. %
 The results of the objective function are used to decide which solution is promising. %
 The neighborhoods around promising solutions \emph{or} similarly-structured solutions are then sampled in the next cycle. %
 Prominent metaheuristics are \glspl{algoSLS}, \gls{algoSA}, \gls{algoTS}, and \glspl{algoEA}.%
@@ -337,7 +337,7 @@ name={N\nobreakdashes-Queens},%
 sort={N\nobreakdashes-Queens},%
 plural={N\nobreakdashes-Queens},%
 description={%
-The N\nobreakdashes-Queens Problem is a benchmark problem for bit-string based black-box search~\cite{DYHWSB2020BDOHWI,ZWWW2026WFFAFTSIFGLS}. %
+The N\nobreakdashes-Queens Problem is a benchmark problem for bit-string based black-box search\scite{DYHWSB2020BDOHWI,ZWWW2026WFFAFTSIFGLS}. %
 The goal is to arrange $N$~queens on an $N\times N$~chessboard so that none can attack the other. %
 The search space has thus dimension~$\scale=N^2$, with each bit standing for a field and encoding whether or not a queen is placed there. %
 The objective function~\objFunb{\sespel} of the minimization variant is~$N - \left(\sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}\right) - N \sum_{\xi} \max \left\{ 0, Q_{\xi}(\sespel) - 1 \right\}$ where $Q_{\xi}(\sespel)$ is the number of queens in the horizontal, vertical, or diagonale~$\xi$. %
@@ -367,14 +367,14 @@ text={LeadingOnes},%
 name={LeadingOnes},%
 sort={LeadingOnes},%
 description={%
-The LeadingOnes problem is a benchmark problem for bit-string based black-box search~\cite{R1997CPOEA,W1989TGAASPWRBAORTIB,ZWWW2026WFFAFTSIFGLS}. %
+The LeadingOnes problem is a benchmark problem for bit-string based black-box search\scite{R1997CPOEA,W1989TGAASPWRBAORTIB,ZWWW2026WFFAFTSIFGLS}. %
 It tries to maximize the number of \emph{leading}~\texttt{1}~bits in the bit string of a chosen dimension~\scale. %
 The objective function~\objFunb{\sespel} of the minimization variant of this problem can be defined as $\objFunb{\sespel}= \scale - \sum_{i=1}^{\scale} \prod_{j=1}^{i} \arrayIndex{\sespel}{j}$. %
 Different from \gls{optOneMax}, the contribution to the objective value of the bit at index~$i$ thus depends on the state of all the bits \emph{before} this index. %
 The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
 Different from \gls{optOneMax}, it is not separable, i.e., we can optimize each variable separately. %
-The expected runtime of \gls{algoEAopo} on \gls{optLeadingOnes} is in \bigThetab{\scale^2}~\cite{DJW2002OTAOTOPOEA}. %
-The average runtime \gls{algoFEAopo} on \gls{optLeadingOnes} seems to be slower by factor proportional to~\scale, i.e., seems to be in~\bigOb{\scale^3}~\cite{WWLC2021FFAMOAIUBTOTOFV}.%
+The expected runtime of \gls{algoEAopo} on \gls{optLeadingOnes} is in \bigThetab{\scale^2}\scite{DJW2002OTAOTOPOEA}. %
+The average runtime \gls{algoFEAopo} on \gls{optLeadingOnes} seems to be slower by factor proportional to~\scale, i.e., seems to be in~\bigOb{\scale^3}\scite{WWLC2021FFAMOAIUBTOTOFV}.%
 }}%
 %
 %
@@ -383,7 +383,7 @@ text={linter},%
 name={linter},%
 sort={linter},%
 description={%
-A linter is a tool for analyzing program code to identify bugs, problems, vulnerabilities, and inconsistent code styles~\cite{J1978LACPC,RJYKK2022CULTDVM}. %
+A linter is a tool for analyzing program code to identify bugs, problems, vulnerabilities, and inconsistent code styles\scite{J1978LACPC,RJYKK2022CULTDVM}. %
 \ruff\ is an example of a \gls{linter} used in the \python\ world.%
 }}%
 %
@@ -391,7 +391,7 @@ A linter is a tool for analyzing program code to identify bugs, problems, vulner
 \newglossaryentry{localhost}{%
 name={localhost},%
 description={%
-is the hostname of the current computer~\cite{RFC2606,RFC6761}. %
+is the hostname of the current computer\scite{RFC2606,RFC6761}. %
 It is equivalent to the IP~address~\textil{127.0.0.1}. %
 Any message or package sent to localhost will be sent to the current computer itself.%
 }}%
@@ -427,13 +427,13 @@ text={OneMax},%
 name={OneMax},%
 sort={OneMax},%
 description={%
-OneMax is the simplest possible benchmark problem for bit-string based black-box search~\cite{DJW2006UALBFRSHIBBO,M1992HGARWMAH,ZWWW2026WFFAFTSIFGLS}. %
+OneMax is the simplest possible benchmark problem for bit-string based black-box search\scite{DJW2006UALBFRSHIBBO,M1992HGARWMAH,ZWWW2026WFFAFTSIFGLS}. %
 The goal is to maximize the number of \texttt{1}~bits in the bit string of a chosen dimension~\scale. %
 The objective function~\objFunb{\sespel} of the minimization variant of this problem can be defined as $\objFunb{\sespel}= {\scale} - \sum_{i=1}^{\scale} \arrayIndex{\sespel}{i}$. %
 The problem is unimodal, i.e., has only a single global optimum and no local optimum. %
 It is fully separable, i.e., we can optimize each variable separately. %
-The expected runtime of \gls{algoEAopo} on \gls{optOneMax} is in \bigThetab{\scale\ln{\scale}}~\cite{DDE2015FBBCTDNGA,M1992HGARWMAH}. %
-The average runtime \gls{algoFEAopo} on \gls{optOneMax} seems to be slower by factor proportional to~\scale, i.e., seems to be in~\bigOb{\scale^2\ln{\scale}}~\cite{WWLC2021FFAMOAIUBTOTOFV}.%
+The expected runtime of \gls{algoEAopo} on \gls{optOneMax} is in \bigThetab{\scale\ln{\scale}}\scite{DDE2015FBBCTDNGA,M1992HGARWMAH}. %
+The average runtime \gls{algoFEAopo} on \gls{optOneMax} seems to be slower by factor proportional to~\scale, i.e., seems to be in~\bigOb{\scale^2\ln{\scale}}\scite{WWLC2021FFAMOAIUBTOTOFV}.%
 }}%
 %
 %
@@ -452,11 +452,11 @@ text={Plateau},%
 name={Plateau},%
 sort={Plateau},%
 description={%
-The Plateau problem is a benchmark problem for bit-string based black-box search~\cite{AD2018PRAFP,ZWWW2026WFFAFTSIFGLS}. %
+The Plateau problem is a benchmark problem for bit-string based black-box search\scite{AD2018PRAFP,ZWWW2026WFFAFTSIFGLS}. %
 It is structured exactly like \gls{optJump}, but instead of being deceptive, the last $\omega$~bits to flip around the optimum are neutral. %
 The objective function~\objFunb{\sespel} of the minimization variant is~${\scale} - \left\lVert \sespel \right\rVert_1$ if~$\left\lVert \sespel \right\rVert_1 = \scale$ or~$\left\lVert \sespel \right\rVert_1 \leq \scale - \omega$ hold, and $\omega$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
 This means that, the larger~$\omega$, the larger the neutral plane around the optimum that an algorithm needs to cross. %
-An \gls{algoEAopo} has an expected runtime of \bigThetab{\scale^{\omega}} on plateaus~\cite{AD2018PRAFP}. %
+An \gls{algoEAopo} has an expected runtime of \bigThetab{\scale^{\omega}} on plateaus\scite{AD2018PRAFP}. %
 The average runtime of the \gls{algoFEAopo} on \glspl{optPlateau} is slower by a factor seemingly proportional in~\scale.%
 }}%
 %
@@ -464,7 +464,7 @@ The average runtime of the \gls{algoFEAopo} on \glspl{optPlateau} is slower by a
 \newglossaryentry{port}{%
 name={port},%
 description={%
-A \gls{port} in networking is a software-defined number associated to a network protocol that receives or transmits communication for a specific service~\cite{KR2020CNATDA}. %
+A \gls{port} in networking is a software-defined number associated to a network protocol that receives or transmits communication for a specific service\scite{KR2020CNATDA}. %
 In the \gls{clientServerArchitecture}, the \gls{server} listens for incoming communication connections at a specific \gls{port}. %
 The \glspl{client} connect to the network address and \gls{port} number of the \gls{server} to establish such connections. %
 \gls{port} numbers range from~0 to~65535, where the \gls{port} numbers from~0 to~1023 are so-called well-known ports corresponding to the most common services, e.g., \gls{HTTP}, the protocol underpinning of the \gls{WWW}, uses normally port~80.%
@@ -475,7 +475,7 @@ The \glspl{client} connect to the network address and \gls{port} number of the \
 name={QAPLIB},%
 plural={QAPLIB},%
 description={%
-is a library of 136 benchmark instances for the \glsFull{optQAP}~\cite{BKR1997QAQAPL,BCKRAH2022QAQAPLPIAS}, 28~of which have not yet been solved to optimality~\cite{A2023TQC}~(at least by \citeyear{A2023TQC}).%
+is a library of 136 benchmark instances for the \glsFull{optQAP}\scite{BKR1997QAQAPL,BCKRAH2022QAQAPLPIAS}, 28~of which have not yet been solved to optimality\scite{A2023TQC}~(at least by \citeyear{A2023TQC}).%
 }}%
 %
 %
@@ -484,8 +484,8 @@ text={Random Keys encoding},%
 name={Random Keys encoding},%
 sort={Random Keys encoding},%
 description={%
-is a decoding procedure~$\decode:\searchSpace\mapsto\solutionSpace$ that maps a continuous search space~$\searchSpace\subset[0,1]^{\scale}$ which is a subset of the \scale\nobreakdashes-dimensional real numbers to the space~\solutionSpace\ of permutations of the first \scale~natural numbers~\cite{B1992GARKFSAO,B1994GAARKFSAO}. %
-For example, on $\scale=5$, the vector~$\sespel=(0.49, 0.91, 0.33, 0.75, 0.51)$ is translated to the permutation~$\solution=(3, 1, 5, 4, 2)$, because $\arrayIndex{\sespel}{3}=0.33$ has the smallest value, putting~$3$ at the beginning, $\arrayIndex{\sespel}{1}=0.49$ the second-smallest, placing~$1$ second, {\dots}, and $\arrayIndex{\sespel}{2}=0.91$ being the largest value meaning that the last number in~\solution\ will be~$2$~\cite{B1992GARKFSAO}. %
+is a decoding procedure~$\decode:\searchSpace\mapsto\solutionSpace$ that maps a continuous search space~$\searchSpace\subset[0,1]^{\scale}$ which is a subset of the \scale\nobreakdashes-dimensional real numbers to the space~\solutionSpace\ of permutations of the first \scale~natural numbers\scite{B1992GARKFSAO,B1994GAARKFSAO}. %
+For example, on $\scale=5$, the vector~$\sespel=(0.49, 0.91, 0.33, 0.75, 0.51)$ is translated to the permutation~$\solution=(3, 1, 5, 4, 2)$, because $\arrayIndex{\sespel}{3}=0.33$ has the smallest value, putting~$3$ at the beginning, $\arrayIndex{\sespel}{1}=0.49$ the second-smallest, placing~$1$ second, {\dots}, and $\arrayIndex{\sespel}{2}=0.91$ being the largest value meaning that the last number in~\solution\ will be~$2$\scite{B1992GARKFSAO}. %
 The advantage of the encoding is that we can search in \searchSpace\ applying arbitrary mathematical operators, crossover, and mutation procedures, but will always get correct permutations. %
 The disadvantage is that $|\searchSpace|\gg|\solutionSpace|$ and that there actually is no meaning underpinning moves in~\searchSpace\ in relation to their projected result in~\solutionSpace.%
 }}%
@@ -494,14 +494,14 @@ The disadvantage is that $|\searchSpace|\gg|\solutionSpace|$ and that there actu
 \newglossaryentry{rdb}{%
 name={relational database},%
 description={%
-A relational \gls{db} is a database that organizes data into rows~(tuples, records) and columns~(attributes), which collectively form tables~(relations) where the data points are related to each other~\cite{I2021WIARDB,C1970ARMODFLSDB,SC1975OTPOARADI,T2018ISARD,H2016RDDAI,HM2024IMARD,databases}.%
+A relational \gls{db} is a database that organizes data into rows~(tuples, records) and columns~(attributes), which collectively form tables~(relations) where the data points are related to each other\scite{I2021WIARDB,C1970ARMODFLSDB,SC1975OTPOARADI,T2018ISARD,H2016RDDAI,HM2024IMARD,databases}.%
 }}%
 %
 %
 \newglossaryentry{cryptoRSA}{%
 name={RSA},%
 description={%
-The RSA algorithm~\cite{RSA1978AMFODSAPKC,Y2006MCFCTR}, named after its inventors \citeauthor{RSA1978AMFODSAPKC}, is a widely used asymmetric cryptographic technique for digital signatures, key exchange, and encryption. %
+The RSA algorithm\scite{RSA1978AMFODSAPKC,Y2006MCFCTR}, named after its inventors \citeauthor{RSA1978AMFODSAPKC}, is a widely used asymmetric cryptographic technique for digital signatures, key exchange, and encryption. %
 In the latter case, it uses a public key for encryption and a private key for decryption. %
 It is based on the mathematical complexity of factorizing large integers.%
 }}%
@@ -511,7 +511,7 @@ It is based on the mathematical complexity of factorizing large integers.%
 name={SATLIB},%
 plural={SATLIB},%
 description={%
-is a library of benchmark instances for the \glsFull{optMaxSAT} available at \citeurl{HS2001STSL}~\cite{HS2000SAORFROS,HS2001STSL}.%
+is a library of benchmark instances for the \glsFull{optMaxSAT} available at \citeurl{HS2001STSL}\scite{HS2000SAORFROS,HS2001STSL}.%
 }}%
 %
 %
@@ -523,8 +523,8 @@ description={%
 In a \gls{clientServerArchitecture}, the \gls{server} is a process that fulfills the requests of the \glspl{client}. %
 It usually waits for incoming communication carring the requests from the \glspl{client}. %
 For each request, it takes the necessary actions, performs the required computations, and then sends a response with the result of the request. %
-Typical examples of \glspl{server} are web servers~\cite{C2022HAFTLS} in the internet as well as \glspl{dbms}. %
-It is also common to refer to the computer running the \gls{server} processes as \gls{server} as well, i.e., to call it the \inQuotes{\gls{server} computer}~\cite{L2022MUS}.%
+Typical examples of \glspl{server} are web servers\scite{C2022HAFTLS} in the internet as well as \glspl{dbms}. %
+It is also common to refer to the computer running the \gls{server} processes as \gls{server} as well, i.e., to call it the \inQuotes{\gls{server} computer}\scite{L2022MUS}.%
 }}%
 \protected\gdef\server{\pgls{server}}%
 %
@@ -533,7 +533,7 @@ It is also common to refer to the computer running the \gls{server} processes as
 name={SHA\nobreakdashes-512},%
 text={SHA\nobreakdashes-512},%
 description={\sloppy%
-SHA\nobreakdashes-512~is a cryptographic hash function belonging to the \emph{Secure Hash Algorithm~2} family~\cite{FIPSPUB180D4}. %
+SHA\nobreakdashes-512~is a cryptographic hash function belonging to the \emph{Secure Hash Algorithm~2} family\scite{FIPSPUB180D4}. %
 It is a one-way function that computes a checksum of 512~bits from data of arbitrary length. %
 For the same data, the same checksum is computed. %
 From the checksum, you cannot obtain the original data. %
@@ -547,7 +547,7 @@ Here, we did this by encoding the string to \pgls{utf8}.%
 name={significand},%
 description={%
 The significand is the part of a floating point number that stores the digits of the number~(in binary representation). %
-In the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 52~bits.%
+In the 64~bit double precision IEEE~Standard 754 floating point number layout\scite{IEEE2019ISFFPA,H1997IS7FPN}, the exponent is 52~bits.%
 \optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }}%
 %
@@ -556,15 +556,15 @@ In the 64~bit double precision IEEE~Standard 754 floating point number layout~\c
 name={signature},%
 description={%
 \pythonIdx{function!signature}%
-The signature of a function refers to the parameters and their types, the return type, and the exceptions that the function can raise~\cite{M2023SF}. %
-In \python, the function~\pythonilIdx{signature} of the module~\pythonilIdx{inspect} provides some information about the signature of a function~\cite{PEP362}.%
+The signature of a function refers to the parameters and their types, the return type, and the exceptions that the function can raise\scite{M2023SF}. %
+In \python, the function~\pythonilIdx{signature} of the module~\pythonilIdx{inspect} provides some information about the signature of a function\scite{PEP362}.%
 }}%
 %
 %
 \newglossaryentry{signBit}{%
 name={sign bit},%
 description={%
-The sign bit indicates whether a floating point number is positive or negative in the 64~bit double precision IEEE~Standard 754 floating point number layout~\cite{IEEE2019ISFFPA,H1997IS7FPN}.%
+The sign bit indicates whether a floating point number is positive or negative in the 64~bit double precision IEEE~Standard 754 floating point number layout\scite{IEEE2019ISFFPA,H1997IS7FPN}.%
 \optionalRef{sec:howFloatingPointNumbersWork}{ See \cref{sec:howFloatingPointNumbersWork}.}%
 }}%
 %
@@ -573,7 +573,7 @@ The sign bit indicates whether a floating point number is positive or negative i
 name={stack trace},%
 description={%
 A stack trace gives information the way in which one function invoked another. %
-The term comes from the fact that the data needed to implement function calls is stored in a stack data structure~\cite{K1997FA}. %
+The term comes from the fact that the data needed to implement function calls is stored in a stack data structure\scite{K1997FA}. %
 The data for the most recently invoked function is on top, the data of the function that called is right below, the data of the function that called that one comes next, and so on. %
 Printing a stack trace can be very helpful when trying to find out where an \pythonilIdx{Exception} occurred.%
 \optionalRef{sec:exceptions}{ See, for instance, \cref{sec:exceptions}.}%
@@ -584,7 +584,7 @@ text={\texttt{sudo}},%
 name={sudo},%
 sort={sudo},%
 description={%
-In order to perform administrative tasks such as installing new software under \linux, root~(or ``super'') user privileges as needed~\cite{CN2020ULB}. %
+In order to perform administrative tasks such as installing new software under \linux, root~(or ``super'') user privileges as needed\scite{CN2020ULB}. %
 A normal user can execute a program in the \gls{terminal} as super user by pre-pending \bashil{sudo}, often referred to as ``super user do.'' %
 This requires the root password.%
 }}%
@@ -594,7 +594,7 @@ This requires the root password.%
 name={terminal},%
 plural={terminals},%
 description={%
-A terminal is a text-based window where you can enter commands and execute them~\cite{CN2020ULB,B2022ELATCL}. %
+A terminal is a text-based window where you can enter commands and execute them\scite{CN2020ULB,B2022ELATCL}. %
 Knowing what a terminal is and how to use it is very essential in any programming- or system administration-related task. %
 If you want to open a terminal under \microsoftWindows, you can \windowsTerminal. %
 \optionalRef{fig:installingPythonWindows01openTerminal}{This is shown, e.g., in \cref{fig:installingPythonWindows01openTerminal}. }%
@@ -606,7 +606,7 @@ Under \ubuntu\ \linux, \ubuntuTerminal\ opens a terminal, which then runs a \bas
 name={TSPLib},%
 plural={TSPLib},%
 description={%
-is a library of benchmark instances for the \glsFull{optTSP}~\cite{R2016T,R1991ATSPL}. %
+is a library of benchmark instances for the \glsFull{optTSP}\scite{R2016T,R1991ATSPL}. %
 Its original \gls{URL} was available until 2025 and then became defunct. %
 The repository \url{https://github.com/shredderzwj/TSPLIB} contains the data. %
 Additionally, you may also check \url{https://github.com/thomasWeise/tspSuite}, which contains all the \gls{TSPLib} instances as well as \gls{Java} code to load them.
@@ -620,7 +620,7 @@ name={{OR}\nobreakdashes-Library},%
 text={{OR}\nobreakdashes-Library},%
 sort={OR-Library},%
 description={%
-is a library of benchmark instances for various \gls{fieldOR} problems~\cite{B1990OLDTPBEM,B1990WTOL} located at \citeurl{B1990WTOL}. %
+is a library of benchmark instances for various \gls{fieldOR} problems\scite{B1990OLDTPBEM,B1990WTOL} located at \citeurl{B1990WTOL}. %
 It contains instances of the \gls{optJSSP}, 1D\nobreakdashes- and 2D\nobreakdashes-Packing, Knapsack, periodic \glspl{optTSP}, amongst others.%
 }}%
 %
@@ -631,7 +631,7 @@ plural={{TSP}~Suite},%
 description={%
 is a open source benchmarking framework for the \gls{optTSP} written in \gls{Java}\cite{WCLTTCMY2014BOAAOSFFTTSP}. %
 It uses the instances of the \gls{TSPLib} and offers both automated experiment execution as well as several metrics to measure runtime. %
-It is available at \url{https://thomasweise.github.io/tspSuite} and has been used in many research works, such as~\cite{WWCTL2016GVLSTIOPSOEAP}. %
+It is available at \url{https://thomasweise.github.io/tspSuite} and has been used in many research works, such as\scite{WWCTL2016GVLSTIOPSOEAP}. %
 It can be viewed as a predecessor of \moptipy.%
 }}%
 %
@@ -640,9 +640,9 @@ It can be viewed as a predecessor of \moptipy.%
 name={timestamping},%
 plural={timestamping},%
 description={%
-is a technique used in \pglspl{db} to keep track of the creation and/or modification time of data~\cite{TJS2000ETID,SE:SE:WSADTUT}. %
-For each table in a \pgls{rdb} to which it is applied, an additional column with datatype~\sqlilIdx{TIMESTAMP}~\cite{PGDG:PD:DTT} is added for the creation timestamp. %
-This column is usually annotated as \sqlil{NOT NULL DEFAULT CURRENT_TIMESTAMP}\sqlIdx{CURRENT\_TIMESTAMP}~\cite{PGDG:PD:DTFAO}, meaning that the \dbms\ will automatically store the current date and time when a row is created. %
+is a technique used in \pglspl{db} to keep track of the creation and/or modification time of data\scite{TJS2000ETID,SE:SE:WSADTUT}. %
+For each table in a \pgls{rdb} to which it is applied, an additional column with datatype~\sqlilIdx{TIMESTAMP}\scite{PGDG:PD:DTT} is added for the creation timestamp. %
+This column is usually annotated as \sqlil{NOT NULL DEFAULT CURRENT_TIMESTAMP}\sqlIdx{CURRENT\_TIMESTAMP}\scite{PGDG:PD:DTFAO}, meaning that the \dbms\ will automatically store the current date and time when a row is created. %
 If data can be changed, then another column for the last update time can be added to the table as well.%
 }}%
 %
@@ -651,8 +651,8 @@ If data can be changed, then another column for the last update time can be adde
 name={transcendental},%
 plural={transcendental},%
 description={%
-A \emph{transcendental} number is a number that is not the root of any integer polynomial, meaning that it is not an algebraic number of any degree~\cite{W2024MAWWR:TN}. %
-Every real transcendental number must also be \gls{irrational}, since a \glslink{rationalNumbers}{rational number} is, by definition, an algebraic number of degree one~\cite{W2024MAWWR:TN}. %
+A \emph{transcendental} number is a number that is not the root of any integer polynomial, meaning that it is not an algebraic number of any degree\scite{W2024MAWWR:TN}. %
+Every real transcendental number must also be \gls{irrational}, since a \glslink{rationalNumbers}{rational number} is, by definition, an algebraic number of degree one\scite{W2024MAWWR:TN}. %
 Examples of transcendental numbers are \numberPi\ and \numberE.%
 }}%
 %
@@ -662,12 +662,12 @@ text={Trap},%
 name={Trap},%
 sort={Trap},%
 description={%
-The Trap problem is a benchmark problem for bit-string based black-box search~\cite{ZWWW2026WFFAFTSIFGLS,DJW2002OTAOTOPOEA,NB2003AAOTBOSEAOTF}. %
+The Trap problem is a benchmark problem for bit-string based black-box search\scite{ZWWW2026WFFAFTSIFGLS,DJW2002OTAOTOPOEA,NB2003AAOTBOSEAOTF}. %
 It is structured exactly like \gls{optOneMax}, however the worst and the best solution are swapped. %
 This makes the problem highly deceptive, as following the \inQuotes{gradient} in the search space leads the search away from the global optimum. %
 For bit strings of length~\scale, the objective function~\objFunb{\sespel} of the minimization variant is~$0$ if~$\left\lVert \sespel \right\rVert_1 = 0$ and $\scale - \left\lVert \sespel \right\rVert_1 + 1$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
 An \gls{algoEAopo} will converge to the resulting local optimum and thus have an expected runtime of \bigThetab{\scale^{\scale}}\cite{DJW2002OTAOTOPOEA}. %
-In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap, seemingly in~\bigOb{\scale^2 \ln{\scale}}~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap, seemingly in~\bigOb{\scale^2 \ln{\scale}}\scite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
 }}%
 %
 %
@@ -675,7 +675,7 @@ In experiments, the \gls{algoFEAopo} achieves polynomial runtime on Trap, seemin
 name={Turbo Pascal},%
 plural={Turbo Pascal},%
 description={%
-is/was a programming language supporting \gls{OOP} with an \gls{ide} providing a \gls{debugger} and compiler that was popular in the 1990s~\cite{B1992TPV7UB}.%
+is/was a programming language supporting \gls{OOP} with an \gls{ide} providing a \gls{debugger} and compiler that was popular in the 1990s\scite{B1992TPV7UB}.%
 }}%
 %
 %
@@ -684,18 +684,18 @@ text={TwoMax},%
 name={TwoMax},%
 sort={TwoMax},%
 description={%
-The TwoMax problem is a benchmark problem for bit-string based black-box search~\cite{FQW2018ELDBOAWHTMO,VHGN2002FTTIMEAHSP,ZWWW2026WFFAFTSIFGLS}. %
+The TwoMax problem is a benchmark problem for bit-string based black-box search\scite{FQW2018ELDBOAWHTMO,VHGN2002FTTIMEAHSP,ZWWW2026WFFAFTSIFGLS}. %
 It has a global and a local optimum, both of about the same size, at opposite ends of the search space. %
 For bit strings of length~\scale, the objective function~\objFunb{\sespel} of the minimization variant is~$0$ if~$\left\lVert \sespel \right\rVert_1 = \scale$ and $1 + \scale - \max\left\{ \left\lVert \sespel \right\rVert_1, {\scale} - \left\lVert \sespel \right\rVert_1 \right\}$ otherwise, where $\left\lVert \sespel \right\rVert_1 = \sum_{i=1}^{{\scale}} \arrayIndex{\sespel}{i}$. %
-An \gls{algoEAopo} has a 50/50 chance to converge to the local or global optimum and thus has an expected runtime in \bigThetab{\scale^{\scale}}~\cite{FQW2018ELDBOAWHTMO,FOSW2009AODPMFGE}. %
-In experiments, the \gls{algoFEAopo} achieves polynomial runtime seemingly in~\bigOb{\scale^2 \ln{\scale}} on TwoMax~\cite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
+An \gls{algoEAopo} has a 50/50 chance to converge to the local or global optimum and thus has an expected runtime in \bigThetab{\scale^{\scale}}\scite{FQW2018ELDBOAWHTMO,FOSW2009AODPMFGE}. %
+In experiments, the \gls{algoFEAopo} achieves polynomial runtime seemingly in~\bigOb{\scale^2 \ln{\scale}} on TwoMax\scite{WWLC2021FFAMOAIUBTOTOFV,WWLCL2023FFAOWBFGSCBE,ZWWW2026WFFAFTSIFGLS}.%
 }}%
 %
 \newglossaryentry{typeHint}{%
 name={type hint},%
 plural={type hints},%
 description={%
-are annotations that help programmers and static code analysis tools such as \mypy\ to better understand what type a variable or function parameter is supposed to be~\cite{PEP484,PEP482}. %
+are annotations that help programmers and static code analysis tools such as \mypy\ to better understand what type a variable or function parameter is supposed to be\scite{PEP484,PEP482}. %
 \python\ is a dynamically typed programming language where you do not need to specify the type of, e.g., a variable. %
 This creates problems for code analysis, both automated as well as manual: %
 For example, it may not always be clear whether a variable or function parameter should be an integer or floating point number. %
@@ -709,7 +709,7 @@ They are a basically a piece of documentation.%
 \newglossaryentry{unicode}{%
 name={Unicode},%
 description={%
-A standard for assigning characters to numbers~\cite{TUC2023U1510,TUC2023U151ACS,ISOIEC106462020ITUCCSU}. %
+A standard for assigning characters to numbers\scite{TUC2023U1510,TUC2023U151ACS,ISOIEC106462020ITUCCSU}. %
 The Unicode standard supports basically all characters from all languages that are currently in use, as well as many special symbols. %
 It is the predominantly used way to represent characters in computers and is regularly updated and improved.%
 }}%
@@ -720,7 +720,7 @@ name={unit test},%
 description={%
 Software development is centered around creating the program code of an application, library, or otherwise useful system. %
 A \emph{unit test} is an \emph{additional} code fragment that is not part of that productive code. %
-It exists to execute~(a part of) the productive code in a certain scenario~(e.g., with specific parameters), to observe the behavior of that code, and to compare whether this behavior meets the specification~\cite{P2021PUTAAOAEUTIP,R2006ASOUTP,TLG2006UTCU,O1991UTVIT,B2004JPG,O2003UTTETO}. %
+It exists to execute~(a part of) the productive code in a certain scenario~(e.g., with specific parameters), to observe the behavior of that code, and to compare whether this behavior meets the specification\scite{P2021PUTAAOAEUTIP,R2006ASOUTP,TLG2006UTCU,O1991UTVIT,B2004JPG,O2003UTTETO}. %
 If not, the unit test fails. %
 The use of unit tests is at least threefold: %
 First, they help us to detect errors in the code. %
@@ -735,7 +735,7 @@ Third, they are part of the documentation or even specification of a program.%
 \newglossaryentry{virtualEnvironment}{%
 name={virtual environment},%
 description={%
-A virtual environment is a directory that contains a local \python\ installation~\cite{PSF:P3D:TPT:VEAP,PEP405}. %
+A virtual environment is a directory that contains a local \python\ installation\scite{PSF:P3D:TPT:VEAP,PEP405}. %
 It comes with its own package installation directory. %
 Multiple different virtual environments can be installed on a system. %
 This allows different applications to use different versions of the same packages without conflict, because we can simply install these applications into different \glspl{virtualEnvironment}.%

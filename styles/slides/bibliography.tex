@@ -45,3 +45,8 @@
 }}\end{center}%
 \let\cite\@@old@quotation@cite%
 }%
+%
+%% Insert a citation, but without non-breakable space in front of it.
+%% Use this command instead of "\cite" in the text.
+\global\let\scite\cite%
+%

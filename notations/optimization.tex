@@ -8,7 +8,7 @@
 \newFunc{decode}{\ensuremath{\gamma}}{g(x)}{\sespel}{%
 The decoding function~$\gamma:\searchSpace\mapsto\solutionSpace$ translates point from the search space~\searchSpace\ to one point~\solution\ in the solution space~\solutionSpace. %
 It is a very common case that~$\searchSpace=\solutionSpace$ and that the decoding function~\decode\ is the identity mapping. %
-Examples for encodings that translate from a simple search space~\searchSpace\ to a complex solution data structure~\solutionSpace\ are the \gls{algoIBL} algorithm that translates (potentially signed) permutations to two-dimensional packings on the \gls{optBPP2D}, the permutation-based encoding of \glspl{ganttChart} for the \gls{optJSSP} from~\cite{GTK1994SJSSPBGA,B1995AGPATJSSWGA,BMK1996OPRFSP,SIS1997NESFSJSPBGA,WLCW2021SJSSPWUABFGS}, or the permutation-based encoding of game plans for the \gls{optTTP} from~\cite{XWvdBW2024RLSVNVFFAOTTTP}. %
+Examples for encodings that translate from a simple search space~\searchSpace\ to a complex solution data structure~\solutionSpace\ are the \gls{algoIBL} algorithm that translates (potentially signed) permutations to two-dimensional packings on the \gls{optBPP2D}, the permutation-based encoding of \glspl{ganttChart} for the \gls{optJSSP} from\scite{GTK1994SJSSPBGA,B1995AGPATJSSWGA,BMK1996OPRFSP,SIS1997NESFSJSPBGA,WLCW2021SJSSPWUABFGS}, or the permutation-based encoding of game plans for the \gls{optTTP} from\scite{XWvdBW2024RLSVNVFFAOTTTP}. %
 Encodings can also translate between types of search spaces. %
 The \gls{algoRandomKeys}, for example, translates from~$[0,1]^{\scale}$ to permutations of the first \scale~natural numbers.%
 }%
@@ -75,10 +75,10 @@ For example, in a \gls{optJSSP}, we have a number of machines and a number of jo
 But even then, the scale~\scale\ relates to the size of the solution space~\solutionSpace, and, hence, also of the search space~\searchSpace, which usually grow exponentially with~\scale. %
 And this is already the main issue: %
 The larger~\scale, the (exponentially) larger the number of possible solutions and thus, the larger the runtime of algorithms. %
-This is known as the \inQuotes{curse of dimensionality}~\cite{B1957DP,CMB2015MTCODAIEOPSOADE}. %
+This is known as the \inQuotes{curse of dimensionality}\scite{B1957DP,CMB2015MTCODAIEOPSOADE}. %
 %
 Scales~\scale\ are also often used in conjunction with the \bigO\nobreakdashes-notation to denote algorithm complexity. %
-For example, comparison-based sorting a list of~\scale~items takes~\bigThetab{\scale\log{\scale}}~steps~\cite{K1998SAS}~(because they need~$\lceil\log_2 \factorial{\scale}\rceil$~comparisons in the worst case)%
+For example, comparison-based sorting a list of~\scale~items takes~\bigThetab{\scale\log{\scale}}~steps\scite{K1998SAS}~(because they need~$\lceil\log_2 \factorial{\scale}\rceil$~comparisons in the worst case)%
 }%
 %
 %

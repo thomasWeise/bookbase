@@ -111,9 +111,12 @@ URL\addcolon\space%
 }}\end{quotation}%
 }%
 %
-%%% Load the slides bibliography commands, if need be
+%%% Load the slides and book bibliography commands, if need be
 \ifIsSlides\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
 \input{\bookbaseDir/styles/slides/bibliography.tex}%
+}{}%
+\ifIsBook\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{%
+\input{\bookbaseDir/styles/books/bibliography.tex}%
 }{}%
 %
 %%% Also print publisher and publisher's address for journal articles

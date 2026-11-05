@@ -22,15 +22,15 @@ the domain of an attribute~$a$\optionalRef{def:attributeDomain}{, see \cref{def:
 %
 %
 \newFunc{bigO}{\ensuremath{\mathcal{O}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN,B1894DAZDVPB,L1909HDLVDVDP,K1976BOABOABT,K1997FA}. %
+\mbox{If $f(x)=\bigOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$\scite{CLRS2009ITA:AN,B1894DAZDVPB,L1909HDLVDVDP,K1976BOABOABT,K1997FA}. %
 In other words, \bigOb{g(x)}~describes an upper bound for function growth}%
 %
 \newFunc{bigOmega}{\ensuremath{\mathbf{\Omega}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigOmegab{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$f(x)\geq c*g(x)\geq 0$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN,K1976BOABOABT,K1997FA}. %
+\mbox{If $f(x)=\bigOmegab{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ and~$c\in\realNumbersP$ such that~\mbox{$f(x)\geq c*g(x)\geq 0$} for all~$x\geq x_0$\scite{CLRS2009ITA:AN,K1976BOABOABT,K1997FA}. %
 In other words, \bigOmegab{g(x)}~describes a lower bound for function growth}%
 %
 \newFunc{bigTheta}{\ensuremath{\mathbf{\Theta}}}{O(g(x))}{g(x)}{%
-\mbox{If $f(x)=\bigThetab{g(x)}$,} then $f(x)=\bigOb{g(x)}$ and $f(x)=\bigOmegab{g(x)}$~\cite{K1976BOABOABT,K1997FA}, meaning that there exist positive constants~$c_1,c_2,x_0\in\realNumbersP$ such that~$0\leq c_1 g(x)\leq f(x)\leq c_2 g(x)$ for all~$x\geq x_0$~\cite{CLRS2009ITA:AN}. %
+\mbox{If $f(x)=\bigThetab{g(x)}$,} then $f(x)=\bigOb{g(x)}$ and $f(x)=\bigOmegab{g(x)}$\scite{K1976BOABOABT,K1997FA}, meaning that there exist positive constants~$c_1,c_2,x_0\in\realNumbersP$ such that~$0\leq c_1 g(x)\leq f(x)\leq c_2 g(x)$ for all~$x\geq x_0$\scite{CLRS2009ITA:AN}. %
 In other words, \bigThetab{g(x)}~describes an exact order of function growth%
 }%
 %
@@ -42,13 +42,13 @@ name={\complexConj{z}},%
 text={\complexConj{z}},%
 sort={z},%
 description={\sloppy%
-The conjugate~\complexConj{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\complexConj{z}=a-b\imaginaryUnit$~\cite{VDC2022AITCN}. %
+The conjugate~\complexConj{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\complexConj{z}=a-b\imaginaryUnit$\scite{VDC2022AITCN}. %
 You get the complex conjugate of a complex number by flipping the sign of the imaginary part.%
 }}%
 %
 \newSymbol{complexNumbers}{\ensuremath{\mathSpace{C}}}{C}{%
 the set of complex numbers is defined as~$\complexNumbers=\{(a,b): a,b\in\realNumbers\}$. %
-Complex numbers~$z$ are often written in the standard form~$z=a+b\imaginaryUnit$, where \imaginaryUnit~is the so-called imaginary unit with~$\imaginaryUnit^2=-1$~\cite{VDC2022AITCN}.
+Complex numbers~$z$ are often written in the standard form~$z=a+b\imaginaryUnit$, where \imaginaryUnit~is the so-called imaginary unit with~$\imaginaryUnit^2=-1$\scite{VDC2022AITCN}.
 }%
 %
 \protected\gdef\factorial#1{\ensuremath{#1\gls{factorialMark}}}%
@@ -58,7 +58,7 @@ name={$i!$},%
 text={!},%
 sort={!},%
 description={\sloppy%
-The factorial~\factorial{a} of a natural number~$a\in\naturalNumbersO$ is the product of all positive natural numbers less than or equal to~$a$, i.e., $\factorial{a}=1*2*3*4*\dots*(a-1)*a$~\cite{D1991TEHOTFF,CB2022FBDOTFF,L2015ANKOFF}.\optionalRef{eq:factorial}{ %
+The factorial~\factorial{a} of a natural number~$a\in\naturalNumbersO$ is the product of all positive natural numbers less than or equal to~$a$, i.e., $\factorial{a}=1*2*3*4*\dots*(a-1)*a$\scite{D1991TEHOTFF,CB2022FBDOTFF,L2015ANKOFF}.\optionalRef{eq:factorial}{ %
 See also \cref{eq:factorial} and \cref{lst:functions:def_factorial}}%
 }}%
 %
@@ -66,17 +66,17 @@ See also \cref{eq:factorial} and \cref{lst:functions:def_factorial}}%
 \newFunc{geoMean}{\ensuremath{\operatorname{geom}}}{geom(A)}{A}{%
 The \emph{geometric mean}~\geoMeanb{A} is the \scale\textsuperscript{th} root of the product of \scale\ \emph{positive} values in a dataset~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1},\dots,\arrayIndex{a}{\scale-1})$ with $\arrayIndex{a}{i}>0$ for all~$i\in\intRange{0}{\scale}$, i.e., $\geoMeanb{A} = \sqrt[\scale]{\prod_{i=0}^{\scale-1} \arrayIndex{a}{i}}=\exp{\left(\frac{1}{\scale} \sum_{i=0}^{\scale-1} \ln{\arrayIndex{a}{i}} \right)}$. %
 The formula using $\exp$ and $\ln$ is equivalent to the product formula. %
-However, due to the limited range of floating point numbers on computers~\cite{IEEE2019ISFFPA}, the product formula may lead to an overflow or underflow and the $\exp$\nobreakdashes-$\ln$ method is more reliable. %
-In~\cite{FW1986HNTLWSTCWTSBR}, it is shown that the geometric mean is the only reasonable measure of average when dealing with normalized data, where the \glslink{arithMean}{arithmetic mean} or \glslink{median}{median} become unreliable. %
+However, due to the limited range of floating point numbers on computers\scite{IEEE2019ISFFPA}, the product formula may lead to an overflow or underflow and the $\exp$\nobreakdashes-$\ln$ method is more reliable. %
+In\scite{FW1986HNTLWSTCWTSBR}, it is shown that the geometric mean is the only reasonable measure of average when dealing with normalized data, where the \glslink{arithMean}{arithmetic mean} or \glslink{median}{median} become unreliable. %
 In \python, you can use function \pythonIdx{statistics!geometric\_mean}\pythonil{geometric_mean}\pythonIdx{geometric\_mean} from the module \pythonilIdx{statistics} to compute the geometric mean%
 }%
 %
 \newSymbol{imaginaryUnit}{\ensuremath{\mathbf{\mathrm{i}}}}{i}{%
-The imaginary unit~\imaginaryUnit, which can also be written as~$\imaginaryUnit=(0,1)\in\complexNumbers$, is defined as~$\imaginaryUnit=\sqrt{-1}$ and~$\imaginaryUnit^2=-1$~\cite{VDC2022AITCN}%
+The imaginary unit~\imaginaryUnit, which can also be written as~$\imaginaryUnit=(0,1)\in\complexNumbers$, is defined as~$\imaginaryUnit=\sqrt{-1}$ and~$\imaginaryUnit^2=-1$\scite{VDC2022AITCN}%
 }%
 %
 \newFunc{imaginaryPart}{\ensuremath{\operatorname{Im}}}{Im(z)}{z}{%
-The \emph{imaginary part}~\imaginaryPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\imaginaryPartb{z}=b$~\cite{VDC2022AITCN}%
+The \emph{imaginary part}~\imaginaryPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\imaginaryPartb{z}=b$\scite{VDC2022AITCN}%
 }%
 %
 \newSymbol{integerNumbers}{\ensuremath{\mathSpace{Z}}}{Z}{%
@@ -99,7 +99,7 @@ For example, \mbox{\intRange{5}{9}}~is equivalent to~\mbox{$\{5, 6, 7, 8, 9\}$}}
 %
 %
 \newFunc{littleO}{\ensuremath{\mathbf{o}}}{o(g(x))}{g(x)}{%
-\mbox{If $f(x)=\littleOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$ \emph{all}~$c\in\realNumbersP$~\cite{CLRS2009ITA:AN}. %
+\mbox{If $f(x)=\littleOb{g(x)}$,} then there exist positive numbers~$x_0\in\realNumbersP$ such that~\mbox{$0\leq f(x)\leq c*g(x)$} for all~$x\geq x_0$ \emph{all}~$c\in\realNumbersP$\scite{CLRS2009ITA:AN}. %
 Different from \bigOb{g(x)}, \littleOb{g(x)} holds for \emph{all} constants~$c>0$, whereas~\bigOb{g(x)} implies the existence of \emph{some} constant~$c>0$. %
 This basically means that $f(x)$ becomes insignificant compared to~$g(x)$ as~$x_0$ grows toward infinity. %
 It is often written that~$\lim_{x_0\to\infty} \frac{f(x)}{g(x)} = 0$. %
@@ -107,7 +107,7 @@ In other words, \littleOb{g(x)}~describes an upper bound for function growth tha
 }%
 %
 \newFunc{littleOmega}{\ensuremath{\mathbf{\omega}}}{w(g(x))}{g(x)}{%
-\mbox{If $f(x)=\littleOmegab{g(x)}$,} then for every positive constant~$c>0$, there exists a number~$x_0\in\realNumbersP$ such that~\mbox{$0\leq c*g(x)< f(x)$} for all~$x\geq x_0$~\cite{CLRS2009ITA:AN}. %
+\mbox{If $f(x)=\littleOmegab{g(x)}$,} then for every positive constant~$c>0$, there exists a number~$x_0\in\realNumbersP$ such that~\mbox{$0\leq c*g(x)< f(x)$} for all~$x\geq x_0$\scite{CLRS2009ITA:AN}. %
 In other words, $f(x)=\littleOmegab{g(x)}$ if and only if $g(x)=\littleOb{f(x)}$. %
 In other words, \littleOmega\ describes a lower bound that is not asymptotically tight%
 }%
@@ -144,41 +144,41 @@ It holds that~$\naturalNumbersZ\subset\integerNumbers$ and that~$\naturalNumbers
 \protected\gdef\@NPprefix{\ensuremath{\mathcal{NP}}}%
 %
 \newSymbol{classNP}{\@NPprefix}{NP}{%
-is the class of computational problems that can be solved in polynomial time by a non-deterministic machine and can be verified in polynomial time by a deterministic machine~(such as a normal computer)~\cite{G2022AGITNC}%
+is the class of computational problems that can be solved in polynomial time by a non-deterministic machine and can be verified in polynomial time by a deterministic machine~(such as a normal computer)\scite{G2022AGITNC}%
 }%
 %
 \newSymbol{npComplete}{\@NPprefix\nobreakdashes-complete}{NP\nobreakdashes-complete}{%
-A decision problem is \gls{classNP}\nobreakdashes-complete if it is in \@NPprefix\ and all problems in \@NPprefix\ are reducible to it in polynomial time~\cite{RV2008NCPAPM,G2022AGITNC}. %
+A decision problem is \gls{classNP}\nobreakdashes-complete if it is in \@NPprefix\ and all problems in \@NPprefix\ are reducible to it in polynomial time\scite{RV2008NCPAPM,G2022AGITNC}. %
 A problem is \npComplete\ if it is \npHard\ and if it is in \@NPprefix%
 }%
 %
 \newSymbol{npHard}{\@NPprefix\nobreakdashes-hard}{NP\nobreakdashes-hard}{%
-A problem is \npHard\ if all problems in \@NPprefix\ are reducible to it in polynomial time~\cite{G2022AGITNC}. %
-Algorithms that guarantee to find the correct solutions of \gls{classNP}\nobreakdashes-hard problems~\cite{LLRKS1993SASAAC,CPW1998AROMSCAAA,C1971TCOTPP} have a worst-case runtime that grows exponentially with the problem scale%
+A problem is \npHard\ if all problems in \@NPprefix\ are reducible to it in polynomial time\scite{G2022AGITNC}. %
+Algorithms that guarantee to find the correct solutions of \gls{classNP}\nobreakdashes-hard problems\scite{LLRKS1993SASAAC,CPW1998AROMSCAAA,C1971TCOTPP} have a worst-case runtime that grows exponentially with the problem scale%
 }%
 %
 %
 \newSymbol{numberE}{\ensuremath{e}}{e}{%
-is Euler's number~\cite{E1737DFCD}, the base of the natural logarithm. %
-$\numberE\in\realNumbers$ is an \gls{irrational} and \gls{transcendental} number~\cite{APM1991AAAFI:TOEAP,F2011TTOEAP}, which is approximately~$\numberE\approx2.718\decSep281\decSep828\decSep459\decSep045\decSep235\decSep360$. %
+is Euler's number\scite{E1737DFCD}, the base of the natural logarithm. %
+$\numberE\in\realNumbers$ is an \gls{irrational} and \gls{transcendental} number\scite{APM1991AAAFI:TOEAP,F2011TTOEAP}, which is approximately~$\numberE\approx2.718\decSep281\decSep828\decSep459\decSep045\decSep235\decSep360$. %
 In \python, it is provided by the \pythonilIdx{math} module as variable \pythonilIdx{e} with value~\pythonilIdx{2.718281828459045}. %
-In \postgresql, you can obtain it via the \sql\ function~\sqlil{exp(1)}\sqlIdx{exp} as value~\sqlilIdx{2.718281828459045}~\cite{PGDG:PD:MFAO}%
+In \postgresql, you can obtain it via the \sql\ function~\sqlil{exp(1)}\sqlIdx{exp} as value~\sqlilIdx{2.718281828459045}\scite{PGDG:PD:MFAO}%
 }%
 %
 %
 \newSymbol{numberGoldenRatio}{\ensuremath{\phi}}{$\phi$}{%
 The golden ratio~(or golden section)~\numberGoldenRatio\ is the \gls{irrational} number~$\frac{1+\sqrt{5}}{2}$. %
-It is the ratio of a line segment cut into two pieces of different lengths such that the ratio of the whole segment to that of the longer segment is equal to the ratio of the longer segment to the shorter segment~\cite{EOEBEB:GR,EHF2008EEOGTGOJLH11FEEEELIEILHIATBG11EAPWMETBFR}. %
-The golden ratio is approximately~$\phi\approx1.618\decSep033\decSep988\decSep749\decSep894\decSep848\decSep204\decSep586\decSep834$~\cite{S2024DEOGRPOT}. %
+It is the ratio of a line segment cut into two pieces of different lengths such that the ratio of the whole segment to that of the longer segment is equal to the ratio of the longer segment to the shorter segment\scite{EOEBEB:GR,EHF2008EEOGTGOJLH11FEEEELIEILHIATBG11EAPWMETBFR}. %
+The golden ratio is approximately~$\phi\approx1.618\decSep033\decSep988\decSep749\decSep894\decSep848\decSep204\decSep586\decSep834$\scite{S2024DEOGRPOT}. %
 Represented as \pythonil{float} in \python, its value is~\pythonil{1.618033988749895}}%
 %
 %
 \newSymbol{numberPi}{\ensuremath{\pi}}{$\pi$}{%
 is the ratio of the circumference~$U$ of a circle and its diameter~$d$, i.e., $\numberPi=U/d$. %
-$\numberPi\in\realNumbers$ is an \gls{irrational} and \gls{transcendental} number~\cite{N1939TTOP,APM1991AAAFI:TOEAP,F2011TTOEAP}, which is approximately~$\numberPi\approx3.141\decSep592\decSep653\decSep589\decSep793\decSep238\decSep462\decSep643$. %
-An early method to approximate \numberPi\ was developed by the Chinese mathematician LIU Hui~(刘徽) based on inscribing regular~$e$\nobreakdashes-gons into a circle somewhere in the third century~\pgls{CE}~\cite{OR2003LH,Y2024COACMMLHFHTIOMACE} in his commentary to the famous Chinese mathematics book \emph{Jiu Zhang Suanshu}~(九章算术)~\cite{OR2003LH,SCL1999TNCOTMACAC,S1998LHATFGAOCM,D2010AALHOCAS,C2002LFLHADWTDM}. %
+$\numberPi\in\realNumbers$ is an \gls{irrational} and \gls{transcendental} number\scite{N1939TTOP,APM1991AAAFI:TOEAP,F2011TTOEAP}, which is approximately~$\numberPi\approx3.141\decSep592\decSep653\decSep589\decSep793\decSep238\decSep462\decSep643$. %
+An early method to approximate \numberPi\ was developed by the Chinese mathematician LIU Hui~(刘徽) based on inscribing regular~$e$\nobreakdashes-gons into a circle somewhere in the third century~\pgls{CE}\scite{OR2003LH,Y2024COACMMLHFHTIOMACE} in his commentary to the famous Chinese mathematics book \emph{Jiu Zhang Suanshu}~(九章算术)\scite{OR2003LH,SCL1999TNCOTMACAC,S1998LHATFGAOCM,D2010AALHOCAS,C2002LFLHADWTDM}. %
 In \python, \numberPi\ is provided by the \pythonilIdx{math} module as variable \pythonilIdx{pi} with value~\pythonilIdx{3.141592653589793}. %
-In \postgresql, it is provided by the \sql\ function~\sqlil{pi()}\sqlIdx{pi} with value~\sqlilIdx{3.141592653589793}~\cite{PGDG:PD:MFAO}%
+In \postgresql, it is provided by the \sql\ function~\sqlil{pi()}\sqlIdx{pi} with value~\sqlilIdx{3.141592653589793}\scite{PGDG:PD:MFAO}%
 }%
 %
 %
@@ -197,11 +197,11 @@ the set of the positive real numbers, i.e., $\realNumbersP=\{x\in\realNumbers:x>
 %
 %
 \newFunc{realPart}{\ensuremath{\operatorname{Re}}}{Re(z)}{z}{%
-The \emph{real part}~\realPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\realPartb{z}=a$~\cite{VDC2022AITCN}%
+The \emph{real part}~\realPartb{z} of a complex number~$z\in\complexNumbers$ with~$z=a+b\imaginaryUnit$ is~$\realPartb{z}=a$\scite{VDC2022AITCN}%
 }%
 %
 \newFunc{relSchema}{\ensuremath{\operatorname{\Sigma}}}{Sigma(R)}{R}{%
-the relation schema of relation~$R$~\cite{SS2005EIDDDFDB:SDWSD2}\optionalRef{def:relationSchema}{, see \cref{def:relationSchema}}}%
+the relation schema of relation~$R$\scite{SS2005EIDDDFDB:SDWSD2}\optionalRef{def:relationSchema}{, see \cref{def:relationSchema}}}%
 %
 %
 \protected\gdef\sampleQuantile#1#2#3{\ensuremath{\gls{sampleQuantileMark}^{#1}_{#2}(#3)}}%
@@ -229,8 +229,8 @@ In \python, you can use function \pythonIdx{statistics!stdev}\pythonilIdx{stdev}
 \newFunc{sampleVar}{\ensuremath{\operatorname{var}}}{var(A)}{A}{%
 The \emph{variance} of a distribution is the expectation of the squared deviation of the underlying random variable from its mean. %
 The variance~\sampleVarb{A} of a data sample~$A=(\arrayIndex{a}{0},\arrayIndex{a}{1}, \dots, \arrayIndex{a}{\scale-1})$ with \scale~observations can be estimated as~$\sampleVarb{A} = \frac{1}{\scale-1} \sum_{i=0}^{\scale-1} \left(\arrayIndex{a}{i} - \arithMeanb{A}\right)^2$. %
-It can also be computed using~$\sampleVarb{A} = \left(\sum_{i=0}^{\scale-1} \arrayIndex{a}{i}^2\right)-\frac{1}{\scale}\left(\sum_{i=0}^{\scale-1} \arrayIndex{a}{i}\right)^2$, which affords computing it in a single pass, but this method may lead to disastrous rounding errors~\cite{CGL1983AFCTSVAAR}. %
-A better choice is \citeauthor{W1962NOAMFCCSOSAP}'s algorithm~\cite{W1962NOAMFCCSOSAP,K1997SA}: %
+It can also be computed using~$\sampleVarb{A} = \left(\sum_{i=0}^{\scale-1} \arrayIndex{a}{i}^2\right)-\frac{1}{\scale}\left(\sum_{i=0}^{\scale-1} \arrayIndex{a}{i}\right)^2$, which affords computing it in a single pass, but this method may lead to disastrous rounding errors\scite{CGL1983AFCTSVAAR}. %
+A better choice is \citeauthor{W1962NOAMFCCSOSAP}'s algorithm\scite{W1962NOAMFCCSOSAP,K1997SA}: %
 It begins by setting its running mean~$m\gets0$, running variance~$v\gets0$, and its running counter~$i\gets0$. %
 It then iterates over~$A$ with the current value being~\arrayIndex{a}{i}. %
 In each step, it sets~$delta\gets \arrayIndex{a}{i}-m$, then updates~$m\gets m+\delta/(i+1)$, $v\gets v+\delta*(\arrayIndex{a}{i}-m)$, and finally~$i\gets i+1$. %
