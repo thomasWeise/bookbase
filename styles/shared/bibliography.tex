@@ -14,6 +14,10 @@ urldate=iso,%
 date=comp,%
 ]{biblatex}%
 %
+%% A citation command using brackets
+\let\bracketCite\cite%
+\protected\gdef\sbracketCite#1{~\bracketCite{#1}}%
+%
 %% Set our bibliography.
 \bibliography{%
 \bookbaseDir/bibliography/prefix,%
@@ -107,7 +111,7 @@ URL\addcolon\space%
 \protected\long\gdef\cquotation#1#2{%
 \begin{quotation}{\rmfamily{%
 #2\strut\\%
-\strut\hfill\strut---~{\small{\textit{\citeauthorfull{#1}~\cite{#1}, \citeyear{#1}}}}\strut%
+\strut\hfill\strut---~{\small{\textit{\citeauthorfull{#1}\sbracketCite{#1}, \citeyear{#1}}}}\strut%
 }}\end{quotation}%
 }%
 %
