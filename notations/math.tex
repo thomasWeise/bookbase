@@ -35,6 +35,28 @@ In other words, \bigThetab{g(x)}~describes an exact order of function growth%
 }%
 %
 %
+\protected\gdef\binomial#1#2{\ensuremath{%
+\glslink{binomialCoefficient}{\left(\vphantom{#1 \atop #2}\right.}%
+\hspace{-0.3em}{#1 \atop #2}\hspace{-0.3em}%
+\glslink{binomialCoefficient}{\left.\vphantom{#1 \atop #2}\right)}%
+}}%
+\newglossaryentry{binomialCoefficient}{%
+type={symbols},
+name={$n\choose k$},%
+text={(nk)},%
+sort={(nk)},%
+description={\sloppy%
+The \emph{binomial coefficient}~\binomial{n}{k}, often referenced as \inQuotes{$n$~choose~$k$,} represents the number of ways to select $k$~elements from a set of $n$~distinct elements without regard to order~($0\leq k\leq n$)\scite{W2024MAWWR:BC,AS1972HOMFWFGAMT}. %
+It can be computed as $\binomial{n}{k}=\frac{\factorial{n}}{\factorial{k}\factorial{(n-k)}}$. %
+The following identities hold:%
+$\binomial{n}{0}=\binomial{n}{n}=1$, %
+$\binomial{n}{k}=\binomial{n}{n-k}$, %
+$\binomial{n}{k+1}=\binomial{n}{k}\frac{n-k}{k+1}$, which can be illustrated as Pascal's triangle\scite{W2024MAWWR:PT}, %
+$\binomial{n}{k}=\binomial{n-1}{k-1}+\binomial{n-1}{k}$, and %
+$2^n = \sum_{k=0}^n \binomial{n}{k}$ for any~$n\in\naturalNumbersZ$.%
+}}%
+%
+%
 \protected\gdef\complexConj#1{\ensuremath{\overline{#1}}\glslink{complexConj}{\strut}}%
 \newglossaryentry{complexConj}{%
 type={symbols},
