@@ -524,7 +524,7 @@ Typical examples include DeepSeek\scite{DAGYZSZXZMWBZYWWGSLGLXWWFLZDZRDCJLLDLHCL
 %
 %
 \newacronym[description={%
-A \emph{local search} is an algorithm where a single \inQuotes{current} candidate solution is maintained and new solutions are selected from its neighborhood in each step. %
+A \emph{local search} is an algorithm where a single \inQuotes{current} candidate solution is maintained and new solutions are selected from its neighborhood in each step\scite{SKC1994NSFILS}. %
 Most \glsShortpl{algoLS} are randomized, i.e., \glsFull{algoSLS}.%
 },shortplural={LSes}]{algoLS}{LS}{local search}%
 %
@@ -551,7 +551,8 @@ are all combined into one~\inQuotes{and.} %
 The objective function~$f(x)$, subject to minimization, computes the number of clauses which are false under the variable setting~$x$. %
 If~$f(x) = 0$, then all clauses of $F$ are true, which solves the problem. %
 The \glsShort{optMaxSAT} problem is \npComplete\scite{C1971TCOTPP} and exhibits low epistasis but deceptiveness\scite{RW1998GABITMD}, making it hard for local searches. %
-Typical benchmark instances can be found in~\gls{SATLIB}, which contains smaller-scale instances, and the up-to-date \gls{optMaxSATEvaluation}, providing \gls{SOTA} benchmarks, algorithms, and results.%
+Typical benchmark instances can be found in~\gls{SATLIB}, which contains smaller-scale instances, and the up-to-date \gls{optMaxSATEvaluation}, providing \gls{SOTA} benchmarks, algorithms, and results. %
+Some good \gls{optMaxSAT} algorithms can be found in\scite{SKC1994NSFILS,LH2012AMBLSFMS,CCL2023NILSFWPMBNWT,JCZH2026PAAMSEM,ZZLH2024RTSCPBCOMLSS,N2024TOWIAEAMS,MI2026SFME2,ZHZ2023FPSAGSFBLSMS,ZHZJLM2025IMABWLSFM}.%
 }]{optMaxSAT}{MaxSAT}{Maximum Satisfiability}%
 %
 %
