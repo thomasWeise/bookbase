@@ -19,8 +19,9 @@ However, there might be bits and pieces of code useful for others in here as wel
 ## 2. License
 With the exceptions below, the files here are under the Attribution-NonCommercial-ShareAlike 4.0 International license (CC&nbsp;BY&#8209;NC&#8209;SA&nbsp;4.0), see [http://creativecommons.org/licenses/by-nc-sa/4.0/](http://creativecommons.org/licenses/by-nc-sa/4.0/) for a summary.
 
-We statically include the [pdfsizeopt](https://github.com/pts/pdfsizeopt) tool in the [GitHub Repository](https://github.com/thomasWeise/programmingWithPython) of our book.
-We did use it during the book compiling and building process in the past to compress the book pdf file.
+We statically include the [pdfsizeopt](https://github.com/pts/pdfsizeopt) tool in the [GitHub Repository](https://github.com/thomasWeise/programmingWithPython) of our books and slides.
+We did use it during the book compiling and building processes in the past to compress the PDF files.
+It is still contained for historical reasons, because it produces smaller PDFs at the expense of longer builds.
 This tool is excluded from the license mentioned above.
 It is under the GNU GENERAL PUBLIC LICENSE Version 2, June 1991 and the copyright belongs to its authors.
 
