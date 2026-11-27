@@ -27,7 +27,7 @@ Therefore, I here also document how it can be used.
 If you use it in your projects, this is **at your own risk** &mdash; as said, I only maintain this for myself.
 
 
-## 2.1. Mount as Git Submodule
+### 2.1. Mount as Git Submodule
 The best way to use `bookbase` is to mount it into your `git` repository as submodule.
 You can do this by entering your Git project's base directory and then executing:
 
