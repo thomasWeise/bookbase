@@ -59,7 +59,7 @@ jobs:
           run: |
             apk add cargo gcc linux-headers musl-dev py3-pip python3 python3-dev rust
             MAKE_COMMAND
-# deploy to github pages
+
       - name: deploy documentation
         uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
