@@ -38,7 +38,7 @@ You can use the `bookbase` build process inside a [GitHub Action](https://github
 You would create a directory named `.github` and inside of that a directory called `workflows`.
 Inside `.github/workflows`, you'd create the file `build.yaml` as follows:
 
-```
+<pre>
 name: publish
 
 on:
@@ -66,7 +66,7 @@ jobs:
           branch: gh-pages
           folder: /home/runner/work/REPO_NAME/REPO_NAME/website/
           single-commit: true
-```
+</pre>
 
 If you are building a book, you would replace `MAKE_COMMAND` with
 
