@@ -39,33 +39,33 @@ You would create a directory named `.github` and inside of that a directory call
 Inside `.github/workflows`, you'd create the file `build.yaml` as follows:
 
 <pre>
-name: publish
+<code>name: publish</code>
 
-on:
-  push:
-    branches:
-      - main
+<code>on:</code>
+<code>  push:</code>
+<code>    branches:</code>
+<code>      - main</code>
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7.0.1
-        with:
-          submodules: true
-      - uses: xu-cheng/texlive-action@v3
-        with:
-          scheme: full
-          run: |
-            apk add cargo gcc linux-headers musl-dev py3-pip python3 python3-dev rust
-            MAKE_COMMAND
+<code>jobs:</code>
+<code>  build:</code>
+<code>    runs-on: ubuntu-latest</code>
+<code>    steps:</code>
+<code>      - uses: actions/checkout@v7.0.1</code>
+<code>        with:</code>
+<code>          submodules: true</code>
+<code>      - uses: xu-cheng/texlive-action@v3</code>
+<code>        with:</code>
+<code>          scheme: full</code>
+<code>          run: |</code>
+<code>            apk add cargo gcc linux-headers musl-dev py3-pip python3 python3-dev rust</code>
+<code>            MAKE_COMMAND</code>
 
-      - name: deploy documentation
-        uses: JamesIves/github-pages-deploy-action@v4.8.0
-        with:
-          branch: gh-pages
-          folder: /home/runner/work/REPO_NAME/REPO_NAME/website/
-          single-commit: true
+<code>      - name: deploy documentation</code>
+<code>        uses: JamesIves/github-pages-deploy-action@v4.8.0</code>
+<code>        with:</code>
+<code>          branch: gh-pages</code>
+<code>          folder: /home/runner/work/REPO_NAME/REPO_NAME/website/</code>
+<code>          single-commit: true</code>
 </pre>
 
 If you are building a book, you would replace `MAKE_COMMAND` with
