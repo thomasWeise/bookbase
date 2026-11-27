@@ -18,6 +18,15 @@ However, there might be bits and pieces of code useful for others in here as wel
 
 
 ## 2. Usage
+**This repository is not intended for public use.**
+I maintain it *only* for my personal projects.
+However, you are free to maybe copy it and copy my workflows.
+This may be an easy starting point for own books/slides.
+Or, at least, a stash of "working" methods, a starting point to check how something can be done.
+Therefore, I here also document how it can be used.
+If you use it in your projects, this is **at your own risk** &mdash; as said, I only maintain this for myself.
+
+
 ## 2.1. Mount as Git Submodule
 The best way to use `bookbase` is to mount it into your `git` repository as submodule.
 You can do this by entering your Git project's base directory and then executing:
@@ -39,33 +48,33 @@ You would create a directory named `.github` and inside of that a directory call
 Inside `.github/workflows`, you'd create the file `build.yaml` as follows:
 
 <pre>
-<code>name: publish</code>
+name: publish
 
-<code>on:</code>
-<code>  push:</code>
-<code>    branches:</code>
-<code>      - main</code>
+on:
+  push:
+    branches:
+      - main
 
-<code>jobs:</code>
-<code>  build:</code>
-<code>    runs-on: ubuntu-latest</code>
-<code>    steps:</code>
-<code>      - uses: actions/checkout@v7.0.1</code>
-<code>        with:</code>
-<code>          submodules: true</code>
-<code>      - uses: xu-cheng/texlive-action@v3</code>
-<code>        with:</code>
-<code>          scheme: full</code>
-<code>          run: |</code>
-<code>            apk add cargo gcc linux-headers musl-dev py3-pip python3 python3-dev rust</code>
-<code>            MAKE_COMMAND</code>
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          submodules: true
+      - uses: xu-cheng/texlive-action@v3
+        with:
+          scheme: full
+          run: |
+            apk add cargo gcc linux-headers musl-dev py3-pip python3 python3-dev rust
+            MAKE_COMMAND
 
-<code>      - name: deploy documentation</code>
-<code>        uses: JamesIves/github-pages-deploy-action@v4.8.0</code>
-<code>        with:</code>
-<code>          branch: gh-pages</code>
-<code>          folder: /home/runner/work/REPO_NAME/REPO_NAME/website/</code>
-<code>          single-commit: true</code>
+      - name: deploy documentation
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
+        with:
+          branch: gh-pages
+          folder: /home/runner/work/REPO_NAME/REPO_NAME/website/
+          single-commit: true
 </pre>
 
 If you are building a book, you would replace `MAKE_COMMAND` with
@@ -82,7 +91,8 @@ If you are building slides, you would replace `MAKE_COMMAND` with
 ```
 
 In either case, `REPO_NAME` is to be replaced with the repository name.
-
+The `slidesWebsiteBaseURL` would be the base URL to which your website would be deployed, usually something like `https://userName.github.io/repoName`, where `userName` is your GitHub user name in all lower case and `repoName` is the repository name. 
+Then you finally need to set your repository to deploy a website from the the `gh-pages` branch.
 
 ## 3. License
 With the exceptions below, the files here are under the Attribution-NonCommercial-ShareAlike 4.0 International license (CC&nbsp;BY&#8209;NC&#8209;SA&nbsp;4.0), see [http://creativecommons.org/licenses/by-nc-sa/4.0/](http://creativecommons.org/licenses/by-nc-sa/4.0/) for a summary.
