@@ -25,6 +25,7 @@ You can do this by entering your Git project's base directory and then executing
 ```bash
 git submodule add https://github.com/thomasWeise/bookbase
 ```
+
 Then you can use all the scripts, bibliography, and styles from the package.
 They will all be in the subfolder `bookbase` inside your own checked-out repository.
 
